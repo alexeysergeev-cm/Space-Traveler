@@ -2,6 +2,7 @@
   "name": "space-traveler",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --mode=development --watch",
@@ -10,7 +11,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.1.1",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.5.0",
@@ -25,5 +32,8 @@
   },
   "homepage": "https://github.com/alexeysergeev-cm/Space-Traveler#readme",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "d3": "^6.5.0"
+  }
 }

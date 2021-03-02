@@ -6,7 +6,8 @@ module.exports = {
    "path": __dirname + '/dist',
    "filename": "bundle.js"
  },
-devServer: {
+  devtool: 'source-map',
+  devServer: {
    contentBase: path.join(__dirname, 'dist')
  },
  "module": {
@@ -18,6 +19,19 @@ devServer: {
          "css-loader"
        ]
      },
+     {
+       "test": /\.js$/,
+       "exclude": /node_modules/,
+       "use": {
+         "loader": "babel-loader",
+         "options": {
+           "presets": [
+             "@babel/preset-env",
+           ]
+         },
+       }
+     },
    ]
- }
+ },
+ 
 }

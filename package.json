@@ -36,6 +36,5 @@
   "description": "",
   "dependencies": {
     "d3": "^6.5.0"
-  },
-  "homepage": "https://github.com/alexeysergeev-cm/space-traveler"
+  }
 }

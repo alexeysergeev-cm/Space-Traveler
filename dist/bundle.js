@@ -86,50 +86,106 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css":
-/*!*******************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css ***!
-  \*******************************************************************/
+/***/ "./css/main.css":
+/*!**********************!*\
+  !*** ./css/main.css ***!
+  \**********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./main.css */ "./node_modules/css-loader/dist/cjs.js!./css/main.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./css/reset.css":
+/*!***********************!*\
+  !*** ./css/reset.css ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_reset_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./reset.css */ "./node_modules/css-loader/dist/cjs.js!./css/reset.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_reset_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_reset_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./css/main.css":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./css/main.css ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "body {\n background: rgba(0, 0, 0, 0.9);\n}\n\n.title-cont{\n  display: flex;\n  padding: 50px;\n  justify-content: center;\n  \n  \n}\n\n.title{\n  padding: 20px;\n  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);\n  font-size: 70px;\n  font-family: fantasy;\n  color: white;\n  border-radius: 20px;\n  font-weight: 900;\n}\n \n\n.main-div{\n  display: flex;  \n}\n\n\n.intro{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: 3px solid rgb(255, 215, 0);\n  border-radius: 30px;\n  height: 650px;\n  width: auto;\n  margin: 0 150px;\n  padding: 15px;\n  max-width: 700px;\n  margin: auto;\n}\n\n\n.intro.hidden, .main-div.hidden{\n  display: none;\n}\n\n.intro{\n    animation-name: animation;\n    animation-duration: 5s;\n    animation-timing-function: ease-in-out;\n    animation-iteration-count: infinite;    \n    animation-play-state: running;\n}\n\n\n@-webkit-keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: orange;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n@keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: green;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n.intro-text{\n  font-size: 40px;\n  color: white;\n  font-family: fantasy;\n  padding: 10px;\n  margin-bottom: 30px;\n}\n\n.intro > ul > li {\n  padding: 5px;\n  color: darkgray;\n  margin: 15px 0;\n}\n\n.intro > button{\n  margin-top: auto;\n  background: rgb(0 255 255);\n  height: 50px;\n  width: 200px;\n  font-size: 20px;\n  border-radius: 14px;\n  box-shadow: orange 2px 2px;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n\n.intro > button > span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.intro > button > span:after {\n  content: '\\00bb';\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  right: -20px;\n  transition: 0.5s;\n}\n\n.intro > button:hover > span {\n  padding-right: 25px;\n}\n\n.intro > button:hover > span:after {\n  opacity: 1;\n  right: 0;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;CACC,8BAA8B;AAC/B;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uBAAuB;;;AAGzB;;AAEA;EACE,aAAa;EACb,8CAA8C;EAC9C,eAAe;EACf,oBAAoB;EACpB,YAAY;EACZ,mBAAmB;EACnB,gBAAgB;AAClB;;;AAGA;EACE,aAAa;AACf;;;AAGA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,kCAAkC;EAClC,mBAAmB;EACnB,aAAa;EACb,WAAW;EACX,eAAe;EACf,aAAa;EACb,gBAAgB;EAChB,YAAY;AACd;;;AAGA;EACE,aAAa;AACf;;AAEA;IACI,yBAAyB;IACzB,sBAAsB;IACtB,sCAAsC;IACtC,mCAAmC;IACnC,6BAA6B;AACjC;;;AAGA;IACI,QAAQ,gBAAgB,CAAC;IACzB,QAAQ,oBAAoB,CAAC;IAC7B,QAAQ,6BAA6B;IACrC,QAAQ,oBAAoB,CAAC;IAC7B,QAAQ,gBAAgB,CAAC;AAC7B;;AAEA;IACI,QAAQ,gBAAgB,CAAC;IACzB,QAAQ,mBAAmB,CAAC;IAC5B,QAAQ,6BAA6B;IACrC,QAAQ,oBAAoB,CAAC;IAC7B,QAAQ,gBAAgB,CAAC;AAC7B;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,oBAAoB;EACpB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,0BAA0B;EAC1B,YAAY;EACZ,YAAY;EACZ,eAAe;EACf,mBAAmB;EACnB,0BAA0B;EAC1B,eAAe;EACf,oBAAoB;AACtB;;AAEA;EACE,eAAe;EACf,qBAAqB;EACrB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,UAAU;EACV,MAAM;EACN,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,QAAQ;AACV","sourcesContent":["body {\n background: rgba(0, 0, 0, 0.9);\n}\n\n.title-cont{\n  display: flex;\n  padding: 50px;\n  justify-content: center;\n  \n  \n}\n\n.title{\n  padding: 20px;\n  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);\n  font-size: 70px;\n  font-family: fantasy;\n  color: white;\n  border-radius: 20px;\n  font-weight: 900;\n}\n \n\n.main-div{\n  display: flex;  \n}\n\n\n.intro{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: 3px solid rgb(255, 215, 0);\n  border-radius: 30px;\n  height: 650px;\n  width: auto;\n  margin: 0 150px;\n  padding: 15px;\n  max-width: 700px;\n  margin: auto;\n}\n\n\n.intro.hidden, .main-div.hidden{\n  display: none;\n}\n\n.intro{\n    animation-name: animation;\n    animation-duration: 5s;\n    animation-timing-function: ease-in-out;\n    animation-iteration-count: infinite;    \n    animation-play-state: running;\n}\n\n\n@-webkit-keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: orange;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n@keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: green;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n.intro-text{\n  font-size: 40px;\n  color: white;\n  font-family: fantasy;\n  padding: 10px;\n  margin-bottom: 30px;\n}\n\n.intro > ul > li {\n  padding: 5px;\n  color: darkgray;\n  margin: 15px 0;\n}\n\n.intro > button{\n  margin-top: auto;\n  background: rgb(0 255 255);\n  height: 50px;\n  width: 200px;\n  font-size: 20px;\n  border-radius: 14px;\n  box-shadow: orange 2px 2px;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n\n.intro > button > span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.intro > button > span:after {\n  content: '\\00bb';\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  right: -20px;\n  transition: 0.5s;\n}\n\n.intro > button:hover > span {\n  padding-right: 25px;\n}\n\n.intro > button:hover > span:after {\n  opacity: 1;\n  right: 0;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "body {\n background: rgba(0, 0, 0, 0.9);\n}\n\n.title-cont{\n  display: flex;\n  padding: 50px;\n  justify-content: center;\n  \n  \n}\n\n.title{\n  padding: 20px;\n  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);\n  font-size: 70px;\n  font-family: fantasy;\n  color: white;\n  border-radius: 20px;\n  font-weight: 900;\n}\n \n\n.main-div{\n  display: flex;  \n}\n\n\n.intro{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: 3px solid rgb(255, 215, 0);\n  border-radius: 30px;\n  height: 650px;\n  width: auto;\n  margin: 0 150px;\n  padding: 15px;\n  max-width: 700px;\n  margin: auto;\n}\n\n\n.intro.hidden, .main-div.hidden{\n  display: none;\n}\n\n.intro{\n    animation-name: animation;\n    animation-duration: 5s;\n    animation-timing-function: ease-in-out;\n    animation-iteration-count: infinite;    \n    animation-play-state: running;\n}\n\n\n@-webkit-keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: orange;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n@keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: green;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n.intro-text{\n  font-size: 40px;\n  color: white;\n  font-family: fantasy;\n  padding: 10px;\n  margin-bottom: 30px;\n}\n\n.intro > ul > li {\n  padding: 5px;\n  color: darkgray;\n  margin: 15px 0;\n}\n\n.intro > button{\n  margin-top: auto;\n  background: rgb(0 255 255);\n  height: 50px;\n  width: 200px;\n  font-size: 20px;\n  border-radius: 14px;\n  box-shadow: orange 2px 2px;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n\n.intro > button > span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.intro > button > span:after {\n  content: '\\00bb';\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  right: -20px;\n  transition: 0.5s;\n}\n\n.intro > button:hover > span {\n  padding-right: 25px;\n}\n\n.intro > button:hover > span:after {\n  opacity: 1;\n  right: 0;\n}", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"AAAA;CACC,8BAA8B;AAC/B;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uBAAuB;;;AAGzB;;AAEA;EACE,aAAa;EACb,8CAA8C;EAC9C,eAAe;EACf,oBAAoB;EACpB,YAAY;EACZ,mBAAmB;EACnB,gBAAgB;AAClB;;;AAGA;EACE,aAAa;AACf;;;AAGA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,kCAAkC;EAClC,mBAAmB;EACnB,aAAa;EACb,WAAW;EACX,eAAe;EACf,aAAa;EACb,gBAAgB;EAChB,YAAY;AACd;;;AAGA;EACE,aAAa;AACf;;AAEA;IACI,yBAAyB;IACzB,sBAAsB;IACtB,sCAAsC;IACtC,mCAAmC;IACnC,6BAA6B;AACjC;;;AAGA;IACI,QAAQ,gBAAgB,CAAC;IACzB,QAAQ,oBAAoB,CAAC;IAC7B,QAAQ,6BAA6B;IACrC,QAAQ,oBAAoB,CAAC;IAC7B,QAAQ,gBAAgB,CAAC;AAC7B;;AAEA;IACI,QAAQ,gBAAgB,CAAC;IACzB,QAAQ,mBAAmB,CAAC;IAC5B,QAAQ,6BAA6B;IACrC,QAAQ,oBAAoB,CAAC;IAC7B,QAAQ,gBAAgB,CAAC;AAC7B;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,oBAAoB;EACpB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,0BAA0B;EAC1B,YAAY;EACZ,YAAY;EACZ,eAAe;EACf,mBAAmB;EACnB,0BAA0B;EAC1B,eAAe;EACf,oBAAoB;AACtB;;AAEA;EACE,eAAe;EACf,qBAAqB;EACrB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,UAAU;EACV,MAAM;EACN,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,QAAQ;AACV","sourcesContent":["body {\n background: rgba(0, 0, 0, 0.9);\n}\n\n.title-cont{\n  display: flex;\n  padding: 50px;\n  justify-content: center;\n  \n  \n}\n\n.title{\n  padding: 20px;\n  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);\n  font-size: 70px;\n  font-family: fantasy;\n  color: white;\n  border-radius: 20px;\n  font-weight: 900;\n}\n \n\n.main-div{\n  display: flex;  \n}\n\n\n.intro{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: 3px solid rgb(255, 215, 0);\n  border-radius: 30px;\n  height: 650px;\n  width: auto;\n  margin: 0 150px;\n  padding: 15px;\n  max-width: 700px;\n  margin: auto;\n}\n\n\n.intro.hidden, .main-div.hidden{\n  display: none;\n}\n\n.intro{\n    animation-name: animation;\n    animation-duration: 5s;\n    animation-timing-function: ease-in-out;\n    animation-iteration-count: infinite;    \n    animation-play-state: running;\n}\n\n\n@-webkit-keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: orange;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n@keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: green;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n.intro-text{\n  font-size: 40px;\n  color: white;\n  font-family: fantasy;\n  padding: 10px;\n  margin-bottom: 30px;\n}\n\n.intro > ul > li {\n  padding: 5px;\n  color: darkgray;\n  margin: 15px 0;\n}\n\n.intro > button{\n  margin-top: auto;\n  background: rgb(0 255 255);\n  height: 50px;\n  width: 200px;\n  font-size: 20px;\n  border-radius: 14px;\n  box-shadow: orange 2px 2px;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n\n.intro > button > span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.intro > button > span:after {\n  content: '\\00bb';\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  right: -20px;\n  transition: 0.5s;\n}\n\n.intro > button:hover > span {\n  padding-right: 25px;\n}\n\n.intro > button:hover > span:after {\n  opacity: 1;\n  right: 0;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/reset.css":
-/*!********************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/reset.css ***!
-  \********************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./css/reset.css":
+/*!*************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./css/reset.css ***!
+  \*************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul, li {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}", "",{"version":3,"sources":["webpack://./src/styles/reset.css"],"names":[],"mappings":";AACA;;;;;;;;;;;;;CAaC,SAAS;CACT,UAAU;CACV,SAAS;CACT,eAAe;CACf,aAAa;CACb,wBAAwB;AACzB;;AAEA,gDAAgD;AAChD;;CAEC,cAAc;AACf;AACA;CACC,cAAc;AACf;AACA;CACC,gBAAgB;AACjB;AACA;CACC,YAAY;AACb;AACA;;CAEC,WAAW;CACX,aAAa;AACd;AACA;CACC,yBAAyB;CACzB,iBAAiB;AAClB","sourcesContent":["\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul, li {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul, li {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}", "",{"version":3,"sources":["webpack://./css/reset.css"],"names":[],"mappings":";AACA;;;;;;;;;;;;;CAaC,SAAS;CACT,UAAU;CACV,SAAS;CACT,eAAe;CACf,aAAa;CACb,wBAAwB;AACzB;;AAEA,gDAAgD;AAChD;;CAEC,cAAc;AACf;AACA;CACC,cAAc;AACf;AACA;CACC,gBAAgB;AACjB;AACA;CACC,YAAY;AACb;AACA;;CAEC,WAAW;CACX,aAAa;AACd;AACA;CACC,yBAAyB;CACzB,iBAAiB;AAClB","sourcesContent":["\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul, li {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -31690,8 +31746,8 @@ module.exports = function (list, options) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/reset.css */ "./src/styles/reset.css");
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _css_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/reset.css */ "./css/reset.css");
+/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/main.css */ "./css/main.css");
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
 
  // import './styles/index.scss';
@@ -31714,62 +31770,6 @@ function continueButton() {
     intro[0].classList.add('hidden');
   });
 }
-
-/***/ }),
-
-/***/ "./src/styles/main.css":
-/*!*****************************!*\
-  !*** ./src/styles/main.css ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./main.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_main_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
-
-/***/ }),
-
-/***/ "./src/styles/reset.css":
-/*!******************************!*\
-  !*** ./src/styles/reset.css ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_reset_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./reset.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/reset.css");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_reset_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_reset_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ })
 

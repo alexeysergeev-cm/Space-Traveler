@@ -1,5 +1,5 @@
-import './styles/reset.css'
-import './styles/main.css';
+import '../css/reset.css'
+import '../css/main.css';
 // import './styles/index.scss';
 import * as d3 from 'd3';
 

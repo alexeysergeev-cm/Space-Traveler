@@ -37,9 +37,8 @@ function continueButton(){
     intro[0].classList.add('hidden')
     
     update()
-    
+    loadData()
   })
-
 }
 
 
@@ -49,6 +48,17 @@ function update() {
     .ease(d3.easeLinear)
     .duration(3000)
     .attr("fill", "blue")
+}
+
+function loadData(){
+  d3.csv('/dist/data/banana.csv', function(data){
+    console.log(data)
+    for (var i = 0; i < 2; i++) {
+      console.log(data)
+    
+    }
+
+  })
 }
 
 // test , it works insie of contBTN()

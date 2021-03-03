@@ -31771,11 +31771,22 @@ function continueButton() {
     main[0].classList.remove('hidden');
     intro[0].classList.add('hidden');
     update();
+    loadData();
   });
 }
 
 function update() {
   d3__WEBPACK_IMPORTED_MODULE_2__["select"]('rect').transition().ease(d3__WEBPACK_IMPORTED_MODULE_2__["easeLinear"]).duration(3000).attr("fill", "blue");
+}
+
+function loadData() {
+  d3__WEBPACK_IMPORTED_MODULE_2__["csv"]('/dist/data/banana.csv', function (data) {
+    console.log(data);
+
+    for (var i = 0; i < 2; i++) {
+      console.log(data);
+    }
+  });
 } // test , it works insie of contBTN()
 
 

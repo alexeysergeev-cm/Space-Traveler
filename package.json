@@ -9,7 +9,7 @@
     "build": "webpack --watch --mode=development --watch",
     "dev-server": "webpack serve",
     "predeploy": "npm run build",
-    "deploy": "npm run build && gh-pages -d build" 
+    "deploy": "npm run build && gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +38,7 @@
   "keywords": [],
   "description": "",
   "dependencies": {
-    "d3": "^6.5.0"
+    "d3": "^6.5.0",
+    "http-server": "^0.12.3"
   }
 }

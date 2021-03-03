@@ -1,5 +1,5 @@
 body {
- background: #414a4c;
+ background: rgba(0, 0, 0, 0.9);
 }
 
 .title-cont{
@@ -12,10 +12,10 @@ body {
 
 .title{
   padding: 20px;
-  box-shadow: 8px -8px 20px 7px blue;
+  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);
   font-size: 70px;
   font-family: fantasy;
-  color: rgb(0, 0, 0);
+  color: white;
   border-radius: 20px;
   font-weight: 900;
 }
@@ -30,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgb(255, 215, 0);
+  border: 3px solid rgb(255, 215, 0);
   border-radius: 30px;
   height: 650px;
   width: auto;
@@ -54,7 +54,7 @@ body {
 
 @-webkit-keyframes animation {
     0%     {border-color:red;}
-    25.0%  {border-color: blue;}
+    25.0%  {border-color: orange;}
     50.0%  {border-color:rgb(255, 215, 0)}
     75.0%  {border-color: purple;}
     100.0% {border-color:red;}
@@ -62,7 +62,7 @@ body {
 
 @keyframes animation {
     0%     {border-color:red;}
-    25.0%  {border-color: blue;}
+    25.0%  {border-color: green;}
     50.0%  {border-color:rgb(255, 215, 0)}
     75.0%  {border-color: purple;}
     100.0% {border-color:red;}
@@ -70,13 +70,50 @@ body {
 
 .intro-text{
   font-size: 40px;
-  color: black;
+  color: white;
   font-family: fantasy;
   padding: 10px;
 }
 
 .intro > ul > li {
   padding: 5px;
-  color: chocolate;
+  color: darkgray;
   margin: 15px 0;
+}
+
+.intro > button{
+  margin-top: auto;
+  background: rgb(0 255 255);
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 14px;
+  box-shadow: orange 2px 2px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.intro > button > span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.intro > button > span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.intro > button:hover > span {
+  padding-right: 25px;
+}
+
+.intro > button:hover > span:after {
+  opacity: 1;
+  right: 0;
 }

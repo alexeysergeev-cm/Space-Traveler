@@ -19,3 +19,7 @@ body {
   width: auto;
   margin: 0 150px;
 }
+
+.intro.hidden{
+  display: none;
+}

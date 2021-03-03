@@ -31780,7 +31780,7 @@ function update() {
 }
 
 function loadData() {
-  d3__WEBPACK_IMPORTED_MODULE_2__["csv"]('/dist/data/banana.csv', function (data) {
+  d3__WEBPACK_IMPORTED_MODULE_2__["csv"]('/data/banana.csv', function (data) {
     console.log(data);
 
     for (var i = 0; i < 2; i++) {

@@ -1,6 +1,5 @@
 body {
- background: rgba(0, 0, 0, 0.9);
-
+ background-color: blue;
 }
 
 .title-cont{
@@ -16,7 +15,7 @@ body {
   box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);
   font-size: 70px;
   font-family: fantasy;
-  color: white;
+  color: black;
   border-radius: 20px;
   font-weight: 900;
 }

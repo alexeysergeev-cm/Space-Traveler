@@ -6,7 +6,17 @@ import * as d3 from 'd3';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  
+  d3.select('body')
+    .transition()
+    .duration(2000)
+    .ease(d3.easeCubic)
+    .style('background-color', 'black')
+
+  d3.select('h1')
+    .transition()
+    .duration(2000)
+    .ease(d3.easeLinear)
+    .style('color', 'white')
   
   continueButton()
 })
@@ -35,11 +45,10 @@ function continueButton(){
 
 
 function update() {
-  // // let body = d3.select('body')
-      d3.select('rect').transition()
-      .ease(d3.easeLinear)
-      .duration(3000)
-      .attr("fill", "blue")
+  d3.select('rect').transition()
+    .ease(d3.easeLinear)
+    .duration(3000)
+    .attr("fill", "blue")
 }
 
 // test , it works insie of contBTN()

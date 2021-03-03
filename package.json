@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --mode=development --watch",
+    "build": "webpack --watch --mode=development --watch",
     "dev-server": "webpack serve",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" 
+    "deploy": "npm run build && gh-pages -d build" 
   },
   "author": "",
   "license": "ISC",

@@ -57,11 +57,11 @@ async function loadDefaultData(){
   // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
   
   // debugger
-  d3.select("body")
+  d3.select(".planets-list")
     .selectAll("p")
     .data(arr)
     .enter().append("p")
-    .text(function(d) { return "I’m number " + d.st_dist + "!"; });
+    .text(function(d) { return d.pl_name });
  
 }
 

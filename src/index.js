@@ -51,11 +51,9 @@ function update() {
 }
 
 function loadData(){
-  d3.csv('/data/exoplanets.csv', function(data){
+  let arr = []
+  d3.csv('/data/exoplanetsFiltered.csv', function(data){
     console.log(data)
-    // for (var i = 0; i < 2; i++) {
-    //   console.log(data)
-    // }
   })
 }
 

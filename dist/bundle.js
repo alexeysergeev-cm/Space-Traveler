@@ -31780,10 +31780,9 @@ function update() {
 }
 
 function loadData() {
-  d3__WEBPACK_IMPORTED_MODULE_2__["csv"]('/data/exoplanets.csv', function (data) {
-    console.log(data); // for (var i = 0; i < 2; i++) {
-    //   console.log(data)
-    // }
+  var arr = [];
+  d3__WEBPACK_IMPORTED_MODULE_2__["csv"]('/data/exoplanetsFiltered.csv', function (data) {
+    console.log(data);
   });
 } // test , it works insie of contBTN()
 

@@ -1,6 +1,6 @@
 import '../css/reset.css'
 import '../css/main.css';
-// import './styles/index.scss';
+import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from 'd3';
 
 
@@ -50,14 +50,26 @@ function update() {
     .attr("fill", "blue")
 }
 
-function loadData(){
-  let arr = []
+async function loadData(){
+  // let arr = []
   // d3.csv('/data/exoplanetsFiltered.csv', function(data){
   //   console.log(data)
   // })
-  d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5', function(data){
-    console.log(data)
-  })
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5') //, function(data){
+    // console.log(data)  
+
+  // })
+  debugger
+  d3.select("body")
+    .selectAll("p")
+    .data(arr)
+    .enter().append("p")
+    .text(function(d) { return "I’m number " + d.st_dist + "!"; });
+  // d3.select("body")
+  // .selectAll("p")
+  // .data([4, 8, 15, 16, 23, 42])
+  // .enter().append("p")
+  //   .text(function(d) { return "I’m number " + d + "!"; });
 }
 
 // test , it works insie of contBTN()

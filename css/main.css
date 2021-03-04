@@ -181,13 +181,14 @@ body {
   /* border: 2px solid rgb(100 149 237); */
   display: flex;
   justify-content: space-between;
-  margin-top: 7px;
+  margin-top: 9px;
+  padding-bottom: 5px;
 }
 
 .left-switch{
   border: 1px solid rgb(255 192 203);
   padding: 5px;
-  margin-left: 25px;
+  margin-left: 35px;
   padding-top: 9px;
   background-color: rgb(255 127 80 / 40%);
 
@@ -215,7 +216,7 @@ body {
 .right-switch{
   border: 1px solid rgb(255 192 203);
   padding: 5px;
-  margin-right: 25px;
+  margin-right: 35px;
   padding-top: 9px;
   background-color: rgb(96 255 80 / 40%);
 }

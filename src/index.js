@@ -63,7 +63,7 @@ async function loadDefaultData(){
   d3.select(".right-switch")
     .select('button')
     .style('background-color', 'rgb(90 250 13)')
-  
+      
   // let arr = []
   // d3.csv('/data/exoplanetsFiltered.csv', function(data){
   //   console.log(data)
@@ -72,25 +72,26 @@ async function loadDefaultData(){
   // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
   
   // debugger
-  d3.select(".planets-list")
-    .selectAll("p")
-    .data(arr)
-    .enter().append("p")
-    .text(function(d) { return d.pl_name });
+  // d3.select(".planets-list")
+  //   .selectAll("p")
+  //   .data(arr)
+  //   .enter().append("p")
+  //   .text(function(d) { return d.pl_name });
  
+
+  d3.selectAll('button')
+    .on('click', (e) => { 
+      let ele = e.currentTarget.parentElement.classList[0]
+      d3.select('.' + ele)
+        .selectAll('button')
+        .style('background-color', 'red')
+      e.currentTarget.style.backgroundColor = 'rgb(90 250 13)'
+    })
 }
 
-// document.getElementsByClassName('left-switch').addEventListener('click', function(){
-//   debugger
-//   console.log(this)
-// })
 
-
-d3.selectAll(".left-switch").style('background-color', 'red')
-  // .on('click', function(){
-  //   debugger
-  //   console.log(this)
-  //   d3.select('.left-switch')
-  //     .style('background-color', 'green')
-
-  // })
+document.getElementsByTagName('button')
+  .on('click', (e) => { 
+    debugger
+    e.currentTarget.style('background-color', 'green') 
+  })

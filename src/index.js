@@ -78,7 +78,11 @@ async function loadDefaultData(){
 
   d3.selectAll('button')
     .on('click', (e) => { 
+      if (e.currentTarget.innerText === "5-10 parsecs") {
+        loadMediumDistance()
+      }
       let ele = e.currentTarget.parentElement.classList[0]
+      debugger
       d3.select('.' + ele)
         .selectAll('button')
         .style('background-color', 'red')
@@ -86,3 +90,13 @@ async function loadDefaultData(){
     })
 }
 
+
+async function loadMediumDistance(){
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10') // default nasa api
+  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+  d3.select(".planets-list")
+    .selectAll("p")
+    .data(arr)
+    .enter().append("p")
+    .text(function(d) { return d.pl_name });
+}

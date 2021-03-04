@@ -32571,7 +32571,12 @@ function _loadDefaultData() {
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select('button').style('background-color', 'rgb(90 250 13)');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)');
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('button').on('click', function (e) {
+              if (e.currentTarget.innerText === "5-10 parsecs") {
+                loadMediumDistance();
+              }
+
               var ele = e.currentTarget.parentElement.classList[0];
+              debugger;
               d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red');
               e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
             });
@@ -32584,6 +32589,38 @@ function _loadDefaultData() {
     }, _callee);
   }));
   return _loadDefaultData.apply(this, arguments);
+}
+
+function loadMediumDistance() {
+  return _loadMediumDistance.apply(this, arguments);
+}
+
+function _loadMediumDistance() {
+  _loadMediumDistance = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+    var arr;
+    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10');
+
+          case 2:
+            arr = _context2.sent;
+            // default nasa api
+            // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
+              return d.pl_name;
+            });
+
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return _loadMediumDistance.apply(this, arguments);
 }
 
 /***/ })

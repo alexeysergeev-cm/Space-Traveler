@@ -52,7 +52,10 @@ function update() {
 
 function loadData(){
   let arr = []
-  d3.csv('/data/exoplanetsFiltered.csv', function(data){
+  // d3.csv('/data/exoplanetsFiltered.csv', function(data){
+  //   console.log(data)
+  // })
+  d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5', function(data){
     console.log(data)
   })
 }

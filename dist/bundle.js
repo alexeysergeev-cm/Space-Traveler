@@ -31780,8 +31780,11 @@ function update() {
 }
 
 function loadData() {
-  var arr = [];
-  d3__WEBPACK_IMPORTED_MODULE_2__["csv"]('/data/exoplanetsFiltered.csv', function (data) {
+  var arr = []; // d3.csv('/data/exoplanetsFiltered.csv', function(data){
+  //   console.log(data)
+  // })
+
+  d3__WEBPACK_IMPORTED_MODULE_2__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5', function (data) {
     console.log(data);
   });
 } // test , it works insie of contBTN()

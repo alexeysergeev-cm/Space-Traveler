@@ -32549,35 +32549,34 @@ function loadDefaultData() {
 
 function _loadDefaultData() {
   _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    var arr;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            //all btns
+            _context.next = 2;
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5');
+
+          case 2:
+            arr = _context.sent;
+            // default nasa api
+            // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
+              return d.pl_name;
+            }); //all btns
+
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
 
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select('button').style('background-color', 'rgb(90 250 13)');
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)'); // let arr = []
-            // d3.csv('/data/exoplanetsFiltered.csv', function(data){
-            //   console.log(data)
-            // })
-            // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5') // default nasa api
-            // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
-            // debugger
-            // d3.select(".planets-list")
-            //   .selectAll("p")
-            //   .data(arr)
-            //   .enter().append("p")
-            //   .text(function(d) { return d.pl_name });
-
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)');
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('button').on('click', function (e) {
               var ele = e.currentTarget.parentElement.classList[0];
               d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red');
               e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
             });
 
-          case 5:
+          case 9:
           case "end":
             return _context.stop();
         }
@@ -32586,11 +32585,6 @@ function _loadDefaultData() {
   }));
   return _loadDefaultData.apply(this, arguments);
 }
-
-document.getElementsByTagName('button').on('click', function (e) {
-  debugger;
-  e.currentTarget.style('background-color', 'green');
-});
 
 /***/ })
 

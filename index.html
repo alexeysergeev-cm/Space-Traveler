@@ -4,21 +4,75 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type='text/css' href="css/reset.css">
+  <link rel="stylesheet" type='text/css' href="css/main.css">
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+
+  <script src="./dist/bundle.js"></script>
   <title>Space Traveler</title>
 </head>
+
+
 <body>
-  <h1 class="title">Space Traveler</h1>
-  <div class="main-div">
-
+  
+  <div class='title-cont'>
+    <svg id='mainSVG' width="300" height="200">
+      <rect x="0" y="0" width="5" height="5" fill='lightblue' transform="translate(120,100) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='white' transform="translate(40,10) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='purple' transform="translate(260,50) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="7" height="7" fill='aqua' transform="translate(10,150) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
+      </rect>5
+      <rect x="0" y="0" width="5" height="5" fill='green' transform="translate(230,170) rotate(55)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="6s" repeatCount="indefinite" />
+      </rect>
+    </svg>
+    <h1 class="title">Space Traveler</h1>
+    <svg id='mainSVG' width="300" height="200">
+      <rect x="0" y="0" width="5" height="5" fill='lightblue' transform="translate(160,100) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='white' transform="translate(80,10) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='purple' transform="translate(290, 0) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="7" height="7" fill='aqua' transform="translate(30,150) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="7s" repeatCount="indefinite" />
+      </rect>5
+      <rect x="0" y="0" width="5" height="5" fill='green' transform="translate(270,130) rotate(55)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
+      </rect>
+    </svg>
   </div>
-
+  
+  <div class="main-cont">
+    <div class="main-div">
+      <h1 class="welcome">Welcome dear traveler, this station take you to the destinations outside of our solar system.</h1>
+    </div>
+  </div>
+  
   <div class="intro">
-    <h2>Important Information</h2>
-    <p>
-      Here is an educational information for you
-    </p>
-    <button>I see, continue</button>
+    <h4 class='intro-text'>Important Information</h4>
+    <ul>
+      <li>A global average human life expectancy is 72.6 years</li>
+      <li>The sun's rotation period is 25 days at the equator</li>
+      <li>The speed of light 671,000,000 mph</li>
+      <li>Fastest human spaceflight reached a top speed of 24,791 mph (1 / 27,000 the speed of light)</li>
+      <li>Distance: 1 parsec = 4.24 light years</li>
+    </ul>
+    
+    <button><span>I see, continue</span></button>
   </div>
-  <script src="./dist/bundle.js"></script>
+  
 </body>
 </html>

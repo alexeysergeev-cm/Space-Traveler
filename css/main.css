@@ -1,0 +1,137 @@
+body {
+ background-color: blue;
+}
+
+.title-cont{
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  padding-bottom: 0;
+
+}
+
+.title{
+  padding: 20px;
+  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);
+  font-size: 70px;
+  font-family: fantasy;
+  color: black;
+  border-radius: 20px;
+  font-weight: 900;
+  height: 69px;
+}
+ 
+.main-cont{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.welcome{
+  color: white;
+}
+
+.main-div{
+  display: flex;  
+  border: 3px dotted rgb(255 255 255);
+  border-radius: 5px;
+  height: 800px;
+  width: 1200px;
+  margin: 0 30px;
+}
+
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid rgb(255, 215, 0);
+  border-radius: 30px;
+  height: 650px;
+  width: auto;
+  margin: 0 150px;
+  padding: 15px;
+  max-width: 700px;
+  margin: auto;
+}
+
+
+.intro.hidden, .main-div.hidden{
+  display: none;
+}
+
+.intro{
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;    
+    animation-play-state: running;
+}
+
+
+@-webkit-keyframes animation {
+    0%     {border-color:red;}
+    25.0%  {border-color: orange;}
+    50.0%  {border-color:rgb(255, 215, 0)}
+    75.0%  {border-color: purple;}
+    100.0% {border-color:red;}
+}
+
+@keyframes animation {
+    0%     {border-color:red;}
+    25.0%  {border-color: green;}
+    50.0%  {border-color:rgb(255, 215, 0)}
+    75.0%  {border-color: purple;}
+    100.0% {border-color:red;}
+}
+
+.intro-text{
+  font-size: 40px;
+  color: white;
+  font-family: fantasy;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.intro > ul > li {
+  padding: 5px;
+  color: darkgray;
+  margin: 15px 0;
+}
+
+.intro > button{
+  margin-top: auto;
+  background: rgb(0 255 255);
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 14px;
+  box-shadow: orange 2px 2px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.intro > button > span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.intro > button > span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.intro > button:hover > span {
+  padding-right: 25px;
+}
+
+.intro > button:hover > span:after {
+  opacity: 1;
+  right: 0;
+}

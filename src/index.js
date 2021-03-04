@@ -21,16 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
   continueButton()
 })
 
-function continueButton(){
-  
+function continueButton(){  
   const main = document.getElementsByClassName('main-div')
   main[0].classList.add('hidden')
-  
-  // d3.select("li").style("color", "green"); test
-  
+
   const intro = document.getElementsByClassName('intro')
   intro[0].classList.remove('hidden')
-  // debugger
+
   let button = intro[0].lastElementChild
   button.addEventListener('click', () => {
     main[0].classList.remove('hidden')
@@ -49,6 +46,23 @@ function mainPageTransition() {
 }
 
 async function loadDefaultData(){
+
+  //all btns
+  d3.select(".left-switch")
+    .selectAll('button')
+    .style('background-color', 'red')
+  d3.select(".right-switch")
+    .selectAll('button')
+    .style('background-color', 'red')
+
+  //default
+  d3.select(".left-switch")
+    .select('button')
+    .style('background-color', 'rgb(90 250 13)')
+  d3.select(".right-switch")
+    .select('button')
+    .style('background-color', 'rgb(90 250 13)')
+  
   // let arr = []
   // d3.csv('/data/exoplanetsFiltered.csv', function(data){
   //   console.log(data)

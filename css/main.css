@@ -155,7 +155,7 @@ body {
   border: 3px solid rgb(255 0 0);
   margin: 5px;
   overflow: auto;
-  height: 732px;
+  height: 659px;
 
 }
 
@@ -181,26 +181,40 @@ body {
   /* border: 2px solid rgb(100 149 237); */
   display: flex;
   justify-content: space-between;
+  margin-top: 7px;
 }
 
 .left-switch{
   border: 1px solid rgb(255 192 203);
   padding: 5px;
   margin-left: 25px;
+  padding-top: 9px;
+
 }
 
 .left-switch > label{
   display: block;
   color: rgb(245 222 179);
+  text-rendering: geometricprecision;
+  text-align: center;
+  font-family: serif;
+  text-decoration: overline;
+  text-decoration-color: rgb(0 133 255);
 }
 
 .right-switch{
   border: 1px solid rgb(255 192 203);
   padding: 5px;
   margin-right: 25px;
+  padding-top: 9px;
 }
 
 .right-switch > label{
   display: block;
   color: rgb(245 222 179);
+  text-rendering: geometricprecision;
+  text-align: center;
+  font-family: serif;
+  text-decoration: overline;
+  text-decoration-color: rgb(255 255 0);
 }

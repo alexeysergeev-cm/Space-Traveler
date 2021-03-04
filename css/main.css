@@ -6,8 +6,8 @@ body {
   display: flex;
   padding: 50px;
   justify-content: center;
-  
-  
+  padding-bottom: 0;
+
 }
 
 .title{
@@ -18,11 +18,26 @@ body {
   color: black;
   border-radius: 20px;
   font-weight: 900;
+  height: 69px;
 }
  
+.main-cont{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.welcome{
+  color: white;
+}
 
 .main-div{
   display: flex;  
+  border: 3px dotted rgb(255 255 255);
+  border-radius: 5px;
+  height: 800px;
+  width: 1200px;
+  margin: 0 30px;
 }
 
 

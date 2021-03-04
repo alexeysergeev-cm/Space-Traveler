@@ -53,7 +53,7 @@ async function loadDefaultData(){
   // d3.csv('/data/exoplanetsFiltered.csv', function(data){
   //   console.log(data)
   // })
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5') // default nasa api
+  // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5') // default nasa api
   // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
   
   // debugger
@@ -65,16 +65,17 @@ async function loadDefaultData(){
  
 }
 
-// test , it works insie of contBTN()
+// document.getElementsByClassName('left-switch').addEventListener('click', function(){
+//   debugger
+//   console.log(this)
+// })
 
-let mainSVG = d3.select('#mainSVG')
-let data = [
-  [150, 150],
-  [500,500]
-]
 
-let linGenerator = d3.line()
-mainSVG.append('path')
-  .attr('d', linGenerator(data))
-  .style('stroke', 'green')
-  .style('fill', 'blue')
+d3.selectAll(".left-switch").style('background-color', 'red')
+  // .on('click', function(){
+  //   debugger
+  //   console.log(this)
+  //   d3.select('.left-switch')
+  //     .style('background-color', 'green')
+
+  // })

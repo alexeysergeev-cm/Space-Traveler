@@ -7,7 +7,7 @@ body {
   padding: 50px;
   justify-content: center;
   padding-bottom: 0;
-
+  height: 120px;
 }
 
 .title{
@@ -39,6 +39,9 @@ body {
   padding: 10px;
   margin-top: 5px;
   padding-bottom: 0px;
+  text-align: center;
+  width: fit-content;
+
 }
 
 .main-div{
@@ -172,4 +175,32 @@ body {
   width: 157px;
   padding-left: 15px;
   line-height: 1.5;
+}
+
+.switch-controller{
+  /* border: 2px solid rgb(100 149 237); */
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-switch{
+  border: 1px solid rgb(255 192 203);
+  padding: 5px;
+  margin-left: 25px;
+}
+
+.left-switch > label{
+  display: block;
+  color: rgb(245 222 179);
+}
+
+.right-switch{
+  border: 1px solid rgb(255 192 203);
+  padding: 5px;
+  margin-right: 25px;
+}
+
+.right-switch > label{
+  display: block;
+  color: rgb(245 222 179);
 }

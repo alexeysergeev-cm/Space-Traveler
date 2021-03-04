@@ -51,13 +51,11 @@ function update() {
 }
 
 function loadData(){
-  d3.csv('/data/banana.csv', function(data){
+  d3.csv('/data/exoplanets.csv', function(data){
     console.log(data)
-    for (var i = 0; i < 2; i++) {
-      console.log(data)
-    
-    }
-
+    // for (var i = 0; i < 2; i++) {
+    //   console.log(data)
+    // }
   })
 }
 

@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .ease(d3.easeLinear)
     .style('color', 'white')
   
-  continueButton()
+  // continueButton()
+  loadDefaultData()
 })
 
 function continueButton(){  
@@ -55,7 +56,7 @@ async function loadDefaultData(){
     .selectAll('button')
     .style('background-color', 'red')
 
-  //default
+  //default btn green
   d3.select(".left-switch")
     .select('button')
     .style('background-color', 'rgb(90 250 13)')

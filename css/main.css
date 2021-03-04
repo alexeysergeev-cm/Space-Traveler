@@ -189,6 +189,7 @@ body {
   padding: 5px;
   margin-left: 25px;
   padding-top: 9px;
+  background-color: rgb(255 127 80 / 40%);
 
 }
 
@@ -202,11 +203,21 @@ body {
   text-decoration-color: rgb(0 133 255);
 }
 
+.left-switch > button, .right-switch > button {
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  cursor: pointer;
+}
+
+
 .right-switch{
   border: 1px solid rgb(255 192 203);
   padding: 5px;
   margin-right: 25px;
   padding-top: 9px;
+  background-color: rgb(96 255 80 / 40%);
 }
 
 .right-switch > label{
@@ -217,4 +228,12 @@ body {
   font-family: serif;
   text-decoration: overline;
   text-decoration-color: rgb(255 255 0);
+}
+
+.dashboard{
+  color: rgb(240 248 255);
+  font-size: 48px;
+  padding-top: 10px;
+  font-family: system-ui;
+  text-shadow: 3px 3px 1px darkviolet;
 }

@@ -251,3 +251,27 @@ body {
   background: rgb(255 255 255 / 30%);
   border-radius: 5px;
 }
+
+.main-display{
+  display: flex;
+  justify-content: start;
+}
+
+.data-cont{
+  padding: 5px;
+}
+
+.planet-data{
+  height: 350px;
+  width: 500px;
+  border: 1px solid rgb(0 128 0);
+}
+
+.other-data{
+  height: 291px;
+  width: 500px;
+  border: 1px solid rgb(0 128 0);
+  padding-top: 2px;
+  margin-top: 10px;
+}
+

@@ -73,66 +73,57 @@ async function loadDefaultData(){
   d3.select(".right-switch")
     .select('button')
     .style('background-color', 'rgb(90 250 13)')
-      
+     
+  //store data from api request
+  let data;
 
- 
   //selecting distance
   d3.selectAll('button')
-    .on('click', (e) => { 
-      if (e.currentTarget.innerText === "5-10 parsecs") {
-        loadMedium()
-      } else if (e.currentTarget.innerText === "< 5 parsecs") {
-        loadNear()
-      } else if (e.currentTarget.innerText === "10+ parsecs") {
-        loadFar()
-      }
-
+    .on('click', async (e) => { 
       let ele = e.currentTarget.parentElement.classList[0]
       d3.select('.' + ele)
         .selectAll('button')
         .style('background-color', 'red')
       e.currentTarget.style.backgroundColor = 'rgb(90 250 13)'
+
+      if (e.currentTarget.innerText === "< 5 parsecs") {
+        data = await loadNear() 
+      } else if (e.currentTarget.innerText === "5-10 parsecs") {
+        data = await loadMedium()
+      } else if (e.currentTarget.innerText === "10+ parsecs") {
+        data = await loadFar()
+      }
     })
+
 }
 
 async function loadNear(){
-  //clear the list
-   d3.select(".planets-list")
-    .selectAll("p").remove()
-
   let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
-  d3.select(".planets-list")
-    .selectAll("p")
-    .data(arr)
-    .enter().append("p")
-    .text(function(d) { return d.pl_name });
+  populateNames(arr)
+  return arr
 }
 
 async function loadMedium(){
-  //clear the list
-   d3.select(".planets-list")
-    .selectAll("p").remove()
-
   let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist') // default nasa api
-  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
-  d3.select(".planets-list")
-    .selectAll("p")
-    .data(arr)
-    .enter().append("p")
-    .text(function(d) { return d.pl_name });
+  populateNames(arr)
+  return arr
 }
 
 async function loadFar(){
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>11 and st_dist<13&order=st_dist') // default nasa api
+  populateNames(arr)
+  return arr
+}
+
+async function populateNames(arr){
   //clear the list
    d3.select(".planets-list")
     .selectAll("p").remove()
-
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>11 and st_dist<13&order=st_dist') // default nasa api
-  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+  //append new items
   d3.select(".planets-list")
     .selectAll("p")
     .data(arr)
     .enter().append("p")
     .text(function(d) { return d.pl_name });
 }
+

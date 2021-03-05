@@ -185,6 +185,12 @@ function showPlanetStats(planet){
   let humanGenerations = yearsToReach / 30 // 30 years between generations
   let humanData = [yearsToReach, humanGenerations]
 
+  //planet stats
+
+  let scale1 = d3.scaleLinear()
+            .domain([1, 20000])
+            .range([1, 490]);
+
   let graph = d3.select(".planet-data")
                 .append("svg")
                 .attr("width", width)
@@ -195,19 +201,25 @@ function showPlanetStats(planet){
                   .enter()
                   .append("g")
                   .attr("transform", function(d, i) {
-                        return "translate(0," + i * barHeight + ")";
+                      if (i === 0){
+                        return "translate(0,15)";
+                      } else if (i === 1) {
+                        return "translate(0,70)";
+                      } else if (i === 2){
+                        return "translate(0,115)";
+                      }
                   });
   
   bar.append("rect")
       .attr("width", function(d) {
               return d * scaleFactor;
       })
-      .attr("height", barHeight - 1)
+      .attr("height", barHeight - 10)
       .attr("fill", 'red')
 
   bar.append("text")
-      .attr("x", function (d) { return (d); })
-      .attr("y", barHeight / 2)
+      .attr("x", 0)
+      .attr("y", -10 )
       .attr("dy", ".35em")
       .attr("stroke", "white")
       .attr("font-size", "14px")
@@ -223,7 +235,7 @@ function showPlanetStats(planet){
       })
 
   //human-related data
-  var scale = d3.scaleLinear()
+  let scale = d3.scaleLinear()
             .domain([2000, 770000])
             .range([50, 490]);
 

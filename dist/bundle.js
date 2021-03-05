@@ -32960,17 +32960,23 @@ function showPlanetStats(planet) {
   var yearsToReach = totalMilesToDestination / (voyagerSpeed * day * yearLength);
   var humanGenerations = yearsToReach / 30; // 30 years between generations
 
-  var humanData = [yearsToReach, humanGenerations];
+  var humanData = [yearsToReach, humanGenerations]; //planet stats
+
+  var scale1 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([1, 20000]).range([1, 490]);
   var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").append("svg").attr("width", width).attr("height", height);
   var bar = graph.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
-    return "translate(0," + i * barHeight + ")";
+    if (i === 0) {
+      return "translate(0,15)";
+    } else if (i === 1) {
+      return "translate(0,70)";
+    } else if (i === 2) {
+      return "translate(0,115)";
+    }
   });
   bar.append("rect").attr("width", function (d) {
     return d * scaleFactor;
-  }).attr("height", barHeight - 1).attr("fill", 'red');
-  bar.append("text").attr("x", function (d) {
-    return d;
-  }).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "14px").attr("font-family", "fantasy").text(function (d, i) {
+  }).attr("height", barHeight - 10).attr("fill", 'red');
+  bar.append("text").attr("x", 0).attr("y", -10).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "14px").attr("font-family", "fantasy").text(function (d, i) {
     if (i === 0) {
       return parseInt(d) + ' Light Years';
     } else if (i === 1) {

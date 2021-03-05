@@ -261,6 +261,20 @@ body {
   padding: 5px;
 }
 
+.data-info{
+  text-align: center;
+  padding: 5px;
+  font-family: monospace;
+  background-color: rgb(139 0 139);
+}
+
+.other-info{
+  text-align: center;
+  padding: 5px;
+  font-family: monospace;
+  background-color: rgb(0 0 255);
+}
+
 .planet-data{
   height: 350px;
   width: 500px;

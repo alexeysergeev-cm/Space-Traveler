@@ -32570,11 +32570,14 @@ function _loadDefaultData() {
 
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('button').on('click', function (e) {
               if (e.currentTarget.innerText === "5-10 parsecs") {
-                loadMediumDistance();
+                loadMedium();
+              } else if (e.currentTarget.innerText === "< 5 parsecs") {
+                loadNear();
+              } else if (e.currentTarget.innerText === "10+ parsecs") {
+                loadFar();
               }
 
               var ele = e.currentTarget.parentElement.classList[0];
-              debugger;
               d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red');
               e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
             });
@@ -32589,12 +32592,12 @@ function _loadDefaultData() {
   return _loadDefaultData.apply(this, arguments);
 }
 
-function loadMediumDistance() {
-  return _loadMediumDistance.apply(this, arguments);
+function loadNear() {
+  return _loadNear.apply(this, arguments);
 }
 
-function _loadMediumDistance() {
-  _loadMediumDistance = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+function _loadNear() {
+  _loadNear = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
     var arr;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
@@ -32603,7 +32606,7 @@ function _loadMediumDistance() {
             //clear the list
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").remove();
             _context2.next = 3;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist&limit=3');
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist');
 
           case 3:
             arr = _context2.sent;
@@ -32620,7 +32623,75 @@ function _loadMediumDistance() {
       }
     }, _callee2);
   }));
-  return _loadMediumDistance.apply(this, arguments);
+  return _loadNear.apply(this, arguments);
+}
+
+function loadMedium() {
+  return _loadMedium.apply(this, arguments);
+}
+
+function _loadMedium() {
+  _loadMedium = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
+    var arr;
+    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            //clear the list
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").remove();
+            _context3.next = 3;
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist');
+
+          case 3:
+            arr = _context3.sent;
+            // default nasa api
+            // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
+              return d.pl_name;
+            });
+
+          case 5:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  return _loadMedium.apply(this, arguments);
+}
+
+function loadFar() {
+  return _loadFar.apply(this, arguments);
+}
+
+function _loadFar() {
+  _loadFar = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
+    var arr;
+    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            //clear the list
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").remove();
+            _context4.next = 3;
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<15&order=st_dist');
+
+          case 3:
+            arr = _context4.sent;
+            // default nasa api
+            // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
+              return d.pl_name;
+            });
+
+          case 5:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
+  return _loadFar.apply(this, arguments);
 }
 
 /***/ })

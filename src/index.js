@@ -80,10 +80,14 @@ async function loadDefaultData(){
   d3.selectAll('button')
     .on('click', (e) => { 
       if (e.currentTarget.innerText === "5-10 parsecs") {
-        loadMediumDistance()
+        loadMedium()
+      } else if (e.currentTarget.innerText === "< 5 parsecs") {
+        loadNear()
+      } else if (e.currentTarget.innerText === "10+ parsecs") {
+        loadFar()
       }
+      
       let ele = e.currentTarget.parentElement.classList[0]
-      debugger
       d3.select('.' + ele)
         .selectAll('button')
         .style('background-color', 'red')
@@ -91,13 +95,40 @@ async function loadDefaultData(){
     })
 }
 
-
-async function loadMediumDistance(){
+async function loadNear(){
   //clear the list
    d3.select(".planets-list")
     .selectAll("p").remove()
 
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist&limit=3') // default nasa api
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
+  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+  d3.select(".planets-list")
+    .selectAll("p")
+    .data(arr)
+    .enter().append("p")
+    .text(function(d) { return d.pl_name });
+}
+
+async function loadMedium(){
+  //clear the list
+   d3.select(".planets-list")
+    .selectAll("p").remove()
+
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist') // default nasa api
+  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+  d3.select(".planets-list")
+    .selectAll("p")
+    .data(arr)
+    .enter().append("p")
+    .text(function(d) { return d.pl_name });
+}
+
+async function loadFar(){
+  //clear the list
+   d3.select(".planets-list")
+    .selectAll("p").remove()
+
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<15&order=st_dist') // default nasa api
   // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
   d3.select(".planets-list")
     .selectAll("p")

@@ -19,6 +19,7 @@ body {
   border-radius: 20px;
   font-weight: 900;
   height: 69px;
+  width: 40vw;
 }
  
 .main-cont{
@@ -161,7 +162,10 @@ body {
 
 .planets-name{
   color:rgb(0, 255, 136);
-
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  text-shadow: 2px 2px 0px darkolivegreen;
 }
 
 .planets-list{
@@ -173,7 +177,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 157px;
-  padding-left: 15px;
+  padding-left: 5px;
   line-height: 1.5;
 }
 
@@ -237,4 +241,14 @@ body {
   padding-top: 10px;
   font-family: system-ui;
   text-shadow: 3px 3px 1px darkviolet;
+}
+
+.planets-list > p {
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+.planets-list > p:hover {
+  background: rgb(255 255 255 / 30%);
+  border-radius: 5px;
 }

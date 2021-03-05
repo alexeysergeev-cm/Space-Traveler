@@ -32522,7 +32522,7 @@ document.addEventListener('DOMContentLoaded', function () {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('body').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style('background-color', 'black');
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white'); // continueButton()
 
-  loadDefaultData();
+  loadDefaultData(); // remove after development
 });
 
 function continueButton() {
@@ -32549,7 +32549,7 @@ function loadDefaultData() {
 
 function _loadDefaultData() {
   _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-    var data;
+    var data, planetsList;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -32632,8 +32632,19 @@ function _loadDefaultData() {
                 return _ref.apply(this, arguments);
               };
             }());
+            planetsList = document.getElementsByClassName('planets-list');
 
-          case 5:
+            if (planetsList.length) {
+              planetsList[0].addEventListener('click', function (e) {
+                data.forEach(function (planet) {
+                  if (e.target.innerText === planet.pl_name) {
+                    showPlanetStats(planet);
+                  }
+                });
+              });
+            }
+
+          case 7:
           case "end":
             return _context2.stop();
         }
@@ -32758,6 +32769,22 @@ function _populateNames() {
     }, _callee6);
   }));
   return _populateNames.apply(this, arguments);
+}
+
+function showPlanetStats(planet) {
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").selectAll("svg").remove();
+  var data = [planet.st_dist, planet.pl_pnum, planet.pl_orbper];
+  var width = 500;
+  var height = 350;
+  var scaleFactor = 10;
+  var barHeight = 20;
+  var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").append("svg").attr("width", width).attr("height", height);
+  var bar = graph.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
+    return "translate(0," + i * barHeight + ")";
+  });
+  bar.append("rect").attr("width", function (d) {
+    return d * scaleFactor;
+  }).attr("height", barHeight - 1).attr("fill", 'red');
 }
 
 /***/ })

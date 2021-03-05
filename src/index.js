@@ -18,19 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     .ease(d3.easeLinear)
     .style('color', 'white')
   
-  continueButton()
+  // continueButton()
+  loadDefaultData()
 })
 
-function continueButton(){
-  
+function continueButton(){  
   const main = document.getElementsByClassName('main-div')
   main[0].classList.add('hidden')
-  
-  // d3.select("li").style("color", "green"); test
-  
+
   const intro = document.getElementsByClassName('intro')
   intro[0].classList.remove('hidden')
-  // debugger
+
   let button = intro[0].lastElementChild
   button.addEventListener('click', () => {
     main[0].classList.remove('hidden')
@@ -49,32 +47,83 @@ function mainPageTransition() {
 }
 
 async function loadDefaultData(){
-  // let arr = []
-  // d3.csv('/data/exoplanetsFiltered.csv', function(data){
-  //   console.log(data)
-  // })
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5') // default nasa api
-  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
   
-  // debugger
-  d3.select("body")
+  //load Default data
+  // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
+  // // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+  // d3.select(".planets-list")
+  //   .selectAll("p")
+  //   .data(arr)
+  //   .enter().append("p")
+  //   .text(function(d) { return d.pl_name });
+
+
+  //all btns
+  d3.select(".left-switch")
+    .selectAll('button')
+    .style('background-color', 'red')
+  d3.select(".right-switch")
+    .selectAll('button')
+    .style('background-color', 'red')
+
+  //default btn green
+  d3.select(".left-switch")
+    .select('button')
+    .style('background-color', 'rgb(90 250 13)')
+  d3.select(".right-switch")
+    .select('button')
+    .style('background-color', 'rgb(90 250 13)')
+     
+  //store data from api request
+  let data;
+
+  //selecting distance
+  d3.selectAll('button')
+    .on('click', async (e) => { 
+      let ele = e.currentTarget.parentElement.classList[0]
+      d3.select('.' + ele)
+        .selectAll('button')
+        .style('background-color', 'red')
+      e.currentTarget.style.backgroundColor = 'rgb(90 250 13)'
+
+      if (e.currentTarget.innerText === "< 5 parsecs") {
+        data = await loadNear() 
+      } else if (e.currentTarget.innerText === "5-10 parsecs") {
+        data = await loadMedium()
+      } else if (e.currentTarget.innerText === "10+ parsecs") {
+        data = await loadFar()
+      }
+    })
+
+}
+
+async function loadNear(){
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
+  populateNames(arr)
+  return arr
+}
+
+async function loadMedium(){
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist') // default nasa api
+  populateNames(arr)
+  return arr
+}
+
+async function loadFar(){
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>11 and st_dist<13&order=st_dist') // default nasa api
+  populateNames(arr)
+  return arr
+}
+
+async function populateNames(arr){
+  //clear the list
+   d3.select(".planets-list")
+    .selectAll("p").remove()
+  //append new items
+  d3.select(".planets-list")
     .selectAll("p")
     .data(arr)
     .enter().append("p")
-    .text(function(d) { return "I’m number " + d.st_dist + "!"; });
- 
+    .text(function(d) { return d.pl_name });
 }
 
-// test , it works insie of contBTN()
-
-let mainSVG = d3.select('#mainSVG')
-let data = [
-  [150, 150],
-  [500,500]
-]
-
-let linGenerator = d3.line()
-mainSVG.append('path')
-  .attr('d', linGenerator(data))
-  .style('stroke', 'green')
-  .style('fill', 'blue')

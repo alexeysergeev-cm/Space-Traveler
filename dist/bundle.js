@@ -32520,9 +32520,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 document.addEventListener('DOMContentLoaded', function () {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('body').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style('background-color', 'black');
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white'); // continueButton()
-
-  loadDefaultData(); // remove after development
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white');
+  continueButton(); // loadDefaultData() // remove after development
 });
 
 function continueButton() {
@@ -32549,20 +32548,22 @@ function loadDefaultData() {
 
 function _loadDefaultData() {
   _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-    var data, planetsList;
+    var arr, data, planetsList;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            //load Default data
-            // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-            // // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
-            // d3.select(".planets-list")
-            //   .selectAll("p")
-            //   .data(arr)
-            //   .enter().append("p")
-            //   .text(function(d) { return d.pl_name });
-            //all btns
+            _context2.next = 2;
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist');
+
+          case 2:
+            arr = _context2.sent;
+            // default nasa api
+            // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
+              return d.pl_name;
+            }); //all btns
+
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
 
@@ -32644,7 +32645,7 @@ function _loadDefaultData() {
               });
             }
 
-          case 7:
+          case 11:
           case "end":
             return _context2.stop();
         }

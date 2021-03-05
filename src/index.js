@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .ease(d3.easeLinear)
     .style('color', 'white')
   
-  // continueButton()
-  loadDefaultData() // remove after development
+  continueButton()
+  // loadDefaultData() // remove after development
 })
 
 function continueButton(){  
@@ -49,13 +49,13 @@ function mainPageTransition() {
 async function loadDefaultData(){
   
   //load Default data
-  // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-  // // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
-  // d3.select(".planets-list")
-  //   .selectAll("p")
-  //   .data(arr)
-  //   .enter().append("p")
-  //   .text(function(d) { return d.pl_name });
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
+  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+  d3.select(".planets-list")
+    .selectAll("p")
+    .data(arr)
+    .enter().append("p")
+    .text(function(d) { return d.pl_name });
 
 
   //all btns

@@ -182,7 +182,7 @@ function showPlanetStats(planet){
 
   let totalMilesToDestination = lightYearDistInMiles * data[0]
   let yearsToReach = totalMilesToDestination / (voyagerSpeed * day * yearLength)
-  let humanGenerations = yearsToReach / 30
+  let humanGenerations = yearsToReach / 30 // 30 years between generations
   let humanData = [yearsToReach, humanGenerations]
 
   let graph = d3.select(".planet-data")
@@ -202,15 +202,37 @@ function showPlanetStats(planet){
       .attr("width", function(d) {
               return d * scaleFactor;
       })
-      .attr("height", barHeight - 5)
+      .attr("height", barHeight - 1)
       .attr("fill", 'red')
 
+  bar.append("text")
+      .attr("x", function (d) { return (d); })
+      .attr("y", barHeight / 2)
+      .attr("dy", ".35em")
+      .attr("stroke", "white")
+      .attr("font-size", "14px")
+      .attr("font-family", "fantasy")
+      .text(function (d, i) {
+        if (i === 0) {
+          return parseInt(d) + ' Light Years'
+        } else if (i === 1) {
+          return parseInt(d) + ' Planet Number'
+        } else if (i === 2){
+          return parseInt(d) + ' Planet Orbital Period (in days)'
+        }
+      })
+
   //human-related data
+  var scale = d3.scaleLinear()
+            .domain([2000, 770000])
+            .range([50, 490]);
+
   d3.select(".other-data")
     .selectAll("svg").remove()
 
   let otherWidth = 500;
   let otherHeight = 290;
+
   let graph2 = d3.select(".other-data")
                 .append("svg")
                 .attr("width", otherWidth)
@@ -226,9 +248,24 @@ function showPlanetStats(planet){
   
   bar2.append("rect")
       .attr("width", function(d) {
-              return d * scaleFactor;
+              return scale(d);
       })
       .attr("height", barHeight - 1)
       .attr("fill", 'red')
+    
+  bar2.append("text")
+      .attr("x", function (d) { return (scale(d)); })
+      .attr("y", barHeight / 2)
+      .attr("dy", ".35em")
+      .attr("stroke", "white")
+      .attr("font-size", "14px")
+      .attr("font-family", "sans-serif")
+      .text(function (d, i) {
+        if (i === 0) {
+          return parseInt(d) + ' Years'
+        } else if (i === 1) {
+          return parseInt(d) + ' Generations'
+        }
+      })
 }
 

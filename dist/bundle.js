@@ -32958,7 +32958,8 @@ function showPlanetStats(planet) {
 
   var totalMilesToDestination = lightYearDistInMiles * data[0];
   var yearsToReach = totalMilesToDestination / (voyagerSpeed * day * yearLength);
-  var humanGenerations = yearsToReach / 30;
+  var humanGenerations = yearsToReach / 30; // 30 years between generations
+
   var humanData = [yearsToReach, humanGenerations];
   var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").append("svg").attr("width", width).attr("height", height);
   var bar = graph.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
@@ -32966,8 +32967,20 @@ function showPlanetStats(planet) {
   });
   bar.append("rect").attr("width", function (d) {
     return d * scaleFactor;
-  }).attr("height", barHeight - 5).attr("fill", 'red'); //human-related data
+  }).attr("height", barHeight - 1).attr("fill", 'red');
+  bar.append("text").attr("x", function (d) {
+    return d;
+  }).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "14px").attr("font-family", "fantasy").text(function (d, i) {
+    if (i === 0) {
+      return parseInt(d) + ' Light Years';
+    } else if (i === 1) {
+      return parseInt(d) + ' Planet Number';
+    } else if (i === 2) {
+      return parseInt(d) + ' Planet Orbital Period (in days)';
+    }
+  }); //human-related data
 
+  var scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([2000, 770000]).range([50, 490]);
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
   var otherWidth = 500;
   var otherHeight = 290;
@@ -32976,8 +32989,17 @@ function showPlanetStats(planet) {
     return "translate(0," + i * barHeight + ")";
   });
   bar2.append("rect").attr("width", function (d) {
-    return d * scaleFactor;
+    return scale(d);
   }).attr("height", barHeight - 1).attr("fill", 'red');
+  bar2.append("text").attr("x", function (d) {
+    return scale(d);
+  }).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "14px").attr("font-family", "sans-serif").text(function (d, i) {
+    if (i === 0) {
+      return parseInt(d) + ' Years';
+    } else if (i === 1) {
+      return parseInt(d) + ' Generations';
+    }
+  });
 }
 
 /***/ })

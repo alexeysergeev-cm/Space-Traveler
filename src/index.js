@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .ease(d3.easeLinear)
     .style('color', 'white')
   
-  // continueButton()
-  loadDefaultData()
+  continueButton()
+  // loadDefaultData() // remove after development
 })
 
 function continueButton(){  
@@ -49,13 +49,13 @@ function mainPageTransition() {
 async function loadDefaultData(){
   
   //load Default data
-  // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-  // // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
-  // d3.select(".planets-list")
-  //   .selectAll("p")
-  //   .data(arr)
-  //   .enter().append("p")
-  //   .text(function(d) { return d.pl_name });
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
+  // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+  d3.select(".planets-list")
+    .selectAll("p")
+    .data(arr)
+    .enter().append("p")
+    .text(function(d) { return d.pl_name });
 
 
   //all btns
@@ -95,7 +95,21 @@ async function loadDefaultData(){
       }
     })
 
+
+  const planetsList = document.getElementsByClassName('planets-list')
+  if (planetsList.length) {
+    planetsList[0].addEventListener('click', e => {
+      data.forEach(planet => {
+        if (e.target.innerText === planet.pl_name) {
+          showPlanetStats(planet)
+        }
+      })
+    })
+  }
+  
 }
+
+
 
 async function loadNear(){
   let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
@@ -125,5 +139,39 @@ async function populateNames(arr){
     .data(arr)
     .enter().append("p")
     .text(function(d) { return d.pl_name });
+}
+
+
+function showPlanetStats(planet){
+  
+  d3.select(".planet-data")
+    .selectAll("svg").remove()
+
+  let data = [planet.st_dist, planet.pl_pnum, planet.pl_orbper]
+
+  let width = 500
+  let height = 350
+  let scaleFactor = 10
+  let barHeight = 20;
+
+  let graph = d3.select(".planet-data")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+  let bar = graph.selectAll("g")
+                  .data(data)
+                  .enter()
+                  .append("g")
+                  .attr("transform", function(d, i) {
+                        return "translate(0," + i * barHeight + ")";
+                  });
+  
+  bar.append("rect")
+      .attr("width", function(d) {
+              return d * scaleFactor;
+      })
+      .attr("height", barHeight - 1)
+      .attr("fill", 'red')
 }
 

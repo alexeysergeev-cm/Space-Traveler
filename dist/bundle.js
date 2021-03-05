@@ -32520,9 +32520,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 document.addEventListener('DOMContentLoaded', function () {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('body').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style('background-color', 'black');
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white'); // continueButton()
-
-  loadDefaultData();
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white');
+  continueButton(); // loadDefaultData() // remove after development
 });
 
 function continueButton() {
@@ -32549,20 +32548,22 @@ function loadDefaultData() {
 
 function _loadDefaultData() {
   _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-    var data;
+    var arr, data, planetsList;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            //load Default data
-            // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-            // // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
-            // d3.select(".planets-list")
-            //   .selectAll("p")
-            //   .data(arr)
-            //   .enter().append("p")
-            //   .text(function(d) { return d.pl_name });
-            //all btns
+            _context2.next = 2;
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist');
+
+          case 2:
+            arr = _context2.sent;
+            // default nasa api
+            // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
+              return d.pl_name;
+            }); //all btns
+
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
 
@@ -32632,8 +32633,19 @@ function _loadDefaultData() {
                 return _ref.apply(this, arguments);
               };
             }());
+            planetsList = document.getElementsByClassName('planets-list');
 
-          case 5:
+            if (planetsList.length) {
+              planetsList[0].addEventListener('click', function (e) {
+                data.forEach(function (planet) {
+                  if (e.target.innerText === planet.pl_name) {
+                    showPlanetStats(planet);
+                  }
+                });
+              });
+            }
+
+          case 11:
           case "end":
             return _context2.stop();
         }
@@ -32758,6 +32770,22 @@ function _populateNames() {
     }, _callee6);
   }));
   return _populateNames.apply(this, arguments);
+}
+
+function showPlanetStats(planet) {
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").selectAll("svg").remove();
+  var data = [planet.st_dist, planet.pl_pnum, planet.pl_orbper];
+  var width = 500;
+  var height = 350;
+  var scaleFactor = 10;
+  var barHeight = 20;
+  var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").append("svg").attr("width", width).attr("height", height);
+  var bar = graph.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
+    return "translate(0," + i * barHeight + ")";
+  });
+  bar.append("rect").attr("width", function (d) {
+    return d * scaleFactor;
+  }).attr("height", barHeight - 1).attr("fill", 'red');
 }
 
 /***/ })

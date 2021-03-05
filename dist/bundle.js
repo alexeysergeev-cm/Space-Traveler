@@ -32674,7 +32674,7 @@ function _loadFar() {
             //clear the list
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").remove();
             _context4.next = 3;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<15&order=st_dist');
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>11 and st_dist<13&order=st_dist');
 
           case 3:
             arr = _context4.sent;

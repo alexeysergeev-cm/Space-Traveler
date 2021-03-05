@@ -86,7 +86,7 @@ async function loadDefaultData(){
       } else if (e.currentTarget.innerText === "10+ parsecs") {
         loadFar()
       }
-      
+
       let ele = e.currentTarget.parentElement.classList[0]
       d3.select('.' + ele)
         .selectAll('button')
@@ -128,7 +128,7 @@ async function loadFar(){
    d3.select(".planets-list")
     .selectAll("p").remove()
 
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<15&order=st_dist') // default nasa api
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>11 and st_dist<13&order=st_dist') // default nasa api
   // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
   d3.select(".planets-list")
     .selectAll("p")

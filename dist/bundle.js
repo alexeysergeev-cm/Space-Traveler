@@ -32520,9 +32520,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 document.addEventListener('DOMContentLoaded', function () {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('body').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style('background-color', 'black');
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white'); // continueButton()
-
-  loadDefaultData(); // remove after development
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white');
+  continueButton(); // loadDefaultData() // remove after development
 });
 
 function continueButton() {
@@ -32549,193 +32548,42 @@ function loadDefaultData() {
 
 function _loadDefaultData() {
   _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-    var arr, data, planetsList;
+    var data0, data1, data2, planetsList;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            //load Default data
-            // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-            // let arr = await d3.csv('https://api.le-systeme-solaire.net/rest/bodies/') // solar system api
-            arr = [{
-              dec: "-62.679485",
-              dec_str: "-62d40m46.1s",
-              gaia_gmag: "8.954",
-              gaia_gmagerr: "",
-              gaia_gmaglim: "0",
-              pl_bmassj: "0.00400",
-              pl_bmassjerr1: "0.00060",
-              pl_bmassjerr2: "-0.00053",
-              pl_bmassjlim: "0",
-              pl_bmassn: "1",
-              pl_bmassprov: "Msini",
-              pl_controvflag: "0",
-              pl_dens: "",
-              pl_denserr1: "",
-              pl_denserr2: "",
-              pl_denslim: "",
-              pl_densn: "0",
-              pl_discmethod: "Radial Velocity",
-              pl_facility: "European Southern Observatory",
-              pl_hostname: "Proxima Cen",
-              pl_k2flag: "0",
-              pl_kepflag: "0",
-              pl_letter: "b",
-              pl_name: "Proxima Cen b",
-              pl_nnotes: "0",
-              pl_orbeccen: "0.350000",
-              pl_orbeccenerr1: "",
-              pl_orbeccenerr2: "",
-              pl_orbeccenlim: "1",
-              pl_orbeccenn: "2",
-              pl_orbincl: "",
-              pl_orbinclerr1: "",
-              pl_orbinclerr2: "",
-              pl_orbincllim: "",
-              pl_orbincln: "0",
-              pl_orbper: "11.18600000",
-              pl_orbpererr1: "0.00100000",
-              pl_orbpererr2: "-0.00200000",
-              pl_orbperlim: "0",
-              pl_orbpern: "2",
-              pl_orbsmax: "0.048500",
-              pl_orbsmaxerr1: "0.004100",
-              pl_orbsmaxerr2: "-0.005100",
-              pl_orbsmaxlim: "0",
-              pl_orbsmaxn: "1",
-              pl_pnum: "1",
-              pl_radj: "",
-              pl_radjerr1: "",
-              pl_radjerr2: "",
-              pl_radjlim: "",
-              pl_radn: "0",
-              pl_ttvflag: "0",
-              ra: "217.428955",
-              ra_str: "14h29m42.95s",
-              rowupdate: "2016-08-25",
-              st_decerr: "0.000004",
-              st_dist: "1.30",
-              st_disterr1: "0.00",
-              st_disterr2: "-0.00",
-              st_distlim: "0",
-              st_distn: "3",
-              st_mass: "0.12",
-              st_masserr1: "0.01",
-              st_masserr2: "-0.01",
-              st_masslim: "0",
-              st_massn: "2",
-              st_optband: "V (Johnson)",
-              st_optmag: "11.110",
-              st_optmagerr: "",
-              st_optmaglim: "0",
-              st_posn: "4",
-              st_rad: "0.14",
-              st_raderr1: "0.02",
-              st_raderr2: "-0.02",
-              st_radlim: "0",
-              st_radn: "2",
-              st_raerr: "0.000004",
-              st_teff: "3050.00",
-              st_tefferr1: "100.00",
-              st_tefferr2: "-100.00",
-              st_tefflim: "0",
-              st_teffn: "2"
-            }];
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
-              return d.pl_name;
-            }); //all btns
+            //store data from api request
+            data0 = [];
+            data1 = [];
+            data2 = []; //load Default data
 
+            _context2.next = 5;
+            return loadNear();
+
+          case 5:
+            data0 = _context2.sent;
+            //all btns
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
 
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select('button').style('background-color', 'rgb(90 250 13)');
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)'); //store data from api request
-            // let data;
-
-            data = [{
-              dec: "-62.679485",
-              dec_str: "-62d40m46.1s",
-              gaia_gmag: "8.954",
-              gaia_gmagerr: "",
-              gaia_gmaglim: "0",
-              pl_bmassj: "0.00400",
-              pl_bmassjerr1: "0.00060",
-              pl_bmassjerr2: "-0.00053",
-              pl_bmassjlim: "0",
-              pl_bmassn: "1",
-              pl_bmassprov: "Msini",
-              pl_controvflag: "0",
-              pl_dens: "",
-              pl_denserr1: "",
-              pl_denserr2: "",
-              pl_denslim: "",
-              pl_densn: "0",
-              pl_discmethod: "Radial Velocity",
-              pl_facility: "European Southern Observatory",
-              pl_hostname: "Proxima Cen",
-              pl_k2flag: "0",
-              pl_kepflag: "0",
-              pl_letter: "b",
-              pl_name: "Proxima Cen b",
-              pl_nnotes: "0",
-              pl_orbeccen: "0.350000",
-              pl_orbeccenerr1: "",
-              pl_orbeccenerr2: "",
-              pl_orbeccenlim: "1",
-              pl_orbeccenn: "2",
-              pl_orbincl: "",
-              pl_orbinclerr1: "",
-              pl_orbinclerr2: "",
-              pl_orbincllim: "",
-              pl_orbincln: "0",
-              pl_orbper: "11.18600000",
-              pl_orbpererr1: "0.00100000",
-              pl_orbpererr2: "-0.00200000",
-              pl_orbperlim: "0",
-              pl_orbpern: "2",
-              pl_orbsmax: "0.048500",
-              pl_orbsmaxerr1: "0.004100",
-              pl_orbsmaxerr2: "-0.005100",
-              pl_orbsmaxlim: "0",
-              pl_orbsmaxn: "1",
-              pl_pnum: "1",
-              pl_radj: "",
-              pl_radjerr1: "",
-              pl_radjerr2: "",
-              pl_radjlim: "",
-              pl_radn: "0",
-              pl_ttvflag: "0",
-              ra: "217.428955",
-              ra_str: "14h29m42.95s",
-              rowupdate: "2016-08-25",
-              st_decerr: "0.000004",
-              st_dist: "1.30",
-              st_disterr1: "0.00",
-              st_disterr2: "-0.00",
-              st_distlim: "0",
-              st_distn: "3",
-              st_mass: "0.12",
-              st_masserr1: "0.01",
-              st_masserr2: "-0.01",
-              st_masslim: "0",
-              st_massn: "2",
-              st_optband: "V (Johnson)",
-              st_optmag: "11.110",
-              st_optmagerr: "",
-              st_optmaglim: "0",
-              st_posn: "4",
-              st_rad: "0.14",
-              st_raderr1: "0.02",
-              st_raderr2: "-0.02",
-              st_radlim: "0",
-              st_radn: "2",
-              st_raerr: "0.000004",
-              st_teff: "3050.00",
-              st_tefferr1: "100.00",
-              st_tefferr2: "-100.00",
-              st_tefflim: "0",
-              st_teffn: "2"
-            }]; //selecting distance
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)'); //development dummy variable
+            //   let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
+            //   pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
+            // pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
+            // pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "", 
+            // pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
+            // pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
+            // ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
+            // st_masserr2: "-0.01",st_masslim: "0",st_massn: "2",st_optband: "V (Johnson)",st_optmag: "11.110",st_optmagerr: "",st_optmaglim: "0",st_posn: "4",st_rad: "0.14",st_raderr1: "0.02",
+            // st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3050.00",st_tefferr1: "100.00",st_tefferr2: "-100.00",st_tefflim: "0",st_teffn: "2"}]
+            // d3.select(".planets-list")
+            //   .selectAll("p")
+            //   .data(data)
+            //   .enter().append("p")
+            //   .text(function(d) { return d.pl_name });
+            //selecting distance
 
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('button').on('click', /*#__PURE__*/function () {
               var _ref = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee(e) {
@@ -32749,45 +32597,79 @@ function _loadDefaultData() {
                         e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
 
                         if (!(e.currentTarget.innerText === "< 5 parsecs")) {
-                          _context.next = 9;
+                          _context.next = 13;
                           break;
                         }
 
-                        _context.next = 6;
+                        if (!data0.length) {
+                          _context.next = 8;
+                          break;
+                        }
+
+                        populateNames(data0);
+                        _context.next = 11;
+                        break;
+
+                      case 8:
+                        _context.next = 10;
                         return loadNear();
 
-                      case 6:
-                        data = _context.sent;
-                        _context.next = 19;
+                      case 10:
+                        data0 = _context.sent;
+
+                      case 11:
+                        _context.next = 31;
                         break;
 
-                      case 9:
+                      case 13:
                         if (!(e.currentTarget.innerText === "5-10 parsecs")) {
-                          _context.next = 15;
+                          _context.next = 23;
                           break;
                         }
 
-                        _context.next = 12;
-                        return loadMedium();
+                        if (!data1.length) {
+                          _context.next = 18;
+                          break;
+                        }
 
-                      case 12:
-                        data = _context.sent;
-                        _context.next = 19;
+                        populateNames(data1);
+                        _context.next = 21;
                         break;
-
-                      case 15:
-                        if (!(e.currentTarget.innerText === "10+ parsecs")) {
-                          _context.next = 19;
-                          break;
-                        }
-
-                        _context.next = 18;
-                        return loadFar();
 
                       case 18:
-                        data = _context.sent;
+                        _context.next = 20;
+                        return loadMedium();
 
-                      case 19:
+                      case 20:
+                        data1 = _context.sent;
+
+                      case 21:
+                        _context.next = 31;
+                        break;
+
+                      case 23:
+                        if (!(e.currentTarget.innerText === "10+ parsecs")) {
+                          _context.next = 31;
+                          break;
+                        }
+
+                        if (!data2.length) {
+                          _context.next = 28;
+                          break;
+                        }
+
+                        populateNames(data1);
+                        _context.next = 31;
+                        break;
+
+                      case 28:
+                        _context.next = 30;
+                        return loadFar();
+
+                      case 30:
+                        data2 = _context.sent;
+
+                      case 31:
                       case "end":
                         return _context.stop();
                     }
@@ -32803,15 +32685,33 @@ function _loadDefaultData() {
 
             if (planetsList.length) {
               planetsList[0].addEventListener('click', function (e) {
-                data.forEach(function (planet) {
-                  if (e.target.innerText === planet.pl_name) {
-                    showPlanetStats(planet);
+                var switches = document.getElementsByClassName('left-switch')[0].children;
+
+                for (var i = 1; i < switches.length; i++) {
+                  if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
+                    data0.forEach(function (planet) {
+                      if (e.target.innerText === planet.pl_name) {
+                        showPlanetStats(planet);
+                      }
+                    });
+                  } else if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "5-10 parsecs") {
+                    data1.forEach(function (planet) {
+                      if (e.target.innerText === planet.pl_name) {
+                        showPlanetStats(planet);
+                      }
+                    });
+                  } else {
+                    data2.forEach(function (planet) {
+                      if (e.target.innerText === planet.pl_name) {
+                        showPlanetStats(planet);
+                      }
+                    });
                   }
-                });
+                }
               });
             }
 
-          case 10:
+          case 13:
           case "end":
             return _context2.stop();
         }
@@ -32945,7 +32845,7 @@ function showPlanetStats(planet) {
   var width = 500;
   var height = 350;
   var scaleFactor = 10;
-  var barHeight = 40;
+  var barHeight = 50;
   var lightYearDistInMiles = 6000000000000; //miles
 
   var speedOfLight = 671000000; //mph
@@ -32966,23 +32866,31 @@ function showPlanetStats(planet) {
   var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").append("svg").attr("width", width).attr("height", height);
   var bar = graph.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
     if (i === 0) {
-      return "translate(0,15)";
+      return "translate(0,25)";
     } else if (i === 1) {
-      return "translate(0,70)";
+      return "translate(0,90)";
     } else if (i === 2) {
-      return "translate(0,115)";
+      return "translate(0,155)";
     }
   });
-  bar.append("rect").attr("width", function (d) {
+  bar.append("rect").attr("height", barHeight - 10).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
     return d * scaleFactor;
-  }).attr("height", barHeight - 10).attr("fill", 'red');
-  bar.append("text").attr("x", 0).attr("y", -10).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "14px").attr("font-family", "fantasy").text(function (d, i) {
+  }).attr("fill", 'red');
+  bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
     if (i === 0) {
-      return parseInt(d) + ' Light Years';
+      return 'Distance (in light years)';
     } else if (i === 1) {
-      return parseInt(d) + ' Planet Number';
+      return 'Planet Number';
     } else if (i === 2) {
-      return parseInt(d) + ' Planet Orbital Period (in days)';
+      return 'Orbital Period (in days)';
+    }
+  });
+  bar.append("text").attr("x", 5).attr("y", barHeight / 2) // .attr("dy", ".35em")
+  .attr("stroke", "white").attr("font-size", "16px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
+    if (i === 0) {
+      return d.toFixed(2);
+    } else {
+      return parseInt(d);
     }
   }); //human-related data
 
@@ -32992,18 +32900,29 @@ function showPlanetStats(planet) {
   var otherHeight = 290;
   var graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", otherWidth).attr("height", otherHeight);
   var bar2 = graph2.selectAll("g").data(humanData).enter().append("g").attr("transform", function (d, i) {
-    return "translate(0," + i * barHeight + ")";
-  });
-  bar2.append("rect").attr("width", function (d) {
-    return scale(d);
-  }).attr("height", barHeight - 1).attr("fill", 'red');
-  bar2.append("text").attr("x", function (d) {
-    return scale(d);
-  }).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "14px").attr("font-family", "sans-serif").text(function (d, i) {
     if (i === 0) {
-      return parseInt(d) + ' Years';
+      return "translate(0,25)";
     } else if (i === 1) {
-      return parseInt(d) + ' Generations';
+      return "translate(0,100)";
+    } else if (i === 2) {
+      return "translate(0,155)";
+    }
+  });
+  bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
+    return scale(d);
+  }).attr("fill", 'red');
+  bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
+    if (i === 0) {
+      return 'Flight Time (in human years)';
+    } else if (i === 1) {
+      return 'Generations amount';
+    }
+  });
+  bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
+    if (i === 0) {
+      return parseInt(d);
+    } else if (i === 1) {
+      return parseInt(d);
     }
   });
 }

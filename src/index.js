@@ -54,6 +54,7 @@ async function loadDefaultData(){
 
   //load Default data
   data0 = await loadNear()
+  console.log(data0)
   
   //all btns
   d3.select(".left-switch")
@@ -194,10 +195,12 @@ function showPlanetStats(planet){
   let data = [planet.st_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]
 
   let width = 500
-  let height = 350
+  let height = 200
   let scaleFactor = 10
   let barHeight = 50;
 
+  let earthMassJup = 0.00314; //earth mass compared to jupiter
+  let planetSize = planet.pl_bmassj 
   let lightYearDistInMiles = 6000000000000; //miles
   let speedOfLight = 671000000; //mph
   let voyagerSpeed = 38000; //mph

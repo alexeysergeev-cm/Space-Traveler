@@ -32563,7 +32563,8 @@ function _loadDefaultData() {
 
           case 5:
             data0 = _context2.sent;
-            //all btns
+            console.log(data0); //all btns
+
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
 
@@ -32711,7 +32712,7 @@ function _loadDefaultData() {
               });
             }
 
-          case 13:
+          case 14:
           case "end":
             return _context2.stop();
         }
@@ -32843,9 +32844,12 @@ function showPlanetStats(planet) {
   var LightYearsInOneParsec = 3.26;
   var data = [planet.st_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper];
   var width = 500;
-  var height = 350;
+  var height = 200;
   var scaleFactor = 10;
   var barHeight = 50;
+  var earthMassJup = 0.00314; //earth mass compared to jupiter
+
+  var planetSize = planet.pl_bmassj;
   var lightYearDistInMiles = 6000000000000; //miles
 
   var speedOfLight = 671000000; //mph

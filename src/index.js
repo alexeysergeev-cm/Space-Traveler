@@ -249,7 +249,7 @@ function showPlanetStats(planet){
       .attr("width", function(d) {
               return d * scaleFactor;
       })
-      .attr("fill", 'red')
+      .attr("fill", 'rgb(139, 0, 139)')
 
   bar.append("text")
       .attr("x", 3)

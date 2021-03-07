@@ -440,7 +440,7 @@ body {
 }
 
 .solar-system-stats{
-    border: 2px solid rgb(240 128 128);
+  border: 2px solid rgb(240 128 128);
   width: 436px;
   height: 500px;
   margin: 10px;
@@ -452,6 +452,25 @@ body {
   height: 65px;
   border: 2px solid rgb(245 245 220);
   margin: 6px 10px 0 10px;
+}
+
+.source-title{
+  color: rgb(0, 255, 136);
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  text-shadow: 2px 2px 0px darkolivegreen;
+}
+
+.source-name{
+  text-align: center;
+}
+
+.source-name > a{
+  color: rgb(255 255 255);
+  
+  text-decoration: none;
+  font-size: 19px;
 }
 
 .solar-title-cont{

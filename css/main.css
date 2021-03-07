@@ -337,6 +337,8 @@ body {
   height: 100px;
   border: 1px solid rgb(0 128 0);
   margin-left: 6px;
+  display: flex;
+
 }
 
 .planet-mass{
@@ -356,5 +358,47 @@ body {
   color: greenyellow;
   font-size: 19px;
   padding-top: 10px;
+  font-family: monospace;
+}
+
+.misc {
+  width: 150px;
+  height: 80px;
+  border: 1px solid rgb(100 149 237);
+  margin: 9px;
+  text-align: center;
+}
+
+.misc > h6 {
+  color: rgb(255 255 255);
+  font-size: 20px;
+}
+
+.misc > p {
+  color: red; 
+  font-size: 19px;
+  padding-top: 10px;
+  font-family: monospace;
+}
+
+.facility {
+  width: 150px;
+  height: 80px;
+  border: 1px solid rgb(100 149 237);
+  margin: 9px;
+  text-align: center;
+  overflow: scroll;
+
+}
+
+.facility > h6 {
+  color: rgb(255 255 255);
+  font-size: 20px;
+}
+
+.facility > p {
+  color: orange; 
+  font-size: 13px;
+  padding-top: 5px;
   font-family: monospace;
 }

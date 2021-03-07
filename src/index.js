@@ -201,6 +201,9 @@ function showPlanetStats(planet){
 
   let earthMassJup = 0.00314; //earth mass compared to jupiter
   let planetMass = planet.pl_bmassj / earthMassJup; //calulate planet mass
+  let lastUpdate = planet.rowupdate; 
+  let facility = planet.pl_facility;
+
   let lightYearDistInMiles = 6000000000000; //miles
   let speedOfLight = 671000000; //mph
   let voyagerSpeed = 38000; //mph
@@ -291,6 +294,26 @@ function showPlanetStats(planet){
                 .enter()
                 .append("p")
                 .text(function(d) { return d.toFixed(2) + " of Earth's Mass"; });
+
+  d3.select(".misc")
+    .selectAll("p").remove()
+
+  let misc = d3.select(".misc")
+                .selectAll("p")
+                .data([lastUpdate])
+                .enter()
+                .append("p")
+                .text(function(d) { return d; });
+
+  d3.select(".facility")
+    .selectAll("p").remove()
+
+  let facil = d3.select(".facility")
+                .selectAll("p")
+                .data([facility])
+                .enter()
+                .append("p")
+                .text(function(d) { return d; });
 
 
 

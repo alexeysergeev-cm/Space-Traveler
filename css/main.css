@@ -330,3 +330,31 @@ body {
   font-size: 17px;
   font-family: monospace;
 }
+
+
+.planet-data-static{
+  width: 485px;
+  height: 100px;
+  border: 1px solid rgb(0 128 0);
+  margin-left: 6px;
+}
+
+.planet-mass{
+  width: 150px;
+  height: 80px;
+  border: 1px solid rgb(100 149 237);
+  margin: 9px;
+  text-align: center;
+}
+
+.planet-mass > h6 {
+  color: rgb(255 255 255);
+  font-size: 20px;
+}
+
+.planet-mass > p {
+  color: greenyellow;
+  font-size: 19px;
+  padding-top: 10px;
+  font-family: monospace;
+}

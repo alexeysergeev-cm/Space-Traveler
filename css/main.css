@@ -301,3 +301,32 @@ body {
 .speed{
   text-align: center;
 }
+
+
+
+.personal-info{
+  display: flex;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.personal-info > a {
+
+  padding: 5px;
+}
+
+.personal-info > a > img {
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+.me{
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-family: monospace;
+}

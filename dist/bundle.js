@@ -33000,7 +33000,7 @@ function showPlanetStats(planet) {
   });
   bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
     return scale(d);
-  }).attr("fill", 'red');
+  }).attr("fill", 'darkmagenta');
   bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
     if (i === 0) {
       return 'Flight Time (in human years)';
@@ -33010,9 +33010,9 @@ function showPlanetStats(planet) {
   });
   bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
     if (i === 0) {
-      return parseInt(d);
+      return parseInt(d).toLocaleString();
     } else if (i === 1) {
-      return parseInt(d);
+      return parseInt(d).toLocaleString();
     }
   });
 }

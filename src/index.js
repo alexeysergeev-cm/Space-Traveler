@@ -355,7 +355,7 @@ function showPlanetStats(planet){
       .attr("width", function(d) {
               return scale(d);
       })
-      .attr("fill", 'red')
+      .attr("fill", 'darkmagenta')
 
   bar2.append("text")
       .attr("x", 3)
@@ -383,9 +383,9 @@ function showPlanetStats(planet){
       .style("fill", "darkOrange")
       .text(function (d, i) {
         if (i === 0) {
-          return parseInt(d)
+          return parseInt(d).toLocaleString()
         } else if (i === 1) {
-          return parseInt(d)
+          return parseInt(d).toLocaleString()
         }
       })
 }

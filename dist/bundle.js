@@ -33086,7 +33086,7 @@ function showHumanStats(distance, speed) {
     });
     bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
       if (i === 0) {
-        return parseInt(d).toLocaleString();
+        return d.toFixed(2);
       } else if (i === 1) {
         return parseInt(d).toLocaleString();
       }

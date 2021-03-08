@@ -464,7 +464,7 @@ function showHumanStats(distance, speed){
 
   let scaleFactor = 10
   let barHeight = 50;
-  
+
   if (speed > 40000) {
 
     let scale = d3.scaleLinear()
@@ -532,7 +532,7 @@ function showHumanStats(distance, speed){
         .style("fill", "darkOrange")
         .text(function (d, i) {
           if (i === 0) {
-            return parseInt(d).toLocaleString()
+            return d.toFixed(2)
           } else if (i === 1) {
             return parseInt(d).toLocaleString()
           }

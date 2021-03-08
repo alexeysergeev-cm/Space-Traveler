@@ -92,9 +92,12 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
     .text(function(d) { return d.pl_name });
 
   //selecting distance
+  let speed = 38000; //default 
+
   d3.selectAll('button')
     .on('click', async (e) => { 
       let ele = e.currentTarget.parentElement.classList[0]
+      debugger
       d3.select('.' + ele)
         .selectAll('button')
         .style('background-color', 'red')
@@ -119,6 +122,48 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
           data2 = await loadFar()
         }
       }
+
+      //if click speed
+      if (e.currentTarget.innerText === "The Speed of Light") {
+        speed = 671000000
+        d3.select('.speed')
+          .selectAll('h1')
+          .remove()
+
+        d3.select('.speed')
+          .selectAll("h1")
+          .data([speed])
+          .enter()
+          .append("h1")
+          .style('color', 'rgb(255 140 0)')
+          .text(function(d) { return d.toLocaleString() + " mph"; })
+      } else if (e.currentTarget.innerText === "Voyager 1") {
+        speed = 38000
+        d3.select('.speed')
+          .selectAll('h1')
+          .remove()
+
+        d3.select('.speed')
+          .selectAll("h1")
+          .data([speed])
+          .enter()
+          .append("h1")
+          .style('color', 'rgb(255 140 0)')
+          .text(function(d) { return d.toLocaleString() + " mph"; })
+      } else {
+        speed = 27
+        d3.select('.speed')
+          .selectAll('h1')
+          .remove()
+
+        d3.select('.speed')
+          .selectAll("h1")
+          .data([speed])
+          .enter()
+          .append("h1")
+          .style('color', 'rgb(255 140 0)')
+          .text(function(d) { return d + " times the speed of light" })
+      }
     })
 
 
@@ -130,19 +175,19 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
         if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
           data.forEach(planet => {                          //development 
             if (e.target.innerText === planet.pl_name) {
-              showPlanetStats(planet)
+              showPlanetStats(planet, speed)
             }
           })
         } else if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "5-10 parsecs"){
           data1.forEach(planet => {
             if (e.target.innerText === planet.pl_name) {
-              showPlanetStats(planet)
+              showPlanetStats(planet, speed)
             }
           })
         } else {
           data2.forEach(planet => {
             if (e.target.innerText === planet.pl_name) {
-              showPlanetStats(planet)
+              showPlanetStats(planet, speed)
             }
           })
         }
@@ -215,8 +260,9 @@ function showPlanetStats(planet){
   let humanGenerations = yearsToReach / 30 // 30 years between generations
   let humanData = [yearsToReach, humanGenerations]
 
-  //planet stats
 
+
+  //planet stats
   let scale1 = d3.scaleLinear()
             .domain([1, 20000])
             .range([1, 490]);

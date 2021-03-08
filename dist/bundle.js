@@ -32510,6 +32510,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -32521,9 +32527,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 document.addEventListener('DOMContentLoaded', function () {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('body').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style('background-color', 'black');
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white'); // continueButton()
-
-  loadDefaultData(); // remove after development
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white');
+  continueButton(); // loadDefaultData()         //  development
 });
 
 function continueButton() {
@@ -32550,7 +32555,7 @@ function loadDefaultData() {
 
 function _loadDefaultData() {
   _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-    var data0, data1, data2, data, speed, planetsList;
+    var data0, data1, data2, speed, planetsList;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -32559,103 +32564,33 @@ function _loadDefaultData() {
             data0 = [];
             data1 = [];
             data2 = []; //load Default data
-            // data0 = await loadNear()
-            // console.log(data0)
-            //all btns
 
+            _context2.next = 5;
+            return loadNear();
+
+          case 5:
+            data0 = _context2.sent;
+            //all btns
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
 
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select('button').style('background-color', 'rgb(90 250 13)');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)'); //development dummy variable
-
-            data = [{
-              dec: "-62.679485",
-              dec_str: "-62d40m46.1s",
-              gaia_gmag: "8.954",
-              gaia_gmagerr: "",
-              gaia_gmaglim: "0",
-              pl_bmassj: "0.00400",
-              pl_bmassjerr1: "0.00060",
-              pl_bmassjerr2: "-0.00053",
-              pl_bmassjlim: "0",
-              pl_bmassn: "1",
-              pl_bmassprov: "Msini",
-              pl_controvflag: "0",
-              pl_dens: "",
-              pl_denserr1: "",
-              pl_denserr2: "",
-              pl_denslim: "",
-              pl_densn: "0",
-              pl_discmethod: "Radial Velocity",
-              pl_facility: "European Southern Observatory",
-              pl_hostname: "Proxima Cen",
-              pl_k2flag: "0",
-              pl_kepflag: "0",
-              pl_letter: "b",
-              pl_name: "Proxima Cen b",
-              pl_nnotes: "0",
-              pl_orbeccen: "0.350000",
-              pl_orbeccenerr1: "",
-              pl_orbeccenerr2: "",
-              pl_orbeccenlim: "1",
-              pl_orbeccenn: "2",
-              pl_orbincl: "",
-              pl_orbinclerr1: "",
-              pl_orbinclerr2: "",
-              pl_orbincllim: "",
-              pl_orbincln: "0",
-              pl_orbper: "11.18600000",
-              pl_orbpererr1: "0.00100000",
-              pl_orbpererr2: "-0.00200000",
-              pl_orbperlim: "0",
-              pl_orbpern: "2",
-              pl_orbsmax: "0.048500",
-              pl_orbsmaxerr1: "0.004100",
-              pl_orbsmaxerr2: "-0.005100",
-              pl_orbsmaxlim: "0",
-              pl_orbsmaxn: "1",
-              pl_pnum: "1",
-              pl_radj: "",
-              pl_radjerr1: "",
-              pl_radjerr2: "",
-              pl_radjlim: "",
-              pl_radn: "0",
-              pl_ttvflag: "0",
-              ra: "217.428955",
-              ra_str: "14h29m42.95s",
-              rowupdate: "2016-08-25",
-              st_decerr: "0.000004",
-              st_dist: "1.30",
-              st_disterr1: "0.00",
-              st_disterr2: "-0.00",
-              st_distlim: "0",
-              st_distn: "3",
-              st_mass: "0.12",
-              st_masserr1: "0.01",
-              st_masserr2: "-0.01",
-              st_masslim: "0",
-              st_massn: "2",
-              st_optband: "V (Johnson)",
-              st_optmag: "11.110",
-              st_optmagerr: "",
-              st_optmaglim: "0",
-              st_posn: "4",
-              st_rad: "0.14",
-              st_raderr1: "0.02",
-              st_raderr2: "-0.02",
-              st_radlim: "0",
-              st_radn: "2",
-              st_raerr: "0.000004",
-              st_teff: "3050.00",
-              st_tefferr1: "100.00",
-              st_tefferr2: "-100.00",
-              st_tefflim: "0",
-              st_teffn: "2"
-            }];
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(data).enter().append("p").text(function (d) {
-              return d.pl_name;
-            }); //selecting distance
+            //   let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
+            //   pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
+            // pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
+            // pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "", 
+            // pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
+            // pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
+            // ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
+            // st_masserr2: "-0.01",st_masslim: "0",st_massn: "2",st_optband: "V (Johnson)",st_optmag: "11.110",st_optmagerr: "",st_optmaglim: "0",st_posn: "4",st_rad: "0.14",st_raderr1: "0.02",
+            // st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3050.00",st_tefferr1: "100.00",st_tefferr2: "-100.00",st_tefflim: "0",st_teffn: "2"}]
+            //   d3.select(".planets-list")
+            //     .selectAll("p")
+            //     .data(data)
+            //     .enter().append("p")
+            //     .text(function(d) { return d.pl_name });
+            //selecting distance
 
             speed = 38000; //default 
 
@@ -32779,13 +32714,83 @@ function _loadDefaultData() {
                 d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
                   return d + " times the speed of light";
                 });
-              }
+              } //check what speed chosen
+
 
               var humanData = document.getElementsByClassName('other-data')[0].children;
 
-              if (humanData.length === 2) {
+              if (humanData.length === 2 && e.currentTarget.innerText === "Voyager 1") {
+                (function () {
+                  var list = document.getElementsByClassName('planets-list')[0].children; //get distance && gerenrate data
+
+                  var distance = document.getElementsByClassName('planet-data')[0].children[1].children[0].children[0]["__data__"];
+                  var lightYearDistInMiles = 6000000000000; //miles
+
+                  var speedOfLight = 671000000; //mph
+
+                  var voyagerSpeed = 38000; //mph
+
+                  var day = 24; //hrs
+
+                  var yearLength = 365; //days
+
+                  var totalMilesToDestination = lightYearDistInMiles * distance;
+                  var yearsToReach = totalMilesToDestination / (voyagerSpeed * day * yearLength);
+                  var humanGenerations = yearsToReach / 30; // 30 years between generations
+
+                  var humanData = [yearsToReach, humanGenerations];
+
+                  var _iterator = _createForOfIteratorHelper(list),
+                      _step;
+
+                  try {
+                    var _loop = function _loop() {
+                      var item = _step.value;
+
+                      if (item.style.backgroundColor === 'green') {
+                        ///NOT DRY! refactor
+                        var switches = document.getElementsByClassName('left-switch')[0].children;
+
+                        for (var i = 1; i < switches.length; i++) {
+                          if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
+                            data0.forEach(function (planet) {
+                              //development 
+                              if (item.innerText === planet.pl_name) {
+                                // showPlanetStats(planet, speed)
+                                showHumanStats(humanData, speed);
+                              }
+                            });
+                          } else if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "5-10 parsecs") {
+                            data1.forEach(function (planet) {
+                              if (item.innerText === planet.pl_name) {
+                                // showPlanetStats(planet, speed)
+                                showHumanStats(humanData, speed);
+                              }
+                            });
+                          } else {
+                            data2.forEach(function (planet) {
+                              if (item.innerText === planet.pl_name) {
+                                // showPlanetStats(planet, speed)
+                                showHumanStats(humanData, speed);
+                              }
+                            });
+                          }
+                        }
+                      }
+                    };
+
+                    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                      _loop();
+                    }
+                  } catch (err) {
+                    _iterator.e(err);
+                  } finally {
+                    _iterator.f();
+                  }
+                })();
+              } else if (humanData.length === 2) {
+                //refactor TOO MANY repetitions
                 var distance = document.getElementsByClassName('planet-data')[0].children[1].children[0].children[0]["__data__"];
-                debugger;
                 showHumanStats(distance, speed);
               }
             });
@@ -32793,11 +32798,31 @@ function _loadDefaultData() {
 
             if (planetsList.length) {
               planetsList[0].addEventListener('click', function (e) {
+                var list = document.getElementsByClassName('planets-list')[0].children;
+
+                var _iterator2 = _createForOfIteratorHelper(list),
+                    _step2;
+
+                try {
+                  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                    var item = _step2.value;
+
+                    if (item.style.backgroundColor === 'green') {
+                      item.style.backgroundColor = "";
+                    }
+                  }
+                } catch (err) {
+                  _iterator2.e(err);
+                } finally {
+                  _iterator2.f();
+                }
+
+                e.target.style.backgroundColor = 'green';
                 var switches = document.getElementsByClassName('left-switch')[0].children;
 
                 for (var i = 1; i < switches.length; i++) {
                   if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
-                    data.forEach(function (planet) {
+                    data0.forEach(function (planet) {
                       //development 
                       if (e.target.innerText === planet.pl_name) {
                         showPlanetStats(planet, speed);
@@ -32820,7 +32845,7 @@ function _loadDefaultData() {
               });
             }
 
-          case 14:
+          case 15:
           case "end":
             return _context2.stop();
         }
@@ -32950,17 +32975,15 @@ function _populateNames() {
 function showPlanetStats(planet, speed) {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").selectAll("svg").remove();
   var LightYearsInOneParsec = 3.26;
-  var data = [planet.st_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper];
-  var width = 500;
-  var height = 200;
-  var scaleFactor = 10;
-  var barHeight = 50;
+  var data = [planet.st_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]; //generate planet stats
+
   var earthMassJup = 0.00314; //earth mass compared to jupiter
 
   var planetMass = planet.pl_bmassj / earthMassJup; //calulate planet mass
 
   var lastUpdate = planet.rowupdate;
-  var facility = planet.pl_facility;
+  var facility = planet.pl_facility; //generate human stats
+
   var lightYearDistInMiles = 6000000000000; //miles
 
   var speedOfLight = 671000000; //mph
@@ -32977,6 +33000,10 @@ function showPlanetStats(planet, speed) {
 
   var humanData = [yearsToReach, humanGenerations]; //planet stats
 
+  var width = 500;
+  var height = 200;
+  var scaleFactor = 10;
+  var barHeight = 50;
   var scale1 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([1, 20000]).range([1, 490]);
   var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data-svg").append("svg").attr("width", width).attr("height", height);
   var bar = graph.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
@@ -33019,39 +33046,15 @@ function showPlanetStats(planet, speed) {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").remove();
   var facil = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").data([facility]).enter().append("p").text(function (d) {
     return d;
-  }); //human-related data
+  }); //show human-related data
 
-  var scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([2000, 770000]).range([50, 490]);
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
-  var otherWidth = 500;
-  var otherHeight = 290;
-  var graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", otherWidth).attr("height", otherHeight);
-  var bar2 = graph2.selectAll("g").data(humanData).enter().append("g").attr("transform", function (d, i) {
-    if (i === 0) {
-      return "translate(0,25)";
-    } else if (i === 1) {
-      return "translate(0,100)";
-    } else if (i === 2) {
-      return "translate(0,155)";
-    }
-  });
-  bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
-    return scale(d);
-  }).attr("fill", 'darkmagenta');
-  bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
-    if (i === 0) {
-      return 'Flight Time (in human years)';
-    } else if (i === 1) {
-      return 'Generations amount';
-    }
-  });
-  bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
-    if (i === 0) {
-      return parseInt(d).toLocaleString();
-    } else if (i === 1) {
-      return parseInt(d).toLocaleString();
-    }
-  });
+  var calcBySpeed = document.getElementsByClassName('speed')[0].innerText;
+
+  if (calcBySpeed === "38,000 mph") {
+    showHumanStats(humanData, speed);
+  } else {
+    showHumanStats(data[0], speed);
+  }
 } //on speed click
 
 
@@ -33059,13 +33062,13 @@ function showHumanStats(distance, speed) {
   var scaleFactor = 10;
   var barHeight = 50;
 
-  if (speed > 40000) {
-    var scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([10, 100]).range([50, 490]);
+  if (distance.length > 1) {
+    var scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([2000, 770000]).range([50, 490]);
     d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
     var otherWidth = 500;
     var otherHeight = 290;
     var graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", otherWidth).attr("height", otherHeight);
-    var bar2 = graph2.selectAll("g").data([distance]).enter().append("g").attr("transform", function (d, i) {
+    var bar2 = graph2.selectAll("g").data(distance).enter().append("g").attr("transform", function (d, i) {
       if (i === 0) {
         return "translate(0,25)";
       } else if (i === 1) {
@@ -33086,11 +33089,51 @@ function showHumanStats(distance, speed) {
     });
     bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
       if (i === 0) {
+        return parseInt(d).toLocaleString();
+      } else if (i === 1) {
+        return parseInt(d).toLocaleString();
+      }
+    });
+  } else if (speed > 40000) {
+    var _scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([10, 100]).range([50, 490]);
+
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
+    var _otherWidth = 500;
+    var _otherHeight = 290;
+
+    var _graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", _otherWidth).attr("height", _otherHeight);
+
+    var _bar = _graph.selectAll("g").data([distance]).enter().append("g").attr("transform", function (d, i) {
+      if (i === 0) {
+        return "translate(0,25)";
+      } else if (i === 1) {
+        return "translate(0,100)";
+      } else if (i === 2) {
+        return "translate(0,155)";
+      }
+    });
+
+    _bar.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
+      return _scale(d);
+    }).attr("fill", 'darkmagenta');
+
+    _bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
+      if (i === 0) {
+        return 'Flight Time (in human years)';
+      } else if (i === 1) {
+        return 'Generations amount';
+      }
+    });
+
+    _bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
+      if (i === 0) {
         return d.toFixed(2);
       } else if (i === 1) {
         return parseInt(d).toLocaleString();
       }
     });
+  } else if (speed === 38000) {
+    showPlanetStats;
   }
 }
 

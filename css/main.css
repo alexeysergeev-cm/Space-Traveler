@@ -34,14 +34,13 @@ body {
   margin-left: auto;
   border: 4px solid rgb(128 0 128);
   height: 30px;
-  font-size: 26px;
-  font-family: fantasy;
+  font-size: 30px;
+  font-family: serif;
   padding: 10px;
   margin-top: 5px;
   padding-bottom: 0px;
   text-align: center;
   width: fit-content;
-
 }
 
 .main-div{
@@ -154,8 +153,7 @@ body {
   width: 191px;
   border: 3px solid rgb(255 0 0);
   margin: 5px;
-  overflow: auto;
-  height: 653px;
+  height: 654px;
 
 }
 
@@ -170,7 +168,7 @@ body {
 .planets-list{
   color: white;
   overflow: scroll;
-  border: 3px solid rgb(255 255 0);
+  border: 2px solid rgb(255 255 0);
   padding: 2px;
   margin: 5px;
   display: flex;
@@ -178,10 +176,12 @@ body {
   width: 157px;
   padding-left: 5px;
   line-height: 1.5;
+  height: 605px;
+  margin-left: 10px;
+
 }
 
 .switch-controller{
-  /* border: 2px solid rgb(100 149 237); */
   display: flex;
   justify-content: space-between;
   margin-top: 9px;
@@ -205,6 +205,7 @@ body {
   font-family: serif;
   text-decoration: overline;
   text-decoration-color: rgb(0 133 255);
+  text-shadow: 2px 2px black
 }
 
 .left-switch > button, .right-switch > button {
@@ -232,6 +233,7 @@ body {
   font-family: serif;
   text-decoration: overline;
   text-decoration-color: rgb(255 255 0);
+  text-shadow: 2px 2px black
 }
 
 .dashboard{
@@ -262,19 +264,32 @@ body {
 }
 
 .data-info{
-  text-align: center;
+  /* text-align: center;
   padding: 5px;
   font-family: monospace;
   background-color: rgb(139 0 139);
-  margin-bottom: 8px;
+  margin-bottom: 8px; */
+  color: rgb(0, 255, 136);
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  text-shadow: 2px 2px 0px darkolivegreen;
 }
 
+
+
+
 .other-info{
-  text-align: center;
+  /* text-align: center;
   padding: 5px;
   font-family: monospace;
   background-color: rgb(0 0 255);
-  margin-bottom: 8px;
+  margin-bottom: 8px; */
+  color: rgb(0, 255, 136);
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  text-shadow: 2px 2px 0px darkolivegreen;
 }
 
 .planet-data{
@@ -292,11 +307,22 @@ body {
 }
 
 .spacecraft-info{
-  width: 400px;
-  border: 3px solid white;
+  width: 435px;
+  border: 2px solid white;
   height: fit-content;
   margin: 5px;
+  margin-left: 10px;
 }
+
+.speed-title{
+  color: rgb(0, 255, 136);
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  text-shadow: 2px 2px 0px darkolivegreen;
+}
+
+
 
 .speed{
   text-align: center;
@@ -352,11 +378,12 @@ body {
 .planet-mass > h6 {
   color: rgb(255 255 255);
   font-size: 20px;
+  padding: 1px;
 }
 
 .planet-mass > p {
   color: greenyellow;
-  font-size: 19px;
+  font-size: 17px;
   padding-top: 10px;
   font-family: monospace;
 }
@@ -371,12 +398,13 @@ body {
 
 .misc > h6 {
   color: rgb(255 255 255);
-  font-size: 20px;
+  font-size: 18px;
+  padding: 1px;
 }
 
 .misc > p {
-  color: red; 
-  font-size: 19px;
+  color: orange;
+  font-size: 17px;
   padding-top: 10px;
   font-family: monospace;
 }
@@ -393,12 +421,76 @@ body {
 
 .facility > h6 {
   color: rgb(255 255 255);
-  font-size: 20px;
+  font-size: 18px;
+  padding: 1px;
+
 }
 
 .facility > p {
   color: orange; 
-  font-size: 13px;
-  padding-top: 5px;
+  font-size: 17px;
+  padding-top: 8px;
   font-family: monospace;
+}
+
+.static-info{
+  margin: 5px;
+  border: 3px solid rgb(184 134 11);
+  width: 460px;
+}
+
+.solar-system-stats{
+  border: 2px solid rgb(240 128 128);
+  width: 436px;
+  height: 500px;
+  margin: 5px 10px 5px 10px
+}
+
+
+.source-info{
+  width: 435px;
+  height: 65px;
+  border: 2px solid rgb(245 245 220);
+  margin: 6px 10px 0 10px;
+}
+
+.source-title{
+  color: rgb(0, 255, 136);
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  text-shadow: 2px 2px 0px darkolivegreen;
+}
+
+.source-name{
+  text-align: center;
+}
+
+.source-name > a{
+  color: rgb(255 255 255);
+  
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.solar-title-cont{
+  color: rgb(0, 255, 136);
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  text-shadow: 2px 2px 0px darkolivegreen;
+}
+
+
+
+.our-solar{
+  font-family: monospace;
+  color: rgb(233 150 122);
+  padding: 10px 5px 0 5px;
+  line-height: 1.1;
+  text-indent: 0px;
+}
+
+.our-solar > p {
+  padding: 5px;
 }

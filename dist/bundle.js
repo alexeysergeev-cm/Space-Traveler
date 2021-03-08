@@ -32518,6 +32518,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('body').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style('background-color', 'black');
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white'); // continueButton()
@@ -32666,106 +32667,83 @@ function _loadDefaultData() {
                     switch (_context.prev = _context.next) {
                       case 0:
                         ele = e.currentTarget.parentElement.classList[0];
-                        debugger;
                         d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red');
                         e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
 
                         if (!(e.currentTarget.innerText === "< 5 parsecs")) {
-                          _context.next = 14;
+                          _context.next = 13;
                           break;
                         }
 
                         if (!data0.length) {
-                          _context.next = 9;
+                          _context.next = 8;
                           break;
                         }
 
                         populateNames(data0);
-                        _context.next = 12;
+                        _context.next = 11;
                         break;
 
-                      case 9:
-                        _context.next = 11;
+                      case 8:
+                        _context.next = 10;
                         return loadNear();
 
-                      case 11:
+                      case 10:
                         data0 = _context.sent;
 
-                      case 12:
-                        _context.next = 32;
+                      case 11:
+                        _context.next = 31;
                         break;
 
-                      case 14:
+                      case 13:
                         if (!(e.currentTarget.innerText === "5-10 parsecs")) {
-                          _context.next = 24;
+                          _context.next = 23;
                           break;
                         }
 
                         if (!data1.length) {
-                          _context.next = 19;
+                          _context.next = 18;
                           break;
                         }
 
                         populateNames(data1);
-                        _context.next = 22;
+                        _context.next = 21;
                         break;
 
-                      case 19:
-                        _context.next = 21;
+                      case 18:
+                        _context.next = 20;
                         return loadMedium();
 
-                      case 21:
+                      case 20:
                         data1 = _context.sent;
 
-                      case 22:
-                        _context.next = 32;
+                      case 21:
+                        _context.next = 31;
                         break;
 
-                      case 24:
+                      case 23:
                         if (!(e.currentTarget.innerText === "10+ parsecs")) {
-                          _context.next = 32;
+                          _context.next = 31;
                           break;
                         }
 
                         if (!data2.length) {
-                          _context.next = 29;
+                          _context.next = 28;
                           break;
                         }
 
                         populateNames(data1);
-                        _context.next = 32;
+                        _context.next = 31;
                         break;
 
-                      case 29:
-                        _context.next = 31;
+                      case 28:
+                        _context.next = 30;
                         return loadFar();
 
-                      case 31:
+                      case 30:
                         data2 = _context.sent;
 
-                      case 32:
-                        //if click speed
-                        if (e.currentTarget.innerText === "The Speed of Light") {
-                          speed = 671000000;
-                          d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
-                          d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
-                            return d.toLocaleString() + " mph";
-                          });
-                        } else if (e.currentTarget.innerText === "Voyager 1") {
-                          speed = 38000;
-                          d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
-                          d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
-                            return d.toLocaleString() + " mph";
-                          });
-                        } else {
-                          speed = 27;
-                          d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
-                          d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
-                            return d + " times the speed of light";
-                          });
-                        }
-
-                      case 33:
+                      case 31:
                       case "end":
                         return _context.stop();
                     }
@@ -32776,7 +32754,41 @@ function _loadDefaultData() {
               return function (_x2) {
                 return _ref.apply(this, arguments);
               };
-            }());
+            }()); //if click speed
+
+            d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('.right-switch').selectAll('button').on('click', function (e) {
+              var ele = e.currentTarget.parentElement.classList[0];
+              d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red');
+              e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
+
+              if (e.currentTarget.innerText === "The Speed of Light") {
+                speed = 671000000;
+                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
+                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
+                  return d.toLocaleString() + " mph";
+                });
+              } else if (e.currentTarget.innerText === "Voyager 1") {
+                speed = 38000;
+                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
+                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
+                  return d.toLocaleString() + " mph";
+                });
+              } else {
+                speed = 27;
+                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
+                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
+                  return d + " times the speed of light";
+                });
+              }
+
+              var humanData = document.getElementsByClassName('other-data')[0].children;
+
+              if (humanData.length === 2) {
+                var distance = document.getElementsByClassName('planet-data')[0].children[1].children[0].children[0]["__data__"];
+                debugger;
+                showHumanStats(distance, speed);
+              }
+            });
             planetsList = document.getElementsByClassName('planets-list');
 
             if (planetsList.length) {
@@ -32808,7 +32820,7 @@ function _loadDefaultData() {
               });
             }
 
-          case 13:
+          case 14:
           case "end":
             return _context2.stop();
         }
@@ -32935,7 +32947,7 @@ function _populateNames() {
   return _populateNames.apply(this, arguments);
 }
 
-function showPlanetStats(planet) {
+function showPlanetStats(planet, speed) {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").selectAll("svg").remove();
   var LightYearsInOneParsec = 3.26;
   var data = [planet.st_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper];
@@ -33040,6 +33052,46 @@ function showPlanetStats(planet) {
       return parseInt(d).toLocaleString();
     }
   });
+} //on speed click
+
+
+function showHumanStats(distance, speed) {
+  var scaleFactor = 10;
+  var barHeight = 50;
+
+  if (speed > 40000) {
+    var scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([10, 100]).range([50, 490]);
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
+    var otherWidth = 500;
+    var otherHeight = 290;
+    var graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", otherWidth).attr("height", otherHeight);
+    var bar2 = graph2.selectAll("g").data([distance]).enter().append("g").attr("transform", function (d, i) {
+      if (i === 0) {
+        return "translate(0,25)";
+      } else if (i === 1) {
+        return "translate(0,100)";
+      } else if (i === 2) {
+        return "translate(0,155)";
+      }
+    });
+    bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
+      return scale(d);
+    }).attr("fill", 'darkmagenta');
+    bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
+      if (i === 0) {
+        return 'Flight Time (in human years)';
+      } else if (i === 1) {
+        return 'Generations amount';
+      }
+    });
+    bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
+      if (i === 0) {
+        return parseInt(d).toLocaleString();
+      } else if (i === 1) {
+        return parseInt(d).toLocaleString();
+      }
+    });
+  }
 }
 
 /***/ })

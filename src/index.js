@@ -2,6 +2,7 @@ import '../css/reset.css'
 import '../css/main.css';
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from 'd3';
+import { selectAll } from 'd3';
 
 
 
@@ -97,7 +98,6 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
   d3.selectAll('button')
     .on('click', async (e) => { 
       let ele = e.currentTarget.parentElement.classList[0]
-      debugger
       d3.select('.' + ele)
         .selectAll('button')
         .style('background-color', 'red')
@@ -122,48 +122,70 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
           data2 = await loadFar()
         }
       }
+    })
 
       //if click speed
-      if (e.currentTarget.innerText === "The Speed of Light") {
-        speed = 671000000
-        d3.select('.speed')
-          .selectAll('h1')
-          .remove()
+    d3.selectAll('.right-switch')
+      .selectAll('button')
+      .on('click', (e) => {
+        let ele = e.currentTarget.parentElement.classList[0]
+        d3.select('.' + ele)
+          .selectAll('button')
+          .style('background-color', 'red')
+          e.currentTarget.style.backgroundColor = 'rgb(90 250 13)'
 
-        d3.select('.speed')
-          .selectAll("h1")
-          .data([speed])
-          .enter()
-          .append("h1")
-          .style('color', 'rgb(255 140 0)')
-          .text(function(d) { return d.toLocaleString() + " mph"; })
-      } else if (e.currentTarget.innerText === "Voyager 1") {
-        speed = 38000
-        d3.select('.speed')
-          .selectAll('h1')
-          .remove()
+        if (e.currentTarget.innerText === "The Speed of Light") {
+          speed = 671000000
+          d3.select('.speed')
+            .selectAll('h1')
+            .remove()
 
-        d3.select('.speed')
-          .selectAll("h1")
-          .data([speed])
-          .enter()
-          .append("h1")
-          .style('color', 'rgb(255 140 0)')
-          .text(function(d) { return d.toLocaleString() + " mph"; })
-      } else {
-        speed = 27
-        d3.select('.speed')
-          .selectAll('h1')
-          .remove()
+          d3.select('.speed')
+            .selectAll("h1")
+            .data([speed])
+            .enter()
+            .append("h1")
+            .style('color', 'rgb(255 140 0)')
+            .text(function(d) { return d.toLocaleString() + " mph"; })
+        } else if (e.currentTarget.innerText === "Voyager 1") {
+          speed = 38000
+          d3.select('.speed')
+            .selectAll('h1')
+            .remove()
 
-        d3.select('.speed')
-          .selectAll("h1")
-          .data([speed])
-          .enter()
-          .append("h1")
-          .style('color', 'rgb(255 140 0)')
-          .text(function(d) { return d + " times the speed of light" })
-      }
+          d3.select('.speed')
+            .selectAll("h1")
+            .data([speed])
+            .enter()
+            .append("h1")
+            .style('color', 'rgb(255 140 0)')
+            .text(function(d) { return d.toLocaleString() + " mph"; })
+        } else {
+          speed = 27
+          d3.select('.speed')
+            .selectAll('h1')
+            .remove()
+
+          d3.select('.speed')
+            .selectAll("h1")
+            .data([speed])
+            .enter()
+            .append("h1")
+            .style('color', 'rgb(255 140 0)')
+            .text(function(d) { return d + " times the speed of light" })
+        }
+
+        let humanData = document.getElementsByClassName('other-data')[0].children
+        if (humanData.length === 2){
+          let distance = document.getElementsByClassName('planet-data')[0]
+                      .children[1]
+                      .children[0]
+                      .children[0]["__data__"]
+
+          
+          debugger
+          showHumanStats(distance, speed)
+        }
     })
 
 
@@ -230,7 +252,7 @@ async function populateNames(arr){
 }
 
 
-function showPlanetStats(planet){
+function showPlanetStats(planet, speed){
   
   d3.select(".planet-data")
     .selectAll("svg").remove()
@@ -436,3 +458,84 @@ function showPlanetStats(planet){
       })
 }
 
+
+//on speed click
+function showHumanStats(distance, speed){
+
+  let scaleFactor = 10
+  let barHeight = 50;
+  
+  if (speed > 40000) {
+
+    let scale = d3.scaleLinear()
+              .domain([10, 100])
+              .range([50, 490]);
+  
+    d3.select(".other-data")
+      .selectAll("svg").remove()
+  
+    let otherWidth = 500;
+    let otherHeight = 290;
+  
+    let graph2 = d3.select(".other-data")
+                  .append("svg")
+                  .attr("width", otherWidth)
+                  .attr("height", otherHeight);
+  
+    let bar2 = graph2.selectAll("g")
+                    .data([distance])
+                    .enter()
+                    .append("g")
+                    .attr("transform", function(d, i) {
+                          if (i === 0){
+                          return "translate(0,25)";
+                        } else if (i === 1) {
+                          return "translate(0,100)";
+                        } else if (i === 2){
+                          return "translate(0,155)";
+                        }
+                    });
+    
+    bar2.append("rect")
+        .attr("height", barHeight - 1)
+        .transition()
+        .ease(d3.easeLinear)
+        .duration(500)
+        .attr("width", function(d) {
+                return scale(d);
+        })
+        .attr("fill", 'darkmagenta')
+  
+    bar2.append("text")
+        .attr("x", 3)
+        .attr("y", -12 )
+        .attr("dy", ".35em")
+        .attr("stroke", "white")
+        .attr("font-size", "18px")
+        .attr("font-family", "fantasy")
+        .style("fill", "darkOrange")
+        .text(function (d, i) {
+          if (i === 0) {
+            return 'Flight Time (in human years)'
+          } else if (i === 1) {
+            return 'Generations amount'
+          }
+        })
+      
+    bar2.append("text")
+        .attr("x", 5)
+        .attr("y", barHeight / 2)
+        .attr("dy", ".35em")
+        .attr("stroke", "white")
+        .attr("font-size", "16px")
+        .attr("font-family", "sans-serif")
+        .style("fill", "darkOrange")
+        .text(function (d, i) {
+          if (i === 0) {
+            return parseInt(d).toLocaleString()
+          } else if (i === 1) {
+            return parseInt(d).toLocaleString()
+          }
+        })
+  }
+}

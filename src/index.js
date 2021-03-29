@@ -18,17 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
     .duration(2000)
     .ease(d3.easeLinear)
     .style('color', 'white')
-  
+
   continueButton()
   // loadDefaultData()         //  development
 })
 
 function continueButton(){  
+
   const main = document.getElementsByClassName('main-div')
   main[0].classList.add('hidden')
 
   const intro = document.getElementsByClassName('intro')
   intro[0].classList.remove('hidden')
+
+  startType()
 
   let button = intro[0].lastElementChild
   button.addEventListener('click', () => {
@@ -39,6 +42,41 @@ function continueButton(){
     loadDefaultData()
   })
 }
+
+let arrNumCount = 0;
+let charCount = 0; 
+let arr = [
+  "There is roughly 30 years between generations. So 2000 years ~ 56 generations.",
+  "A global average human life expectancy is 72.6 years.",
+  "The earth's orbital period is 365 days.",
+  "Distance: 1 parsec = 4.24 light years.",
+  "Voyager 1 speed = 38,000 mph.",
+  "The speed of light 671,000,000 mph.",
+  "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.",
+  "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system. D:"
+]
+
+function startType() {
+  if (arrNumCount < arr.length){
+    let li = document.createElement('li')
+    document.getElementById('rel-info').appendChild(li)
+    actualType()
+  }
+}
+
+function actualType() {
+  if (charCount < arr[arrNumCount].length){
+    let letter = arr[arrNumCount].charAt(charCount)
+    document.getElementById('rel-info').lastChild.textContent += letter
+    charCount++;
+    setTimeout(actualType, 50)
+  } else if (charCount === arr[arrNumCount].length){
+    arrNumCount++;
+    charCount = 0;
+    startType()
+  }
+}
+
 
 function mainPageTransition() {
   d3.select('rect').transition()

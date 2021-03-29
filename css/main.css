@@ -8,17 +8,27 @@ body {
   justify-content: center;
   padding-bottom: 0;
   height: 120px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .title{
   padding: 20px;
-  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);
+  box-shadow: 0px 0px 20px 5px rgb(0, 255, 136);
   font-size: 70px;
   font-family: fantasy;
   color: black;
   border-radius: 20px;
   font-weight: 900;
-  height: 69px;
+  overflow: auto;
+}
+
+#rel-info{
+  list-style: none;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 10px;
+  font-family: monospace;
 }
  
 .main-cont{

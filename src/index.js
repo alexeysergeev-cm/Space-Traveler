@@ -195,6 +195,7 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
             .enter()
             .append("h1")
             .style('color', 'rgb(255 140 0)')
+            // .style('font-size', '22px')
             .text(function(d) { return d.toLocaleString() + " mph"; })
         } else if (e.currentTarget.innerText === "Voyager 1") {
           speed = 38000
@@ -208,6 +209,7 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
             .enter()
             .append("h1")
             .style('color', 'rgb(255 140 0)')
+            // .style('font-size', '22px')
             .text(function(d) { return d.toLocaleString() + " mph"; })
         } else {
           speed = 27
@@ -221,7 +223,8 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
             .enter()
             .append("h1")
             .style('color', 'rgb(255 140 0)')
-            .text(function(d) { return d + " times the speed of light" })
+            // .style('font-size', '22px')
+            .text(function(d) { return d + " x The Speed of Light" })
         }
 
         //check what speed chosen
@@ -349,10 +352,10 @@ async function loadFar(){
 }
 
 async function populateNames(arr){
-  //clear the list
+
    d3.select(".planets-list")
     .selectAll("p").remove()
-  //append new items
+
   d3.select(".planets-list")
     .selectAll("p")
     .data(arr)
@@ -392,7 +395,7 @@ function showPlanetStats(planet, speed){
 
   //planet stats
   let width = 500
-  let height = 200
+  let height = 210
   let scaleFactor = 10
   let barHeight = 50;
 

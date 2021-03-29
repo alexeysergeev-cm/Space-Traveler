@@ -294,11 +294,11 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
     planetsList[0].addEventListener('click', e => {
       let list = document.getElementsByClassName('planets-list')[0].children
       for (let item of list){
-        if (item.style.backgroundColor === 'green'){
+        if (item.style.backgroundColor === 'rgb(255, 140, 0)'){
           item.style.backgroundColor = ""
         }
       }
-      e.target.style.backgroundColor = 'green'
+      e.target.style.backgroundColor = 'rgb(255, 140, 0)'
 
 
       let switches = document.getElementsByClassName('left-switch')[0].children

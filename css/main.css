@@ -39,15 +39,15 @@ body {
 }
 
 .welcome{
-  color: white;
+  color: black;
   font-size: 30px;
   font-family: sans-serif;
   margin: 5px 0;
   width: fit-content;
-  background-color: rgb(47, 79, 79);
+  background-color: #C2B28F;
   border: 1px solid rgb(85, 107, 47);
-  padding: 5px 10px;
-  box-shadow: 0px 1px seashell;
+  padding: 5px 130px;
+  box-shadow: 0px 2px 2px 1px black;
   border-radius: 6px;
   margin-left: auto;
   margin-right: auto;
@@ -60,10 +60,9 @@ body {
   height: 800px;
   width: 1200px;
   margin: 0 30px;
-  box-shadow: 0 2px aliceblue;
   padding: 5px;
   background-color: rgb(255 255 255 / 25%);
-
+  box-shadow: 0 2px 3px 1px #E4D8B4;
 }
 
 
@@ -168,7 +167,9 @@ body {
   border: 3px solid rgb(255 0 0);
   margin: 5px;
   height: 654px;
-
+  background-color: rgb(255 0 0 / 10%);
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px 1px black;
 }
 
 .planets-name{
@@ -192,19 +193,24 @@ body {
   line-height: 1.5;
   height: 605px;
   margin-left: 10px;
-
+  background-color: rgb(255 255 0 / 20%);
+  border-radius: 4px;
+  box-shadow: inset 0 2px 2px 1px black;
+  font-family: monospace;
+  font-size: 16px;
 }
 
 .switch-controller{
   display: flex;
   justify-content: space-between;
-  margin-top: 9px;
+  margin-top: 5px;
   padding-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .left-switch{
   border: 1px solid rgb(0 0 0);
-  box-shadow: 0px 1px 3px 1px aliceblue;
+  box-shadow: 0px 2px 2px 1px black;
   padding: 5px;
   margin-left: 35px;
   padding-top: 9px;
@@ -233,7 +239,7 @@ body {
 
 .right-switch{
   border: 1px solid rgb(0 0 0);
-  box-shadow: 0px 1px 3px 1px aliceblue;
+  box-shadow: 0px 2px 2px 1px black;
   padding: 5px;
   margin-right: 35px;
   padding-top: 9px;
@@ -254,16 +260,22 @@ body {
 }
 
 .dashboard{
-  color: rgb(240 248 255);
-  font-size: 48px;
-  padding-top: 10px;
+  font-size: 28px;
   font-family: system-ui;
-  text-shadow: 3px 3px 1px darkviolet;
+  border: 1px solid rgb(0 0 0);
+  background-color: rgb(194 178 143);
+  color: rgb(0 0 0);
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px 1px black;
+  padding: 6px 25px;
+  height: fit-content;
+  margin-top: 10px;
 }
 
 .planets-list > p {
   cursor: pointer;
   padding-left: 8px;
+  border-radius: 3px;
 }
 
 .planets-list > p:hover {
@@ -313,6 +325,8 @@ body {
   height: 350px;
   width: 500px;
   border: 3px solid rgb(0 128 0);
+  box-shadow: 0 2px 2px 1px black;
+  border-radius: 3px;
 }
 
 .other-data{
@@ -321,6 +335,8 @@ body {
   border: 3px solid rgb(0 128 0);
   padding-top: 2px;
   margin-top: 10px;
+  box-shadow: 0 2px 2px 1px black;
+  border-radius: 3px;
 }
 
 .spacecraft-info{
@@ -381,7 +397,8 @@ body {
   border: 1px solid rgb(0 128 0);
   margin-left: 6px;
   display: flex;
-
+  box-shadow: 0 2px 2px 1px black;
+  border-radius: 3px;
 }
 
 .planet-mass{
@@ -390,6 +407,8 @@ body {
   border: 1px solid rgb(100 149 237);
   margin: 9px;
   text-align: center;
+  box-shadow: inset 0 2px 2px 1px black;
+  border-radius: 3px;
 }
 
 .planet-mass > h6 {
@@ -411,6 +430,8 @@ body {
   border: 1px solid rgb(100 149 237);
   margin: 9px;
   text-align: center;
+  box-shadow: inset 0 2px 2px 1px black;
+  border-radius: 3px;
 }
 
 .misc > h6 {
@@ -433,7 +454,8 @@ body {
   margin: 9px;
   text-align: center;
   overflow: scroll;
-
+  box-shadow: inset 0 2px 2px 1px black;
+  border-radius: 3px;
 }
 
 .facility > h6 {

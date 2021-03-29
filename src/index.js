@@ -185,46 +185,13 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
 
         if (e.currentTarget.innerText === "The Speed of Light") {
           speed = 671000000
-          d3.select('.speed')
-            .selectAll('h1')
-            .remove()
-
-          d3.select('.speed')
-            .selectAll("h1")
-            .data([speed])
-            .enter()
-            .append("h1")
-            .style('color', 'rgb(255 140 0)')
-            // .style('font-size', '22px')
-            .text(function(d) { return d.toLocaleString() + " mph"; })
+          showTheSpeed(speed)
         } else if (e.currentTarget.innerText === "Voyager 1") {
           speed = 38000
-          d3.select('.speed')
-            .selectAll('h1')
-            .remove()
-
-          d3.select('.speed')
-            .selectAll("h1")
-            .data([speed])
-            .enter()
-            .append("h1")
-            .style('color', 'rgb(255 140 0)')
-            // .style('font-size', '22px')
-            .text(function(d) { return d.toLocaleString() + " mph"; })
+          showTheSpeed(speed)
         } else {
           speed = 27
-          d3.select('.speed')
-            .selectAll('h1')
-            .remove()
-
-          d3.select('.speed')
-            .selectAll("h1")
-            .data([speed])
-            .enter()
-            .append("h1")
-            .style('color', 'rgb(255 140 0)')
-            // .style('font-size', '22px')
-            .text(function(d) { return d + " x The Speed of Light" })
+          showTheSpeed(speed)
         }
 
         //check what speed chosen
@@ -659,5 +626,33 @@ function showHumanStats(distance, speed){
         })
   } else if (speed === 38000){
     showPlanetStats
+  }
+}
+
+function showTheSpeed(speed){
+  if (speed === 27){
+    d3.select('.speed')
+      .selectAll('h1')
+      .remove()
+
+    d3.select('.speed')
+      .selectAll("h1")
+      .data([speed])
+      .enter()
+      .append("h1")
+      .style('color', 'rgb(255 140 0)')
+      .text(function(d) { return d + " x The Speed of Light" })
+  } else {
+    d3.select('.speed')
+      .selectAll('h1')
+      .remove()
+
+    d3.select('.speed')
+      .selectAll("h1")
+      .data([speed])
+      .enter()
+      .append("h1")
+      .style('color', 'rgb(255 140 0)')
+      .text(function(d) { return d.toLocaleString() + " mph"; })
   }
 }

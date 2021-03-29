@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .ease(d3.easeLinear)
     .style('color', 'white')
 
-  continueButton()
-  // loadDefaultData()         //  development
+  // continueButton()
+  loadDefaultData()         //  development
 })
 
 function continueButton(){  
@@ -56,6 +56,7 @@ let arr = [
   "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system. D:"
 ]
 
+
 function startType() {
   if (arrNumCount < arr.length){
     let li = document.createElement('li')
@@ -86,13 +87,14 @@ function mainPageTransition() {
 }
 
 async function loadDefaultData(){
+
   //store data from api request
   let data0 = [];
   let data1 = [];
   let data2 = [];
 
   //load Default data
-  data0 = await loadNear()
+  // data0 = await loadNear()
   
   //all btns
   d3.select(".left-switch")
@@ -106,39 +108,46 @@ async function loadDefaultData(){
   d3.select(".left-switch")
     .select('button')
     .style('background-color', 'rgb(90 250 13)')
-  d3.select(".right-switch")
+    .style('box-shadow', 'inset 0 1px 3px 1px rgb(0 0 0)')
+    d3.select(".right-switch")
     .select('button')
     .style('background-color', 'rgb(90 250 13)')
+    .style('box-shadow', 'inset 0 1px 3px 1px rgb(0 0 0)')
      
   
-    //development dummy variable
+    // development dummy variable
 
-//   let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
-//   pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
-// pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
-// pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "", 
-// pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
-// pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
-// ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
-// st_masserr2: "-0.01",st_masslim: "0",st_massn: "2",st_optband: "V (Johnson)",st_optmag: "11.110",st_optmagerr: "",st_optmaglim: "0",st_posn: "4",st_rad: "0.14",st_raderr1: "0.02",
-// st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3050.00",st_tefferr1: "100.00",st_tefferr2: "-100.00",st_tefflim: "0",st_teffn: "2"}]
+  let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
+  pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
+pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
+pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "", 
+pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
+pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
+ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
+st_masserr2: "-0.01",st_masslim: "0",st_massn: "2",st_optband: "V (Johnson)",st_optmag: "11.110",st_optmagerr: "",st_optmaglim: "0",st_posn: "4",st_rad: "0.14",st_raderr1: "0.02",
+st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3050.00",st_tefferr1: "100.00",st_tefferr2: "-100.00",st_tefflim: "0",st_teffn: "2"}]
 
-//   d3.select(".planets-list")
-//     .selectAll("p")
-//     .data(data)
-//     .enter().append("p")
-//     .text(function(d) { return d.pl_name });
+  d3.select(".planets-list")
+    .selectAll("p")
+    .data(data)
+    .enter().append("p")
+    .text(function(d) { return d.pl_name });
 
   //selecting distance
   let speed = 38000; //default 
 
+  //click LEFT-SWITCH
   d3.selectAll('button')
     .on('click', async (e) => { 
       let ele = e.currentTarget.parentElement.classList[0]
       d3.select('.' + ele)
         .selectAll('button')
         .style('background-color', 'red')
+        .style('box-shadow', '0 2px 2px 0px rgb(0 0 0)')
       e.currentTarget.style.backgroundColor = 'rgb(90 250 13)'
+      e.currentTarget.style.boxShadow = 'inset 0 1px 3px 1px rgb(0 0 0)'
+      e.currentTarget.style.outline = 'none'
+
 
       if (e.currentTarget.innerText === "< 5 parsecs") {
         if (data0.length){
@@ -161,7 +170,7 @@ async function loadDefaultData(){
       }
     })
 
-      //if click speed
+    //if click RIGHT-SWITCH
     d3.selectAll('.right-switch')
       .selectAll('button')
       .on('click', (e) => {
@@ -169,7 +178,10 @@ async function loadDefaultData(){
         d3.select('.' + ele)
           .selectAll('button')
           .style('background-color', 'red')
+          .style('box-shadow', '0 2px 2px 0px rgb(0 0 0)')
           e.currentTarget.style.backgroundColor = 'rgb(90 250 13)'
+          e.currentTarget.style.boxShadow = 'inset 0 1px 3px 1px rgb(0 0 0)'
+          e.currentTarget.style.outline = 'none'
 
         if (e.currentTarget.innerText === "The Speed of Light") {
           speed = 671000000
@@ -292,7 +304,7 @@ async function loadDefaultData(){
       let switches = document.getElementsByClassName('left-switch')[0].children
       for (let i = 1; i < switches.length; i++ ) {
         if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
-          data0.forEach(planet => {                          //development 
+          data.forEach(planet => {                          //development 
             if (e.target.innerText === planet.pl_name) {
               showPlanetStats(planet, speed)
             }

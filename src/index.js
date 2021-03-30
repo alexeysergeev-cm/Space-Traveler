@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function continueButton(){  
-
   const main = document.getElementsByClassName('main-div')
   main[0].classList.add('hidden')
 

@@ -33224,9 +33224,17 @@ function showHumanStats(distance, speed) {
       }
     });
   } else if (speed === 27) {
-    var newSpeed = 671000000 * 27;
+    var newDistance = distance / 27 * 12;
 
-    var _scale2 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([10, 100]).range([50, 490]);
+    var _genAmount;
+
+    if (newDistance < 30) {
+      _genAmount = 0;
+    } else {
+      _genAmount = newDistance / 30;
+    }
+
+    var _scale2 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([0, 10]).range([10, 100]);
 
     d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
     var _otherWidth2 = 500;
@@ -33234,7 +33242,7 @@ function showHumanStats(distance, speed) {
 
     var _graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", _otherWidth2).attr("height", _otherHeight2);
 
-    var _bar2 = _graph2.selectAll("g").data([distance]).enter().append("g").attr("transform", function (d, i) {
+    var _bar2 = _graph2.selectAll("g").data([newDistance, _genAmount]).enter().append("g").attr("transform", function (d, i) {
       if (i === 0) {
         return "translate(0,25)";
       } else if (i === 1) {
@@ -33250,7 +33258,7 @@ function showHumanStats(distance, speed) {
 
     _bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
       if (i === 0) {
-        return 'Flight Time (in human years)';
+        return 'Flight Time (in months)';
       } else if (i === 1) {
         return 'Generations amount';
       }
@@ -33263,8 +33271,6 @@ function showHumanStats(distance, speed) {
         return parseInt(d).toLocaleString();
       }
     });
-
-    showPlanetStats;
   }
 }
 

@@ -630,11 +630,18 @@ function showHumanStats(distance, speed){
         })
   } else if (speed === 27){
 
-    let newSpeed = 671000000 * 27; 
+    let newDistance = (distance / 27) * 12; 
+
+    let genAmount;
+    if (newDistance < 30){
+      genAmount = 0
+    } else {
+      genAmount = newDistance / 30;
+    }
 
     let scale = d3.scaleLinear()
-              .domain([10, 100])
-              .range([50, 490]);
+              .domain([0, 10])
+              .range([10, 100]);
   
     d3.select(".other-data")
       .selectAll("svg").remove()
@@ -648,7 +655,7 @@ function showHumanStats(distance, speed){
                   .attr("height", otherHeight);
   
     let bar2 = graph2.selectAll("g")
-                    .data([distance])
+                    .data([newDistance, genAmount])
                     .enter()
                     .append("g")
                     .attr("transform", function(d, i) {
@@ -683,7 +690,7 @@ function showHumanStats(distance, speed){
         .attr('filter', 'drop-shadow(0px 2px 2px black)')
         .text(function (d, i) {
           if (i === 0) {
-            return 'Flight Time (in human years)'
+            return 'Flight Time (in months)'
           } else if (i === 1) {
             return 'Generations amount'
           }
@@ -703,7 +710,6 @@ function showHumanStats(distance, speed){
             return parseInt(d).toLocaleString()
           }
         })
-    showPlanetStats
   }
 }
 

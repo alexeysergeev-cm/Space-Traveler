@@ -160,7 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "body {\n background-color: blue;\n}\n\n.title-cont{\n  display: flex;\n  padding: 50px;\n  justify-content: center;\n  padding-bottom: 0;\n  height: 120px;\n}\n\n.title{\n  padding: 20px;\n  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);\n  font-size: 70px;\n  font-family: fantasy;\n  color: black;\n  border-radius: 20px;\n  font-weight: 900;\n  height: 69px;\n}\n \n.main-cont{\n  display: flex;\n  padding: 10px;\n  justify-content: center;\n}\n\n.welcome{\n  color: white;\n  margin-right: auto;\n  display: block;\n  margin-left: auto;\n  border: 4px solid rgb(128 0 128);\n  height: 30px;\n  font-size: 30px;\n  font-family: serif;\n  padding: 10px;\n  margin-top: 5px;\n  padding-bottom: 0px;\n  text-align: center;\n  width: fit-content;\n}\n\n.main-div{\n  display:  block;  \n  border: 3px dotted rgb(255 255 255);\n  border-radius: 5px;\n  height: 800px;\n  width: 1200px;\n  margin: 0 30px;\n}\n\n\n.intro{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: 3px solid rgb(255, 215, 0);\n  border-radius: 30px;\n  height: 650px;\n  width: auto;\n  margin: 0 150px;\n  padding: 15px;\n  max-width: 700px;\n  margin: auto;\n}\n\n\n.intro.hidden, .main-div.hidden{\n  display: none;\n}\n\n.intro{\n    animation-name: animation;\n    animation-duration: 5s;\n    animation-timing-function: ease-in-out;\n    animation-iteration-count: infinite;    \n    animation-play-state: running;\n}\n\n\n@-webkit-keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: orange;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n@keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: green;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n.intro-text{\n  font-size: 40px;\n  color: white;\n  font-family: fantasy;\n  padding: 10px;\n  margin-bottom: 30px;\n}\n\n.intro > ul > li {\n  padding: 5px;\n  color: darkgray;\n  margin: 15px 0;\n}\n\n.intro > button{\n  margin-top: auto;\n  background: rgb(0 255 255);\n  height: 50px;\n  width: 200px;\n  font-size: 20px;\n  border-radius: 14px;\n  box-shadow: orange 2px 2px;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n\n.intro > button > span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.intro > button > span:after {\n  content: '\\00bb';\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  right: -20px;\n  transition: 0.5s;\n}\n\n.intro > button:hover > span {\n  padding-right: 25px;\n}\n\n.intro > button:hover > span:after {\n  opacity: 1;\n  right: 0;\n}\n\n\n.planets-controller{\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n\n}\n\n.planets-name{\n  color:rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n.planets-list{\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n\n}\n\n.switch-controller{\n  display: flex;\n  justify-content: space-between;\n  margin-top: 9px;\n  padding-bottom: 5px;\n}\n\n.left-switch{\n  border: 1px solid rgb(255 192 203);\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: rgb(255 127 80 / 40%);\n\n}\n\n.left-switch > label{\n  display: block;\n  color: rgb(245 222 179);\n  text-rendering: geometricprecision;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  text-shadow: 2px 2px black\n}\n\n.left-switch > button, .right-switch > button {\n  border-top: 1px solid #CCCCCC;\n  border-right: 1px solid #333333;\n  border-bottom: 1px solid #333333;\n  border-left: 1px solid #CCCCCC;\n  cursor: pointer;\n}\n\n\n.right-switch{\n  border: 1px solid rgb(255 192 203);\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: rgb(96 255 80 / 40%);\n}\n\n.right-switch > label{\n  display: block;\n  color: rgb(245 222 179);\n  text-rendering: geometricprecision;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(255 255 0);\n  text-shadow: 2px 2px black\n}\n\n.dashboard{\n  color: rgb(240 248 255);\n  font-size: 48px;\n  padding-top: 10px;\n  font-family: system-ui;\n  text-shadow: 3px 3px 1px darkviolet;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display{\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont{\n  padding: 5px;\n}\n\n.data-info{\n  /* text-align: center;\n  padding: 5px;\n  font-family: monospace;\n  background-color: rgb(139 0 139);\n  margin-bottom: 8px; */\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n\n\n\n.other-info{\n  /* text-align: center;\n  padding: 5px;\n  font-family: monospace;\n  background-color: rgb(0 0 255);\n  margin-bottom: 8px; */\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n.planet-data{\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n}\n\n.other-data{\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n}\n\n.spacecraft-info{\n  width: 435px;\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n}\n\n.speed-title{\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n\n\n.speed{\n  text-align: center;\n}\n\n\n\n.personal-info{\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n\n.me{\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n\n.planet-data-static{\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n\n}\n\n.planet-mass{\n  width: 150px;\n  height: 80px;\n  border: 1px solid rgb(100 149 237);\n  margin: 9px;\n  text-align: center;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 20px;\n  padding: 1px;\n}\n\n.planet-mass > p {\n  color: greenyellow;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 150px;\n  height: 80px;\n  border: 1px solid rgb(100 149 237);\n  margin: 9px;\n  text-align: center;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 18px;\n  padding: 1px;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 150px;\n  height: 80px;\n  border: 1px solid rgb(100 149 237);\n  margin: 9px;\n  text-align: center;\n  overflow: scroll;\n\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 18px;\n  padding: 1px;\n\n}\n\n.facility > p {\n  color: orange; \n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info{\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 460px;\n}\n\n.solar-system-stats{\n  border: 2px solid rgb(240 128 128);\n  width: 436px;\n  height: 500px;\n  margin: 5px 10px 5px 10px\n}\n\n\n.source-info{\n  width: 435px;\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n}\n\n.source-title{\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n.source-name{\n  text-align: center;\n}\n\n.source-name > a{\n  color: rgb(255 255 255);\n  \n  text-decoration: none;\n  font-size: 19px;\n}\n\n.solar-title-cont{\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n\n\n.our-solar{\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n}\n\n.our-solar > p {\n  padding: 5px;\n}", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"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","sourcesContent":["body {\n background-color: blue;\n}\n\n.title-cont{\n  display: flex;\n  padding: 50px;\n  justify-content: center;\n  padding-bottom: 0;\n  height: 120px;\n}\n\n.title{\n  padding: 20px;\n  box-shadow: 8px -8px 20px 7px rgb(0, 255, 136);\n  font-size: 70px;\n  font-family: fantasy;\n  color: black;\n  border-radius: 20px;\n  font-weight: 900;\n  height: 69px;\n}\n \n.main-cont{\n  display: flex;\n  padding: 10px;\n  justify-content: center;\n}\n\n.welcome{\n  color: white;\n  margin-right: auto;\n  display: block;\n  margin-left: auto;\n  border: 4px solid rgb(128 0 128);\n  height: 30px;\n  font-size: 30px;\n  font-family: serif;\n  padding: 10px;\n  margin-top: 5px;\n  padding-bottom: 0px;\n  text-align: center;\n  width: fit-content;\n}\n\n.main-div{\n  display:  block;  \n  border: 3px dotted rgb(255 255 255);\n  border-radius: 5px;\n  height: 800px;\n  width: 1200px;\n  margin: 0 30px;\n}\n\n\n.intro{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: 3px solid rgb(255, 215, 0);\n  border-radius: 30px;\n  height: 650px;\n  width: auto;\n  margin: 0 150px;\n  padding: 15px;\n  max-width: 700px;\n  margin: auto;\n}\n\n\n.intro.hidden, .main-div.hidden{\n  display: none;\n}\n\n.intro{\n    animation-name: animation;\n    animation-duration: 5s;\n    animation-timing-function: ease-in-out;\n    animation-iteration-count: infinite;    \n    animation-play-state: running;\n}\n\n\n@-webkit-keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: orange;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n@keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: green;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n.intro-text{\n  font-size: 40px;\n  color: white;\n  font-family: fantasy;\n  padding: 10px;\n  margin-bottom: 30px;\n}\n\n.intro > ul > li {\n  padding: 5px;\n  color: darkgray;\n  margin: 15px 0;\n}\n\n.intro > button{\n  margin-top: auto;\n  background: rgb(0 255 255);\n  height: 50px;\n  width: 200px;\n  font-size: 20px;\n  border-radius: 14px;\n  box-shadow: orange 2px 2px;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n\n.intro > button > span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.intro > button > span:after {\n  content: '\\00bb';\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  right: -20px;\n  transition: 0.5s;\n}\n\n.intro > button:hover > span {\n  padding-right: 25px;\n}\n\n.intro > button:hover > span:after {\n  opacity: 1;\n  right: 0;\n}\n\n\n.planets-controller{\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n\n}\n\n.planets-name{\n  color:rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n.planets-list{\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n\n}\n\n.switch-controller{\n  display: flex;\n  justify-content: space-between;\n  margin-top: 9px;\n  padding-bottom: 5px;\n}\n\n.left-switch{\n  border: 1px solid rgb(255 192 203);\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: rgb(255 127 80 / 40%);\n\n}\n\n.left-switch > label{\n  display: block;\n  color: rgb(245 222 179);\n  text-rendering: geometricprecision;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  text-shadow: 2px 2px black\n}\n\n.left-switch > button, .right-switch > button {\n  border-top: 1px solid #CCCCCC;\n  border-right: 1px solid #333333;\n  border-bottom: 1px solid #333333;\n  border-left: 1px solid #CCCCCC;\n  cursor: pointer;\n}\n\n\n.right-switch{\n  border: 1px solid rgb(255 192 203);\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: rgb(96 255 80 / 40%);\n}\n\n.right-switch > label{\n  display: block;\n  color: rgb(245 222 179);\n  text-rendering: geometricprecision;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(255 255 0);\n  text-shadow: 2px 2px black\n}\n\n.dashboard{\n  color: rgb(240 248 255);\n  font-size: 48px;\n  padding-top: 10px;\n  font-family: system-ui;\n  text-shadow: 3px 3px 1px darkviolet;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display{\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont{\n  padding: 5px;\n}\n\n.data-info{\n  /* text-align: center;\n  padding: 5px;\n  font-family: monospace;\n  background-color: rgb(139 0 139);\n  margin-bottom: 8px; */\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n\n\n\n.other-info{\n  /* text-align: center;\n  padding: 5px;\n  font-family: monospace;\n  background-color: rgb(0 0 255);\n  margin-bottom: 8px; */\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n.planet-data{\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n}\n\n.other-data{\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n}\n\n.spacecraft-info{\n  width: 435px;\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n}\n\n.speed-title{\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n\n\n.speed{\n  text-align: center;\n}\n\n\n\n.personal-info{\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n\n.me{\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n\n.planet-data-static{\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n\n}\n\n.planet-mass{\n  width: 150px;\n  height: 80px;\n  border: 1px solid rgb(100 149 237);\n  margin: 9px;\n  text-align: center;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 20px;\n  padding: 1px;\n}\n\n.planet-mass > p {\n  color: greenyellow;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 150px;\n  height: 80px;\n  border: 1px solid rgb(100 149 237);\n  margin: 9px;\n  text-align: center;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 18px;\n  padding: 1px;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 150px;\n  height: 80px;\n  border: 1px solid rgb(100 149 237);\n  margin: 9px;\n  text-align: center;\n  overflow: scroll;\n\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 18px;\n  padding: 1px;\n\n}\n\n.facility > p {\n  color: orange; \n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info{\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 460px;\n}\n\n.solar-system-stats{\n  border: 2px solid rgb(240 128 128);\n  width: 436px;\n  height: 500px;\n  margin: 5px 10px 5px 10px\n}\n\n\n.source-info{\n  width: 435px;\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n}\n\n.source-title{\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n.source-name{\n  text-align: center;\n}\n\n.source-name > a{\n  color: rgb(255 255 255);\n  \n  text-decoration: none;\n  font-size: 19px;\n}\n\n.solar-title-cont{\n  color: rgb(0, 255, 136);\n  text-align: center;\n  padding: 5px;\n  margin: auto;\n  text-shadow: 2px 2px 0px darkolivegreen;\n}\n\n\n\n.our-solar{\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n}\n\n.our-solar > p {\n  padding: 5px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "body {\n background-color: blue;\n}\n\n.title-cont{\n  display: flex;\n  padding: 50px;\n  justify-content: center;\n  padding-bottom: 0;\n  height: 120px;\n  margin-bottom: 20px;\n}\n\n.title{\n  padding: 20px;\n  box-shadow: 0px 1px 5px 1px rgb(0, 255, 136);\n  font-size: 70px;\n  font-family: fantasy;\n  color: black;\n  border-radius: 20px;\n  font-weight: 900;\n  overflow: auto;\n  height: 70px;\n}\n\n#rel-info{\n  list-style: none;\n  font-size: 20px;\n  padding-left: 30px;\n  padding-right: 10px;\n  font-family: monospace;\n}\n \n.main-cont{\n  display: flex;\n  padding: 10px;\n  justify-content: center;\n}\n\n.welcome{\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #C2B28F;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div{\n  display:  block;  \n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  height: 800px;\n  width: 1200px;\n  margin: 0 30px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0 2px 3px 1px #E4D8B4;\n}\n\n\n.intro{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: 3px solid rgb(255, 215, 0);\n  border-radius: 30px;\n  height: 650px;\n  width: auto;\n  margin: 0 150px;\n  padding: 15px;\n  max-width: 700px;\n  margin: auto;\n}\n\n\n.intro.hidden, .main-div.hidden{\n  display: none;\n}\n\n.intro{\n    animation-name: animation;\n    animation-duration: 5s;\n    animation-timing-function: ease-in-out;\n    animation-iteration-count: infinite;    \n    animation-play-state: running;\n}\n\n\n@-webkit-keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: orange;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n@keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: green;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n.intro-text{\n  font-size: 40px;\n  color: white;\n  font-family: fantasy;\n  padding: 10px;\n  margin-bottom: 30px;\n}\n\n.intro > ul > li {\n  padding: 5px;\n  color: darkgray;\n  margin: 15px 0;\n}\n\n.intro > button{\n  margin-top: auto;\n  background: rgb(0 255 255);\n  height: 50px;\n  width: 200px;\n  font-size: 20px;\n  border-radius: 14px;\n  box-shadow: orange 2px 2px;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n\n.intro > button > span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.intro > button > span:after {\n  content: '\\00bb';\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  right: -20px;\n  transition: 0.5s;\n}\n\n.intro > button:hover > span {\n  padding-right: 25px;\n}\n\n.intro > button:hover > span:after {\n  opacity: 1;\n  right: 0;\n}\n\n\n.planets-controller{\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n\n.planets-list{\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller{\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch{\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #E86F68;\n  border-radius: 3px;\n}\n\n.left-switch > label{\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button, .right-switch > button {\n  border: 1px solid rgb(255 255 255 / 85%);\n  box-shadow: 0 2px 2px 0px rgb(0 0 0);\n  cursor: pointer;\n}\n\n\n.right-switch{\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83B799;\n  border-radius: 3px;\n}\n\n.right-switch > label{\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard{\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display{\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont{\n  padding: 5px;\n}\n\n.data-info{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n\n\n\n.other-info{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data{\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data{\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  \n}\n\n.spacecraft-info{\n  width: 435px;\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed{\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info{\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me{\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n\n.planet-data-static{\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass{\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange; \n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info{\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 460px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats{\n  border: 2px solid rgb(240 128 128);\n  width: 436px;\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n\n.source-info{\n  width: 435px;\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name{\n  text-align: center;\n}\n\n.source-name > a{\n  color: rgb(255 255 255);\n  \n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover{\n  color: #E2CD6D;\n}\n\n.solar-title-cont{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n\n\n.our-solar{\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button{\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px; \n  cursor: pointer;\n}\n\n\n.solar-system-stats > button:active { \n  background-color: #83B799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"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","sourcesContent":["body {\n background-color: blue;\n}\n\n.title-cont{\n  display: flex;\n  padding: 50px;\n  justify-content: center;\n  padding-bottom: 0;\n  height: 120px;\n  margin-bottom: 20px;\n}\n\n.title{\n  padding: 20px;\n  box-shadow: 0px 1px 5px 1px rgb(0, 255, 136);\n  font-size: 70px;\n  font-family: fantasy;\n  color: black;\n  border-radius: 20px;\n  font-weight: 900;\n  overflow: auto;\n  height: 70px;\n}\n\n#rel-info{\n  list-style: none;\n  font-size: 20px;\n  padding-left: 30px;\n  padding-right: 10px;\n  font-family: monospace;\n}\n \n.main-cont{\n  display: flex;\n  padding: 10px;\n  justify-content: center;\n}\n\n.welcome{\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #C2B28F;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div{\n  display:  block;  \n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  height: 800px;\n  width: 1200px;\n  margin: 0 30px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0 2px 3px 1px #E4D8B4;\n}\n\n\n.intro{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: 3px solid rgb(255, 215, 0);\n  border-radius: 30px;\n  height: 650px;\n  width: auto;\n  margin: 0 150px;\n  padding: 15px;\n  max-width: 700px;\n  margin: auto;\n}\n\n\n.intro.hidden, .main-div.hidden{\n  display: none;\n}\n\n.intro{\n    animation-name: animation;\n    animation-duration: 5s;\n    animation-timing-function: ease-in-out;\n    animation-iteration-count: infinite;    \n    animation-play-state: running;\n}\n\n\n@-webkit-keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: orange;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n@keyframes animation {\n    0%     {border-color:red;}\n    25.0%  {border-color: green;}\n    50.0%  {border-color:rgb(255, 215, 0)}\n    75.0%  {border-color: purple;}\n    100.0% {border-color:red;}\n}\n\n.intro-text{\n  font-size: 40px;\n  color: white;\n  font-family: fantasy;\n  padding: 10px;\n  margin-bottom: 30px;\n}\n\n.intro > ul > li {\n  padding: 5px;\n  color: darkgray;\n  margin: 15px 0;\n}\n\n.intro > button{\n  margin-top: auto;\n  background: rgb(0 255 255);\n  height: 50px;\n  width: 200px;\n  font-size: 20px;\n  border-radius: 14px;\n  box-shadow: orange 2px 2px;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n\n.intro > button > span {\n  cursor: pointer;\n  display: inline-block;\n  position: relative;\n  transition: 0.5s;\n}\n\n.intro > button > span:after {\n  content: '\\00bb';\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  right: -20px;\n  transition: 0.5s;\n}\n\n.intro > button:hover > span {\n  padding-right: 25px;\n}\n\n.intro > button:hover > span:after {\n  opacity: 1;\n  right: 0;\n}\n\n\n.planets-controller{\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n\n.planets-list{\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller{\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch{\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #E86F68;\n  border-radius: 3px;\n}\n\n.left-switch > label{\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button, .right-switch > button {\n  border: 1px solid rgb(255 255 255 / 85%);\n  box-shadow: 0 2px 2px 0px rgb(0 0 0);\n  cursor: pointer;\n}\n\n\n.right-switch{\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83B799;\n  border-radius: 3px;\n}\n\n.right-switch > label{\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard{\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display{\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont{\n  padding: 5px;\n}\n\n.data-info{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n\n\n\n.other-info{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data{\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data{\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  \n}\n\n.spacecraft-info{\n  width: 435px;\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed{\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info{\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me{\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n\n.planet-data-static{\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass{\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange; \n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info{\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 460px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats{\n  border: 2px solid rgb(240 128 128);\n  width: 436px;\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n\n.source-info{\n  width: 435px;\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name{\n  text-align: center;\n}\n\n.source-name > a{\n  color: rgb(255 255 255);\n  \n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover{\n  color: #E2CD6D;\n}\n\n.solar-title-cont{\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n\n\n.our-solar{\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button{\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px; \n  cursor: pointer;\n}\n\n\n.solar-system-stats > button:active { \n  background-color: #83B799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -32536,6 +32536,7 @@ function continueButton() {
   main[0].classList.add('hidden');
   var intro = document.getElementsByClassName('intro');
   intro[0].classList.remove('hidden');
+  startType();
   var button = intro[0].lastElementChild;
   button.addEventListener('click', function () {
     main[0].classList.remove('hidden');
@@ -32543,6 +32544,31 @@ function continueButton() {
     mainPageTransition();
     loadDefaultData();
   });
+}
+
+var arrNumCount = 0;
+var charCount = 0;
+var arr = ["There is roughly 30 years between generations. So 2000 years ~ 56 generations.", "A global average human life expectancy is 72.6 years.", "The earth's orbital period is 365 days.", "Distance: 1 parsec = 4.24 light years.", "Voyager 1 speed = 38,000 mph.", "The speed of light 671,000,000 mph.", "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.", "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system. D:"];
+
+function startType() {
+  if (arrNumCount < arr.length) {
+    var li = document.createElement('li');
+    document.getElementById('rel-info').appendChild(li);
+    actualType();
+  }
+}
+
+function actualType() {
+  if (charCount < arr[arrNumCount].length) {
+    var letter = arr[arrNumCount].charAt(charCount);
+    document.getElementById('rel-info').lastChild.textContent += letter;
+    charCount++;
+    setTimeout(actualType, 50);
+  } else if (charCount === arr[arrNumCount].length) {
+    arrNumCount++;
+    charCount = 0;
+    startType();
+  }
 }
 
 function mainPageTransition() {
@@ -32555,7 +32581,7 @@ function loadDefaultData() {
 
 function _loadDefaultData() {
   _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-    var data0, data1, data2, speed, planetsList;
+    var data0, data1, data2, speed, planetsList, fact;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -32563,7 +32589,7 @@ function _loadDefaultData() {
             //store data from api request
             data0 = [];
             data1 = [];
-            data2 = []; //load Default data
+            data2 = []; // load Default data
 
             _context2.next = 5;
             return loadNear();
@@ -32574,8 +32600,8 @@ function _loadDefaultData() {
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
 
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select('button').style('background-color', 'rgb(90 250 13)');
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)'); //development dummy variable
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select('button').style('background-color', 'rgb(90 250 13)').style('box-shadow', 'inset 0 1px 3px 1px rgb(0 0 0)');
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)').style('box-shadow', 'inset 0 1px 3px 1px rgb(0 0 0)'); // development dummy variable
             //   let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
             //   pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
             // pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
@@ -32593,6 +32619,7 @@ function _loadDefaultData() {
             //selecting distance
 
             speed = 38000; //default 
+            //click LEFT-SWITCH
 
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('button').on('click', /*#__PURE__*/function () {
               var _ref = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee(e) {
@@ -32602,83 +32629,85 @@ function _loadDefaultData() {
                     switch (_context.prev = _context.next) {
                       case 0:
                         ele = e.currentTarget.parentElement.classList[0];
-                        d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red');
+                        d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red').style('box-shadow', '0 2px 2px 0px rgb(0 0 0)');
                         e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
+                        e.currentTarget.style.boxShadow = 'inset 0 1px 3px 1px rgb(0 0 0)';
+                        e.currentTarget.style.outline = 'none';
 
                         if (!(e.currentTarget.innerText === "< 5 parsecs")) {
-                          _context.next = 13;
+                          _context.next = 15;
                           break;
                         }
 
                         if (!data0.length) {
-                          _context.next = 8;
+                          _context.next = 10;
                           break;
                         }
 
                         populateNames(data0);
-                        _context.next = 11;
+                        _context.next = 13;
                         break;
-
-                      case 8:
-                        _context.next = 10;
-                        return loadNear();
 
                       case 10:
+                        _context.next = 12;
+                        return loadNear();
+
+                      case 12:
                         data0 = _context.sent;
 
-                      case 11:
-                        _context.next = 31;
+                      case 13:
+                        _context.next = 33;
                         break;
 
-                      case 13:
+                      case 15:
                         if (!(e.currentTarget.innerText === "5-10 parsecs")) {
-                          _context.next = 23;
+                          _context.next = 25;
                           break;
                         }
 
                         if (!data1.length) {
-                          _context.next = 18;
+                          _context.next = 20;
                           break;
                         }
 
                         populateNames(data1);
-                        _context.next = 21;
+                        _context.next = 23;
                         break;
-
-                      case 18:
-                        _context.next = 20;
-                        return loadMedium();
 
                       case 20:
+                        _context.next = 22;
+                        return loadMedium();
+
+                      case 22:
                         data1 = _context.sent;
 
-                      case 21:
-                        _context.next = 31;
+                      case 23:
+                        _context.next = 33;
                         break;
 
-                      case 23:
+                      case 25:
                         if (!(e.currentTarget.innerText === "10+ parsecs")) {
-                          _context.next = 31;
+                          _context.next = 33;
                           break;
                         }
 
                         if (!data2.length) {
-                          _context.next = 28;
+                          _context.next = 30;
                           break;
                         }
 
                         populateNames(data1);
-                        _context.next = 31;
+                        _context.next = 33;
                         break;
 
-                      case 28:
-                        _context.next = 30;
+                      case 30:
+                        _context.next = 32;
                         return loadFar();
 
-                      case 30:
+                      case 32:
                         data2 = _context.sent;
 
-                      case 31:
+                      case 33:
                       case "end":
                         return _context.stop();
                     }
@@ -32689,31 +32718,24 @@ function _loadDefaultData() {
               return function (_x2) {
                 return _ref.apply(this, arguments);
               };
-            }()); //if click speed
+            }()); //if click RIGHT-SWITCH
 
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('.right-switch').selectAll('button').on('click', function (e) {
               var ele = e.currentTarget.parentElement.classList[0];
-              d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red');
+              d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red').style('box-shadow', '0 2px 2px 0px rgb(0 0 0)');
               e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
+              e.currentTarget.style.boxShadow = 'inset 0 1px 3px 1px rgb(0 0 0)';
+              e.currentTarget.style.outline = 'none';
 
               if (e.currentTarget.innerText === "The Speed of Light") {
                 speed = 671000000;
-                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
-                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
-                  return d.toLocaleString() + " mph";
-                });
+                showTheSpeed(speed);
               } else if (e.currentTarget.innerText === "Voyager 1") {
                 speed = 38000;
-                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
-                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
-                  return d.toLocaleString() + " mph";
-                });
+                showTheSpeed(speed);
               } else {
                 speed = 27;
-                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
-                d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
-                  return d + " times the speed of light";
-                });
+                showTheSpeed(speed);
               } //check what speed chosen
 
 
@@ -32747,7 +32769,7 @@ function _loadDefaultData() {
                     var _loop = function _loop() {
                       var item = _step.value;
 
-                      if (item.style.backgroundColor === 'green') {
+                      if (item.style.backgroundColor === 'rgb(255, 140, 0)') {
                         ///NOT DRY! refactor
                         var switches = document.getElementsByClassName('left-switch')[0].children;
 
@@ -32807,7 +32829,7 @@ function _loadDefaultData() {
                   for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
                     var item = _step2.value;
 
-                    if (item.style.backgroundColor === 'green') {
+                    if (item.style.backgroundColor === 'rgb(255, 140, 0)') {
                       item.style.backgroundColor = "";
                     }
                   }
@@ -32817,13 +32839,13 @@ function _loadDefaultData() {
                   _iterator2.f();
                 }
 
-                e.target.style.backgroundColor = 'green';
+                e.target.style.backgroundColor = 'rgb(255, 140, 0)';
                 var switches = document.getElementsByClassName('left-switch')[0].children;
 
                 for (var i = 1; i < switches.length; i++) {
                   if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
                     data0.forEach(function (planet) {
-                      //development 
+                      // development 
                       if (e.target.innerText === planet.pl_name) {
                         showPlanetStats(planet, speed);
                       }
@@ -32845,7 +32867,13 @@ function _loadDefaultData() {
               });
             }
 
-          case 15:
+            fact = document.getElementById('random-fact');
+            fact.addEventListener('click', function (e) {
+              e.target.style.backgroundColor = 'rgb(232 111 104)';
+              runFacts();
+            });
+
+          case 17:
           case "end":
             return _context2.stop();
         }
@@ -32927,7 +32955,7 @@ function _loadFar() {
         switch (_context5.prev = _context5.next) {
           case 0:
             _context5.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>11 and st_dist<13&order=st_dist');
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist');
 
           case 2:
             arr = _context5.sent;
@@ -32955,9 +32983,7 @@ function _populateNames() {
       while (1) {
         switch (_context6.prev = _context6.next) {
           case 0:
-            //clear the list
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").remove(); //append new items
-
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").remove();
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
               return d.pl_name;
             });
@@ -33001,34 +33027,34 @@ function showPlanetStats(planet, speed) {
   var humanData = [yearsToReach, humanGenerations]; //planet stats
 
   var width = 500;
-  var height = 200;
+  var height = 210;
   var scaleFactor = 10;
   var barHeight = 50;
-  var scale1 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([1, 20000]).range([1, 490]);
+  var scale1 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([1, 100]).range([10, 1000]);
   var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data-svg").append("svg").attr("width", width).attr("height", height);
   var bar = graph.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
     if (i === 0) {
-      return "translate(0,25)";
+      return "translate(0, 25)";
     } else if (i === 1) {
-      return "translate(0,90)";
+      return "translate(0, 95)";
     } else if (i === 2) {
-      return "translate(0,155)";
+      return "translate(0, 165)";
     }
   });
   bar.append("rect").attr("height", barHeight - 10).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
-    return d * scaleFactor;
-  }).attr("fill", 'rgb(139, 0, 139)');
-  bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
+    // return d * scaleFactor;
+    return scale1(d);
+  }).attr("fill", 'rgb(139, 0, 139)').attr('filter', 'drop-shadow(0px 2px 2px black)');
+  bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
     if (i === 0) {
-      return 'Distance (in light years)';
+      return 'Distance (Light Years)';
     } else if (i === 1) {
       return 'Planet Number';
     } else if (i === 2) {
-      return 'Orbital Period (in days)';
+      return 'Orbital Period (Days)';
     }
   });
-  bar.append("text").attr("x", 5).attr("y", barHeight / 2) // .attr("dy", ".35em")
-  .attr("stroke", "white").attr("font-size", "16px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
+  bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
     if (i === 0) {
       return d.toFixed(2);
     } else {
@@ -33079,15 +33105,15 @@ function showHumanStats(distance, speed) {
     });
     bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
       return scale(d);
-    }).attr("fill", 'darkmagenta');
-    bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
+    }).attr("fill", 'darkmagenta').attr('filter', 'drop-shadow(0px 2px 2px black)');
+    bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
       if (i === 0) {
-        return 'Flight Time (in human years)';
+        return 'Flight Time (Years)';
       } else if (i === 1) {
         return 'Generations amount';
       }
     });
-    bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
+    bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
       if (i === 0) {
         return parseInt(d).toLocaleString();
       } else if (i === 1) {
@@ -33095,6 +33121,8 @@ function showHumanStats(distance, speed) {
       }
     });
   } else if (speed > 40000) {
+    var genAmount = distance / 30;
+
     var _scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([10, 100]).range([50, 490]);
 
     d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
@@ -33103,7 +33131,7 @@ function showHumanStats(distance, speed) {
 
     var _graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", _otherWidth).attr("height", _otherHeight);
 
-    var _bar = _graph.selectAll("g").data([distance]).enter().append("g").attr("transform", function (d, i) {
+    var _bar = _graph.selectAll("g").data([distance, genAmount]).enter().append("g").attr("transform", function (d, i) {
       if (i === 0) {
         return "translate(0,25)";
       } else if (i === 1) {
@@ -33115,26 +33143,95 @@ function showHumanStats(distance, speed) {
 
     _bar.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
       return _scale(d);
-    }).attr("fill", 'darkmagenta');
+    }).attr("fill", 'darkmagenta').attr('filter', 'drop-shadow(0px 2px 2px black)');
 
-    _bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "18px").attr("font-family", "fantasy").style("fill", "darkOrange").text(function (d, i) {
+    _bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
       if (i === 0) {
-        return 'Flight Time (in human years)';
+        return 'Flight Time (Years)';
       } else if (i === 1) {
         return 'Generations amount';
       }
     });
 
-    _bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("stroke", "white").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "darkOrange").text(function (d, i) {
+    _bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
       if (i === 0) {
         return d.toFixed(2);
       } else if (i === 1) {
         return parseInt(d).toLocaleString();
       }
     });
-  } else if (speed === 38000) {
-    showPlanetStats;
+  } else if (speed === 27) {
+    var newDistance = distance / 27 * 12;
+
+    var _genAmount;
+
+    if (newDistance < 30) {
+      _genAmount = 0;
+    } else {
+      _genAmount = newDistance / 30;
+    }
+
+    var _scale2 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([0, 10]).range([10, 100]);
+
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
+    var _otherWidth2 = 500;
+    var _otherHeight2 = 290;
+
+    var _graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", _otherWidth2).attr("height", _otherHeight2);
+
+    var _bar2 = _graph2.selectAll("g").data([newDistance, _genAmount]).enter().append("g").attr("transform", function (d, i) {
+      if (i === 0) {
+        return "translate(0,25)";
+      } else if (i === 1) {
+        return "translate(0,100)";
+      } else if (i === 2) {
+        return "translate(0,155)";
+      }
+    });
+
+    _bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
+      return _scale2(d);
+    }).attr("fill", 'darkmagenta').attr('filter', 'drop-shadow(0px 2px 2px black)');
+
+    _bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
+      if (i === 0) {
+        return 'Flight Time (Months)';
+      } else if (i === 1) {
+        return 'Generations amount';
+      }
+    });
+
+    _bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
+      if (i === 0) {
+        return d.toFixed(2);
+      } else if (i === 1) {
+        return parseInt(d).toLocaleString();
+      }
+    });
   }
+}
+
+function showTheSpeed(speed) {
+  if (speed === 27) {
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
+      return d + " x The Speed of Light";
+    });
+  } else {
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
+      return d.toLocaleString() + " mph";
+    });
+  }
+}
+
+function runFacts() {
+  var factsArr = ["Earth's orbital period: 365 days.", "Planet number in our solar system: 8 (previously 9).", "Pluto is a dwarf planet, smaller than Earth's moon. Thus it was demoted from its planetary status in 2006.", "Exoplanet is a planet outside of our solar system.", "To date, more than 4,000 exoplanets have been discovered and are considered 'confirmed'.", "Earth is the only known planet to have bodies of liquid water on its surface.", "Earth is the only planet in the universe known to possess life."];
+  var random = factsArr[Math.floor(Math.random() * factsArr.length)];
+  var ourSolarDiv = document.getElementsByClassName('our-solar')[0];
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.our-solar').selectAll('p').remove();
+  var pEle = document.createElement('p');
+  ourSolarDiv.appendChild(pEle).textContent = random;
 }
 
 /***/ })

@@ -5,9 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta property="og:title" content="Space-Traveler" />
+  <meta property="og:image" content="./assets/project_pic.png" />
+  <meta property="og:description" content="Get to know what it takes to reach an exoplanet." />
+  <meta property="og:url" content="https://alexeysergeev-cm.github.io/Space-Traveler/" />
+
   <link rel="stylesheet" type='text/css' href="css/reset.css">
   <link rel="stylesheet" type='text/css' href="css/main.css">
-
+  <link rel="shortcut icon" href="/assets/favicon (3).ico">
   <script src="https://d3js.org/d3.v6.min.js"></script>
 
   <script src="./dist/bundle.js"></script>
@@ -18,14 +23,14 @@
 <body>
   
   <div class='title-cont'>
-    <svg id='mainSVG' width="300" height="200">
+    <svg id='mainSVG' width="300" height="1000">
       <rect x="0" y="0" width="5" height="5" fill='lightblue' transform="translate(120,100) rotate(45)">
         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
       </rect>
       <rect x="0" y="0" width="5" height="5" fill='white' transform="translate(40,10) rotate(45)">
         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="4s" repeatCount="indefinite" />
       </rect>
-      <rect x="0" y="0" width="5" height="5" fill='purple' transform="translate(260,50) rotate(45)">
+      <rect x="0" y="0" width="5" height="5" fill='purple' transform="translate(260,70) rotate(45)">
         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
       </rect>
       <rect x="0" y="0" width="7" height="7" fill='aqua' transform="translate(10,150) rotate(45)">
@@ -34,9 +39,24 @@
       <rect x="0" y="0" width="5" height="5" fill='green' transform="translate(230,170) rotate(55)">
         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="6s" repeatCount="indefinite" />
       </rect>
+      <rect x="0" y="0" width="5" height="5" fill='lightblue' transform="translate(5,800) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='white' transform="translate(40,450) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='purple' transform="translate(260,550) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="7" height="7" fill='aqua' transform="translate(200,670) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
+      </rect>5
+      <rect x="0" y="0" width="5" height="5" fill='green' transform="translate(230,900) rotate(55)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="6s" repeatCount="indefinite" />
+      </rect>
     </svg>
     <h1 class="title">Space Traveler</h1>
-    <svg id='mainSVG' width="300" height="200">
+    <svg id='mainSVG' width="300" height="1000">
       <rect x="0" y="0" width="5" height="5" fill='lightblue' transform="translate(160,100) rotate(45)">
         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
       </rect>
@@ -48,8 +68,23 @@
       </rect>
       <rect x="0" y="0" width="7" height="7" fill='aqua' transform="translate(30,150) rotate(45)">
         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="7s" repeatCount="indefinite" />
-      </rect>5
+      </rect>
       <rect x="0" y="0" width="5" height="5" fill='green' transform="translate(270,130) rotate(55)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='lightblue' transform="translate(160,700) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='white' transform="translate(80,910) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="5" height="5" fill='purple' transform="translate(290, 510) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="7" height="7" fill='aqua' transform="translate(50,600) rotate(45)">
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="7s" repeatCount="indefinite" />
+      </rect>5
+      <rect x="0" y="0" width="5" height="5" fill='green' transform="translate(270,340) rotate(55)">
         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
       </rect>
     </svg>
@@ -58,7 +93,7 @@
   <div class="main-cont">
     <div class="main-div">
       <div class="welcome">
-        <h1>Welcome dear traveler, this station takes you to the destinations outside of our solar system.</h1>
+        <h1>Welcome dear traveler</h1>
       </div>
       <div class="switch-controller">
         <div class="left-switch">
@@ -97,7 +132,7 @@
                 <h6>Planet Mass</h6>
               </div>
               <div class="misc">
-                <h6>Date of Last Update</h6>
+                <h6>Last Updated</h6>
               </div>
               <div class="facility">
                 <h6>Discovery Facility</h6>
@@ -123,16 +158,17 @@
           </div>
           <div class="solar-system-stats">
             <div class="solar-title-cont">
-              <h1>Our solar system stats</h1>
+              <h1>Fun Facts</h1>
             </div>
+            <button id="random-fact">Random fact</button>
             <div class="our-solar">
-              <p>- Earth's orbital period: 365 days</p>
+              <!-- <p>- Earth's orbital period: 365 days</p>
               <p>- Planet number: 8 (previously 9)</p>
               <p>- Pluto is a dwarf planet, smaller than Earth's moon. Thus it was demoted from its planetary status in 2006</p>
               <p>- Exoplanet is a planet outside of our solar system</p>
               <p>- To date, more than 4,000 exoplanets have been discovered and are considered "confirmed"</p>
               <p>- Earth is the only known planet to have bodies of liquid water on its surface</p> 
-              <p>- Earth is the only planet in the universe known to possess life</p>
+              <p>- Earth is the only planet in the universe known to possess life</p> -->
             </div>
           </div>
           <div class="source-info">
@@ -150,15 +186,15 @@
   
   <div class="intro">
     <h4 class='intro-text'>Important Information</h4>
-    <ul>
-      <li>The earth's orbital period is 365 days</li>
+    <ul id='rel-info'>
+      <!-- <li>The earth's orbital period is 365 days</li>
       <li>The speed of light 671,000,000 mph</li>
       <li>The fastest human spaceflight reached a top speed of 24,791 mph 
         (1/27,000 the speed of light)</li>
       <li>Voyager-1 speed = 38,000 mph</li>
       <li>Distance: 1 parsec = 4.24 light years</li>
       <li>There is roughly 30 years between generations. So 2000 years = 56 generations</li>
-      <li>A global average human life expectancy is 72.6 years</li>
+      <li>A global average human life expectancy is 72.6 years</li> -->
     </ul>
 
     <button><span>I see, continue</span></button>

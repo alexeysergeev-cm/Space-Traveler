@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .ease(d3.easeLinear)
     .style('color', 'white')
 
-  // continueButton()
-  loadDefaultData()         //  development
+  continueButton()
+  // loadDefaultData()         //  development
 })
 
 function continueButton(){  
@@ -93,8 +93,8 @@ async function loadDefaultData(){
   let data1 = [];
   let data2 = [];
 
-  //load Default data
-  // data0 = await loadNear()
+  // load Default data
+  data0 = await loadNear()
   
   //all btns
   d3.select(".left-switch")
@@ -116,22 +116,21 @@ async function loadDefaultData(){
      
   
     // development dummy variable
+//   let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
+//   pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
+// pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
+// pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "", 
+// pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
+// pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
+// ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
+// st_masserr2: "-0.01",st_masslim: "0",st_massn: "2",st_optband: "V (Johnson)",st_optmag: "11.110",st_optmagerr: "",st_optmaglim: "0",st_posn: "4",st_rad: "0.14",st_raderr1: "0.02",
+// st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3050.00",st_tefferr1: "100.00",st_tefferr2: "-100.00",st_tefflim: "0",st_teffn: "2"}]
 
-  let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
-  pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
-pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
-pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "", 
-pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
-pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
-ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
-st_masserr2: "-0.01",st_masslim: "0",st_massn: "2",st_optband: "V (Johnson)",st_optmag: "11.110",st_optmagerr: "",st_optmaglim: "0",st_posn: "4",st_rad: "0.14",st_raderr1: "0.02",
-st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3050.00",st_tefferr1: "100.00",st_tefferr2: "-100.00",st_tefflim: "0",st_teffn: "2"}]
-
-  d3.select(".planets-list")
-    .selectAll("p")
-    .data(data)
-    .enter().append("p")
-    .text(function(d) { return d.pl_name });
+//   d3.select(".planets-list")
+//     .selectAll("p")
+//     .data(data)
+//     .enter().append("p")
+//     .text(function(d) { return d.pl_name });
 
   //selecting distance
   let speed = 38000; //default 
@@ -274,7 +273,7 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
       let switches = document.getElementsByClassName('left-switch')[0].children
       for (let i = 1; i < switches.length; i++ ) {
         if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
-          data.forEach(planet => {                          //development 
+          data0.forEach(planet => {                               // development 
             if (e.target.innerText === planet.pl_name) {
               showPlanetStats(planet, speed)
             }
@@ -295,6 +294,14 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
       }
     })
   }
+
+  const fact = document.getElementById('random-fact')
+  fact.addEventListener('click', (e) => {
+    
+    e.target.style.backgroundColor = 'rgb(232 111 104)'
+    
+    runFacts()
+  })
 }
 
 
@@ -313,7 +320,7 @@ async function loadMedium(){
 }
 
 async function loadFar(){
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>11 and st_dist<13&order=st_dist') // default nasa api
+  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist') // default nasa api
   populateNames(arr)
   return arr
 }
@@ -337,7 +344,6 @@ function showPlanetStats(planet, speed){
 
   let LightYearsInOneParsec = 3.26;
   let data = [planet.st_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]
-
   
   //generate planet stats
   let earthMassJup = 0.00314; //earth mass compared to jupiter
@@ -366,8 +372,8 @@ function showPlanetStats(planet, speed){
   let barHeight = 50;
 
   let scale1 = d3.scaleLinear()
-            .domain([1, 20000])
-            .range([1, 490]);
+            .domain([1, 100])
+            .range([10, 1000]);
 
   let graph = d3.select(".planet-data-svg")
                 .append("svg")
@@ -395,7 +401,8 @@ function showPlanetStats(planet, speed){
       .ease(d3.easeLinear)
       .duration(500)
       .attr("width", function(d) {
-              return d * scaleFactor;
+              // return d * scaleFactor;
+              return scale1(d)
       })
       .attr("fill", 'rgb(139, 0, 139)')
       .attr('filter', 'drop-shadow(0px 2px 2px black)')
@@ -411,11 +418,11 @@ function showPlanetStats(planet, speed){
       .attr('filter', 'drop-shadow(0px 2px 2px black)')
       .text(function (d, i) {
         if (i === 0) {
-          return 'Distance (in light years)'
+          return 'Distance (Light Years)'
         } else if (i === 1) {
           return 'Planet Number'
         } else if (i === 2){
-          return 'Orbital Period (in days)'
+          return 'Orbital Period (Days)'
         }
       })
 
@@ -533,7 +540,7 @@ function showHumanStats(distance, speed){
         .attr('filter', 'drop-shadow(0px 2px 2px black)')
         .text(function (d, i) {
           if (i === 0) {
-            return 'Flight Time (in human years)'
+            return 'Flight Time (Years)'
           } else if (i === 1) {
             return 'Generations amount'
           }
@@ -608,7 +615,7 @@ function showHumanStats(distance, speed){
         .attr('filter', 'drop-shadow(0px 2px 2px black)')
         .text(function (d, i) {
           if (i === 0) {
-            return 'Flight Time (in human years)'
+            return 'Flight Time (Years)'
           } else if (i === 1) {
             return 'Generations amount'
           }
@@ -690,7 +697,7 @@ function showHumanStats(distance, speed){
         .attr('filter', 'drop-shadow(0px 2px 2px black)')
         .text(function (d, i) {
           if (i === 0) {
-            return 'Flight Time (in months)'
+            return 'Flight Time (Months)'
           } else if (i === 1) {
             return 'Generations amount'
           }
@@ -737,6 +744,29 @@ function showTheSpeed(speed){
       .enter()
       .append("h1")
       .style('color', 'rgb(255 140 0)')
-      .text(function(d) { return d.toLocaleString() + " mph"; })
+      .text(function(d) { return d.toLocaleString() + " mph" })
   }
+}
+
+
+function runFacts(){
+
+  let factsArr = [ 
+    "Earth's orbital period: 365 days.",
+    "Planet number in our solar system: 8 (previously 9).",
+    "Pluto is a dwarf planet, smaller than Earth's moon. Thus it was demoted from its planetary status in 2006.",
+    "Exoplanet is a planet outside of our solar system.",
+    "To date, more than 4,000 exoplanets have been discovered and are considered 'confirmed'.",
+    "Earth is the only known planet to have bodies of liquid water on its surface.",
+    "Earth is the only planet in the universe known to possess life.",
+  ]
+
+  let random = factsArr[Math.floor(Math.random() * factsArr.length)];
+  let ourSolarDiv = document.getElementsByClassName('our-solar')[0]
+  d3.select('.our-solar')
+    .selectAll('p')
+    .remove()
+
+  let pEle = document.createElement('p')
+  ourSolarDiv.appendChild(pEle).textContent = random
 }

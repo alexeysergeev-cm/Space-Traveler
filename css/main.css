@@ -180,7 +180,9 @@ body {
   margin: auto;
   filter: brightness(1.2);
   font-family: sans-serif;
+  text-shadow: 0px 2px 2px black;
 }
+
 
 .planets-list{
   color: white;
@@ -195,7 +197,7 @@ body {
   line-height: 1.5;
   height: 605px;
   margin-left: 10px;
-  background-color: rgb(255 255 0 / 12%);
+  background-color: rgb(255 255 0 / 10%);
   border-radius: 4px;
   box-shadow: inset 0 2px 2px 1px black;
   font-family: monospace;
@@ -302,6 +304,7 @@ body {
   margin: auto;
   filter: brightness(1.2);
   font-family: sans-serif;
+  text-shadow: 0px 2px 2px black;
 }
 
 
@@ -315,6 +318,7 @@ body {
   margin: auto;
   filter: brightness(1.2);
   font-family: sans-serif;
+  text-shadow: 0px 2px 2px black;
 }
 
 .planet-data{
@@ -333,6 +337,7 @@ body {
   margin-top: 10px;
   box-shadow: 0 2px 2px 1px black;
   border-radius: 3px;
+  
 }
 
 .spacecraft-info{
@@ -353,6 +358,7 @@ body {
   margin: auto;
   filter: brightness(1.2);
   font-family: sans-serif;
+  text-shadow: 0px 2px 2px black;
 }
 
 .speed{
@@ -368,15 +374,19 @@ body {
 }
 
 .personal-info > a {
-
   padding: 5px;
 }
+
+
 
 .personal-info > a > img {
   border-radius: 15px;
   width: 30px;
   height: 30px;
   background-color: white;
+}
+.personal-info > a > img:hover {
+  box-shadow: 0px 1px 5px 5px;
 }
 
 .me{
@@ -485,6 +495,8 @@ body {
   margin: 5px 10px 5px 10px;
   box-shadow: 0 2px 2px 1px black;
   border-radius: 3px;
+  font-size: 25px;
+  text-align: center;
 }
 
 
@@ -505,6 +517,7 @@ body {
   margin: auto;
   filter: brightness(1.2);
   font-family: sans-serif;
+  text-shadow: 0px 2px 2px black;
 }
 
 .source-name{
@@ -518,6 +531,10 @@ body {
   font-size: 19px;
 }
 
+.source-name > a:hover{
+  color: #E2CD6D;
+}
+
 .solar-title-cont{
   color: rgb(131 183 153);
   text-align: center;
@@ -526,6 +543,7 @@ body {
   margin: auto;
   filter: brightness(1.2);
   font-family: sans-serif;
+  text-shadow: 0px 2px 2px black;
 }
 
 
@@ -536,8 +554,26 @@ body {
   padding: 10px 5px 0 5px;
   line-height: 1.1;
   text-indent: 0px;
+  margin-top: 20px;
 }
 
 .our-solar > p {
   padding: 5px;
+  color: rgb(240 248 255);
+  font-family: monospace;
+}
+
+.solar-system-stats > button{
+  background-color: rgb(232 111 104);
+  outline: none;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 33px; 
+  cursor: pointer;
+}
+
+
+.solar-system-stats > button:active { 
+  background-color: #83B799;
+  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);
 }

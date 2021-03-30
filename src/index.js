@@ -218,7 +218,7 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
           let humanData = [yearsToReach, humanGenerations]
 
           for (let item of list){
-            if (item.style.backgroundColor === 'green'){        ///NOT DRY! refactor
+            if (item.style.backgroundColor === 'rgb(255, 140, 0)'){        ///NOT DRY! refactor
               
               let switches = document.getElementsByClassName('left-switch')[0].children
               for (let i = 1; i < switches.length; i++ ) {
@@ -295,8 +295,8 @@ st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3
       }
     })
   }
-  
 }
+
 
 
 
@@ -319,9 +319,8 @@ async function loadFar(){
 }
 
 async function populateNames(arr){
-
-   d3.select(".planets-list")
-    .selectAll("p").remove()
+  d3.select(".planets-list")
+  .selectAll("p").remove()
 
   d3.select(".planets-list")
     .selectAll("p")
@@ -381,11 +380,11 @@ function showPlanetStats(planet, speed){
                   .append("g")
                   .attr("transform", function(d, i) {
                       if (i === 0){
-                        return "translate(0,25)";
+                        return "translate(0, 25)";
                       } else if (i === 1) {
-                        return "translate(0,90)";
+                        return "translate(0, 95)";
                       } else if (i === 2){
-                        return "translate(0,155)";
+                        return "translate(0, 165)";
                       }
                   });
   
@@ -399,15 +398,17 @@ function showPlanetStats(planet, speed){
               return d * scaleFactor;
       })
       .attr("fill", 'rgb(139, 0, 139)')
+      .attr('filter', 'drop-shadow(0px 2px 2px black)')
 
   bar.append("text")
       .attr("x", 3)
       .attr("y", -12 )
       .attr("dy", ".35em")
-      .attr("stroke", "white")
       .attr("font-size", "18px")
-      .attr("font-family", "fantasy")
-      .style("fill", "darkOrange")
+      .attr("font-family", "sans-serif")
+      .style("fill", "white")
+      .style("letter-spacing", "1px")
+      .attr('filter', 'drop-shadow(0px 2px 2px black)')
       .text(function (d, i) {
         if (i === 0) {
           return 'Distance (in light years)'
@@ -421,11 +422,9 @@ function showPlanetStats(planet, speed){
     bar.append("text")
       .attr("x", 5 )
       .attr("y", barHeight / 2)
-      // .attr("dy", ".35em")
-      .attr("stroke", "white")
       .attr("font-size", "16px")
-      .attr("font-family", "fantasy")
-      .style("fill", "darkOrange")
+      .attr("font-family", "sans-serif")
+      .style("fill", "white")
       .text(function (d, i) {
         if (i === 0) {
           return d.toFixed(2)
@@ -521,15 +520,17 @@ function showHumanStats(distance, speed){
                 return scale(d);
         })
         .attr("fill", 'darkmagenta')
+        .attr('filter', 'drop-shadow(0px 2px 2px black)')
 
     bar2.append("text")
         .attr("x", 3)
         .attr("y", -12 )
         .attr("dy", ".35em")
-        .attr("stroke", "white")
         .attr("font-size", "18px")
-        .attr("font-family", "fantasy")
-        .style("fill", "darkOrange")
+        .attr("font-family", "sans-serif")
+        .style("fill", "white")
+        .style("letter-spacing", "1px")
+        .attr('filter', 'drop-shadow(0px 2px 2px black)')
         .text(function (d, i) {
           if (i === 0) {
             return 'Flight Time (in human years)'
@@ -542,10 +543,9 @@ function showHumanStats(distance, speed){
         .attr("x", 5)
         .attr("y", barHeight / 2)
         .attr("dy", ".35em")
-        .attr("stroke", "white")
         .attr("font-size", "16px")
         .attr("font-family", "sans-serif")
-        .style("fill", "darkOrange")
+        .style("fill", "white")
         .text(function (d, i) {
           if (i === 0) {
             return parseInt(d).toLocaleString()
@@ -554,6 +554,84 @@ function showHumanStats(distance, speed){
           }
         })
   } else if (speed > 40000) {
+
+    let genAmount = distance / 30;
+
+    let scale = d3.scaleLinear()
+              .domain([10, 100])
+              .range([50, 490]);
+  
+    d3.select(".other-data")
+      .selectAll("svg").remove()
+  
+    let otherWidth = 500;
+    let otherHeight = 290;
+  
+    let graph2 = d3.select(".other-data")
+                  .append("svg")
+                  .attr("width", otherWidth)
+                  .attr("height", otherHeight);
+  
+    let bar2 = graph2.selectAll("g")
+                    .data([distance, genAmount])
+                    .enter()
+                    .append("g")
+                    .attr("transform", function(d, i) {
+                          if (i === 0){
+                          return "translate(0,25)";
+                        } else if (i === 1) {
+                          return "translate(0,100)";
+                        } else if (i === 2){
+                          return "translate(0,155)";
+                        }
+                    });
+    
+    bar2.append("rect")
+        .attr("height", barHeight - 1)
+        .transition()
+        .ease(d3.easeLinear)
+        .duration(500)
+        .attr("width", function(d) {
+                return scale(d);
+        })
+        .attr("fill", 'darkmagenta')
+        .attr('filter', 'drop-shadow(0px 2px 2px black)')
+  
+    bar2.append("text")
+        .attr("x", 3)
+        .attr("y", -12 )
+        .attr("dy", ".35em")
+        .attr("font-size", "18px")
+        .attr("font-family", "sans-serif")
+        .style("fill", "white")
+        .style("letter-spacing", "1px")
+        .attr('filter', 'drop-shadow(0px 2px 2px black)')
+        .text(function (d, i) {
+          if (i === 0) {
+            return 'Flight Time (in human years)'
+          } else if (i === 1) {
+            return 'Generations amount'
+          }
+        })
+      
+    bar2.append("text")
+        .attr("x", 5)
+        .attr("y", barHeight / 2)
+        .attr("dy", ".35em")
+        .attr("font-size", "16px")
+        .attr("font-family", "sans-serif")
+        .style("fill", "white")
+        .text(function (d, i) {
+          if (i === 0) {
+            return d.toFixed(2)
+          } else if (i === 1) {
+            return parseInt(d).toLocaleString()
+          }
+        })
+  } else if (speed === 27){
+
+    let newSpeed = 671000000 * 27; 
+
     let scale = d3.scaleLinear()
               .domain([10, 100])
               .range([50, 490]);
@@ -592,15 +670,17 @@ function showHumanStats(distance, speed){
                 return scale(d);
         })
         .attr("fill", 'darkmagenta')
+        .attr('filter', 'drop-shadow(0px 2px 2px black)')
   
     bar2.append("text")
         .attr("x", 3)
         .attr("y", -12 )
         .attr("dy", ".35em")
-        .attr("stroke", "white")
         .attr("font-size", "18px")
-        .attr("font-family", "fantasy")
-        .style("fill", "darkOrange")
+        .attr("font-family", "sans-serif")
+        .style("fill", "white")
+        .style("letter-spacing", "1px")
+        .attr('filter', 'drop-shadow(0px 2px 2px black)')
         .text(function (d, i) {
           if (i === 0) {
             return 'Flight Time (in human years)'
@@ -613,10 +693,9 @@ function showHumanStats(distance, speed){
         .attr("x", 5)
         .attr("y", barHeight / 2)
         .attr("dy", ".35em")
-        .attr("stroke", "white")
         .attr("font-size", "16px")
         .attr("font-family", "sans-serif")
-        .style("fill", "darkOrange")
+        .style("fill", "white")
         .text(function (d, i) {
           if (i === 0) {
             return d.toFixed(2)
@@ -624,7 +703,6 @@ function showHumanStats(distance, speed){
             return parseInt(d).toLocaleString()
           }
         })
-  } else if (speed === 38000){
     showPlanetStats
   }
 }

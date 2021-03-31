@@ -2,7 +2,7 @@
 
 ![S](https://github.com/alexeysergeev-cm/Space-Traveler/blob/main/assets/intro.gif)
 
-### [Space-Traveler live link](https://alexeysergeev-cm.github.io/Space-Traveler/)
+### [Space-Traveler](https://alexeysergeev-cm.github.io/Space-Traveler/)
 
 ## Motivation:
 I am as space fan could not miss an opportunity to make something space related. I love everything about space: science, facts, sci-fi movies, books, video-games etc. As the final human frontier, space and colonization of other planets is our future. I believe that we have to understand and explore the planets beyond our own. Space travel is going to be the most challenging thing the human can encounter. It seems to be a fantasy to travel to other stars, but one day it will be no different than traveling from one country to another. Good to mention that fantasy has a property of becoming a reality.

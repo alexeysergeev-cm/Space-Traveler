@@ -5,10 +5,10 @@
 ### [Space-Traveler](https://alexeysergeev-cm.github.io/Space-Traveler/)
 
 ## Motivation:
-I am as space fan could not miss an opportunity to make something space related. I love everything about space: science, facts, sci-fi movies, books, video-games etc. As the final human frontier, space and colonization of other planets is our future. I believe that we have to understand and explore the planets beyond our own. Space travel is going to be the most challenging thing the human can encounter. It seems to be a fantasy to travel to other stars, but one day it will be no different than traveling from one country to another. Good to mention that fantasy has a property of becoming a reality.
+I am as a space fan could not miss an opportunity to make something space related. I love everything about space: science, facts, sci-fi movies, books, video-games etc. As the final human frontier, space and colonization of other planets is our future. I believe that we have to understand and explore the planets beyond our own. Space travel is going to be the most challenging thing the human can encounter. It seems to be a fantasy to travel to other stars, but one day it will be no different than traveling from one country to another. Good to mention that fantasy has a property of becoming a reality.
 
 ## Background and Overview
-The Space Traveler is data visualization tool that show the time, distance & generations amount it takes to reach a chosen exoplanet.
+The Space Traveler is a data visualization tool that shows the time, distance & generation amount it takes to reach a chosen exoplanet.
 
 ![S](https://github.com/alexeysergeev-cm/Space-Traveler/blob/main/assets/proj_overview.gif)
 

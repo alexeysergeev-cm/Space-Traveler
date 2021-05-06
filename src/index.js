@@ -309,8 +309,10 @@ async function loadDefaultData(){
 
 async function loadNear(){
   // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-  let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps+where+sy_dist+<+5+order+by+sy_dist&format=csv")
-  console.log(arr)
+  let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5+order+by+sy_dist&format=csv")
+
+  // debugger
+
   populateNames(arr)
   return arr
 }
@@ -328,6 +330,7 @@ async function loadFar(){
 }
 
 async function populateNames(arr){
+
   d3.select(".planets-list")
   .selectAll("p").remove()
 
@@ -340,18 +343,20 @@ async function populateNames(arr){
 
 
 function showPlanetStats(planet, speed){
-  
+
+  debugger 
+
   d3.select(".planet-data")
     .selectAll("svg").remove()
 
   let LightYearsInOneParsec = 3.26;
-  let data = [planet.st_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]
+  let data = [planet.sy_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]
   
   //generate planet stats
   let earthMassJup = 0.00314; //earth mass compared to jupiter
   let planetMass = planet.pl_bmassj / earthMassJup; //calulate planet mass
-  let lastUpdate = planet.rowupdate; 
-  let facility = planet.pl_facility;
+  let pubUpdate = planet.disc_pubdate; 
+  let facility = planet.disc_facility;
 
   //generate human stats
   let lightYearDistInMiles = 6000000000000; //miles
@@ -457,7 +462,7 @@ function showPlanetStats(planet, speed){
 
   let misc = d3.select(".misc")
                 .selectAll("p")
-                .data([lastUpdate])
+                .data([pubUpdate])
                 .enter()
                 .append("p")
                 .text(function(d) { return d; });

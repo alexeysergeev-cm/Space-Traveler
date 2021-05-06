@@ -32896,15 +32896,15 @@ function _loadNear() {
         switch (_context3.prev = _context3.next) {
           case 0:
             _context3.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps+where+sy_dist+<+5+order+by+sy_dist&format=csv");
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5+order+by+sy_dist&format=csv");
 
           case 2:
             arr = _context3.sent;
-            console.log(arr);
+            // debugger
             populateNames(arr);
             return _context3.abrupt("return", arr);
 
-          case 6:
+          case 5:
           case "end":
             return _context3.stop();
         }
@@ -33000,16 +33000,17 @@ function _populateNames() {
 }
 
 function showPlanetStats(planet, speed) {
+  debugger;
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").selectAll("svg").remove();
   var LightYearsInOneParsec = 3.26;
-  var data = [planet.st_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]; //generate planet stats
+  var data = [planet.sy_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]; //generate planet stats
 
   var earthMassJup = 0.00314; //earth mass compared to jupiter
 
   var planetMass = planet.pl_bmassj / earthMassJup; //calulate planet mass
 
-  var lastUpdate = planet.rowupdate;
-  var facility = planet.pl_facility; //generate human stats
+  var pubUpdate = planet.disc_pubdate;
+  var facility = planet.disc_facility; //generate human stats
 
   var lightYearDistInMiles = 6000000000000; //miles
 
@@ -33067,7 +33068,7 @@ function showPlanetStats(planet, speed) {
     return d.toFixed(2) + " of Earth's Mass";
   });
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").remove();
-  var misc = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").data([lastUpdate]).enter().append("p").text(function (d) {
+  var misc = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").data([pubUpdate]).enter().append("p").text(function (d) {
     return d;
   });
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").remove();

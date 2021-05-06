@@ -309,22 +309,23 @@ async function loadDefaultData(){
 
 async function loadNear(){
   // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-  let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5+order+by+sy_dist&format=csv")
-
+  // let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5+order+by+sy_dist&format=csv")
+  let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5&format=csv")
   // debugger
-
   populateNames(arr)
   return arr
 }
 
 async function loadMedium(){
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist') // default nasa api
+  // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist') // default nasa api
+  let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+5+and+sy_dist+<10&format=csv")
   populateNames(arr)
   return arr
 }
 
 async function loadFar(){
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist') // default nasa api
+  // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist') // default nasa api
+let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+10+and+sy_dist+<20&format=csv")
   populateNames(arr)
   return arr
 }
@@ -344,13 +345,13 @@ async function populateNames(arr){
 
 function showPlanetStats(planet, speed){
 
-  debugger 
+  let customDistance = (planet.sy_dist > 0) ? planet.sy_dist : (planet.sy_diststr > 0) ? planet.sy_diststr : planet.sy_dist_reflink.slice(0,3)
 
   d3.select(".planet-data")
     .selectAll("svg").remove()
 
   let LightYearsInOneParsec = 3.26;
-  let data = [planet.sy_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]
+  let data = [customDistance * LightYearsInOneParsec, planet.sy_pnum, planet.pl_orbper]
   
   //generate planet stats
   let earthMassJup = 0.00314; //earth mass compared to jupiter

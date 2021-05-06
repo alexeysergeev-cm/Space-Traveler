@@ -32896,7 +32896,7 @@ function _loadNear() {
         switch (_context3.prev = _context3.next) {
           case 0:
             _context3.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5+order+by+sy_dist&format=csv");
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5&format=csv");
 
           case 2:
             arr = _context3.sent;
@@ -32926,11 +32926,10 @@ function _loadMedium() {
         switch (_context4.prev = _context4.next) {
           case 0:
             _context4.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist');
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+5+and+sy_dist+<10&format=csv");
 
           case 2:
             arr = _context4.sent;
-            // default nasa api
             populateNames(arr);
             return _context4.abrupt("return", arr);
 
@@ -32956,11 +32955,10 @@ function _loadFar() {
         switch (_context5.prev = _context5.next) {
           case 0:
             _context5.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist');
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+10+and+sy_dist+<20&format=csv");
 
           case 2:
             arr = _context5.sent;
-            // default nasa api
             populateNames(arr);
             return _context5.abrupt("return", arr);
 
@@ -33000,10 +32998,10 @@ function _populateNames() {
 }
 
 function showPlanetStats(planet, speed) {
-  debugger;
+  var customDistance = planet.sy_dist > 0 ? planet.sy_dist : planet.sy_diststr > 0 ? planet.sy_diststr : planet.sy_dist_reflink.slice(0, 3);
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").selectAll("svg").remove();
   var LightYearsInOneParsec = 3.26;
-  var data = [planet.sy_dist * LightYearsInOneParsec, planet.pl_pnum, planet.pl_orbper]; //generate planet stats
+  var data = [customDistance * LightYearsInOneParsec, planet.sy_pnum, planet.pl_orbper]; //generate planet stats
 
   var earthMassJup = 0.00314; //earth mass compared to jupiter
 

@@ -94,7 +94,8 @@ async function loadDefaultData(){
 
   // load Default data
   data0 = await loadNear()
-  
+  // console.log(data0)
+
   //all btns
   d3.select(".left-switch")
     .selectAll('button')
@@ -307,7 +308,9 @@ async function loadDefaultData(){
 
 
 async function loadNear(){
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
+  // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
+  let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps+where+sy_dist+<+5+order+by+sy_dist&format=csv")
+  console.log(arr)
   populateNames(arr)
   return arr
 }

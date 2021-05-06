@@ -32596,6 +32596,7 @@ function _loadDefaultData() {
 
           case 5:
             data0 = _context2.sent;
+            // console.log(data0)
             //all btns
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
@@ -32895,15 +32896,15 @@ function _loadNear() {
         switch (_context3.prev = _context3.next) {
           case 0:
             _context3.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist');
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps+where+sy_dist+<+5+order+by+sy_dist&format=csv");
 
           case 2:
             arr = _context3.sent;
-            // default nasa api
+            console.log(arr);
             populateNames(arr);
             return _context3.abrupt("return", arr);
 
-          case 5:
+          case 6:
           case "end":
             return _context3.stop();
         }

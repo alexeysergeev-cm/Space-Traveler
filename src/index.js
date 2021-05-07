@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // loadDefaultData()         //  development
 })
 
-function continueButton(){  
+async function continueButton(){  
   const main = document.getElementsByClassName('main-div')
   main[0].classList.add('hidden')
 
@@ -31,6 +31,7 @@ function continueButton(){
   intro[0].classList.remove('hidden')
 
   startType()
+  let data0 = await loadNear();
 
   let button = intro[0].lastElementChild
   button.addEventListener('click', () => {
@@ -38,7 +39,7 @@ function continueButton(){
     intro[0].classList.add('hidden')
     
     mainPageTransition()
-    loadDefaultData()
+    loadDefaultData(data0)
   })
 }
 
@@ -85,15 +86,15 @@ function mainPageTransition() {
     .attr("fill", "blue")
 }
 
-async function loadDefaultData(){
+async function loadDefaultData(d0){
 
   //store data from api request
-  let data0 = [];
+  let data0 = d0;
   let data1 = [];
   let data2 = [];
 
   // load Default data
-  data0 = await loadNear()
+  // data1 = await loadNear()
   // console.log(data0)
 
   //all btns
@@ -162,7 +163,7 @@ async function loadDefaultData(){
         }
       } else if (e.currentTarget.innerText === "10+ parsecs") {
         if (data2.length){
-          populateNames(data1) 
+          populateNames(data2) 
         } else {
           data2 = await loadFar()
         }
@@ -325,7 +326,7 @@ async function loadMedium(){
 
 async function loadFar(){
   // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist') // default nasa api
-let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+10+and+sy_dist+<20&format=csv")
+  let arr = await d3.csv("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+10+and+sy_dist+<20&format=csv")
   populateNames(arr)
   return arr
 }

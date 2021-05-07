@@ -32532,18 +32532,42 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function continueButton() {
-  var main = document.getElementsByClassName('main-div');
-  main[0].classList.add('hidden');
-  var intro = document.getElementsByClassName('intro');
-  intro[0].classList.remove('hidden');
-  startType();
-  var button = intro[0].lastElementChild;
-  button.addEventListener('click', function () {
-    main[0].classList.remove('hidden');
-    intro[0].classList.add('hidden');
-    mainPageTransition();
-    loadDefaultData();
-  });
+  return _continueButton.apply(this, arguments);
+}
+
+function _continueButton() {
+  _continueButton = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee() {
+    var main, intro, data0, button;
+    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            main = document.getElementsByClassName('main-div');
+            main[0].classList.add('hidden');
+            intro = document.getElementsByClassName('intro');
+            intro[0].classList.remove('hidden');
+            startType();
+            _context.next = 7;
+            return loadNear();
+
+          case 7:
+            data0 = _context.sent;
+            button = intro[0].lastElementChild;
+            button.addEventListener('click', function () {
+              main[0].classList.remove('hidden');
+              intro[0].classList.add('hidden');
+              mainPageTransition();
+              loadDefaultData(data0);
+            });
+
+          case 10:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _continueButton.apply(this, arguments);
 }
 
 var arrNumCount = 0;
@@ -32575,29 +32599,25 @@ function mainPageTransition() {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]('rect').transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(3000).attr("fill", "blue");
 }
 
-function loadDefaultData() {
+function loadDefaultData(_x) {
   return _loadDefaultData.apply(this, arguments);
 }
 
 function _loadDefaultData() {
-  _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+  _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3(d0) {
     var data0, data1, data2, speed, planetsList, fact;
-    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
+    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context3.prev = _context3.next) {
           case 0:
             //store data from api request
-            data0 = [];
+            data0 = d0;
             data1 = [];
             data2 = []; // load Default data
-
-            _context2.next = 5;
-            return loadNear();
-
-          case 5:
-            data0 = _context2.sent;
+            // data1 = await loadNear()
             // console.log(data0)
             //all btns
+
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
 
@@ -32623,11 +32643,11 @@ function _loadDefaultData() {
             //click LEFT-SWITCH
 
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('button').on('click', /*#__PURE__*/function () {
-              var _ref = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee(e) {
+              var _ref = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2(e) {
                 var ele;
-                return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
+                return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
                   while (1) {
-                    switch (_context.prev = _context.next) {
+                    switch (_context2.prev = _context2.next) {
                       case 0:
                         ele = e.currentTarget.parentElement.classList[0];
                         d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red').style('box-shadow', '0 2px 2px 0px rgb(0 0 0)');
@@ -32636,87 +32656,87 @@ function _loadDefaultData() {
                         e.currentTarget.style.outline = 'none';
 
                         if (!(e.currentTarget.innerText === "< 5 parsecs")) {
-                          _context.next = 15;
+                          _context2.next = 15;
                           break;
                         }
 
                         if (!data0.length) {
-                          _context.next = 10;
+                          _context2.next = 10;
                           break;
                         }
 
                         populateNames(data0);
-                        _context.next = 13;
+                        _context2.next = 13;
                         break;
 
                       case 10:
-                        _context.next = 12;
+                        _context2.next = 12;
                         return loadNear();
 
                       case 12:
-                        data0 = _context.sent;
+                        data0 = _context2.sent;
 
                       case 13:
-                        _context.next = 33;
+                        _context2.next = 33;
                         break;
 
                       case 15:
                         if (!(e.currentTarget.innerText === "5-10 parsecs")) {
-                          _context.next = 25;
+                          _context2.next = 25;
                           break;
                         }
 
                         if (!data1.length) {
-                          _context.next = 20;
+                          _context2.next = 20;
                           break;
                         }
 
                         populateNames(data1);
-                        _context.next = 23;
+                        _context2.next = 23;
                         break;
 
                       case 20:
-                        _context.next = 22;
+                        _context2.next = 22;
                         return loadMedium();
 
                       case 22:
-                        data1 = _context.sent;
+                        data1 = _context2.sent;
 
                       case 23:
-                        _context.next = 33;
+                        _context2.next = 33;
                         break;
 
                       case 25:
                         if (!(e.currentTarget.innerText === "10+ parsecs")) {
-                          _context.next = 33;
+                          _context2.next = 33;
                           break;
                         }
 
                         if (!data2.length) {
-                          _context.next = 30;
+                          _context2.next = 30;
                           break;
                         }
 
-                        populateNames(data1);
-                        _context.next = 33;
+                        populateNames(data2);
+                        _context2.next = 33;
                         break;
 
                       case 30:
-                        _context.next = 32;
+                        _context2.next = 32;
                         return loadFar();
 
                       case 32:
-                        data2 = _context.sent;
+                        data2 = _context2.sent;
 
                       case 33:
                       case "end":
-                        return _context.stop();
+                        return _context2.stop();
                     }
                   }
-                }, _callee);
+                }, _callee2);
               }));
 
-              return function (_x2) {
+              return function (_x3) {
                 return _ref.apply(this, arguments);
               };
             }()); //if click RIGHT-SWITCH
@@ -32874,12 +32894,12 @@ function _loadDefaultData() {
               runFacts();
             });
 
-          case 17:
+          case 14:
           case "end":
-            return _context2.stop();
+            return _context3.stop();
         }
       }
-    }, _callee2);
+    }, _callee3);
   }));
   return _loadDefaultData.apply(this, arguments);
 }
@@ -32889,47 +32909,18 @@ function loadNear() {
 }
 
 function _loadNear() {
-  _loadNear = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
-    var arr;
-    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            _context3.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5&format=csv");
-
-          case 2:
-            arr = _context3.sent;
-            // debugger
-            populateNames(arr);
-            return _context3.abrupt("return", arr);
-
-          case 5:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3);
-  }));
-  return _loadNear.apply(this, arguments);
-}
-
-function loadMedium() {
-  return _loadMedium.apply(this, arguments);
-}
-
-function _loadMedium() {
-  _loadMedium = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
+  _loadNear = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
     var arr;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
             _context4.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+5+and+sy_dist+<10&format=csv");
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+<+5&format=csv");
 
           case 2:
             arr = _context4.sent;
+            // debugger
             populateNames(arr);
             return _context4.abrupt("return", arr);
 
@@ -32940,22 +32931,22 @@ function _loadMedium() {
       }
     }, _callee4);
   }));
+  return _loadNear.apply(this, arguments);
+}
+
+function loadMedium() {
   return _loadMedium.apply(this, arguments);
 }
 
-function loadFar() {
-  return _loadFar.apply(this, arguments);
-}
-
-function _loadFar() {
-  _loadFar = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee5() {
+function _loadMedium() {
+  _loadMedium = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee5() {
     var arr;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
           case 0:
             _context5.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+10+and+sy_dist+<20&format=csv");
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+5+and+sy_dist+<10&format=csv");
 
           case 2:
             arr = _context5.sent;
@@ -32969,18 +32960,47 @@ function _loadFar() {
       }
     }, _callee5);
   }));
+  return _loadMedium.apply(this, arguments);
+}
+
+function loadFar() {
   return _loadFar.apply(this, arguments);
 }
 
-function populateNames(_x) {
+function _loadFar() {
+  _loadFar = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee6() {
+    var arr;
+    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            _context6.next = 2;
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+sy_dist+>+10+and+sy_dist+<20&format=csv");
+
+          case 2:
+            arr = _context6.sent;
+            populateNames(arr);
+            return _context6.abrupt("return", arr);
+
+          case 5:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6);
+  }));
+  return _loadFar.apply(this, arguments);
+}
+
+function populateNames(_x2) {
   return _populateNames.apply(this, arguments);
 }
 
 function _populateNames() {
-  _populateNames = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee6(arr) {
-    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee6$(_context6) {
+  _populateNames = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee7(arr) {
+    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee7$(_context7) {
       while (1) {
-        switch (_context6.prev = _context6.next) {
+        switch (_context7.prev = _context7.next) {
           case 0:
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").remove();
             d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
@@ -32989,10 +33009,10 @@ function _populateNames() {
 
           case 2:
           case "end":
-            return _context6.stop();
+            return _context7.stop();
         }
       }
-    }, _callee6);
+    }, _callee7);
   }));
   return _populateNames.apply(this, arguments);
 }

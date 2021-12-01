@@ -32525,22 +32525,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('body').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style('background-color', 'black');
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('h1').transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style('color', 'white');
+document.addEventListener("DOMContentLoaded", function () {
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]("body").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style("background-color", "black");
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]("h1").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style("color", "white");
   continueButton(); // loadDefaultData()         //  development
 });
 
 function continueButton() {
-  var main = document.getElementsByClassName('main-div');
-  main[0].classList.add('hidden');
-  var intro = document.getElementsByClassName('intro');
-  intro[0].classList.remove('hidden');
+  var main = document.getElementsByClassName("main-div");
+  main[0].classList.add("hidden");
+  var intro = document.getElementsByClassName("intro");
+  intro[0].classList.remove("hidden");
   startType();
   var button = intro[0].lastElementChild;
-  button.addEventListener('click', function () {
-    main[0].classList.remove('hidden');
-    intro[0].classList.add('hidden');
+  button.addEventListener("click", function () {
+    main[0].classList.remove("hidden");
+    intro[0].classList.add("hidden");
     mainPageTransition();
     loadDefaultData();
   });
@@ -32552,8 +32552,8 @@ var arr = ["There is roughly 30 years between generations. So 2000 years ~ 56 ge
 
 function startType() {
   if (arrNumCount < arr.length) {
-    var li = document.createElement('li');
-    document.getElementById('rel-info').appendChild(li);
+    var li = document.createElement("li");
+    document.getElementById("rel-info").appendChild(li);
     actualType();
   }
 }
@@ -32561,9 +32561,9 @@ function startType() {
 function actualType() {
   if (charCount < arr[arrNumCount].length) {
     var letter = arr[arrNumCount].charAt(charCount);
-    document.getElementById('rel-info').lastChild.textContent += letter;
+    document.getElementById("rel-info").lastChild.textContent += letter;
     charCount++;
-    setTimeout(actualType, 50);
+    setTimeout(actualType, 20);
   } else if (charCount === arr[arrNumCount].length) {
     arrNumCount++;
     charCount = 0;
@@ -32572,7 +32572,7 @@ function actualType() {
 }
 
 function mainPageTransition() {
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('rect').transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(3000).attr("fill", "blue");
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]("rect").transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(3000).attr("fill", "blue");
 }
 
 function loadDefaultData() {
@@ -32597,15 +32597,15 @@ function _loadDefaultData() {
           case 5:
             data0 = _context2.sent;
             //all btns
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll('button').style('background-color', 'red');
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll('button').style('background-color', 'red'); //default btn green
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll("button").style("background-color", "red");
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll("button").style("background-color", "red"); //default btn green
 
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select('button').style('background-color', 'rgb(90 250 13)').style('box-shadow', 'inset 0 1px 3px 1px rgb(0 0 0)');
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select('button').style('background-color', 'rgb(90 250 13)').style('box-shadow', 'inset 0 1px 3px 1px rgb(0 0 0)'); // development dummy variable
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)"); // development dummy variable
             //   let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
             //   pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
             // pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
-            // pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "", 
+            // pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "",
             // pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
             // pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
             // ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
@@ -32618,10 +32618,10 @@ function _loadDefaultData() {
             //     .text(function(d) { return d.pl_name });
             //selecting distance
 
-            speed = 38000; //default 
+            speed = 38000; //default
             //click LEFT-SWITCH
 
-            d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('button').on('click', /*#__PURE__*/function () {
+            d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]("button").on("click", /*#__PURE__*/function () {
               var _ref = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee(e) {
                 var ele;
                 return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
@@ -32629,10 +32629,10 @@ function _loadDefaultData() {
                     switch (_context.prev = _context.next) {
                       case 0:
                         ele = e.currentTarget.parentElement.classList[0];
-                        d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red').style('box-shadow', '0 2px 2px 0px rgb(0 0 0)');
-                        e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
-                        e.currentTarget.style.boxShadow = 'inset 0 1px 3px 1px rgb(0 0 0)';
-                        e.currentTarget.style.outline = 'none';
+                        d3__WEBPACK_IMPORTED_MODULE_3__["select"]("." + ele).selectAll("button").style("background-color", "red").style("box-shadow", "0 2px 2px 0px rgb(0 0 0)");
+                        e.currentTarget.style.backgroundColor = "rgb(90 250 13)";
+                        e.currentTarget.style.boxShadow = "inset 0 1px 3px 1px rgb(0 0 0)";
+                        e.currentTarget.style.outline = "none";
 
                         if (!(e.currentTarget.innerText === "< 5 parsecs")) {
                           _context.next = 15;
@@ -32720,12 +32720,12 @@ function _loadDefaultData() {
               };
             }()); //if click RIGHT-SWITCH
 
-            d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]('.right-switch').selectAll('button').on('click', function (e) {
+            d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"](".right-switch").selectAll("button").on("click", function (e) {
               var ele = e.currentTarget.parentElement.classList[0];
-              d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.' + ele).selectAll('button').style('background-color', 'red').style('box-shadow', '0 2px 2px 0px rgb(0 0 0)');
-              e.currentTarget.style.backgroundColor = 'rgb(90 250 13)';
-              e.currentTarget.style.boxShadow = 'inset 0 1px 3px 1px rgb(0 0 0)';
-              e.currentTarget.style.outline = 'none';
+              d3__WEBPACK_IMPORTED_MODULE_3__["select"]("." + ele).selectAll("button").style("background-color", "red").style("box-shadow", "0 2px 2px 0px rgb(0 0 0)");
+              e.currentTarget.style.backgroundColor = "rgb(90 250 13)";
+              e.currentTarget.style.boxShadow = "inset 0 1px 3px 1px rgb(0 0 0)";
+              e.currentTarget.style.outline = "none";
 
               if (e.currentTarget.innerText === "The Speed of Light") {
                 speed = 671000000;
@@ -32739,13 +32739,13 @@ function _loadDefaultData() {
               } //check what speed chosen
 
 
-              var humanData = document.getElementsByClassName('other-data')[0].children;
+              var humanData = document.getElementsByClassName("other-data")[0].children;
 
               if (humanData.length === 2 && e.currentTarget.innerText === "Voyager 1") {
                 (function () {
-                  var list = document.getElementsByClassName('planets-list')[0].children; //get distance && gerenrate data
+                  var list = document.getElementsByClassName("planets-list")[0].children; //get distance && gerenrate data
 
-                  var distance = document.getElementsByClassName('planet-data')[0].children[1].children[0].children[0]["__data__"];
+                  var distance = document.getElementsByClassName("planet-data")[0].children[1].children[0].children[0]["__data__"];
                   var lightYearDistInMiles = 6000000000000; //miles
 
                   var speedOfLight = 671000000; //mph
@@ -32769,14 +32769,14 @@ function _loadDefaultData() {
                     var _loop = function _loop() {
                       var item = _step.value;
 
-                      if (item.style.backgroundColor === 'rgb(255, 140, 0)') {
+                      if (item.style.backgroundColor === "rgb(255, 140, 0)") {
                         ///NOT DRY! refactor
-                        var switches = document.getElementsByClassName('left-switch')[0].children;
+                        var switches = document.getElementsByClassName("left-switch")[0].children;
 
                         for (var i = 1; i < switches.length; i++) {
                           if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
                             data0.forEach(function (planet) {
-                              //development 
+                              //development
                               if (item.innerText === planet.pl_name) {
                                 // showPlanetStats(planet, speed)
                                 showHumanStats(humanData, speed);
@@ -32812,15 +32812,15 @@ function _loadDefaultData() {
                 })();
               } else if (humanData.length === 2) {
                 //refactor TOO MANY repetitions
-                var distance = document.getElementsByClassName('planet-data')[0].children[1].children[0].children[0]["__data__"];
+                var distance = document.getElementsByClassName("planet-data")[0].children[1].children[0].children[0]["__data__"];
                 showHumanStats(distance, speed);
               }
             });
-            planetsList = document.getElementsByClassName('planets-list');
+            planetsList = document.getElementsByClassName("planets-list");
 
             if (planetsList.length) {
-              planetsList[0].addEventListener('click', function (e) {
-                var list = document.getElementsByClassName('planets-list')[0].children;
+              planetsList[0].addEventListener("click", function (e) {
+                var list = document.getElementsByClassName("planets-list")[0].children;
 
                 var _iterator2 = _createForOfIteratorHelper(list),
                     _step2;
@@ -32829,7 +32829,7 @@ function _loadDefaultData() {
                   for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
                     var item = _step2.value;
 
-                    if (item.style.backgroundColor === 'rgb(255, 140, 0)') {
+                    if (item.style.backgroundColor === "rgb(255, 140, 0)") {
                       item.style.backgroundColor = "";
                     }
                   }
@@ -32839,13 +32839,13 @@ function _loadDefaultData() {
                   _iterator2.f();
                 }
 
-                e.target.style.backgroundColor = 'rgb(255, 140, 0)';
-                var switches = document.getElementsByClassName('left-switch')[0].children;
+                e.target.style.backgroundColor = "rgb(255, 140, 0)";
+                var switches = document.getElementsByClassName("left-switch")[0].children;
 
                 for (var i = 1; i < switches.length; i++) {
                   if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
                     data0.forEach(function (planet) {
-                      // development 
+                      // development
                       if (e.target.innerText === planet.pl_name) {
                         showPlanetStats(planet, speed);
                       }
@@ -32867,9 +32867,9 @@ function _loadDefaultData() {
               });
             }
 
-            fact = document.getElementById('random-fact');
-            fact.addEventListener('click', function (e) {
-              e.target.style.backgroundColor = 'rgb(232 111 104)';
+            fact = document.getElementById("random-fact");
+            fact.addEventListener("click", function (e) {
+              e.target.style.backgroundColor = "rgb(232 111 104)";
               runFacts();
             });
 
@@ -32889,17 +32889,36 @@ function loadNear() {
 
 function _loadNear() {
   _loadNear = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
-    var arr;
+    var resp;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
             _context3.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist');
+            return fetch( // "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+disc_facility+like+%27%25TESS%25%27+order+by+pl_orbper+desc&format=json"
+            // "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative"
+            // "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&format=ipac&where=pl_name like 'BD%2B20 594 b'"
+            "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,pl_masse,ra,dec+from+ps").then(function (res) {
+              return res.text();
+            }).then(function (data) {
+              return data ? JSON.parse(data) : {};
+            })["catch"](function (error) {
+              console.log(error);
+            });
 
           case 2:
-            arr = _context3.sent;
-            // default nasa api
+            resp = _context3.sent;
+            // const xhr = new XMLHttpRequest();
+            // const url = "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative";
+            // xhr.open("GET", url);
+            // // xhr.onreadystatechange = someHandler;
+            // xhr.send();
+            // const data = await resp.json();
+            // debugger;
+            // headers: {
+            //   "Content-Type": "application/json",
+            //   "Accept": "application/json",
+            // },
             populateNames(arr);
             return _context3.abrupt("return", arr);
 
@@ -32925,7 +32944,7 @@ function _loadMedium() {
         switch (_context4.prev = _context4.next) {
           case 0:
             _context4.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist');
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist");
 
           case 2:
             arr = _context4.sent;
@@ -32955,7 +32974,7 @@ function _loadFar() {
         switch (_context5.prev = _context5.next) {
           case 0:
             _context5.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist');
+            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist");
 
           case 2:
             arr = _context5.sent;
@@ -33044,14 +33063,14 @@ function showPlanetStats(planet, speed) {
   bar.append("rect").attr("height", barHeight - 10).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
     // return d * scaleFactor;
     return scale1(d);
-  }).attr("fill", 'rgb(139, 0, 139)').attr('filter', 'drop-shadow(0px 2px 2px black)');
-  bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
+  }).attr("fill", "rgb(139, 0, 139)").attr("filter", "drop-shadow(0px 2px 2px black)");
+  bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
     if (i === 0) {
-      return 'Distance (Light Years)';
+      return "Distance (Light Years)";
     } else if (i === 1) {
-      return 'Planet Number';
+      return "Planet Number";
     } else if (i === 2) {
-      return 'Orbital Period (Days)';
+      return "Orbital Period (Days)";
     }
   });
   bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
@@ -33074,7 +33093,7 @@ function showPlanetStats(planet, speed) {
     return d;
   }); //show human-related data
 
-  var calcBySpeed = document.getElementsByClassName('speed')[0].innerText;
+  var calcBySpeed = document.getElementsByClassName("speed")[0].innerText;
 
   if (calcBySpeed === "38,000 mph") {
     showHumanStats(humanData, speed);
@@ -33105,12 +33124,12 @@ function showHumanStats(distance, speed) {
     });
     bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
       return scale(d);
-    }).attr("fill", 'darkmagenta').attr('filter', 'drop-shadow(0px 2px 2px black)');
-    bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
+    }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
+    bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return 'Flight Time (Years)';
+        return "Flight Time (Years)";
       } else if (i === 1) {
-        return 'Generations amount';
+        return "Generations amount";
       }
     });
     bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
@@ -33143,13 +33162,13 @@ function showHumanStats(distance, speed) {
 
     _bar.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
       return _scale(d);
-    }).attr("fill", 'darkmagenta').attr('filter', 'drop-shadow(0px 2px 2px black)');
+    }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
 
-    _bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
+    _bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return 'Flight Time (Years)';
+        return "Flight Time (Years)";
       } else if (i === 1) {
-        return 'Generations amount';
+        return "Generations amount";
       }
     });
 
@@ -33191,13 +33210,13 @@ function showHumanStats(distance, speed) {
 
     _bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
       return _scale2(d);
-    }).attr("fill", 'darkmagenta').attr('filter', 'drop-shadow(0px 2px 2px black)');
+    }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
 
-    _bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr('filter', 'drop-shadow(0px 2px 2px black)').text(function (d, i) {
+    _bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return 'Flight Time (Months)';
+        return "Flight Time (Months)";
       } else if (i === 1) {
-        return 'Generations amount';
+        return "Generations amount";
       }
     });
 
@@ -33213,13 +33232,13 @@ function showHumanStats(distance, speed) {
 
 function showTheSpeed(speed) {
   if (speed === 27) {
-    d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
-    d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".speed").selectAll("h1").remove();
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".speed").selectAll("h1").data([speed]).enter().append("h1").style("color", "rgb(255 140 0)").text(function (d) {
       return d + " x The Speed of Light";
     });
   } else {
-    d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll('h1').remove();
-    d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.speed').selectAll("h1").data([speed]).enter().append("h1").style('color', 'rgb(255 140 0)').text(function (d) {
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".speed").selectAll("h1").remove();
+    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".speed").selectAll("h1").data([speed]).enter().append("h1").style("color", "rgb(255 140 0)").text(function (d) {
       return d.toLocaleString() + " mph";
     });
   }
@@ -33228,9 +33247,9 @@ function showTheSpeed(speed) {
 function runFacts() {
   var factsArr = ["Earth's orbital period: 365 days.", "Planet number in our solar system: 8 (previously 9).", "Pluto is a dwarf planet, smaller than Earth's moon. Thus it was demoted from its planetary status in 2006.", "Exoplanet is a planet outside of our solar system.", "To date, more than 4,000 exoplanets have been discovered and are considered 'confirmed'.", "Earth is the only known planet to have bodies of liquid water on its surface.", "Earth is the only planet in the universe known to possess life."];
   var random = factsArr[Math.floor(Math.random() * factsArr.length)];
-  var ourSolarDiv = document.getElementsByClassName('our-solar')[0];
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]('.our-solar').selectAll('p').remove();
-  var pEle = document.createElement('p');
+  var ourSolarDiv = document.getElementsByClassName("our-solar")[0];
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".our-solar").selectAll("p").remove();
+  var pEle = document.createElement("p");
   ourSolarDiv.appendChild(pEle).textContent = random;
 }
 

@@ -3,6 +3,7 @@ import "../css/main.css";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
 import { selectAll } from "d3";
+const axios = require("axios");
 
 document.addEventListener("DOMContentLoaded", () => {
   d3.select("body")
@@ -315,23 +316,26 @@ async function loadNear() {
   // let arr = await d3.csv(
   //   "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,pl_masse,ra,dec+from+ps+where+upper(soltype)+like+'%CONF%'+and+pl_masse+between+0.5+and+2.0&format=csv"
   // ); // default nasa api
+  // "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+disc_facility+like+%27%25TESS%25%27+order+by+pl_orbper+desc&format=json"
 
-  let resp = await fetch(
-    // "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+disc_facility+like+%27%25TESS%25%27+order+by+pl_orbper+desc&format=json"
-    // "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative"
-    // "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&format=ipac&where=pl_name like 'BD%2B20 594 b'"
-    "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,pl_masse,ra,dec+from+ps"
-  )
-    .then((res) => {
-      return res.text();
-    })
-    .then((data) => {
-      return data ? JSON.parse(data) : {};
+  let resp = await axios
+    .get("/loadPlanets")
+    .then((response) => {
+      debugger
+      console.log(response);
     })
     .catch((error) => {
       console.log(error);
     });
-
+  // .then((res) => {
+  //   return res.text();
+  // })
+  // .then((data) => {
+  //   return data ? JSON.parse(data) : {};
+  // })
+  // .catch((error) => {
+  //   console.log(error);
+  // });
 
   // const xhr = new XMLHttpRequest();
   // const url = "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative";
@@ -347,6 +351,7 @@ async function loadNear() {
   //   "Content-Type": "application/json",
   //   "Accept": "application/json",
   // },
+  debugger;
   populateNames(arr);
   return arr;
 }

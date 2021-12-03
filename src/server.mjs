@@ -2,7 +2,6 @@ import express from "express";
 const app = express();
 import path from "path";
 import fetch from "node-fetch";
-import axios from "axios";
 const PORT = process.env.PORT || 8000; // process.env accesses heroku's environment variables
 
 app.use(express.static("./"));

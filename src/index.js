@@ -43,7 +43,7 @@ function continueButton() {
 let arrNumCount = 0;
 let charCount = 0;
 let arr = [
-  "There is roughly 30 years between generations. So 2000 years ~ 56 generations.",
+  "There are roughly 30 years between generations. So 2000 years equals approximately 56 generations.",
   "A global average human life expectancy is 72.6 years.",
   "The earth's orbital period is 365 days.",
   "Distance: 1 parsec = 4.24 light years.",
@@ -51,7 +51,7 @@ let arr = [
   "The speed of light 671,000,000 mph.",
   "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.",
   "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system.",
-  "D:",
+  "😳",
 ];
 
 function startType() {

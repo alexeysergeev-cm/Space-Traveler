@@ -192,3 +192,7 @@
   filter: blur(10px);
   border-radius: 60px;
 }
+
+#rel-info > li:nth-child(9) {
+  text-align: center;
+}

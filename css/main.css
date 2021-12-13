@@ -1,27 +1,24 @@
-
-@media screen and (max-width: 1160px){
+@media screen and (max-width: 1160px) {
   /* .title{
     font-size: 40px !important;
   } */
 }
 body {
- background-color: blue;
+  background-color: blue;
 }
 
-
-.main-cont{
+.main-cont {
   display: flex;
-  padding: 10px;
   justify-content: center;
 }
 
-.welcome{
+.welcome {
   color: black;
   font-size: 30px;
   font-family: sans-serif;
   margin: 5px 0;
   width: fit-content;
-  background-color: #C2B28F;
+  background-color: #c2b28f;
   border: 1px solid rgb(85, 107, 47);
   padding: 5px 130px;
   box-shadow: 0px 2px 2px 1px black;
@@ -30,21 +27,16 @@ body {
   margin-right: auto;
 }
 
-.main-div{
-  display:  block;  
+.main-div {
+  display: block;
   border: 3px solid rgb(128 128 128);
   border-radius: 10px;
-  height: 800px;
-  width: 1200px;
-  margin: 0 30px;
   padding: 5px;
   background-color: rgb(255 255 255 / 25%);
-  box-shadow: 0 2px 3px 1px #E4D8B4;
+  box-shadow: 0px -6px 0px -4px #e4d8b4;
 }
 
-
-
-.planets-controller{
+.planets-controller {
   width: 191px;
   border: 3px solid rgb(255 0 0);
   margin: 5px;
@@ -54,7 +46,7 @@ body {
   box-shadow: 0px 2px 2px 1px black;
 }
 
-.planets-name{
+.planets-name {
   color: rgb(131 183 153);
   text-align: center;
   padding: 5px;
@@ -65,8 +57,7 @@ body {
   text-shadow: 0px 2px 2px black;
 }
 
-
-.planets-list{
+.planets-list {
   color: white;
   overflow: scroll;
   border: 2px solid rgb(255 255 0);
@@ -86,7 +77,7 @@ body {
   font-size: 16px;
 }
 
-.switch-controller{
+.switch-controller {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
@@ -94,17 +85,17 @@ body {
   margin-bottom: 8px;
 }
 
-.left-switch{
+.left-switch {
   border: 1px solid rgb(0 0 0);
   box-shadow: 0px 2px 2px 1px black;
   padding: 5px;
   margin-left: 35px;
   padding-top: 9px;
-  background-color: #E86F68;
+  background-color: #e86f68;
   border-radius: 3px;
 }
 
-.left-switch > label{
+.left-switch > label {
   display: block;
   color: #272324;
   text-align: center;
@@ -116,24 +107,24 @@ body {
   font-family: sans-serif;
 }
 
-.left-switch > button, .right-switch > button {
+.left-switch > button,
+.right-switch > button {
   border: 1px solid rgb(255 255 255 / 85%);
   box-shadow: 0 2px 2px 0px rgb(0 0 0);
   cursor: pointer;
 }
 
-
-.right-switch{
+.right-switch {
   border: 1px solid rgb(0 0 0);
   box-shadow: 0px 2px 2px 1px black;
   padding: 5px;
   margin-right: 35px;
   padding-top: 9px;
-  background-color: #83B799;
+  background-color: #83b799;
   border-radius: 3px;
 }
 
-.right-switch > label{
+.right-switch > label {
   display: block;
   color: #272324;
   text-align: center;
@@ -145,7 +136,7 @@ body {
   font-family: sans-serif;
 }
 
-.dashboard{
+.dashboard {
   font-size: 28px;
   font-family: system-ui;
   border: 1px solid rgb(0 0 0);
@@ -169,16 +160,16 @@ body {
   border-radius: 5px;
 }
 
-.main-display{
+.main-display {
   display: flex;
   justify-content: start;
 }
 
-.data-cont{
+.data-cont {
   padding: 5px;
 }
 
-.data-info{
+.data-info {
   color: rgb(131 183 153);
   text-align: center;
   padding: 5px;
@@ -189,10 +180,7 @@ body {
   text-shadow: 0px 2px 2px black;
 }
 
-
-
-
-.other-info{
+.other-info {
   color: rgb(131 183 153);
   text-align: center;
   padding: 5px;
@@ -203,7 +191,7 @@ body {
   text-shadow: 0px 2px 2px black;
 }
 
-.planet-data{
+.planet-data {
   height: 350px;
   width: 500px;
   border: 3px solid rgb(0 128 0);
@@ -211,7 +199,7 @@ body {
   border-radius: 3px;
 }
 
-.other-data{
+.other-data {
   height: 286px;
   width: 500px;
   border: 3px solid rgb(0 128 0);
@@ -219,11 +207,9 @@ body {
   margin-top: 10px;
   box-shadow: 0 2px 2px 1px black;
   border-radius: 3px;
-  
 }
 
-.spacecraft-info{
-  width: 435px;
+.spacecraft-info {
   border: 2px solid white;
   height: fit-content;
   margin: 5px;
@@ -232,7 +218,7 @@ body {
   border-radius: 3px;
 }
 
-.speed-title{
+.speed-title {
   color: rgb(131 183 153);
   text-align: center;
   padding: 5px;
@@ -243,13 +229,13 @@ body {
   text-shadow: 0px 2px 2px black;
 }
 
-.speed{
+.speed {
   text-align: center;
   font-size: 22px;
   padding: 0 0 5px 0;
 }
 
-.personal-info{
+.personal-info {
   display: flex;
   justify-content: center;
   margin-top: 7px;
@@ -258,8 +244,6 @@ body {
 .personal-info > a {
   padding: 5px;
 }
-
-
 
 .personal-info > a > img {
   border-radius: 15px;
@@ -271,7 +255,7 @@ body {
   box-shadow: 0px 1px 5px 5px;
 }
 
-.me{
+.me {
   color: white;
   display: flex;
   justify-content: center;
@@ -280,8 +264,7 @@ body {
   font-family: monospace;
 }
 
-
-.planet-data-static{
+.planet-data-static {
   width: 485px;
   height: 100px;
   border: 1px solid rgb(0 128 0);
@@ -292,7 +275,7 @@ body {
   font-family: sans-serif;
 }
 
-.planet-mass{
+.planet-mass {
   width: 156px;
   height: 89px;
   border: 1px solid rgb(100 149 237);
@@ -356,23 +339,23 @@ body {
 }
 
 .facility > p {
-  color: orange; 
+  color: orange;
   font-size: 17px;
   padding-top: 8px;
   font-family: monospace;
 }
 
-.static-info{
+.static-info {
   margin: 5px;
   border: 3px solid rgb(184 134 11);
-  width: 460px;
+  width: 100%;
+  min-width: 245px;
   box-shadow: 0 2px 2px 1px black;
   border-radius: 3px;
 }
 
-.solar-system-stats{
+.solar-system-stats {
   border: 2px solid rgb(240 128 128);
-  width: 436px;
   height: 500px;
   margin: 5px 10px 5px 10px;
   box-shadow: 0 2px 2px 1px black;
@@ -381,9 +364,7 @@ body {
   text-align: center;
 }
 
-
-.source-info{
-  width: 435px;
+.source-info {
   height: 65px;
   border: 2px solid rgb(245 245 220);
   margin: 6px 10px 0 10px;
@@ -391,7 +372,7 @@ body {
   border-radius: 3px;
 }
 
-.source-title{
+.source-title {
   color: rgb(131 183 153);
   text-align: center;
   padding: 5px;
@@ -402,22 +383,22 @@ body {
   text-shadow: 0px 2px 2px black;
 }
 
-.source-name{
+.source-name {
   text-align: center;
 }
 
-.source-name > a{
+.source-name > a {
   color: rgb(255 255 255);
-  
+
   text-decoration: none;
   font-size: 19px;
 }
 
-.source-name > a:hover{
-  color: #E2CD6D;
+.source-name > a:hover {
+  color: #e2cd6d;
 }
 
-.solar-title-cont{
+.solar-title-cont {
   color: rgb(131 183 153);
   text-align: center;
   padding: 5px;
@@ -428,9 +409,7 @@ body {
   text-shadow: 0px 2px 2px black;
 }
 
-
-
-.our-solar{
+.our-solar {
   font-family: monospace;
   color: rgb(233 150 122);
   padding: 10px 5px 0 5px;
@@ -445,17 +424,16 @@ body {
   font-family: monospace;
 }
 
-.solar-system-stats > button{
+.solar-system-stats > button {
   background-color: rgb(232 111 104);
   outline: none;
   font-size: 20px;
   border-radius: 5px;
-  margin-top: 33px; 
+  margin-top: 33px;
   cursor: pointer;
 }
 
-
-.solar-system-stats > button:active { 
-  background-color: #83B799;
+.solar-system-stats > button:active {
+  background-color: #83b799;
   box-shadow: inset 0 2px 2px 0px rgb(0 0 0);
 }

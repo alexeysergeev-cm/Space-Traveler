@@ -91,7 +91,7 @@ async function loadDefaultData() {
 
   // load Default data
   data0 = await loadNear();
-
+  // debugger
   //all btns
   d3.select(".left-switch")
     .selectAll("button")
@@ -322,39 +322,14 @@ async function loadNear() {
   let resp = await axios
     .get("/loadPlanets")
     .then((response) => {
-      debugger
-      console.log(response);
+      return response.data
     })
     .catch((error) => {
       console.log(error);
     });
-  // .then((res) => {
-  //   return res.text();
-  // })
-  // .then((data) => {
-  //   return data ? JSON.parse(data) : {};
-  // })
-  // .catch((error) => {
-  //   console.log(error);
-  // });
 
-  // const xhr = new XMLHttpRequest();
-  // const url = "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative";
-
-  // xhr.open("GET", url);
-  // // xhr.onreadystatechange = someHandler;
-  // xhr.send();
-
-  // const data = await resp.json();
-  // debugger;
-
-  // headers: {
-  //   "Content-Type": "application/json",
-  //   "Accept": "application/json",
-  // },
-  // debugger;
-  populateNames(arr);
-  return arr;
+  populateNames(resp);
+  return resp;
 }
 
 async function loadMedium() {
@@ -391,8 +366,8 @@ function showPlanetStats(planet, speed) {
 
   let LightYearsInOneParsec = 3.26;
   let data = [
-    planet.st_dist * LightYearsInOneParsec,
-    planet.pl_pnum,
+    planet.sy_dist * LightYearsInOneParsec,
+    planet.sy_pnum,
     planet.pl_orbper,
   ];
 

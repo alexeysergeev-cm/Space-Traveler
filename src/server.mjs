@@ -12,9 +12,6 @@ app.get("/", (request, res) => {
 
 // create route to get single book by its isbn
 app.get("/loadPlanets", (request, response) => {
-  // debugger;
-  // console.log("FETCHING _ >>>>", fetch)
-  // make api call using fetch
   fetch(
     `https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,sy_dist,sy_pnum,pl_orbper,rowupdate,pl_massj,disc_facility,pl_masse,pl_bmasse,ra,dec+from+ps+where+sy_dist+<+5+order+by+sy_dist&format=json`
   )
@@ -22,7 +19,6 @@ app.get("/loadPlanets", (request, response) => {
       return response.text();
     })
     .then((body) => {
-      debugger;
       let results = JSON.parse(body);
       console.log(results); // logs to server
       response.send(results); // sends to frontend

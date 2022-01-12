@@ -8,10 +8,10 @@
   margin: auto;
   font-family: sans-serif;
   width: clamp(450px, 47vw, 700px);
-  height: clamp(540px, 75vh, 600px);
   background: #a447d6;
   box-shadow: 0px -5px 0px -2px #cf9ee9;
   position: relative;
+  transition: height 2s;
 }
 
 .intro.hidden,
@@ -36,7 +36,6 @@
 
 .intro > ul > li {
   padding: 5px;
-  /* color: darkgray; */
   margin: 5px 0;
 }
 
@@ -80,10 +79,10 @@
 }
 
 #rel-info {
-  font-size: clamp(1rem, 2.5vh, 1.3rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.3rem);
   padding-left: 20px;
   padding-right: 20px;
-  /* font-family: monospace; */
+  min-height: 500px;
 }
 
 @-webkit-keyframes animation {
@@ -122,17 +121,7 @@
   }
 }
 
-@media screen and (max-width: 1270px) {
-  #rel-info {
-    font-size: 1.25rem;
-  }
-}
-
 @media screen and (max-width: 1100px) {
-  #rel-info {
-    font-size: 1.2rem;
-  }
-
   .intro > button {
     margin-bottom: 10px;
   }
@@ -142,10 +131,6 @@
   .intro > button {
     margin-bottom: 20px;
     min-height: 40px;
-  }
-
-  #rel-info {
-    font-size: 1.1rem;
   }
 }
 
@@ -195,4 +180,46 @@
 
 #rel-info > li:nth-child(9) {
   text-align: center;
+}
+
+.shrink {
+  animation: minimize 4s;
+  transform: scale(0);
+}
+
+@keyframes minimize {
+  0% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.shrink > img {
+  background: #b6c13d;
+  border-radius: 50%;
+  animation: rotateBolts 3.2s infinite;
+}
+
+@keyframes rotateBolts {
+  100% {
+    transform: rotate(360deg) scale(2);
+  }
+}
+
+.grow {
+  animation: grow-main 1s;
+}
+
+@keyframes grow-main {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }

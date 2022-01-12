@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .ease(d3.easeLinear)
     .style("color", "white");
 
-  continueButton();
-  // loadDefaultData()         //  development
+  // continueButton();
+  loadDefaultData()         //  development
 });
 
 function continueButton() {
@@ -32,8 +32,13 @@ function continueButton() {
 
   let button = intro[0].lastElementChild;
   button.addEventListener("click", () => {
-    main[0].classList.remove("hidden");
-    intro[0].classList.add("hidden");
+    intro[0].classList.add("shrink");
+
+    setTimeout(() => {
+      main[0].classList.remove("hidden");
+      main[0].classList.add("grow");
+      intro[0].classList.add("hidden");
+    }, 4000);
 
     mainPageTransition();
     loadDefaultData();
@@ -322,7 +327,7 @@ async function loadNear() {
   let resp = await axios
     .get("/loadPlanets")
     .then((response) => {
-      return response.data
+      return response.data;
     })
     .catch((error) => {
       console.log(error);

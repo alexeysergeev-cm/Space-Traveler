@@ -34900,8 +34900,9 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 document.addEventListener("DOMContentLoaded", function () {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"]("body").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style("background-color", "black");
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]("h1").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style("color", "white");
-  continueButton(); // loadDefaultData()         //  development
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"]("h1").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style("color", "white"); // continueButton();
+
+  loadDefaultData(); //  development
 });
 
 function continueButton() {
@@ -34912,8 +34913,12 @@ function continueButton() {
   startType();
   var button = intro[0].lastElementChild;
   button.addEventListener("click", function () {
-    main[0].classList.remove("hidden");
-    intro[0].classList.add("hidden");
+    intro[0].classList.add("shrink");
+    setTimeout(function () {
+      main[0].classList.remove("hidden");
+      main[0].classList.add("grow");
+      intro[0].classList.add("hidden");
+    }, 4000);
     mainPageTransition();
     loadDefaultData();
   });

@@ -2,135 +2,75 @@ import "../css/reset.css";
 import "../css/main.css";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
-import { selectAll } from "d3";
-const axios = require("axios");
+import { startTyping } from "./startTyping";
+import { initiateApp, populateNames } from "./Utils/functions";
+import { useDevDummyData } from "./Utils/devDummyData";
+import { loadPlanets } from "./Utils/api";
+
+const NEAR = "near"
+const MID = "mid"
+const FAR = "far"
 
 document.addEventListener("DOMContentLoaded", () => {
-  d3.select("body")
-    .transition()
-    .duration(2000)
-    .ease(d3.easeCubic)
-    .style("background-color", "black");
+  initiateApp();
+  // initiateIntro();
 
-  d3.select("h1")
-    .transition()
-    .duration(2000)
-    .ease(d3.easeLinear)
-    .style("color", "white");
-
-  // continueButton();
-  loadDefaultData()         //  development
+  //  development
+  developmentMode();
 });
 
-function continueButton() {
-  const main = document.getElementsByClassName("main-div");
-  main[0].classList.add("hidden");
+function developmentMode() {
+  initiateMain();
+  const main = document.querySelector(".main-div");
+  const intro = document.querySelector(".intro");
+  intro.classList.add("hidden");
+  main.classList.remove("hidden");
+}
 
-  const intro = document.getElementsByClassName("intro");
-  intro[0].classList.remove("hidden");
-  startType();
-
-  let button = intro[0].lastElementChild;
+function initiateIntro() {
+  const main = document.querySelector(".main-div");
+  const intro = document.querySelector(".intro");
+  const button = intro.lastElementChild;
+  startTyping();
   button.addEventListener("click", () => {
-    intro[0].classList.add("shrink");
-
+    intro.classList.add("shrink");
     setTimeout(() => {
-      main[0].classList.remove("hidden");
-      main[0].classList.add("grow");
-      intro[0].classList.add("hidden");
+      intro.classList.add("hidden");
+      main.classList.remove("hidden");
+      main.classList.add("grow");
     }, 4000);
-
-    mainPageTransition();
-    loadDefaultData();
+    initiateMain();
   });
 }
 
-let arrNumCount = 0;
-let charCount = 0;
-let arr = [
-  "There are roughly 30 years between generations. So 2000 years equals approximately 56 generations.",
-  "A global average human life expectancy is 72.6 years.",
-  "The earth's orbital period is 365 days.",
-  "Distance: 1 parsec = 4.24 light years.",
-  "Voyager 1 speed = 38,000 mph.",
-  "The speed of light 671,000,000 mph.",
-  "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.",
-  "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system.",
-  "😳",
-];
-
-function startType() {
-  if (arrNumCount < arr.length) {
-    let li = document.createElement("li");
-    document.getElementById("rel-info").appendChild(li);
-    actualType();
-  }
-}
-
-function actualType() {
-  if (charCount < arr[arrNumCount].length) {
-    let letter = arr[arrNumCount].charAt(charCount);
-    document.getElementById("rel-info").lastChild.textContent += letter;
-    charCount++;
-    setTimeout(actualType, 20);
-  } else if (charCount === arr[arrNumCount].length) {
-    arrNumCount++;
-    charCount = 0;
-    startType();
-  }
-}
-
-function mainPageTransition() {
-  d3.select("rect")
-    .transition()
-    .ease(d3.easeLinear)
-    .duration(3000)
-    .attr("fill", "blue");
-}
-
-async function loadDefaultData() {
+async function initiateMain() {
   //store data from api request
   let data0 = [];
   let data1 = [];
   let data2 = [];
 
   // load Default data
-  data0 = await loadNear();
-  // debugger
+  data0 = await loadPlanets(NEAR);
+  //dev
+  // data0 = useDevDummyData();
+
   //all btns
-  d3.select(".left-switch")
-    .selectAll("button")
-    .style("background-color", "red");
-  d3.select(".right-switch")
-    .selectAll("button")
-    .style("background-color", "red");
+  // d3.select(".left-switch")
+  //   .selectAll("button")
+  //   .style("background-color", "red");
+  // d3.select(".right-switch")
+  //   .selectAll("button")
+  //   .style("background-color", "red");
 
-  //default btn green
-  d3.select(".left-switch")
-    .select("button")
-    .style("background-color", "rgb(90 250 13)")
-    .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-  d3.select(".right-switch")
-    .select("button")
-    .style("background-color", "rgb(90 250 13)")
-    .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-
-  // development dummy variable
-  //   let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
-  //   pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
-  // pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
-  // pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "",
-  // pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
-  // pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
-  // ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
-  // st_masserr2: "-0.01",st_masslim: "0",st_massn: "2",st_optband: "V (Johnson)",st_optmag: "11.110",st_optmagerr: "",st_optmaglim: "0",st_posn: "4",st_rad: "0.14",st_raderr1: "0.02",
-  // st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3050.00",st_tefferr1: "100.00",st_tefferr2: "-100.00",st_tefflim: "0",st_teffn: "2"}]
-
-  //   d3.select(".planets-list")
-  //     .selectAll("p")
-  //     .data(data)
-  //     .enter().append("p")
-  //     .text(function(d) { return d.pl_name });
+  // //default btn green
+  // d3.select(".left-switch")
+  //   .select("button")
+  //   .style("background-color", "rgb(90 250 13)")
+  //   .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
+  // d3.select(".right-switch")
+  //   .select("button")
+  //   .style("background-color", "rgb(90 250 13)")
+  //   .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
 
   //selecting distance
   let speed = 38000; //default
@@ -150,19 +90,19 @@ async function loadDefaultData() {
       if (data0.length) {
         populateNames(data0);
       } else {
-        data0 = await loadNear();
+        data0 = await loadPlanets(NEAR);
       }
     } else if (e.currentTarget.innerText === "5-10 parsecs") {
       if (data1.length) {
         populateNames(data1);
       } else {
-        data1 = await loadMedium();
+        data1 = await loadPlanets(MID);
       }
     } else if (e.currentTarget.innerText === "10+ parsecs") {
       if (data2.length) {
         populateNames(data1);
       } else {
-        data2 = await loadFar();
+        data2 = await loadPlanets(FAR);
       }
     }
   });
@@ -312,58 +252,6 @@ async function loadDefaultData() {
 
     runFacts();
   });
-}
-
-async function loadNear() {
-  // let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') // default nasa api
-  // let arr = await d3.csv(
-  //   "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps+where=st_dist<5+and+order=st_dist&format=csv"
-  // ); // default nasa api
-  // let arr = await d3.csv(
-  //   "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,pl_masse,ra,dec+from+ps+where+upper(soltype)+like+'%CONF%'+and+pl_masse+between+0.5+and+2.0&format=csv"
-  // ); // default nasa api
-  // "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars+where+disc_facility+like+%27%25TESS%25%27+order+by+pl_orbper+desc&format=json"
-
-  let resp = await axios
-    .get("/loadPlanets")
-    .then((response) => {
-      return response.data;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-
-  populateNames(resp);
-  return resp;
-}
-
-async function loadMedium() {
-  let arr = await d3.csv(
-    "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist"
-  ); // default nasa api
-  populateNames(arr);
-  return arr;
-}
-
-async function loadFar() {
-  let arr = await d3.csv(
-    "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist"
-  ); // default nasa api
-  populateNames(arr);
-  return arr;
-}
-
-async function populateNames(arr) {
-  d3.select(".planets-list").selectAll("p").remove();
-
-  d3.select(".planets-list")
-    .selectAll("p")
-    .data(arr)
-    .enter()
-    .append("p")
-    .text(function (d) {
-      return d.pl_name;
-    });
 }
 
 function showPlanetStats(planet, speed) {

@@ -110,10 +110,24 @@ body {
 
 .left-switch > button,
 .right-switch > button {
-  border: 1px solid rgb(255 255 255 / 85%);
-  box-shadow: 0 2px 2px 0px rgb(0 0 0);
+  border-radius: 50px;
+  border-width: 0;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: black;
   cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 0.7rem;
+  height: 28px;
+  padding: 0 10px;
+  transition: all 200ms;
+  background: red;
 }
+
+/* .left-switch > button:first-of-type,
+.right-switch > button:first-of-type {
+  background: rgb(90, 250, 13);
+} */
 
 .right-switch {
   border: 1px solid rgb(0 0 0);
@@ -437,4 +451,13 @@ body {
 .solar-system-stats > button:active {
   background-color: #83b799;
   box-shadow: inset 0 2px 2px 0px rgb(0 0 0);
+}
+
+
+
+.all-grey {
+  border-color: grey;
+  background-color: grey;
+  background: grey;
+  color: grey;
 }

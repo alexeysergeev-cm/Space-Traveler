@@ -2335,7 +2335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border: 1px solid rgb(255 255 255 / 85%);\n  box-shadow: 0 2px 2px 0px rgb(0 0 0);\n  cursor: pointer;\n}\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"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","sourcesContent":["@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border: 1px solid rgb(255 255 255 / 85%);\n  box-shadow: 0 2px 2px 0px rgb(0 0 0);\n  cursor: pointer;\n}\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"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","sourcesContent":["@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -34866,6 +34866,616 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./src/Utils/api.js":
+/*!**************************!*\
+  !*** ./src/Utils/api.js ***!
+  \**************************/
+/*! exports provided: loadPlanets */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadPlanets", function() { return loadPlanets; });
+/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./src/Utils/functions.js");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+
+var loadPlanets = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(distance) {
+    var resp;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            distance = distance === "near" ? "sy_dist+<+5" : distance === "mid" ? "sy_dist+>+5+and+sy_dist+<+10" : "sy_dist+>+11+and+sy_dist+<+20";
+            _context.next = 3;
+            return axios.get("/loadPlanets", {
+              params: {
+                distance: distance
+              }
+            }).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              console.log(error);
+            });
+
+          case 3:
+            resp = _context.sent;
+            Object(_functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(resp);
+            return _context.abrupt("return", resp);
+
+          case 6:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function loadPlanets(_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/***/ }),
+
+/***/ "./src/Utils/devDummyData.js":
+/*!***********************************!*\
+  !*** ./src/Utils/devDummyData.js ***!
+  \***********************************/
+/*! exports provided: useDevDummyData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useDevDummyData", function() { return useDevDummyData; });
+/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./src/Utils/functions.js");
+// development dummy data
+ // let data = [
+//   {
+//     dec: "-62.679485",
+//     dec_str: "-62d40m46.1s",
+//     gaia_gmag: "8.954",
+//     gaia_gmagerr: "",
+//     gaia_gmaglim: "0",
+//     pl_bmassj: "0.00400",
+//     pl_bmassjerr1: "0.00060",
+//     pl_bmassjerr2: "-0.00053",
+//     pl_bmassjlim: "0",
+//     pl_bmassn: "1",
+//     pl_bmassprov: "Msini",
+//     pl_controvflag: "0",
+//     pl_dens: "",
+//     pl_denserr1: "",
+//     pl_denserr2: "",
+//     pl_denslim: "",
+//     pl_densn: "0",
+//     pl_discmethod: "Radial Velocity",
+//     pl_facility: "European Southern Observatory",
+//     pl_hostname: "Proxima Cen",
+//     pl_k2flag: "0",
+//     pl_kepflag: "0",
+//     pl_letter: "b",
+//     pl_name: "Proxima Cen b",
+//     pl_nnotes: "0",
+//     pl_orbeccen: "0.350000",
+//     pl_orbeccenerr1: "",
+//     pl_orbeccenerr2: "",
+//     pl_orbeccenlim: "1",
+//     pl_orbeccenn: "2",
+//     pl_orbincl: "",
+//     pl_orbinclerr1: "",
+//     pl_orbinclerr2: "",
+//     pl_orbincllim: "",
+//     pl_orbincln: "0",
+//     pl_orbper: "11.18600000",
+//     pl_orbpererr1: "0.00100000",
+//     pl_orbpererr2: "-0.00200000",
+//     pl_orbperlim: "0",
+//     pl_orbpern: "2",
+//     pl_orbsmax: "0.048500",
+//     pl_orbsmaxerr1: "0.004100",
+//     pl_orbsmaxerr2: "-0.005100",
+//     pl_orbsmaxlim: "0",
+//     pl_orbsmaxn: "1",
+//     pl_pnum: "1",
+//     pl_radj: "",
+//     pl_radjerr1: "",
+//     pl_radjerr2: "",
+//     pl_radjlim: "",
+//     pl_radn: "0",
+//     pl_ttvflag: "0",
+//     ra: "217.428955",
+//     ra_str: "14h29m42.95s",
+//     rowupdate: "2016-08-25",
+//     st_decerr: "0.000004",
+//     st_dist: "1.30",
+//     st_disterr1: "0.00",
+//     st_disterr2: "-0.00",
+//     st_distlim: "0",
+//     st_distn: "3",
+//     st_mass: "0.12",
+//     st_masserr1: "0.01",
+//     st_masserr2: "-0.01",
+//     st_masslim: "0",
+//     st_massn: "2",
+//     st_optband: "V (Johnson)",
+//     st_optmag: "11.110",
+//     st_optmagerr: "",
+//     st_optmaglim: "0",
+//     st_posn: "4",
+//     st_rad: "0.14",
+//     st_raderr1: "0.02",
+//     st_raderr2: "-0.02",
+//     st_radlim: "0",
+//     st_radn: "2",
+//     st_raerr: "0.000004",
+//     st_teff: "3050.00",
+//     st_tefferr1: "100.00",
+//     st_tefferr2: "-100.00",
+//     st_tefflim: "0",
+//     st_teffn: "2",
+//   },
+// ];
+
+var newData = [{
+  pl_name: "Proxima Cen b",
+  sy_dist: 1.30119,
+  sy_pnum: 1,
+  pl_orbper: 11.1855,
+  rowupdate: "2019-06-19",
+  pl_massj: null,
+  disc_facility: "European Southern Observatory",
+  pl_masse: null,
+  pl_bmasse: null,
+  ra: 217.3934657,
+  dec: -62.6761821
+}, {
+  pl_name: "eps Eri b",
+  sy_dist: 3.2026,
+  sy_pnum: 1,
+  pl_orbper: 2690,
+  rowupdate: "2020-09-08",
+  pl_massj: 0.78,
+  disc_facility: "Multiple Observatories",
+  pl_masse: 247.9074,
+  pl_bmasse: 247.9074,
+  ra: 53.2284306,
+  dec: -9.4581715
+}, {
+  pl_name: "GJ 887 c",
+  sy_dist: 3.29,
+  sy_pnum: 2,
+  pl_orbper: 21.789,
+  rowupdate: "2020-07-02",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 7.6,
+  ra: 346.4668274,
+  dec: -35.8530693
+}, {
+  pl_name: "GJ 887 b",
+  sy_dist: 3.29,
+  sy_pnum: 2,
+  pl_orbper: 9.262,
+  rowupdate: "2020-07-02",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 4.2,
+  ra: 346.4668274,
+  dec: -35.8530693
+}, {
+  pl_name: "Ross 128 b",
+  sy_dist: 3.37454,
+  sy_pnum: 1,
+  pl_orbper: 9.8658,
+  rowupdate: "2017-11-16",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.4,
+  ra: 176.9376036,
+  dec: 0.7992898
+}, {
+  pl_name: "GJ 15 A b",
+  sy_dist: 3.56228,
+  sy_pnum: 2,
+  pl_orbper: 11.4433,
+  rowupdate: "2019-10-02",
+  pl_massj: null,
+  disc_facility: "W. M. Keck Observatory",
+  pl_masse: null,
+  pl_bmasse: 5.35,
+  ra: 4.6126677,
+  dec: 44.0247296
+}, {
+  pl_name: "GJ 15 A c",
+  sy_dist: 3.56228,
+  sy_pnum: 2,
+  pl_orbper: 7600,
+  rowupdate: "2019-10-02",
+  pl_massj: null,
+  disc_facility: "Roque de los Muchachos Observatory",
+  pl_masse: null,
+  pl_bmasse: 36,
+  ra: 4.6126677,
+  dec: 44.0247296
+}, {
+  pl_name: "tau Cet h",
+  sy_dist: 3.60304,
+  sy_pnum: 4,
+  pl_orbper: 49.41,
+  rowupdate: "2017-08-14",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 1.83,
+  ra: 26.0093029,
+  dec: -15.9337987
+}, {
+  pl_name: "tau Cet g",
+  sy_dist: 3.60304,
+  sy_pnum: 4,
+  pl_orbper: 20,
+  rowupdate: "2017-08-14",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 1.75,
+  ra: 26.0093029,
+  dec: -15.9337987
+}, {
+  pl_name: "tau Cet f",
+  sy_dist: 3.60304,
+  sy_pnum: 4,
+  pl_orbper: 636.13,
+  rowupdate: "2017-08-14",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 3.93,
+  ra: 26.0093029,
+  dec: -15.9337987
+}, {
+  pl_name: "tau Cet e",
+  sy_dist: 3.60304,
+  sy_pnum: 4,
+  pl_orbper: 162.87,
+  rowupdate: "2017-08-14",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 3.93,
+  ra: 26.0093029,
+  dec: -15.9337987
+}, {
+  pl_name: "eps Ind A b",
+  sy_dist: 3.63857,
+  sy_pnum: 1,
+  pl_orbper: 16510,
+  rowupdate: "2019-10-18",
+  pl_massj: 3.25,
+  disc_facility: "La Silla Observatory",
+  pl_masse: 1032.9475,
+  pl_bmasse: 1032.9475,
+  ra: 330.8714021,
+  dec: -56.7969023
+}, {
+  pl_name: "GJ 1061 b",
+  sy_dist: 3.67278,
+  sy_pnum: 3,
+  pl_orbper: 3.204,
+  rowupdate: "2020-02-21",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.37,
+  ra: 54.0032486,
+  dec: -44.5143104
+}, {
+  pl_name: "GJ 1061 c",
+  sy_dist: 3.67278,
+  sy_pnum: 3,
+  pl_orbper: 6.689,
+  rowupdate: "2020-02-21",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.74,
+  ra: 54.0032486,
+  dec: -44.5143104
+}, {
+  pl_name: "GJ 1061 d",
+  sy_dist: 3.67278,
+  sy_pnum: 3,
+  pl_orbper: 13.031,
+  rowupdate: "2020-02-21",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.64,
+  ra: 54.0032486,
+  dec: -44.5143104
+}, {
+  pl_name: "YZ Cet c",
+  sy_dist: 3.71207,
+  sy_pnum: 3,
+  pl_orbper: 3.06008,
+  rowupdate: "2017-08-22",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 0.98,
+  ra: 18.1330792,
+  dec: -16.9962434
+}, {
+  pl_name: "YZ Cet d",
+  sy_dist: 3.71207,
+  sy_pnum: 3,
+  pl_orbper: 4.65627,
+  rowupdate: "2017-08-22",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.14,
+  ra: 18.1330792,
+  dec: -16.9962434
+}, {
+  pl_name: "YZ Cet b",
+  sy_dist: 3.71207,
+  sy_pnum: 3,
+  pl_orbper: 1.9689,
+  rowupdate: "2019-03-25",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 0.65,
+  ra: 18.1330792,
+  dec: -16.9962434
+}, {
+  pl_name: "Teegarden's Star b",
+  sy_dist: 3.83078,
+  sy_pnum: 2,
+  pl_orbper: 4.91,
+  rowupdate: "2019-06-24",
+  pl_massj: null,
+  disc_facility: "Calar Alto Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.05,
+  ra: 43.2691449,
+  dec: 16.8649024
+}, {
+  pl_name: "Teegarden's Star c",
+  sy_dist: 3.83078,
+  sy_pnum: 2,
+  pl_orbper: 11.409,
+  rowupdate: "2019-06-24",
+  pl_massj: null,
+  disc_facility: "Calar Alto Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.11,
+  ra: 43.2691449,
+  dec: 16.8649024
+}, {
+  pl_name: "Kapteyn c",
+  sy_dist: 3.93305,
+  sy_pnum: 1,
+  pl_orbper: 121.54,
+  rowupdate: "2014-06-04",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 7,
+  ra: 77.9586613,
+  dec: -45.0430198
+}, {
+  pl_name: "Wolf 1061 d",
+  sy_dist: 4.30592,
+  sy_pnum: 3,
+  pl_orbper: 217.21,
+  rowupdate: "2017-03-29",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 7.7,
+  ra: 247.5748276,
+  dec: -12.6676866
+}, {
+  pl_name: "Wolf 1061 c",
+  sy_dist: 4.30592,
+  sy_pnum: 3,
+  pl_orbper: 17.8719,
+  rowupdate: "2017-03-29",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 3.41,
+  ra: 247.5748276,
+  dec: -12.6676866
+}, {
+  pl_name: "Wolf 1061 b",
+  sy_dist: 4.30592,
+  sy_pnum: 3,
+  pl_orbper: 4.8869,
+  rowupdate: "2017-03-29",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.91,
+  ra: 247.5748276,
+  dec: -12.6676866
+}, {
+  pl_name: "GJ 9066 c",
+  sy_dist: 4.471,
+  sy_pnum: 2,
+  pl_orbper: 767.887,
+  rowupdate: "2020-09-08",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 71.6,
+  ra: 30.0588307,
+  dec: 13.0443172
+}, {
+  pl_name: "GJ 9066 b",
+  sy_dist: 4.471,
+  sy_pnum: 2,
+  pl_orbper: 241.883,
+  rowupdate: "2020-09-08",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 30.9,
+  ra: 30.0588307,
+  dec: 13.0443172
+}, {
+  pl_name: "GJ 674 b",
+  sy_dist: 4.54896,
+  sy_pnum: 1,
+  pl_orbper: 4.6938,
+  rowupdate: "2014-05-14",
+  pl_massj: null,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 11.09,
+  ra: 262.1700476,
+  dec: -46.8989826
+}, {
+  pl_name: "GJ 687 b",
+  sy_dist: 4.54939,
+  sy_pnum: 2,
+  pl_orbper: 38.14,
+  rowupdate: "2020-09-08",
+  pl_massj: null,
+  disc_facility: "Lick Observatory",
+  pl_masse: null,
+  pl_bmasse: 18.394,
+  ra: 264.1041731,
+  dec: 68.3336741
+}, {
+  pl_name: "GJ 687 c",
+  sy_dist: 4.54939,
+  sy_pnum: 2,
+  pl_orbper: 727.562,
+  rowupdate: "2020-09-08",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 16,
+  ra: 264.1041731,
+  dec: 68.3336741
+}, {
+  pl_name: "GJ 876 b",
+  sy_dist: 4.67517,
+  sy_pnum: 4,
+  pl_orbper: 60.85,
+  rowupdate: "2014-08-27",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 670.59,
+  ra: 343.3239737,
+  dec: -14.2665958
+}, {
+  pl_name: "GJ 876 d",
+  sy_dist: 4.67517,
+  sy_pnum: 4,
+  pl_orbper: 1.938,
+  rowupdate: "2017-10-16",
+  pl_massj: null,
+  disc_facility: "W. M. Keck Observatory",
+  pl_masse: null,
+  pl_bmasse: 8.06144,
+  ra: 343.3239737,
+  dec: -14.2665958
+}, {
+  pl_name: "GJ 876 c",
+  sy_dist: 4.67517,
+  sy_pnum: 4,
+  pl_orbper: 30.259,
+  rowupdate: "2014-08-27",
+  pl_massj: 0.86,
+  disc_facility: "Multiple Observatories",
+  pl_masse: 273.32,
+  pl_bmasse: 273.32,
+  ra: 343.3239737,
+  dec: -14.2665958
+}, {
+  pl_name: "GJ 876 e",
+  sy_dist: 4.67517,
+  sy_pnum: 4,
+  pl_orbper: 124.5,
+  rowupdate: "2016-01-27",
+  pl_massj: 0.05217,
+  disc_facility: "W. M. Keck Observatory",
+  pl_masse: 16.58,
+  pl_bmasse: 16.58,
+  ra: 343.3239737,
+  dec: -14.2665958
+}, {
+  pl_name: "GJ 832 b",
+  sy_dist: 4.96435,
+  sy_pnum: 2,
+  pl_orbper: 3657,
+  rowupdate: "2014-06-25",
+  pl_massj: null,
+  disc_facility: "Anglo-Australian Telescope",
+  pl_masse: null,
+  pl_bmasse: 216,
+  ra: 323.3912616,
+  dec: -49.0125169
+}, {
+  pl_name: "GJ 832 c",
+  sy_dist: 4.96435,
+  sy_pnum: 2,
+  pl_orbper: 35.68,
+  rowupdate: "2014-06-25",
+  pl_massj: null,
+  disc_facility: "Multiple Observatories",
+  pl_masse: null,
+  pl_bmasse: 5.4,
+  ra: 323.3912616,
+  dec: -49.0125169
+}];
+var useDevDummyData = function useDevDummyData() {
+  Object(_functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(newData);
+  return newData;
+};
+
+/***/ }),
+
+/***/ "./src/Utils/functions.js":
+/*!********************************!*\
+  !*** ./src/Utils/functions.js ***!
+  \********************************/
+/*! exports provided: initiateApp, populateNames */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initiateApp", function() { return initiateApp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "populateNames", function() { return populateNames; });
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+
+var initiateApp = function initiateApp() {
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"]("body").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_0__["easeCubic"]).style("background-color", "black");
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"]("h1").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_0__["easeLinear"]).style("color", "white");
+};
+var populateNames = function populateNames(data) {
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planets-list").selectAll("p").remove();
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planets-list").selectAll("p").data(data).enter().append("p").text(function (d) {
+    return d.pl_name;
+  });
+};
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -34880,6 +35490,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+/* harmony import */ var _startTyping__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./startTyping */ "./src/startTyping.js");
+/* harmony import */ var _Utils_functions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Utils/functions */ "./src/Utils/functions.js");
+/* harmony import */ var _Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utils/devDummyData */ "./src/Utils/devDummyData.js");
+/* harmony import */ var _Utils_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utils/api */ "./src/Utils/api.js");
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -34896,69 +35510,48 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
+
+var NEAR = "near";
+var MID = "mid";
+var FAR = "far";
 document.addEventListener("DOMContentLoaded", function () {
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]("body").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeCubic"]).style("background-color", "black");
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]("h1").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).style("color", "white"); // continueButton();
+  Object(_Utils_functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])(); // initiateIntro();
+  //  development
 
-  loadDefaultData(); //  development
+  developmentMode();
 });
 
-function continueButton() {
-  var main = document.getElementsByClassName("main-div");
-  main[0].classList.add("hidden");
-  var intro = document.getElementsByClassName("intro");
-  intro[0].classList.remove("hidden");
-  startType();
-  var button = intro[0].lastElementChild;
+function developmentMode() {
+  initiateMain();
+  var main = document.querySelector(".main-div");
+  var intro = document.querySelector(".intro");
+  intro.classList.add("hidden");
+  main.classList.remove("hidden");
+}
+
+function initiateIntro() {
+  var main = document.querySelector(".main-div");
+  var intro = document.querySelector(".intro");
+  var button = intro.lastElementChild;
+  Object(_startTyping__WEBPACK_IMPORTED_MODULE_4__["startTyping"])();
   button.addEventListener("click", function () {
-    intro[0].classList.add("shrink");
+    intro.classList.add("shrink");
     setTimeout(function () {
-      main[0].classList.remove("hidden");
-      main[0].classList.add("grow");
-      intro[0].classList.add("hidden");
+      intro.classList.add("hidden");
+      main.classList.remove("hidden");
+      main.classList.add("grow");
     }, 4000);
-    mainPageTransition();
-    loadDefaultData();
+    initiateMain();
   });
 }
 
-var arrNumCount = 0;
-var charCount = 0;
-var arr = ["There are roughly 30 years between generations. So 2000 years equals approximately 56 generations.", "A global average human life expectancy is 72.6 years.", "The earth's orbital period is 365 days.", "Distance: 1 parsec = 4.24 light years.", "Voyager 1 speed = 38,000 mph.", "The speed of light 671,000,000 mph.", "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.", "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system.", "😳"];
-
-function startType() {
-  if (arrNumCount < arr.length) {
-    var li = document.createElement("li");
-    document.getElementById("rel-info").appendChild(li);
-    actualType();
-  }
+function initiateMain() {
+  return _initiateMain.apply(this, arguments);
 }
 
-function actualType() {
-  if (charCount < arr[arrNumCount].length) {
-    var letter = arr[arrNumCount].charAt(charCount);
-    document.getElementById("rel-info").lastChild.textContent += letter;
-    charCount++;
-    setTimeout(actualType, 20);
-  } else if (charCount === arr[arrNumCount].length) {
-    arrNumCount++;
-    charCount = 0;
-    startType();
-  }
-}
-
-function mainPageTransition() {
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"]("rect").transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(3000).attr("fill", "blue");
-}
-
-function loadDefaultData() {
-  return _loadDefaultData.apply(this, arguments);
-}
-
-function _loadDefaultData() {
-  _loadDefaultData = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
+function _initiateMain() {
+  _initiateMain = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
     var data0, data1, data2, speed, planetsList, fact;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
@@ -34970,33 +35563,29 @@ function _loadDefaultData() {
             data2 = []; // load Default data
 
             _context2.next = 5;
-            return loadNear();
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR);
 
           case 5:
             data0 = _context2.sent;
-            // debugger
+            //dev
+            // data0 = useDevDummyData();
             //all btns
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll("button").style("background-color", "red");
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll("button").style("background-color", "red"); //default btn green
-
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)"); // development dummy variable
-            //   let data = [{dec: "-62.679485", dec_str: "-62d40m46.1s", gaia_gmag: "8.954", gaia_gmagerr: "", gaia_gmaglim: "0", pl_bmassj: "0.00400", pl_bmassjerr1: "0.00060",
-            //   pl_bmassjerr2: "-0.00053",pl_bmassjlim: "0",pl_bmassn: "1",pl_bmassprov: "Msini",pl_controvflag: "0",pl_dens: "",pl_denserr1: "",pl_denserr2: "",pl_denslim: "",
-            // pl_densn: "0",pl_discmethod: "Radial Velocity",pl_facility: "European Southern Observatory",pl_hostname: "Proxima Cen",pl_k2flag: "0",pl_kepflag: "0",pl_letter: "b",
-            // pl_name: "Proxima Cen b",pl_nnotes: "0",pl_orbeccen: "0.350000",pl_orbeccenerr1: "",pl_orbeccenerr2: "",pl_orbeccenlim: "1",pl_orbeccenn: "2",pl_orbincl: "",pl_orbinclerr1: "",
-            // pl_orbinclerr2: "",pl_orbincllim: "",pl_orbincln: "0",pl_orbper: "11.18600000",pl_orbpererr1: "0.00100000",pl_orbpererr2: "-0.00200000",pl_orbperlim: "0",pl_orbpern: "2",pl_orbsmax: "0.048500",
-            // pl_orbsmaxerr1: "0.004100",pl_orbsmaxerr2: "-0.005100",pl_orbsmaxlim: "0",pl_orbsmaxn: "1",pl_pnum: "1",pl_radj: "",pl_radjerr1: "",pl_radjerr2: "",pl_radjlim: "",pl_radn: "0",pl_ttvflag: "0",
-            // ra: "217.428955",ra_str: "14h29m42.95s",rowupdate: "2016-08-25",st_decerr: "0.000004",st_dist: "1.30",st_disterr1: "0.00",st_disterr2: "-0.00",st_distlim: "0",st_distn: "3",st_mass: "0.12",st_masserr1: "0.01",
-            // st_masserr2: "-0.01",st_masslim: "0",st_massn: "2",st_optband: "V (Johnson)",st_optmag: "11.110",st_optmagerr: "",st_optmaglim: "0",st_posn: "4",st_rad: "0.14",st_raderr1: "0.02",
-            // st_raderr2: "-0.02",st_radlim: "0",st_radn: "2",st_raerr: "0.000004",st_teff: "3050.00",st_tefferr1: "100.00",st_tefferr2: "-100.00",st_tefflim: "0",st_teffn: "2"}]
-            //   d3.select(".planets-list")
-            //     .selectAll("p")
-            //     .data(data)
-            //     .enter().append("p")
-            //     .text(function(d) { return d.pl_name });
+            // d3.select(".left-switch")
+            //   .selectAll("button")
+            //   .style("background-color", "red");
+            // d3.select(".right-switch")
+            //   .selectAll("button")
+            //   .style("background-color", "red");
+            // //default btn green
+            // d3.select(".left-switch")
+            //   .select("button")
+            //   .style("background-color", "rgb(90 250 13)")
+            //   .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
+            // d3.select(".right-switch")
+            //   .select("button")
+            //   .style("background-color", "rgb(90 250 13)")
+            //   .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
             //selecting distance
-
             speed = 38000; //default
             //click LEFT-SWITCH
 
@@ -35023,13 +35612,13 @@ function _loadDefaultData() {
                           break;
                         }
 
-                        populateNames(data0);
+                        Object(_Utils_functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data0);
                         _context.next = 13;
                         break;
 
                       case 10:
                         _context.next = 12;
-                        return loadNear();
+                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR);
 
                       case 12:
                         data0 = _context.sent;
@@ -35049,13 +35638,13 @@ function _loadDefaultData() {
                           break;
                         }
 
-                        populateNames(data1);
+                        Object(_Utils_functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
                         _context.next = 23;
                         break;
 
                       case 20:
                         _context.next = 22;
-                        return loadMedium();
+                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
 
                       case 22:
                         data1 = _context.sent;
@@ -35075,13 +35664,13 @@ function _loadDefaultData() {
                           break;
                         }
 
-                        populateNames(data1);
+                        Object(_Utils_functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
                         _context.next = 33;
                         break;
 
                       case 30:
                         _context.next = 32;
-                        return loadFar();
+                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR);
 
                       case 32:
                         data2 = _context.sent;
@@ -35094,7 +35683,7 @@ function _loadDefaultData() {
                 }, _callee);
               }));
 
-              return function (_x2) {
+              return function (_x) {
                 return _ref.apply(this, arguments);
               };
             }()); //if click RIGHT-SWITCH
@@ -35252,132 +35841,14 @@ function _loadDefaultData() {
               runFacts();
             });
 
-          case 17:
+          case 13:
           case "end":
             return _context2.stop();
         }
       }
     }, _callee2);
   }));
-  return _loadDefaultData.apply(this, arguments);
-}
-
-function loadNear() {
-  return _loadNear.apply(this, arguments);
-}
-
-function _loadNear() {
-  _loadNear = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee3() {
-    var resp;
-    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            _context3.next = 2;
-            return axios.get("/loadPlanets").then(function (response) {
-              return response.data;
-            })["catch"](function (error) {
-              console.log(error);
-            });
-
-          case 2:
-            resp = _context3.sent;
-            populateNames(resp);
-            return _context3.abrupt("return", resp);
-
-          case 5:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3);
-  }));
-  return _loadNear.apply(this, arguments);
-}
-
-function loadMedium() {
-  return _loadMedium.apply(this, arguments);
-}
-
-function _loadMedium() {
-  _loadMedium = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee4() {
-    var arr;
-    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee4$(_context4) {
-      while (1) {
-        switch (_context4.prev = _context4.next) {
-          case 0:
-            _context4.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>5 and st_dist<10&order=st_dist");
-
-          case 2:
-            arr = _context4.sent;
-            // default nasa api
-            populateNames(arr);
-            return _context4.abrupt("return", arr);
-
-          case 5:
-          case "end":
-            return _context4.stop();
-        }
-      }
-    }, _callee4);
-  }));
-  return _loadMedium.apply(this, arguments);
-}
-
-function loadFar() {
-  return _loadFar.apply(this, arguments);
-}
-
-function _loadFar() {
-  _loadFar = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee5() {
-    var arr;
-    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee5$(_context5) {
-      while (1) {
-        switch (_context5.prev = _context5.next) {
-          case 0:
-            _context5.next = 2;
-            return d3__WEBPACK_IMPORTED_MODULE_3__["csv"]("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist>10 and st_dist<20&order=st_dist");
-
-          case 2:
-            arr = _context5.sent;
-            // default nasa api
-            populateNames(arr);
-            return _context5.abrupt("return", arr);
-
-          case 5:
-          case "end":
-            return _context5.stop();
-        }
-      }
-    }, _callee5);
-  }));
-  return _loadFar.apply(this, arguments);
-}
-
-function populateNames(_x) {
-  return _populateNames.apply(this, arguments);
-}
-
-function _populateNames() {
-  _populateNames = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee6(arr) {
-    return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee6$(_context6) {
-      while (1) {
-        switch (_context6.prev = _context6.next) {
-          case 0:
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").remove();
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planets-list").selectAll("p").data(arr).enter().append("p").text(function (d) {
-              return d.pl_name;
-            });
-
-          case 2:
-          case "end":
-            return _context6.stop();
-        }
-      }
-    }, _callee6);
-  }));
-  return _populateNames.apply(this, arguments);
+  return _initiateMain.apply(this, arguments);
 }
 
 function showPlanetStats(planet, speed) {
@@ -35614,6 +36085,42 @@ function runFacts() {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".our-solar").selectAll("p").remove();
   var pEle = document.createElement("p");
   ourSolarDiv.appendChild(pEle).textContent = random;
+}
+
+/***/ }),
+
+/***/ "./src/startTyping.js":
+/*!****************************!*\
+  !*** ./src/startTyping.js ***!
+  \****************************/
+/*! exports provided: startTyping */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startTyping", function() { return startTyping; });
+var text = ["There are roughly 30 years between generations. So 2000 years equals approximately 56 generations.", "A global average human life expectancy is 72.6 years.", "The earth's orbital period is 365 days.", "Distance: 1 parsec = 4.24 light years.", "Voyager 1 speed = 38,000 mph.", "The speed of light 671,000,000 mph.", "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.", "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system.", "😳"];
+var paragraphCount = 0;
+var charCount = 0;
+var startTyping = function startTyping() {
+  if (paragraphCount < text.length) {
+    var li = document.createElement("li");
+    document.getElementById("rel-info").appendChild(li);
+    actualType();
+  }
+};
+
+function actualType() {
+  if (charCount < text[paragraphCount].length) {
+    var letter = text[paragraphCount].charAt(charCount);
+    document.getElementById("rel-info").lastChild.textContent += letter;
+    charCount++;
+    setTimeout(actualType, 20);
+  } else if (charCount === text[paragraphCount].length) {
+    paragraphCount++;
+    charCount = 0;
+    startTyping();
+  }
 }
 
 /***/ })

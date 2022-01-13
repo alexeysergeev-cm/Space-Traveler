@@ -3,13 +3,14 @@ import "../css/main.css";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
 import { startTyping } from "./startTyping";
-import { initiateApp, populateNames } from "./Utils/functions";
+import { initiateApp, populateNames } from "./Utils/d3functions";
 import { useDevDummyData } from "./Utils/devDummyData";
 import { loadPlanets } from "./Utils/api";
+import { generateData } from "./Utils/calculateData";
 
-const NEAR = "near"
-const MID = "mid"
-const FAR = "far"
+const NEAR = "near";
+const MID = "mid";
+const FAR = "far";
 
 document.addEventListener("DOMContentLoaded", () => {
   initiateApp();
@@ -55,22 +56,22 @@ async function initiateMain() {
   // data0 = useDevDummyData();
 
   //all btns
-  // d3.select(".left-switch")
-  //   .selectAll("button")
-  //   .style("background-color", "red");
-  // d3.select(".right-switch")
-  //   .selectAll("button")
-  //   .style("background-color", "red");
+  d3.select(".left-switch")
+    .selectAll("button")
+    .style("background-color", "red");
+  d3.select(".right-switch")
+    .selectAll("button")
+    .style("background-color", "red");
 
-  // //default btn green
-  // d3.select(".left-switch")
-  //   .select("button")
-  //   .style("background-color", "rgb(90 250 13)")
-  //   .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-  // d3.select(".right-switch")
-  //   .select("button")
-  //   .style("background-color", "rgb(90 250 13)")
-  //   .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
+  //default btn green
+  d3.select(".left-switch")
+    .select("button")
+    .style("background-color", "rgb(90 250 13)")
+    .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
+  d3.select(".right-switch")
+    .select("button")
+    .style("background-color", "rgb(90 250 13)")
+    .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
 
   //selecting distance
   let speed = 38000; //default
@@ -257,39 +258,15 @@ async function initiateMain() {
 function showPlanetStats(planet, speed) {
   d3.select(".planet-data").selectAll("svg").remove();
 
-  let LightYearsInOneParsec = 3.26;
-  let data = [
-    planet.sy_dist * LightYearsInOneParsec,
-    planet.sy_pnum,
-    planet.pl_orbper,
-  ];
-
-  //generate planet stats
-  let earthMassJup = 0.00314; //earth mass compared to jupiter
-  let planetMass = planet.pl_bmassj / earthMassJup; //calulate planet mass
-  let lastUpdate = planet.rowupdate;
-  let facility = planet.pl_facility;
-
-  //generate human stats
-  let lightYearDistInMiles = 6000000000000; //miles
-  let speedOfLight = 671000000; //mph
-  let voyagerSpeed = 38000; //mph
-  let day = 24; //hrs
-  let yearLength = 365; //days
-
-  let totalMilesToDestination = lightYearDistInMiles * data[0];
-  let yearsToReach =
-    totalMilesToDestination / (voyagerSpeed * day * yearLength);
-  let humanGenerations = yearsToReach / 30; // 30 years between generations
-  let humanData = [yearsToReach, humanGenerations];
+  const data = generateData(planet, speed);
 
   //planet stats
-  let width = 500;
-  let height = 210;
+  const width = document.querySelector(".planet-data").offsetWidth - 6;
+  const height = document.querySelector(".planet-data").offsetHeight - 36;
   let scaleFactor = 10;
   let barHeight = 50;
 
-  let scale1 = d3.scaleLinear().domain([1, 100]).range([10, 1000]);
+  let scale1 = d3.scaleLinear().domain([1, 100]).range([50, 500]);
 
   let graph = d3
     .select(".planet-data-svg")
@@ -299,7 +276,7 @@ function showPlanetStats(planet, speed) {
 
   let bar = graph
     .selectAll("g")
-    .data(data)
+    .data(data["planetData"])
     .enter()
     .append("g")
     .attr("transform", function (d, i) {
@@ -309,6 +286,8 @@ function showPlanetStats(planet, speed) {
         return "translate(0, 95)";
       } else if (i === 2) {
         return "translate(0, 165)";
+      } else if (i === 3) {
+        return "translate(0, 245)";
       }
     });
 
@@ -319,8 +298,8 @@ function showPlanetStats(planet, speed) {
     .ease(d3.easeLinear)
     .duration(500)
     .attr("width", function (d) {
-      // return d * scaleFactor;
-      return scale1(d);
+      return d * scaleFactor;
+      // return scale1(d);
     })
     .attr("fill", "rgb(139, 0, 139)")
     .attr("filter", "drop-shadow(0px 2px 2px black)");
@@ -337,11 +316,13 @@ function showPlanetStats(planet, speed) {
     .attr("filter", "drop-shadow(0px 2px 2px black)")
     .text(function (d, i) {
       if (i === 0) {
-        return "Distance (Light Years)";
+        return "Distance to destination (in Light Years)";
       } else if (i === 1) {
         return "Planet Number";
       } else if (i === 2) {
         return "Orbital Period (Days)";
+      } else if (i === 3) {
+        return "Planet Mass (x times Earth Mass)";
       }
     });
 
@@ -353,55 +334,55 @@ function showPlanetStats(planet, speed) {
     .attr("font-family", "sans-serif")
     .style("fill", "white")
     .text(function (d, i) {
-      if (i === 0) {
+      if (i === 0 || i === 3) {
         return d.toFixed(2);
       } else {
         return parseInt(d);
       }
     });
 
-  d3.select(".planet-mass").selectAll("p").remove();
+  // d3.select(".planet-mass").selectAll("p").remove();
 
-  let massBox = d3
-    .select(".planet-mass")
-    .selectAll("p")
-    .data([planetMass])
-    .enter()
-    .append("p")
-    .text(function (d) {
-      return d.toFixed(2) + " of Earth's Mass";
-    });
+  // let massBox = d3
+  //   .select(".planet-mass")
+  //   .selectAll("p")
+  //   .data([planetMass])
+  //   .enter()
+  //   .append("p")
+  //   .text(function (d) {
+  //     return d.toFixed(2) + " of Earth's Mass";
+  //   });
 
-  d3.select(".misc").selectAll("p").remove();
+  // d3.select(".misc").selectAll("p").remove();
 
-  let misc = d3
-    .select(".misc")
-    .selectAll("p")
-    .data([lastUpdate])
-    .enter()
-    .append("p")
-    .text(function (d) {
-      return d;
-    });
+  // let misc = d3
+  //   .select(".misc")
+  //   .selectAll("p")
+  //   .data([lastUpdate])
+  //   .enter()
+  //   .append("p")
+  //   .text(function (d) {
+  //     return d;
+  //   });
 
-  d3.select(".facility").selectAll("p").remove();
+  // d3.select(".facility").selectAll("p").remove();
 
-  let facil = d3
-    .select(".facility")
-    .selectAll("p")
-    .data([facility])
-    .enter()
-    .append("p")
-    .text(function (d) {
-      return d;
-    });
+  // let facil = d3
+  //   .select(".facility")
+  //   .selectAll("p")
+  //   .data([facility])
+  //   .enter()
+  //   .append("p")
+  //   .text(function (d) {
+  //     return d;
+  //   });
 
   //show human-related data
   let calcBySpeed = document.getElementsByClassName("speed")[0].innerText;
   if (calcBySpeed === "38,000 mph") {
-    showHumanStats(humanData, speed);
+    showHumanStats(data["humanData"], speed);
   } else {
-    showHumanStats(data[0], speed);
+    showHumanStats(data["planetData"][0], speed);
   }
 }
 

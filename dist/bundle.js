@@ -2335,7 +2335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"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","sourcesContent":["@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}\n\n.planet-data-svg {\n  min-height: 214px;\n}", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"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","sourcesContent":["@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}\n\n.planet-data-svg {\n  min-height: 214px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -34870,13 +34870,14 @@ module.exports = function (list, options) {
 /*!**************************!*\
   !*** ./src/Utils/api.js ***!
   \**************************/
-/*! exports provided: loadPlanets */
+/*! exports provided: loadPlanets, getWebsiteText */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadPlanets", function() { return loadPlanets; });
-/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./src/Utils/functions.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getWebsiteText", function() { return getWebsiteText; });
+/* harmony import */ var _d3functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./d3functions */ "./src/Utils/d3functions.js");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -34886,16 +34887,16 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 var loadPlanets = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(distance) {
-    var resp;
+    var queryDistance, resp, filteredPlanets;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            distance = distance === "near" ? "sy_dist+<+5" : distance === "mid" ? "sy_dist+>+5+and+sy_dist+<+10" : "sy_dist+>+11+and+sy_dist+<+20";
+            queryDistance = distance === "near" ? "sy_dist+<+5" : distance === "mid" ? "sy_dist+>+5+and+sy_dist+<+10" : "sy_dist+>+11+and+sy_dist+<+20";
             _context.next = 3;
             return axios.get("/loadPlanets", {
               params: {
-                distance: distance
+                distance: queryDistance
               }
             }).then(function (response) {
               return response.data;
@@ -34905,10 +34906,12 @@ var loadPlanets = /*#__PURE__*/function () {
 
           case 3:
             resp = _context.sent;
-            Object(_functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(resp);
-            return _context.abrupt("return", resp);
+            filteredPlanets = handleDups(resp); // console.log(filteredPlanets);
 
-          case 6:
+            Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(filteredPlanets);
+            return _context.abrupt("return", filteredPlanets);
+
+          case 7:
           case "end":
             return _context.stop();
         }
@@ -34920,6 +34923,140 @@ var loadPlanets = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
+
+function handleDups(data) {
+  var filteredPlanets = {};
+  data.forEach(function (item) {
+    var validValuesLen = countValidValues(item);
+
+    if (!filteredPlanets[item.pl_name]) {
+      filteredPlanets[item.pl_name] = item;
+    } else if (validValuesLen > countValidValues(filteredPlanets[item.pl_name])) {
+      filteredPlanets[item.pl_name] = item;
+    }
+  });
+  return Object.values(filteredPlanets);
+}
+
+function countValidValues(obj) {
+  return Object.values(obj).filter(function (el) {
+    return el !== null;
+  }).length;
+}
+
+var getWebsiteText = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(link) {
+    var resp;
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return axios.get("/getWebsiteText", {
+              params: {
+                link: link
+              }
+            }).then(function (response) {
+              return response.data;
+            })["catch"](function (error) {
+              console.log(error);
+            });
+
+          case 2:
+            resp = _context2.sent;
+
+          case 3:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function getWebsiteText(_x2) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+/***/ }),
+
+/***/ "./src/Utils/calculateData.js":
+/*!************************************!*\
+  !*** ./src/Utils/calculateData.js ***!
+  \************************************/
+/*! exports provided: generateData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateData", function() { return generateData; });
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ "./src/Utils/api.js");
+
+var generateData = function generateData(planet, speed) {
+  var data = {};
+  var LightYearsInOneParsec = 3.262;
+  var earthMassToJup = 0.00314;
+  var lightYearDistInMiles = 6 * 10e11;
+  var speedOfLightInMiles = 671 * 10e5;
+  var voyagerSpeedInMiles = 38e3;
+  var hoursInDay = 24;
+  var daysInYear = 365;
+  var yearsBetweenGenerations = 30;
+  var lastPlanetUpdate = planet.rowupdate;
+  var discoveryFacility = planet.disc_facility;
+  var planetData = [planet.sy_dist * LightYearsInOneParsec, planet.sy_pnum, planet.pl_orbper, planet.pl_bmassj / earthMassToJup];
+  var totalMilesToDestination = lightYearDistInMiles * planetData[0];
+  var humanYearsToReachDest = totalMilesToDestination / (voyagerSpeedInMiles * hoursInDay * daysInYear);
+  var humanGenerations = humanYearsToReachDest / yearsBetweenGenerations;
+  var humanData = [humanYearsToReachDest, humanGenerations];
+  data["planetData"] = planetData;
+  data["humanData"] = humanData;
+  data["lastPlanetUpdate"] = lastPlanetUpdate;
+  data["discoveryFacility"] = discoveryFacility;
+  extractText(planet.pl_refname);
+  return data;
+};
+
+function extractText(ref) {
+  var start = ref.indexOf("https");
+  var end = ref.indexOf("abstract") + 8;
+  var link = ref.slice(start, end);
+  Object(_api__WEBPACK_IMPORTED_MODULE_0__["getWebsiteText"])(link); // debugger;
+  // var x = new XMLHttpRequest();
+  // x.onreadystatechange = function () {
+  //   if (x.status === 200 && x.readyState === 4) {
+  //     console.log(x.responseText);
+  //   }
+  // };
+  // x.open("GET", link, true);
+  // x.send();
+}
+
+/***/ }),
+
+/***/ "./src/Utils/d3functions.js":
+/*!**********************************!*\
+  !*** ./src/Utils/d3functions.js ***!
+  \**********************************/
+/*! exports provided: initiateApp, populateNames */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initiateApp", function() { return initiateApp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "populateNames", function() { return populateNames; });
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+
+var initiateApp = function initiateApp() {
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"]("body").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_0__["easeCubic"]).style("background-color", "black");
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"]("h1").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_0__["easeLinear"]).style("color", "white");
+};
+var populateNames = function populateNames(data) {
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planets-list").selectAll("p").remove();
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planets-list").selectAll("p").data(data).enter().append("p").text(function (d) {
+    return d.pl_name;
+  });
+};
 
 /***/ }),
 
@@ -34933,7 +35070,7 @@ var loadPlanets = /*#__PURE__*/function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useDevDummyData", function() { return useDevDummyData; });
-/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./src/Utils/functions.js");
+/* harmony import */ var _d3functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./d3functions */ "./src/Utils/d3functions.js");
 // development dummy data
  // let data = [
 //   {
@@ -35026,12 +35163,13 @@ var newData = [{
   pl_name: "Proxima Cen b",
   sy_dist: 1.30119,
   sy_pnum: 1,
-  pl_orbper: 11.1855,
-  rowupdate: "2019-06-19",
+  pl_orbper: 11.186,
+  rowupdate: "2016-08-25",
   pl_massj: null,
+  pl_bmassj: 0.004,
   disc_facility: "European Southern Observatory",
   pl_masse: null,
-  pl_bmasse: null,
+  pl_bmasse: 1.27,
   ra: 217.3934657,
   dec: -62.6761821
 }, {
@@ -35041,6 +35179,7 @@ var newData = [{
   pl_orbper: 2690,
   rowupdate: "2020-09-08",
   pl_massj: 0.78,
+  pl_bmassj: 0.78,
   disc_facility: "Multiple Observatories",
   pl_masse: 247.9074,
   pl_bmasse: 247.9074,
@@ -35053,6 +35192,7 @@ var newData = [{
   pl_orbper: 21.789,
   rowupdate: "2020-07-02",
   pl_massj: null,
+  pl_bmassj: 0.02391,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 7.6,
@@ -35065,6 +35205,7 @@ var newData = [{
   pl_orbper: 9.262,
   rowupdate: "2020-07-02",
   pl_massj: null,
+  pl_bmassj: 0.01321,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 4.2,
@@ -35077,6 +35218,7 @@ var newData = [{
   pl_orbper: 9.8658,
   rowupdate: "2017-11-16",
   pl_massj: null,
+  pl_bmassj: 0.0044,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.4,
@@ -35089,6 +35231,7 @@ var newData = [{
   pl_orbper: 11.4433,
   rowupdate: "2019-10-02",
   pl_massj: null,
+  pl_bmassj: 0.01683,
   disc_facility: "W. M. Keck Observatory",
   pl_masse: null,
   pl_bmasse: 5.35,
@@ -35101,6 +35244,7 @@ var newData = [{
   pl_orbper: 7600,
   rowupdate: "2019-10-02",
   pl_massj: null,
+  pl_bmassj: 0.11327,
   disc_facility: "Roque de los Muchachos Observatory",
   pl_masse: null,
   pl_bmasse: 36,
@@ -35113,6 +35257,7 @@ var newData = [{
   pl_orbper: 49.41,
   rowupdate: "2017-08-14",
   pl_massj: null,
+  pl_bmassj: 0.00576,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 1.83,
@@ -35125,6 +35270,7 @@ var newData = [{
   pl_orbper: 20,
   rowupdate: "2017-08-14",
   pl_massj: null,
+  pl_bmassj: 0.00551,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 1.75,
@@ -35137,6 +35283,7 @@ var newData = [{
   pl_orbper: 636.13,
   rowupdate: "2017-08-14",
   pl_massj: null,
+  pl_bmassj: 0.01237,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 3.93,
@@ -35149,6 +35296,7 @@ var newData = [{
   pl_orbper: 162.87,
   rowupdate: "2017-08-14",
   pl_massj: null,
+  pl_bmassj: 0.01237,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 3.93,
@@ -35161,6 +35309,7 @@ var newData = [{
   pl_orbper: 16510,
   rowupdate: "2019-10-18",
   pl_massj: 3.25,
+  pl_bmassj: 3.25,
   disc_facility: "La Silla Observatory",
   pl_masse: 1032.9475,
   pl_bmasse: 1032.9475,
@@ -35173,6 +35322,7 @@ var newData = [{
   pl_orbper: 3.204,
   rowupdate: "2020-02-21",
   pl_massj: null,
+  pl_bmassj: 0.00431,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.37,
@@ -35185,6 +35335,7 @@ var newData = [{
   pl_orbper: 6.689,
   rowupdate: "2020-02-21",
   pl_massj: null,
+  pl_bmassj: 0.00547,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.74,
@@ -35197,6 +35348,7 @@ var newData = [{
   pl_orbper: 13.031,
   rowupdate: "2020-02-21",
   pl_massj: null,
+  pl_bmassj: 0.00516,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.64,
@@ -35209,6 +35361,7 @@ var newData = [{
   pl_orbper: 3.06008,
   rowupdate: "2017-08-22",
   pl_massj: null,
+  pl_bmassj: 0.00308,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 0.98,
@@ -35221,6 +35374,7 @@ var newData = [{
   pl_orbper: 4.65627,
   rowupdate: "2017-08-22",
   pl_massj: null,
+  pl_bmassj: 0.00359,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.14,
@@ -35233,6 +35387,7 @@ var newData = [{
   pl_orbper: 1.9689,
   rowupdate: "2019-03-25",
   pl_massj: null,
+  pl_bmassj: 0.00205,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 0.65,
@@ -35245,6 +35400,7 @@ var newData = [{
   pl_orbper: 4.91,
   rowupdate: "2019-06-24",
   pl_massj: null,
+  pl_bmassj: 0.0033,
   disc_facility: "Calar Alto Observatory",
   pl_masse: null,
   pl_bmasse: 1.05,
@@ -35257,6 +35413,7 @@ var newData = [{
   pl_orbper: 11.409,
   rowupdate: "2019-06-24",
   pl_massj: null,
+  pl_bmassj: 0.00349,
   disc_facility: "Calar Alto Observatory",
   pl_masse: null,
   pl_bmasse: 1.11,
@@ -35269,6 +35426,7 @@ var newData = [{
   pl_orbper: 121.54,
   rowupdate: "2014-06-04",
   pl_massj: null,
+  pl_bmassj: 0.022,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 7,
@@ -35281,6 +35439,7 @@ var newData = [{
   pl_orbper: 217.21,
   rowupdate: "2017-03-29",
   pl_massj: null,
+  pl_bmassj: 0.02423,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 7.7,
@@ -35293,6 +35452,7 @@ var newData = [{
   pl_orbper: 17.8719,
   rowupdate: "2017-03-29",
   pl_massj: null,
+  pl_bmassj: 0.01073,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 3.41,
@@ -35305,6 +35465,7 @@ var newData = [{
   pl_orbper: 4.8869,
   rowupdate: "2017-03-29",
   pl_massj: null,
+  pl_bmassj: 0.00601,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.91,
@@ -35317,6 +35478,7 @@ var newData = [{
   pl_orbper: 767.887,
   rowupdate: "2020-09-08",
   pl_massj: null,
+  pl_bmassj: 0.22528,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 71.6,
@@ -35329,6 +35491,7 @@ var newData = [{
   pl_orbper: 241.883,
   rowupdate: "2020-09-08",
   pl_massj: null,
+  pl_bmassj: 0.09722,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 30.9,
@@ -35341,6 +35504,7 @@ var newData = [{
   pl_orbper: 4.6938,
   rowupdate: "2014-05-14",
   pl_massj: null,
+  pl_bmassj: 0.035,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 11.09,
@@ -35353,6 +35517,7 @@ var newData = [{
   pl_orbper: 38.14,
   rowupdate: "2020-09-08",
   pl_massj: null,
+  pl_bmassj: 0.058,
   disc_facility: "Lick Observatory",
   pl_masse: null,
   pl_bmasse: 18.394,
@@ -35365,6 +35530,7 @@ var newData = [{
   pl_orbper: 727.562,
   rowupdate: "2020-09-08",
   pl_massj: null,
+  pl_bmassj: 0.05034,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 16,
@@ -35374,24 +35540,26 @@ var newData = [{
   pl_name: "GJ 876 b",
   sy_dist: 4.67517,
   sy_pnum: 4,
-  pl_orbper: 60.85,
-  rowupdate: "2014-08-27",
-  pl_massj: null,
+  pl_orbper: 61.087,
+  rowupdate: "2016-01-27",
+  pl_massj: 2.6596,
+  pl_bmassj: 2.6596,
   disc_facility: "Multiple Observatories",
-  pl_masse: null,
-  pl_bmasse: 670.59,
+  pl_masse: 845.3,
+  pl_bmasse: 845.3,
   ra: 343.3239737,
   dec: -14.2665958
 }, {
   pl_name: "GJ 876 d",
   sy_dist: 4.67517,
   sy_pnum: 4,
-  pl_orbper: 1.938,
-  rowupdate: "2017-10-16",
-  pl_massj: null,
+  pl_orbper: 1.937848,
+  rowupdate: "2016-01-27",
+  pl_massj: 0.02357,
+  pl_bmassj: 0.02357,
   disc_facility: "W. M. Keck Observatory",
-  pl_masse: null,
-  pl_bmasse: 8.06144,
+  pl_masse: 7.49,
+  pl_bmasse: 7.49,
   ra: 343.3239737,
   dec: -14.2665958
 }, {
@@ -35401,6 +35569,7 @@ var newData = [{
   pl_orbper: 30.259,
   rowupdate: "2014-08-27",
   pl_massj: 0.86,
+  pl_bmassj: 0.86,
   disc_facility: "Multiple Observatories",
   pl_masse: 273.32,
   pl_bmasse: 273.32,
@@ -35413,6 +35582,7 @@ var newData = [{
   pl_orbper: 124.5,
   rowupdate: "2016-01-27",
   pl_massj: 0.05217,
+  pl_bmassj: 0.05217,
   disc_facility: "W. M. Keck Observatory",
   pl_masse: 16.58,
   pl_bmasse: 16.58,
@@ -35425,6 +35595,7 @@ var newData = [{
   pl_orbper: 3657,
   rowupdate: "2014-06-25",
   pl_massj: null,
+  pl_bmassj: 0.68,
   disc_facility: "Anglo-Australian Telescope",
   pl_masse: null,
   pl_bmasse: 216,
@@ -35437,6 +35608,7 @@ var newData = [{
   pl_orbper: 35.68,
   rowupdate: "2014-06-25",
   pl_massj: null,
+  pl_bmassj: 0.017,
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 5.4,
@@ -35444,34 +35616,8 @@ var newData = [{
   dec: -49.0125169
 }];
 var useDevDummyData = function useDevDummyData() {
-  Object(_functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(newData);
+  Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(newData);
   return newData;
-};
-
-/***/ }),
-
-/***/ "./src/Utils/functions.js":
-/*!********************************!*\
-  !*** ./src/Utils/functions.js ***!
-  \********************************/
-/*! exports provided: initiateApp, populateNames */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initiateApp", function() { return initiateApp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "populateNames", function() { return populateNames; });
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
-
-var initiateApp = function initiateApp() {
-  d3__WEBPACK_IMPORTED_MODULE_0__["select"]("body").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_0__["easeCubic"]).style("background-color", "black");
-  d3__WEBPACK_IMPORTED_MODULE_0__["select"]("h1").transition().duration(2000).ease(d3__WEBPACK_IMPORTED_MODULE_0__["easeLinear"]).style("color", "white");
-};
-var populateNames = function populateNames(data) {
-  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planets-list").selectAll("p").remove();
-  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planets-list").selectAll("p").data(data).enter().append("p").text(function (d) {
-    return d.pl_name;
-  });
 };
 
 /***/ }),
@@ -35491,9 +35637,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
 /* harmony import */ var _startTyping__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./startTyping */ "./src/startTyping.js");
-/* harmony import */ var _Utils_functions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Utils/functions */ "./src/Utils/functions.js");
+/* harmony import */ var _Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Utils/d3functions */ "./src/Utils/d3functions.js");
 /* harmony import */ var _Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utils/devDummyData */ "./src/Utils/devDummyData.js");
 /* harmony import */ var _Utils_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utils/api */ "./src/Utils/api.js");
+/* harmony import */ var _Utils_calculateData__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Utils/calculateData */ "./src/Utils/calculateData.js");
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -35512,11 +35659,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 var NEAR = "near";
 var MID = "mid";
 var FAR = "far";
 document.addEventListener("DOMContentLoaded", function () {
-  Object(_Utils_functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])(); // initiateIntro();
+  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])(); // initiateIntro();
   //  development
 
   developmentMode();
@@ -35570,22 +35718,12 @@ function _initiateMain() {
             //dev
             // data0 = useDevDummyData();
             //all btns
-            // d3.select(".left-switch")
-            //   .selectAll("button")
-            //   .style("background-color", "red");
-            // d3.select(".right-switch")
-            //   .selectAll("button")
-            //   .style("background-color", "red");
-            // //default btn green
-            // d3.select(".left-switch")
-            //   .select("button")
-            //   .style("background-color", "rgb(90 250 13)")
-            //   .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-            // d3.select(".right-switch")
-            //   .select("button")
-            //   .style("background-color", "rgb(90 250 13)")
-            //   .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-            //selecting distance
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll("button").style("background-color", "red");
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll("button").style("background-color", "red"); //default btn green
+
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
+            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)"); //selecting distance
+
             speed = 38000; //default
             //click LEFT-SWITCH
 
@@ -35612,7 +35750,7 @@ function _initiateMain() {
                           break;
                         }
 
-                        Object(_Utils_functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data0);
+                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data0);
                         _context.next = 13;
                         break;
 
@@ -35638,7 +35776,7 @@ function _initiateMain() {
                           break;
                         }
 
-                        Object(_Utils_functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
+                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
                         _context.next = 23;
                         break;
 
@@ -35664,7 +35802,7 @@ function _initiateMain() {
                           break;
                         }
 
-                        Object(_Utils_functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
+                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
                         _context.next = 33;
                         break;
 
@@ -35841,7 +35979,7 @@ function _initiateMain() {
               runFacts();
             });
 
-          case 13:
+          case 17:
           case "end":
             return _context2.stop();
         }
@@ -35853,86 +35991,83 @@ function _initiateMain() {
 
 function showPlanetStats(planet, speed) {
   d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").selectAll("svg").remove();
-  var LightYearsInOneParsec = 3.26;
-  var data = [planet.sy_dist * LightYearsInOneParsec, planet.sy_pnum, planet.pl_orbper]; //generate planet stats
+  var data = Object(_Utils_calculateData__WEBPACK_IMPORTED_MODULE_8__["generateData"])(planet, speed); //planet stats
 
-  var earthMassJup = 0.00314; //earth mass compared to jupiter
-
-  var planetMass = planet.pl_bmassj / earthMassJup; //calulate planet mass
-
-  var lastUpdate = planet.rowupdate;
-  var facility = planet.pl_facility; //generate human stats
-
-  var lightYearDistInMiles = 6000000000000; //miles
-
-  var speedOfLight = 671000000; //mph
-
-  var voyagerSpeed = 38000; //mph
-
-  var day = 24; //hrs
-
-  var yearLength = 365; //days
-
-  var totalMilesToDestination = lightYearDistInMiles * data[0];
-  var yearsToReach = totalMilesToDestination / (voyagerSpeed * day * yearLength);
-  var humanGenerations = yearsToReach / 30; // 30 years between generations
-
-  var humanData = [yearsToReach, humanGenerations]; //planet stats
-
-  var width = 500;
-  var height = 210;
+  var width = document.querySelector(".planet-data").offsetWidth - 6;
+  var height = document.querySelector(".planet-data").offsetHeight - 36;
   var scaleFactor = 10;
   var barHeight = 50;
-  var scale1 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([1, 100]).range([10, 1000]);
+  var scale1 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([1, 100]).range([50, 500]);
   var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data-svg").append("svg").attr("width", width).attr("height", height);
-  var bar = graph.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
+  var bar = graph.selectAll("g").data(data["planetData"]).enter().append("g").attr("transform", function (d, i) {
     if (i === 0) {
       return "translate(0, 25)";
     } else if (i === 1) {
       return "translate(0, 95)";
     } else if (i === 2) {
       return "translate(0, 165)";
+    } else if (i === 3) {
+      return "translate(0, 245)";
     }
   });
   bar.append("rect").attr("height", barHeight - 10).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
-    // return d * scaleFactor;
-    return scale1(d);
+    return d * scaleFactor; // return scale1(d);
   }).attr("fill", "rgb(139, 0, 139)").attr("filter", "drop-shadow(0px 2px 2px black)");
   bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
     if (i === 0) {
-      return "Distance (Light Years)";
+      return "Distance to destination (in Light Years)";
     } else if (i === 1) {
       return "Planet Number";
     } else if (i === 2) {
       return "Orbital Period (Days)";
+    } else if (i === 3) {
+      return "Planet Mass (x times Earth Mass)";
     }
   });
   bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
-    if (i === 0) {
+    if (i === 0 || i === 3) {
       return d.toFixed(2);
     } else {
       return parseInt(d);
     }
-  });
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-mass").selectAll("p").remove();
-  var massBox = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-mass").selectAll("p").data([planetMass]).enter().append("p").text(function (d) {
-    return d.toFixed(2) + " of Earth's Mass";
-  });
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").remove();
-  var misc = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").data([lastUpdate]).enter().append("p").text(function (d) {
-    return d;
-  });
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").remove();
-  var facil = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").data([facility]).enter().append("p").text(function (d) {
-    return d;
-  }); //show human-related data
+  }); // d3.select(".planet-mass").selectAll("p").remove();
+  // let massBox = d3
+  //   .select(".planet-mass")
+  //   .selectAll("p")
+  //   .data([planetMass])
+  //   .enter()
+  //   .append("p")
+  //   .text(function (d) {
+  //     return d.toFixed(2) + " of Earth's Mass";
+  //   });
+  // d3.select(".misc").selectAll("p").remove();
+  // let misc = d3
+  //   .select(".misc")
+  //   .selectAll("p")
+  //   .data([lastUpdate])
+  //   .enter()
+  //   .append("p")
+  //   .text(function (d) {
+  //     return d;
+  //   });
+  // d3.select(".facility").selectAll("p").remove();
+  // let facil = d3
+  //   .select(".facility")
+  //   .selectAll("p")
+  //   .data([facility])
+  //   .enter()
+  //   .append("p")
+  //   .text(function (d) {
+  //     return d;
+  //   });
+  //show human-related data
 
   var calcBySpeed = document.getElementsByClassName("speed")[0].innerText;
 
   if (calcBySpeed === "38,000 mph") {
-    showHumanStats(humanData, speed);
+    showHumanStats(data["humanData"], speed);
   } else {
-    showHumanStats(data[0], speed);
+    showHumanStats(data["planetData"][0], speed);
   }
 } //on speed click
 

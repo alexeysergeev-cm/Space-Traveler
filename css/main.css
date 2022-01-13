@@ -461,3 +461,7 @@ body {
   background: grey;
   color: grey;
 }
+
+.planet-data-svg {
+  min-height: 214px;
+}

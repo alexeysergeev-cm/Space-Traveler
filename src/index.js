@@ -3,7 +3,12 @@ import "../css/main.css";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
 import { startTyping } from "./startTyping";
-import { initiateApp, populateNames } from "./Utils/d3functions";
+import {
+  initiateApp,
+  populateNames,
+  activateDefaultButtons,
+  newTextTransition,
+} from "./Utils/d3functions";
 import { useDevDummyData } from "./Utils/devDummyData";
 import { loadPlanets } from "./Utils/api";
 import { generateData } from "./Utils/calculateData";
@@ -14,10 +19,10 @@ const FAR = "far";
 
 document.addEventListener("DOMContentLoaded", () => {
   initiateApp();
-  // initiateIntro();
+  initiateIntro();
 
   //  development
-  developmentMode();
+  // developmentMode();
 });
 
 function developmentMode() {
@@ -51,27 +56,13 @@ async function initiateMain() {
   let data2 = [];
 
   // load Default data
-  data0 = await loadPlanets(NEAR);
+  data0 = await loadPlanets(NEAR, true);
+  data1 = await loadPlanets(MID);
+  data2 = await loadPlanets(FAR);
   //dev
   // data0 = useDevDummyData();
 
-  //all btns
-  d3.select(".left-switch")
-    .selectAll("button")
-    .style("background-color", "red");
-  d3.select(".right-switch")
-    .selectAll("button")
-    .style("background-color", "red");
-
-  //default btn green
-  d3.select(".left-switch")
-    .select("button")
-    .style("background-color", "rgb(90 250 13)")
-    .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-  d3.select(".right-switch")
-    .select("button")
-    .style("background-color", "rgb(90 250 13)")
-    .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
+  activateDefaultButtons();
 
   //selecting distance
   let speed = 38000; //default
@@ -91,19 +82,19 @@ async function initiateMain() {
       if (data0.length) {
         populateNames(data0);
       } else {
-        data0 = await loadPlanets(NEAR);
+        data0 = await loadPlanets(NEAR, true);
       }
     } else if (e.currentTarget.innerText === "5-10 parsecs") {
       if (data1.length) {
         populateNames(data1);
       } else {
-        data1 = await loadPlanets(MID);
+        data1 = await loadPlanets(MID, true);
       }
     } else if (e.currentTarget.innerText === "10+ parsecs") {
       if (data2.length) {
-        populateNames(data1);
+        populateNames(data2);
       } else {
-        data2 = await loadPlanets(FAR);
+        data2 = await loadPlanets(FAR, true);
       }
     }
   });
@@ -213,7 +204,9 @@ async function initiateMain() {
           item.style.backgroundColor = "";
         }
       }
-      e.target.style.backgroundColor = "rgb(255, 140, 0)";
+      if (e.target.tagName === "P") {
+        e.target.style.backgroundColor = "rgb(255, 140, 0)";
+      }
 
       let switches = document.getElementsByClassName("left-switch")[0].children;
       for (let i = 1; i < switches.length; i++) {
@@ -224,6 +217,7 @@ async function initiateMain() {
           data0.forEach((planet) => {
             // development
             if (e.target.innerText === planet.pl_name) {
+              newTextTransition();
               showPlanetStats(planet, speed);
             }
           });
@@ -233,12 +227,14 @@ async function initiateMain() {
         ) {
           data1.forEach((planet) => {
             if (e.target.innerText === planet.pl_name) {
+              newTextTransition();
               showPlanetStats(planet, speed);
             }
           });
         } else {
           data2.forEach((planet) => {
             if (e.target.innerText === planet.pl_name) {
+              newTextTransition();
               showPlanetStats(planet, speed);
             }
           });
@@ -246,13 +242,6 @@ async function initiateMain() {
       }
     });
   }
-
-  const fact = document.getElementById("random-fact");
-  fact.addEventListener("click", (e) => {
-    e.target.style.backgroundColor = "rgb(232 111 104)";
-
-    runFacts();
-  });
 }
 
 function showPlanetStats(planet, speed) {
@@ -341,41 +330,31 @@ function showPlanetStats(planet, speed) {
       }
     });
 
-  // d3.select(".planet-mass").selectAll("p").remove();
 
-  // let massBox = d3
-  //   .select(".planet-mass")
-  //   .selectAll("p")
-  //   .data([planetMass])
-  //   .enter()
-  //   .append("p")
-  //   .text(function (d) {
-  //     return d.toFixed(2) + " of Earth's Mass";
-  //   });
 
-  // d3.select(".misc").selectAll("p").remove();
+  d3.select(".misc").selectAll("p").remove();
 
-  // let misc = d3
-  //   .select(".misc")
-  //   .selectAll("p")
-  //   .data([lastUpdate])
-  //   .enter()
-  //   .append("p")
-  //   .text(function (d) {
-  //     return d;
-  //   });
+  let misc = d3
+    .select(".misc")
+    .selectAll("p")
+    .data([data["lastPlanetUpdate"]])
+    .enter()
+    .append("p")
+    .text(function (d) {
+      return d;
+    });
 
-  // d3.select(".facility").selectAll("p").remove();
+  d3.select(".facility").selectAll("p").remove();
 
-  // let facil = d3
-  //   .select(".facility")
-  //   .selectAll("p")
-  //   .data([facility])
-  //   .enter()
-  //   .append("p")
-  //   .text(function (d) {
-  //     return d;
-  //   });
+  let facil = d3
+    .select(".facility")
+    .selectAll("p")
+    .data([data["discoveryFacility"]])
+    .enter()
+    .append("p")
+    .text(function (d) {
+      return d;
+    });
 
   //show human-related data
   let calcBySpeed = document.getElementsByClassName("speed")[0].innerText;
@@ -397,10 +376,10 @@ function showHumanStats(distance, speed) {
     d3.select(".other-data").selectAll("svg").remove();
 
     let otherWidth = 500;
-    let otherHeight = 290;
+    let otherHeight = 152;
 
     let graph2 = d3
-      .select(".other-data")
+      .select(".human-data-svg")
       .append("svg")
       .attr("width", otherWidth)
       .attr("height", otherHeight);
@@ -653,23 +632,4 @@ function showTheSpeed(speed) {
         return d.toLocaleString() + " mph";
       });
   }
-}
-
-function runFacts() {
-  let factsArr = [
-    "Earth's orbital period: 365 days.",
-    "Planet number in our solar system: 8 (previously 9).",
-    "Pluto is a dwarf planet, smaller than Earth's moon. Thus it was demoted from its planetary status in 2006.",
-    "Exoplanet is a planet outside of our solar system.",
-    "To date, more than 4,000 exoplanets have been discovered and are considered 'confirmed'.",
-    "Earth is the only known planet to have bodies of liquid water on its surface.",
-    "Earth is the only planet in the universe known to possess life.",
-  ];
-
-  let random = factsArr[Math.floor(Math.random() * factsArr.length)];
-  let ourSolarDiv = document.getElementsByClassName("our-solar")[0];
-  d3.select(".our-solar").selectAll("p").remove();
-
-  let pEle = document.createElement("p");
-  ourSolarDiv.appendChild(pEle).textContent = random;
 }

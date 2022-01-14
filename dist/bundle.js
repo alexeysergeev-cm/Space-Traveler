@@ -2335,7 +2335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}\n\n.planet-data-svg {\n  min-height: 214px;\n}", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"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","sourcesContent":["@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 100px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  overflow: scroll;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  padding: 10px 5px 0 5px;\n  line-height: 1.1;\n  text-indent: 0px;\n  margin-top: 20px;\n}\n\n.our-solar > p {\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: monospace;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}\n\n.planet-data-svg {\n  min-height: 214px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 90px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc, .facility {\n  width: 242.5px;\n  height: 79px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  line-height: 1.1;\n  text-indent: 0px;\n  width: 300px;\n\n  overflow: hidden;\n}\n\n.our-solar > p {\n  font-size: 0.8rem;\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: sans-serif;\n  overflow: auto;\n  height: 454px;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}\n\n.planet-data-svg {\n  min-height: 214px;\n}\n", "",{"version":3,"sources":["webpack://./css/main.css"],"names":[],"mappings":"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","sourcesContent":["@media screen and (max-width: 1160px) {\n  /* .title{\n    font-size: 40px !important;\n  } */\n}\nbody {\n  background-color: blue;\n}\n\n.main-cont {\n  display: flex;\n  justify-content: center;\n}\n\n.welcome {\n  color: black;\n  font-size: 30px;\n  font-family: sans-serif;\n  margin: 5px 0;\n  width: fit-content;\n  background-color: #c2b28f;\n  border: 1px solid rgb(85, 107, 47);\n  padding: 5px 130px;\n  box-shadow: 0px 2px 2px 1px black;\n  border-radius: 6px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.main-div {\n  display: block;\n  border: 3px solid rgb(128 128 128);\n  border-radius: 10px;\n  padding: 5px;\n  background-color: rgb(255 255 255 / 25%);\n  box-shadow: 0px -6px 0px -4px #e4d8b4;\n  z-index: 2;\n}\n\n.planets-controller {\n  width: 191px;\n  border: 3px solid rgb(255 0 0);\n  margin: 5px;\n  height: 654px;\n  background-color: rgb(255 0 0 / 10%);\n  border-radius: 4px;\n  box-shadow: 0px 2px 2px 1px black;\n}\n\n.planets-name {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planets-list {\n  color: white;\n  overflow: scroll;\n  border: 2px solid rgb(255 255 0);\n  padding: 2px;\n  margin: 5px;\n  display: flex;\n  flex-direction: column;\n  width: 157px;\n  padding-left: 5px;\n  line-height: 1.5;\n  height: 605px;\n  margin-left: 10px;\n  background-color: rgb(255 255 0 / 10%);\n  border-radius: 4px;\n  box-shadow: inset 0 2px 2px 1px black;\n  font-family: monospace;\n  font-size: 16px;\n}\n\n.switch-controller {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 5px;\n  padding-bottom: 5px;\n  margin-bottom: 8px;\n}\n\n.left-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-left: 35px;\n  padding-top: 9px;\n  background-color: #e86f68;\n  border-radius: 3px;\n}\n\n.left-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.left-switch > button,\n.right-switch > button {\n  border-radius: 50px;\n  border-width: 0;\n  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;\n  color: black;\n  cursor: pointer;\n  display: inline-block;\n  font-family: Arial, sans-serif;\n  font-size: 0.7rem;\n  height: 28px;\n  padding: 0 10px;\n  transition: all 200ms;\n  background: red;\n}\n\n/* .left-switch > button:first-of-type,\n.right-switch > button:first-of-type {\n  background: rgb(90, 250, 13);\n} */\n\n.right-switch {\n  border: 1px solid rgb(0 0 0);\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 5px;\n  margin-right: 35px;\n  padding-top: 9px;\n  background-color: #83b799;\n  border-radius: 3px;\n}\n\n.right-switch > label {\n  display: block;\n  color: #272324;\n  text-align: center;\n  font-family: serif;\n  text-decoration: overline;\n  text-decoration-color: rgb(0 133 255);\n  padding-bottom: 5px;\n  font-size: 22px;\n  font-family: sans-serif;\n}\n\n.dashboard {\n  font-size: 28px;\n  font-family: system-ui;\n  border: 1px solid rgb(0 0 0);\n  background-color: rgb(194 178 143);\n  color: rgb(0 0 0);\n  border-radius: 3px;\n  box-shadow: 0px 2px 2px 1px black;\n  padding: 6px 25px;\n  height: fit-content;\n  margin-top: 10px;\n}\n\n.planets-list > p {\n  cursor: pointer;\n  padding-left: 8px;\n  border-radius: 3px;\n}\n\n.planets-list > p:hover {\n  background: rgb(255 255 255 / 30%);\n  border-radius: 5px;\n}\n\n.main-display {\n  display: flex;\n  justify-content: start;\n}\n\n.data-cont {\n  padding: 5px;\n}\n\n.data-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.other-info {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.planet-data {\n  height: 350px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.other-data {\n  height: 286px;\n  width: 500px;\n  border: 3px solid rgb(0 128 0);\n  padding-top: 2px;\n  margin-top: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.spacecraft-info {\n  border: 2px solid white;\n  height: fit-content;\n  margin: 5px;\n  margin-left: 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.speed-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.speed {\n  text-align: center;\n  font-size: 22px;\n  padding: 0 0 5px 0;\n}\n\n.personal-info {\n  display: flex;\n  justify-content: center;\n  margin-top: 7px;\n}\n\n.personal-info > a {\n  padding: 5px;\n}\n\n.personal-info > a > img {\n  border-radius: 15px;\n  width: 30px;\n  height: 30px;\n  background-color: white;\n}\n.personal-info > a > img:hover {\n  box-shadow: 0px 1px 5px 5px;\n}\n\n.me {\n  color: white;\n  display: flex;\n  justify-content: center;\n  margin-bottom: 10px;\n  font-size: 17px;\n  font-family: monospace;\n}\n\n.planet-data-static {\n  width: 485px;\n  height: 90px;\n  border: 1px solid rgb(0 128 0);\n  margin-left: 6px;\n  display: flex;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-family: sans-serif;\n}\n\n.planet-mass {\n  width: 156px;\n  height: 89px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.planet-mass > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.planet-mass > p {\n  color: rgb(255 165 0);\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.misc, .facility {\n  width: 242.5px;\n  height: 79px;\n  border: 1px solid rgb(100 149 237);\n  margin: 5px;\n  text-align: center;\n  box-shadow: inset 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.misc > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.misc > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 10px;\n  font-family: monospace;\n}\n\n.facility > h6 {\n  color: rgb(255 255 255);\n  font-size: 19px;\n  padding: 5px 0 0 0;\n}\n\n.facility > p {\n  color: orange;\n  font-size: 17px;\n  padding-top: 8px;\n  font-family: monospace;\n}\n\n.static-info {\n  margin: 5px;\n  border: 3px solid rgb(184 134 11);\n  width: 100%;\n  min-width: 245px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.solar-system-stats {\n  border: 2px solid rgb(240 128 128);\n  height: 500px;\n  margin: 5px 10px 5px 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n  font-size: 25px;\n  text-align: center;\n}\n\n.source-info {\n  height: 65px;\n  border: 2px solid rgb(245 245 220);\n  margin: 6px 10px 0 10px;\n  box-shadow: 0 2px 2px 1px black;\n  border-radius: 3px;\n}\n\n.source-title {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.source-name {\n  text-align: center;\n}\n\n.source-name > a {\n  color: rgb(255 255 255);\n\n  text-decoration: none;\n  font-size: 19px;\n}\n\n.source-name > a:hover {\n  color: #e2cd6d;\n}\n\n.solar-title-cont {\n  color: rgb(131 183 153);\n  text-align: center;\n  padding: 5px;\n  font-size: 20px;\n  margin: auto;\n  filter: brightness(1.2);\n  font-family: sans-serif;\n  text-shadow: 0px 2px 2px black;\n}\n\n.our-solar {\n  font-family: monospace;\n  color: rgb(233 150 122);\n  line-height: 1.1;\n  text-indent: 0px;\n  width: 300px;\n\n  overflow: hidden;\n}\n\n.our-solar > p {\n  font-size: 0.8rem;\n  padding: 5px;\n  color: rgb(240 248 255);\n  font-family: sans-serif;\n  overflow: auto;\n  height: 454px;\n}\n\n.solar-system-stats > button {\n  background-color: rgb(232 111 104);\n  outline: none;\n  font-size: 20px;\n  border-radius: 5px;\n  margin-top: 33px;\n  cursor: pointer;\n}\n\n.solar-system-stats > button:active {\n  background-color: #83b799;\n  box-shadow: inset 0 2px 2px 0px rgb(0 0 0);\n}\n\n.all-grey {\n  border-color: grey;\n  background-color: grey;\n  background: grey;\n  color: grey;\n}\n\n.planet-data-svg {\n  min-height: 214px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -34886,7 +34886,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 
 var loadPlanets = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(distance) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(distance, toPopulate) {
     var queryDistance, resp, filteredPlanets;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
@@ -34906,12 +34906,12 @@ var loadPlanets = /*#__PURE__*/function () {
 
           case 3:
             resp = _context.sent;
-            filteredPlanets = handleDups(resp); // console.log(filteredPlanets);
-
-            Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(filteredPlanets);
+            filteredPlanets = handleDups(resp);
+            console.log(filteredPlanets);
+            toPopulate && Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(filteredPlanets);
             return _context.abrupt("return", filteredPlanets);
 
-          case 7:
+          case 8:
           case "end":
             return _context.stop();
         }
@@ -34919,7 +34919,7 @@ var loadPlanets = /*#__PURE__*/function () {
     }, _callee);
   }));
 
-  return function loadPlanets(_x) {
+  return function loadPlanets(_x, _x2) {
     return _ref.apply(this, arguments);
   };
 }();
@@ -34964,8 +34964,9 @@ var getWebsiteText = /*#__PURE__*/function () {
 
           case 2:
             resp = _context2.sent;
+            Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["displaySourceDescription"])(resp.replace(/ \([\s\S]*?\)/g, ""));
 
-          case 3:
+          case 4:
           case "end":
             return _context2.stop();
         }
@@ -34973,7 +34974,7 @@ var getWebsiteText = /*#__PURE__*/function () {
     }, _callee2);
   }));
 
-  return function getWebsiteText(_x2) {
+  return function getWebsiteText(_x3) {
     return _ref2.apply(this, arguments);
   };
 }();
@@ -35021,15 +35022,7 @@ function extractText(ref) {
   var start = ref.indexOf("https");
   var end = ref.indexOf("abstract") + 8;
   var link = ref.slice(start, end);
-  Object(_api__WEBPACK_IMPORTED_MODULE_0__["getWebsiteText"])(link); // debugger;
-  // var x = new XMLHttpRequest();
-  // x.onreadystatechange = function () {
-  //   if (x.status === 200 && x.readyState === 4) {
-  //     console.log(x.responseText);
-  //   }
-  // };
-  // x.open("GET", link, true);
-  // x.send();
+  Object(_api__WEBPACK_IMPORTED_MODULE_0__["getWebsiteText"])(link);
 }
 
 /***/ }),
@@ -35038,13 +35031,16 @@ function extractText(ref) {
 /*!**********************************!*\
   !*** ./src/Utils/d3functions.js ***!
   \**********************************/
-/*! exports provided: initiateApp, populateNames */
+/*! exports provided: initiateApp, populateNames, activateDefaultButtons, displaySourceDescription, newTextTransition */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initiateApp", function() { return initiateApp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "populateNames", function() { return populateNames; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "activateDefaultButtons", function() { return activateDefaultButtons; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "displaySourceDescription", function() { return displaySourceDescription; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "newTextTransition", function() { return newTextTransition; });
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
 
 var initiateApp = function initiateApp() {
@@ -35056,6 +35052,20 @@ var populateNames = function populateNames(data) {
   d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planets-list").selectAll("p").data(data).enter().append("p").text(function (d) {
     return d.pl_name;
   });
+};
+var activateDefaultButtons = function activateDefaultButtons() {
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".left-switch, .right-switch").selectAll("button").style("background-color", "red");
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".left-switch, .right-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
+};
+var displaySourceDescription = function displaySourceDescription(text) {
+  var ourSolarDiv = document.querySelector(".our-solar");
+  var pEle = document.createElement("p");
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".our-solar").selectAll("p").remove();
+  ourSolarDiv.appendChild(pEle).textContent = text;
+};
+var newTextTransition = function newTextTransition() {
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".our-solar").transition().duration(250).style("height", "0px");
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".our-solar").transition().delay(750).duration(1000).style("height", "470px");
 };
 
 /***/ }),
@@ -35072,92 +35082,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useDevDummyData", function() { return useDevDummyData; });
 /* harmony import */ var _d3functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./d3functions */ "./src/Utils/d3functions.js");
 // development dummy data
- // let data = [
-//   {
-//     dec: "-62.679485",
-//     dec_str: "-62d40m46.1s",
-//     gaia_gmag: "8.954",
-//     gaia_gmagerr: "",
-//     gaia_gmaglim: "0",
-//     pl_bmassj: "0.00400",
-//     pl_bmassjerr1: "0.00060",
-//     pl_bmassjerr2: "-0.00053",
-//     pl_bmassjlim: "0",
-//     pl_bmassn: "1",
-//     pl_bmassprov: "Msini",
-//     pl_controvflag: "0",
-//     pl_dens: "",
-//     pl_denserr1: "",
-//     pl_denserr2: "",
-//     pl_denslim: "",
-//     pl_densn: "0",
-//     pl_discmethod: "Radial Velocity",
-//     pl_facility: "European Southern Observatory",
-//     pl_hostname: "Proxima Cen",
-//     pl_k2flag: "0",
-//     pl_kepflag: "0",
-//     pl_letter: "b",
-//     pl_name: "Proxima Cen b",
-//     pl_nnotes: "0",
-//     pl_orbeccen: "0.350000",
-//     pl_orbeccenerr1: "",
-//     pl_orbeccenerr2: "",
-//     pl_orbeccenlim: "1",
-//     pl_orbeccenn: "2",
-//     pl_orbincl: "",
-//     pl_orbinclerr1: "",
-//     pl_orbinclerr2: "",
-//     pl_orbincllim: "",
-//     pl_orbincln: "0",
-//     pl_orbper: "11.18600000",
-//     pl_orbpererr1: "0.00100000",
-//     pl_orbpererr2: "-0.00200000",
-//     pl_orbperlim: "0",
-//     pl_orbpern: "2",
-//     pl_orbsmax: "0.048500",
-//     pl_orbsmaxerr1: "0.004100",
-//     pl_orbsmaxerr2: "-0.005100",
-//     pl_orbsmaxlim: "0",
-//     pl_orbsmaxn: "1",
-//     pl_pnum: "1",
-//     pl_radj: "",
-//     pl_radjerr1: "",
-//     pl_radjerr2: "",
-//     pl_radjlim: "",
-//     pl_radn: "0",
-//     pl_ttvflag: "0",
-//     ra: "217.428955",
-//     ra_str: "14h29m42.95s",
-//     rowupdate: "2016-08-25",
-//     st_decerr: "0.000004",
-//     st_dist: "1.30",
-//     st_disterr1: "0.00",
-//     st_disterr2: "-0.00",
-//     st_distlim: "0",
-//     st_distn: "3",
-//     st_mass: "0.12",
-//     st_masserr1: "0.01",
-//     st_masserr2: "-0.01",
-//     st_masslim: "0",
-//     st_massn: "2",
-//     st_optband: "V (Johnson)",
-//     st_optmag: "11.110",
-//     st_optmagerr: "",
-//     st_optmaglim: "0",
-//     st_posn: "4",
-//     st_rad: "0.14",
-//     st_raderr1: "0.02",
-//     st_raderr2: "-0.02",
-//     st_radlim: "0",
-//     st_radn: "2",
-//     st_raerr: "0.000004",
-//     st_teff: "3050.00",
-//     st_tefferr1: "100.00",
-//     st_tefferr2: "-100.00",
-//     st_tefflim: "0",
-//     st_teffn: "2",
-//   },
-// ];
 
 var newData = [{
   pl_name: "Proxima Cen b",
@@ -35170,6 +35094,7 @@ var newData = [{
   disc_facility: "European Southern Observatory",
   pl_masse: null,
   pl_bmasse: 1.27,
+  pl_refname: "<a refstr=ANGLADA_ESCUD_EACUTE__ET_AL__2016 href=https://ui.adsabs.harvard.edu/abs/2016Natur.536..437A/abstract target=ref>Anglada-Escud&eacute; et al. 2016</a>",
   ra: 217.3934657,
   dec: -62.6761821
 }, {
@@ -35183,6 +35108,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: 247.9074,
   pl_bmasse: 247.9074,
+  pl_refname: "<a refstr=MAWET_ET_AL__2019 href=https://ui.adsabs.harvard.edu/abs/2019AJ....157...33M/abstract target=ref>Mawet et al. 2019</a>",
   ra: 53.2284306,
   dec: -9.4581715
 }, {
@@ -35196,6 +35122,7 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 7.6,
+  pl_refname: "<a refstr=JEFFERS_ET_AL__2020 href=https://ui.adsabs.harvard.edu/abs/2020arXiv200616372J/abstract target=ref>Jeffers et al. 2020</a>",
   ra: 346.4668274,
   dec: -35.8530693
 }, {
@@ -35209,6 +35136,7 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 4.2,
+  pl_refname: "<a refstr=JEFFERS_ET_AL__2020 href=https://ui.adsabs.harvard.edu/abs/2020arXiv200616372J/abstract target=ref>Jeffers et al. 2020</a>",
   ra: 346.4668274,
   dec: -35.8530693
 }, {
@@ -35222,19 +35150,21 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.4,
+  pl_refname: "<a refstr=BONFILS_ET_AL__2018 href=https://ui.adsabs.harvard.edu/abs/2018A&A...613A..25B/abstract target=ref>Bonfils et al. 2018</a>",
   ra: 176.9376036,
   dec: 0.7992898
 }, {
   pl_name: "GJ 15 A b",
   sy_dist: 3.56228,
   sy_pnum: 2,
-  pl_orbper: 11.4433,
+  pl_orbper: 11.4407,
   rowupdate: "2019-10-02",
   pl_massj: null,
-  pl_bmassj: 0.01683,
+  pl_bmassj: 0.00953,
   disc_facility: "W. M. Keck Observatory",
   pl_masse: null,
-  pl_bmasse: 5.35,
+  pl_bmasse: 3.03,
+  pl_refname: "<a refstr=PINAMONTI_ET_AL__2018 href=https://ui.adsabs.harvard.edu/abs/2018A&A...617A.104P/abstract target=ref>Pinamonti et al. 2018</a>",
   ra: 4.6126677,
   dec: 44.0247296
 }, {
@@ -35248,6 +35178,7 @@ var newData = [{
   disc_facility: "Roque de los Muchachos Observatory",
   pl_masse: null,
   pl_bmasse: 36,
+  pl_refname: "<a refstr=PINAMONTI_ET_AL__2018 href=https://ui.adsabs.harvard.edu/abs/2018A&A...617A.104P/abstract target=ref>Pinamonti et al. 2018</a>",
   ra: 4.6126677,
   dec: 44.0247296
 }, {
@@ -35261,6 +35192,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 1.83,
+  pl_refname: "<a refstr=FENG_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017AJ....154..135F/abstract target=ref>Feng et al. 2017</a>",
   ra: 26.0093029,
   dec: -15.9337987
 }, {
@@ -35274,6 +35206,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 1.75,
+  pl_refname: "<a refstr=FENG_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017AJ....154..135F/abstract target=ref>Feng et al. 2017</a>",
   ra: 26.0093029,
   dec: -15.9337987
 }, {
@@ -35287,6 +35220,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 3.93,
+  pl_refname: "<a refstr=FENG_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017AJ....154..135F/abstract target=ref>Feng et al. 2017</a>",
   ra: 26.0093029,
   dec: -15.9337987
 }, {
@@ -35300,6 +35234,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 3.93,
+  pl_refname: "<a refstr=FENG_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017AJ....154..135F/abstract target=ref>Feng et al. 2017</a>",
   ra: 26.0093029,
   dec: -15.9337987
 }, {
@@ -35313,8 +35248,23 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: 1032.9475,
   pl_bmasse: 1032.9475,
+  pl_refname: "<a refstr=FENG_ET_AL__2019 href=https://ui.adsabs.harvard.edu/abs/2019MNRAS.490.5002F/abstract target=ref>Feng et al. 2019</a>",
   ra: 330.8714021,
   dec: -56.7969023
+}, {
+  pl_name: "GJ 1061 d",
+  sy_dist: 3.67278,
+  sy_pnum: 3,
+  pl_orbper: 13.031,
+  rowupdate: "2020-02-21",
+  pl_massj: null,
+  pl_bmassj: 0.00516,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 1.64,
+  pl_refname: "<a refstr=DREIZLER_ET_AL__2020 href=https://ui.adsabs.harvard.edu/abs/2020MNRAS.493..536D/abstract target=ref>Dreizler et al. 2020</a>",
+  ra: 54.0032486,
+  dec: -44.5143104
 }, {
   pl_name: "GJ 1061 b",
   sy_dist: 3.67278,
@@ -35326,6 +35276,7 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.37,
+  pl_refname: "<a refstr=DREIZLER_ET_AL__2020 href=https://ui.adsabs.harvard.edu/abs/2020MNRAS.493..536D/abstract target=ref>Dreizler et al. 2020</a>",
   ra: 54.0032486,
   dec: -44.5143104
 }, {
@@ -35339,34 +35290,9 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.74,
+  pl_refname: "<a refstr=DREIZLER_ET_AL__2020 href=https://ui.adsabs.harvard.edu/abs/2020MNRAS.493..536D/abstract target=ref>Dreizler et al. 2020</a>",
   ra: 54.0032486,
   dec: -44.5143104
-}, {
-  pl_name: "GJ 1061 d",
-  sy_dist: 3.67278,
-  sy_pnum: 3,
-  pl_orbper: 13.031,
-  rowupdate: "2020-02-21",
-  pl_massj: null,
-  pl_bmassj: 0.00516,
-  disc_facility: "La Silla Observatory",
-  pl_masse: null,
-  pl_bmasse: 1.64,
-  ra: 54.0032486,
-  dec: -44.5143104
-}, {
-  pl_name: "YZ Cet c",
-  sy_dist: 3.71207,
-  sy_pnum: 3,
-  pl_orbper: 3.06008,
-  rowupdate: "2017-08-22",
-  pl_massj: null,
-  pl_bmassj: 0.00308,
-  disc_facility: "La Silla Observatory",
-  pl_masse: null,
-  pl_bmasse: 0.98,
-  ra: 18.1330792,
-  dec: -16.9962434
 }, {
   pl_name: "YZ Cet d",
   sy_dist: 3.71207,
@@ -35378,19 +35304,35 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 1.14,
+  pl_refname: "<a refstr=ASTUDILLO_DEFRU_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017A&A...605L..11A/abstract target=ref>Astudillo-Defru et al. 2017</a>",
   ra: 18.1330792,
   dec: -16.9962434
 }, {
   pl_name: "YZ Cet b",
   sy_dist: 3.71207,
   sy_pnum: 3,
-  pl_orbper: 1.9689,
-  rowupdate: "2019-03-25",
+  pl_orbper: 1.96876,
+  rowupdate: "2017-08-22",
   pl_massj: null,
-  pl_bmassj: 0.00205,
+  pl_bmassj: 0.00236,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
-  pl_bmasse: 0.65,
+  pl_bmasse: 0.75,
+  pl_refname: "<a refstr=ASTUDILLO_DEFRU_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017A&A...605L..11A/abstract target=ref>Astudillo-Defru et al. 2017</a>",
+  ra: 18.1330792,
+  dec: -16.9962434
+}, {
+  pl_name: "YZ Cet c",
+  sy_dist: 3.71207,
+  sy_pnum: 3,
+  pl_orbper: 0.75215,
+  rowupdate: "2019-03-25",
+  pl_massj: null,
+  pl_bmassj: 0.00182,
+  disc_facility: "La Silla Observatory",
+  pl_masse: null,
+  pl_bmasse: 0.58,
+  pl_refname: "<a refstr=ROBERTSON_2018 href=https://ui.adsabs.harvard.edu/abs/2018ApJ...864L..28R/abstract target=ref>Robertson 2018</a>",
   ra: 18.1330792,
   dec: -16.9962434
 }, {
@@ -35404,6 +35346,7 @@ var newData = [{
   disc_facility: "Calar Alto Observatory",
   pl_masse: null,
   pl_bmasse: 1.05,
+  pl_refname: "<a refstr=ZECHMEISTER_ET_AL__2019 href=https://ui.adsabs.harvard.edu/abs/2019A&A...627A..49Z/abstract target=ref>Zechmeister et al. 2019</a>",
   ra: 43.2691449,
   dec: 16.8649024
 }, {
@@ -35417,6 +35360,7 @@ var newData = [{
   disc_facility: "Calar Alto Observatory",
   pl_masse: null,
   pl_bmasse: 1.11,
+  pl_refname: "<a refstr=ZECHMEISTER_ET_AL__2019 href=https://ui.adsabs.harvard.edu/abs/2019A&A...627A..49Z/abstract target=ref>Zechmeister et al. 2019</a>",
   ra: 43.2691449,
   dec: 16.8649024
 }, {
@@ -35430,6 +35374,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 7,
+  pl_refname: "<a refstr=ANGLADA_ESCUD_EACUTE__ET_AL__2014 href=https://ui.adsabs.harvard.edu/abs/2014MNRAS.443L..89A/abstract target=ref> Anglada-Escud&eacute; et al. 2014</a>",
   ra: 77.9586613,
   dec: -45.0430198
 }, {
@@ -35443,6 +35388,7 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 7.7,
+  pl_refname: "<a refstr=ASTUDILLO_DEFRU_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017A&A...602A..88A/abstract target=ref>Astudillo-Defru et al. 2017</a>",
   ra: 247.5748276,
   dec: -12.6676866
 }, {
@@ -35456,19 +35402,21 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 3.41,
+  pl_refname: "<a refstr=ASTUDILLO_DEFRU_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017A&A...602A..88A/abstract target=ref>Astudillo-Defru et al. 2017</a>",
   ra: 247.5748276,
   dec: -12.6676866
 }, {
   pl_name: "Wolf 1061 b",
   sy_dist: 4.30592,
   sy_pnum: 3,
-  pl_orbper: 4.8869,
+  pl_orbper: 4.8876,
   rowupdate: "2017-03-29",
   pl_massj: null,
-  pl_bmassj: 0.00601,
+  pl_bmassj: 0.00428,
   disc_facility: "La Silla Observatory",
   pl_masse: null,
-  pl_bmasse: 1.91,
+  pl_bmasse: 1.36,
+  pl_refname: "<a refstr=WRIGHT_ET_AL__2016 href=https://ui.adsabs.harvard.edu/abs/2016ApJ...817L..20W/abstract target=ref>Wright et al. 2016</a>",
   ra: 247.5748276,
   dec: -12.6676866
 }, {
@@ -35482,6 +35430,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 71.6,
+  pl_refname: "<a refstr=FENG_ET_AL__2020 href=https://ui.adsabs.harvard.edu/abs/2020arXiv200807998F/abstract target=ref>Feng et al. 2020</a>",
   ra: 30.0588307,
   dec: 13.0443172
 }, {
@@ -35495,6 +35444,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 30.9,
+  pl_refname: "<a refstr=FENG_ET_AL__2020 href=https://ui.adsabs.harvard.edu/abs/2020arXiv200807998F/abstract target=ref>Feng et al. 2020</a>",
   ra: 30.0588307,
   dec: 13.0443172
 }, {
@@ -35508,6 +35458,7 @@ var newData = [{
   disc_facility: "La Silla Observatory",
   pl_masse: null,
   pl_bmasse: 11.09,
+  pl_refname: "<a refstr=BONFILS_ET_AL__2007 href=https://ui.adsabs.harvard.edu/abs/2007A&A...474..293B/abstract target=ref> Bonfils et al. 2007 </a>",
   ra: 262.1700476,
   dec: -46.8989826
 }, {
@@ -35517,10 +35468,11 @@ var newData = [{
   pl_orbper: 38.14,
   rowupdate: "2020-09-08",
   pl_massj: null,
-  pl_bmassj: 0.058,
+  pl_bmassj: 0.06,
   disc_facility: "Lick Observatory",
   pl_masse: null,
-  pl_bmasse: 18.394,
+  pl_bmasse: 19.0698,
+  pl_refname: "<a refstr=STASSUN_ET_AL__2017 href=https://ui.adsabs.harvard.edu/abs/2017AJ....153..136S/abstract target=ref>Stassun et al. 2017</a>",
   ra: 264.1041731,
   dec: 68.3336741
 }, {
@@ -35534,6 +35486,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 16,
+  pl_refname: "<a refstr=FENG_ET_AL__2020 href=https://ui.adsabs.harvard.edu/abs/2020arXiv200807998F/abstract target=ref>Feng et al. 2020</a>",
   ra: 264.1041731,
   dec: 68.3336741
 }, {
@@ -35547,32 +35500,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: 845.3,
   pl_bmasse: 845.3,
-  ra: 343.3239737,
-  dec: -14.2665958
-}, {
-  pl_name: "GJ 876 d",
-  sy_dist: 4.67517,
-  sy_pnum: 4,
-  pl_orbper: 1.937848,
-  rowupdate: "2016-01-27",
-  pl_massj: 0.02357,
-  pl_bmassj: 0.02357,
-  disc_facility: "W. M. Keck Observatory",
-  pl_masse: 7.49,
-  pl_bmasse: 7.49,
-  ra: 343.3239737,
-  dec: -14.2665958
-}, {
-  pl_name: "GJ 876 c",
-  sy_dist: 4.67517,
-  sy_pnum: 4,
-  pl_orbper: 30.259,
-  rowupdate: "2014-08-27",
-  pl_massj: 0.86,
-  pl_bmassj: 0.86,
-  disc_facility: "Multiple Observatories",
-  pl_masse: 273.32,
-  pl_bmasse: 273.32,
+  pl_refname: "<a refstr=NELSON_ET_AL__2016 href=https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.2484N/abstract target=ref>Nelson et al. 2016</a>",
   ra: 343.3239737,
   dec: -14.2665958
 }, {
@@ -35586,6 +35514,35 @@ var newData = [{
   disc_facility: "W. M. Keck Observatory",
   pl_masse: 16.58,
   pl_bmasse: 16.58,
+  pl_refname: "<a refstr=NELSON_ET_AL__2016 href=https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.2484N/abstract target=ref>Nelson et al. 2016</a>",
+  ra: 343.3239737,
+  dec: -14.2665958
+}, {
+  pl_name: "GJ 876 d",
+  sy_dist: 4.67517,
+  sy_pnum: 4,
+  pl_orbper: 1.937848,
+  rowupdate: "2016-01-27",
+  pl_massj: 0.02357,
+  pl_bmassj: 0.02357,
+  disc_facility: "W. M. Keck Observatory",
+  pl_masse: 7.49,
+  pl_bmasse: 7.49,
+  pl_refname: "<a refstr=NELSON_ET_AL__2016 href=https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.2484N/abstract target=ref>Nelson et al. 2016</a>",
+  ra: 343.3239737,
+  dec: -14.2665958
+}, {
+  pl_name: "GJ 876 c",
+  sy_dist: 4.67517,
+  sy_pnum: 4,
+  pl_orbper: 30.0784,
+  rowupdate: "2016-01-27",
+  pl_massj: 0.83755,
+  pl_bmassj: 0.83755,
+  disc_facility: "Multiple Observatories",
+  pl_masse: 266.2,
+  pl_bmasse: 266.2,
+  pl_refname: "<a refstr=NELSON_ET_AL__2016 href=https://ui.adsabs.harvard.edu/abs/2016MNRAS.455.2484N/abstract target=ref>Nelson et al. 2016</a>",
   ra: 343.3239737,
   dec: -14.2665958
 }, {
@@ -35599,6 +35556,7 @@ var newData = [{
   disc_facility: "Anglo-Australian Telescope",
   pl_masse: null,
   pl_bmasse: 216,
+  pl_refname: "<a refstr=WITTENMYER_ET_AL__2014 href=https://ui.adsabs.harvard.edu/abs/2014ApJ...791..114W/abstract target=ref> Wittenmyer et al. 2014</a>",
   ra: 323.3912616,
   dec: -49.0125169
 }, {
@@ -35612,6 +35570,7 @@ var newData = [{
   disc_facility: "Multiple Observatories",
   pl_masse: null,
   pl_bmasse: 5.4,
+  pl_refname: "<a refstr=WITTENMYER_ET_AL__2014 href=https://ui.adsabs.harvard.edu/abs/2014ApJ...791..114W/abstract target=ref> Wittenmyer et al. 2014</a>",
   ra: 323.3912616,
   dec: -49.0125169
 }];
@@ -35664,10 +35623,9 @@ var NEAR = "near";
 var MID = "mid";
 var FAR = "far";
 document.addEventListener("DOMContentLoaded", function () {
-  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])(); // initiateIntro();
-  //  development
-
-  developmentMode();
+  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])();
+  initiateIntro(); //  development
+  // developmentMode();
 });
 
 function developmentMode() {
@@ -35700,7 +35658,7 @@ function initiateMain() {
 
 function _initiateMain() {
   _initiateMain = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-    var data0, data1, data2, speed, planetsList, fact;
+    var data0, data1, data2, speed, planetsList;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -35711,18 +35669,23 @@ function _initiateMain() {
             data2 = []; // load Default data
 
             _context2.next = 5;
-            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR);
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR, true);
 
           case 5:
             data0 = _context2.sent;
+            _context2.next = 8;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
+
+          case 8:
+            data1 = _context2.sent;
+            _context2.next = 11;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR);
+
+          case 11:
+            data2 = _context2.sent;
             //dev
             // data0 = useDevDummyData();
-            //all btns
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").selectAll("button").style("background-color", "red");
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").selectAll("button").style("background-color", "red"); //default btn green
-
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".left-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-            d3__WEBPACK_IMPORTED_MODULE_3__["select"](".right-switch").select("button").style("background-color", "rgb(90 250 13)").style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)"); //selecting distance
+            Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["activateDefaultButtons"])(); //selecting distance
 
             speed = 38000; //default
             //click LEFT-SWITCH
@@ -35756,7 +35719,7 @@ function _initiateMain() {
 
                       case 10:
                         _context.next = 12;
-                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR);
+                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR, true);
 
                       case 12:
                         data0 = _context.sent;
@@ -35782,7 +35745,7 @@ function _initiateMain() {
 
                       case 20:
                         _context.next = 22;
-                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
+                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID, true);
 
                       case 22:
                         data1 = _context.sent;
@@ -35802,13 +35765,13 @@ function _initiateMain() {
                           break;
                         }
 
-                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
+                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data2);
                         _context.next = 33;
                         break;
 
                       case 30:
                         _context.next = 32;
-                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR);
+                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR, true);
 
                       case 32:
                         data2 = _context.sent;
@@ -35945,7 +35908,10 @@ function _initiateMain() {
                   _iterator2.f();
                 }
 
-                e.target.style.backgroundColor = "rgb(255, 140, 0)";
+                if (e.target.tagName === "P") {
+                  e.target.style.backgroundColor = "rgb(255, 140, 0)";
+                }
+
                 var switches = document.getElementsByClassName("left-switch")[0].children;
 
                 for (var i = 1; i < switches.length; i++) {
@@ -35953,18 +35919,21 @@ function _initiateMain() {
                     data0.forEach(function (planet) {
                       // development
                       if (e.target.innerText === planet.pl_name) {
+                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["newTextTransition"])();
                         showPlanetStats(planet, speed);
                       }
                     });
                   } else if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "5-10 parsecs") {
                     data1.forEach(function (planet) {
                       if (e.target.innerText === planet.pl_name) {
+                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["newTextTransition"])();
                         showPlanetStats(planet, speed);
                       }
                     });
                   } else {
                     data2.forEach(function (planet) {
                       if (e.target.innerText === planet.pl_name) {
+                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["newTextTransition"])();
                         showPlanetStats(planet, speed);
                       }
                     });
@@ -35973,13 +35942,7 @@ function _initiateMain() {
               });
             }
 
-            fact = document.getElementById("random-fact");
-            fact.addEventListener("click", function (e) {
-              e.target.style.backgroundColor = "rgb(232 111 104)";
-              runFacts();
-            });
-
-          case 17:
+          case 18:
           case "end":
             return _context2.stop();
         }
@@ -36030,37 +35993,15 @@ function showPlanetStats(planet, speed) {
     } else {
       return parseInt(d);
     }
-  }); // d3.select(".planet-mass").selectAll("p").remove();
-  // let massBox = d3
-  //   .select(".planet-mass")
-  //   .selectAll("p")
-  //   .data([planetMass])
-  //   .enter()
-  //   .append("p")
-  //   .text(function (d) {
-  //     return d.toFixed(2) + " of Earth's Mass";
-  //   });
-  // d3.select(".misc").selectAll("p").remove();
-  // let misc = d3
-  //   .select(".misc")
-  //   .selectAll("p")
-  //   .data([lastUpdate])
-  //   .enter()
-  //   .append("p")
-  //   .text(function (d) {
-  //     return d;
-  //   });
-  // d3.select(".facility").selectAll("p").remove();
-  // let facil = d3
-  //   .select(".facility")
-  //   .selectAll("p")
-  //   .data([facility])
-  //   .enter()
-  //   .append("p")
-  //   .text(function (d) {
-  //     return d;
-  //   });
-  //show human-related data
+  });
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").remove();
+  var misc = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").data([data["lastPlanetUpdate"]]).enter().append("p").text(function (d) {
+    return d;
+  });
+  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").remove();
+  var facil = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").data([data["discoveryFacility"]]).enter().append("p").text(function (d) {
+    return d;
+  }); //show human-related data
 
   var calcBySpeed = document.getElementsByClassName("speed")[0].innerText;
 
@@ -36080,8 +36021,8 @@ function showHumanStats(distance, speed) {
     var scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([2000, 770000]).range([50, 490]);
     d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
     var otherWidth = 500;
-    var otherHeight = 290;
-    var graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").append("svg").attr("width", otherWidth).attr("height", otherHeight);
+    var otherHeight = 152;
+    var graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".human-data-svg").append("svg").attr("width", otherWidth).attr("height", otherHeight);
     var bar2 = graph2.selectAll("g").data(distance).enter().append("g").attr("transform", function (d, i) {
       if (i === 0) {
         return "translate(0,25)";
@@ -36211,15 +36152,6 @@ function showTheSpeed(speed) {
       return d.toLocaleString() + " mph";
     });
   }
-}
-
-function runFacts() {
-  var factsArr = ["Earth's orbital period: 365 days.", "Planet number in our solar system: 8 (previously 9).", "Pluto is a dwarf planet, smaller than Earth's moon. Thus it was demoted from its planetary status in 2006.", "Exoplanet is a planet outside of our solar system.", "To date, more than 4,000 exoplanets have been discovered and are considered 'confirmed'.", "Earth is the only known planet to have bodies of liquid water on its surface.", "Earth is the only planet in the universe known to possess life."];
-  var random = factsArr[Math.floor(Math.random() * factsArr.length)];
-  var ourSolarDiv = document.getElementsByClassName("our-solar")[0];
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".our-solar").selectAll("p").remove();
-  var pEle = document.createElement("p");
-  ourSolarDiv.appendChild(pEle).textContent = random;
 }
 
 /***/ }),

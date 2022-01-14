@@ -39,13 +39,4 @@ function extractText(ref) {
   const end = ref.indexOf("abstract") + 8;
   const link = ref.slice(start, end);
   getWebsiteText(link);
-  // debugger;
-  // var x = new XMLHttpRequest();
-  // x.onreadystatechange = function () {
-  //   if (x.status === 200 && x.readyState === 4) {
-  //     console.log(x.responseText);
-  //   }
-  // };
-  // x.open("GET", link, true);
-  // x.send();
 }

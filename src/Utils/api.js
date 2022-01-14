@@ -1,7 +1,7 @@
 const axios = require("axios");
-import { populateNames } from "./d3functions";
+import { populateNames, displaySourceDescription } from "./d3functions";
 
-export const loadPlanets = async (distance) => {
+export const loadPlanets = async (distance, toPopulate) => {
   const queryDistance =
     distance === "near"
       ? "sy_dist+<+5"
@@ -19,8 +19,8 @@ export const loadPlanets = async (distance) => {
     });
 
   const filteredPlanets = handleDups(resp);
-  // console.log(filteredPlanets);
-  populateNames(filteredPlanets);
+  console.log(filteredPlanets);
+  toPopulate && populateNames(filteredPlanets);
   return filteredPlanets;
 };
 
@@ -53,5 +53,5 @@ export const getWebsiteText = async (link) => {
       console.log(error);
     });
 
-    // debugger
+    displaySourceDescription(resp.replace(/ \([\s\S]*?\)/g, ""));
 };

@@ -281,7 +281,7 @@ body {
 
 .planet-data-static {
   width: 485px;
-  height: 100px;
+  height: 90px;
   border: 1px solid rgb(0 128 0);
   margin-left: 6px;
   display: flex;
@@ -313,9 +313,9 @@ body {
   font-family: monospace;
 }
 
-.misc {
-  width: 156px;
-  height: 89px;
+.misc, .facility {
+  width: 242.5px;
+  height: 79px;
   border: 1px solid rgb(100 149 237);
   margin: 5px;
   text-align: center;
@@ -334,17 +334,6 @@ body {
   font-size: 17px;
   padding-top: 10px;
   font-family: monospace;
-}
-
-.facility {
-  width: 156px;
-  height: 89px;
-  border: 1px solid rgb(100 149 237);
-  margin: 5px;
-  text-align: center;
-  overflow: scroll;
-  box-shadow: inset 0 2px 2px 1px black;
-  border-radius: 3px;
 }
 
 .facility > h6 {
@@ -427,16 +416,20 @@ body {
 .our-solar {
   font-family: monospace;
   color: rgb(233 150 122);
-  padding: 10px 5px 0 5px;
   line-height: 1.1;
   text-indent: 0px;
-  margin-top: 20px;
+  width: 300px;
+
+  overflow: hidden;
 }
 
 .our-solar > p {
+  font-size: 0.8rem;
   padding: 5px;
   color: rgb(240 248 255);
-  font-family: monospace;
+  font-family: sans-serif;
+  overflow: auto;
+  height: 454px;
 }
 
 .solar-system-stats > button {
@@ -452,8 +445,6 @@ body {
   background-color: #83b799;
   box-shadow: inset 0 2px 2px 0px rgb(0 0 0);
 }
-
-
 
 .all-grey {
   border-color: grey;

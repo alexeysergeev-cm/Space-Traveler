@@ -1,4 +1,5 @@
 import { getWebsiteText } from "./api";
+import { displaySourceDescription } from "./d3functions";
 
 export const generateData = (planet, speed) => {
   const data = {};
@@ -30,7 +31,11 @@ export const generateData = (planet, speed) => {
   data["humanData"] = humanData;
   data["lastPlanetUpdate"] = lastPlanetUpdate;
   data["discoveryFacility"] = discoveryFacility;
-  extractText(planet.pl_refname);
+  if (!data["plSystemDescription"]) {
+    data["plSystemDescription"] = extractText(planet.pl_refname);
+  } else {
+    displaySourceDescription(data["plSystemDescription"]);
+  }
   return data;
 };
 

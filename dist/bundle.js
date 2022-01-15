@@ -34946,7 +34946,7 @@ function countValidValues(obj) {
 
 var getWebsiteText = /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(link) {
-    var resp;
+    var resp, result;
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -34964,9 +34964,10 @@ var getWebsiteText = /*#__PURE__*/function () {
 
           case 2:
             resp = _context2.sent;
-            Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["displaySourceDescription"])(resp.replace(/ \([\s\S]*?\)/g, ""));
+            result = resp.replace(/ \([\s\S]*?\)/g, "");
+            Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["displaySourceDescription"])(result);
 
-          case 4:
+          case 5:
           case "end":
             return _context2.stop();
         }
@@ -34992,6 +34993,8 @@ var getWebsiteText = /*#__PURE__*/function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateData", function() { return generateData; });
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ "./src/Utils/api.js");
+/* harmony import */ var _d3functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./d3functions */ "./src/Utils/d3functions.js");
+
 
 var generateData = function generateData(planet, speed) {
   var data = {};
@@ -35014,7 +35017,13 @@ var generateData = function generateData(planet, speed) {
   data["humanData"] = humanData;
   data["lastPlanetUpdate"] = lastPlanetUpdate;
   data["discoveryFacility"] = discoveryFacility;
-  extractText(planet.pl_refname);
+
+  if (!data["plSystemDescription"]) {
+    data["plSystemDescription"] = extractText(planet.pl_refname);
+  } else {
+    Object(_d3functions__WEBPACK_IMPORTED_MODULE_1__["displaySourceDescription"])(data["plSystemDescription"]);
+  }
+
   return data;
 };
 
@@ -35978,7 +35987,7 @@ function showPlanetStats(planet, speed) {
   }).attr("fill", "rgb(139, 0, 139)").attr("filter", "drop-shadow(0px 2px 2px black)");
   bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
     if (i === 0) {
-      return "Distance to destination (in Light Years)";
+      return "Distance to target planet (in Light Years)";
     } else if (i === 1) {
       return "Planet Number";
     } else if (i === 2) {

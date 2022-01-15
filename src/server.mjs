@@ -31,9 +31,11 @@ app.get("/getWebsiteText", (request, response) => {
   const link = request.query.link;
   fetch(link)
     .then((response) => {
+      // debugger =>>> TOO MANY REQUESTS!
       return response.text();
     })
     .then((body) => {
+      // debugger
       const x = cheerio.load(body);
       const planetDesctiption = x("[name='description']")[0]?.attribs?.content;
       console.log(planetDesctiption); // logs to server

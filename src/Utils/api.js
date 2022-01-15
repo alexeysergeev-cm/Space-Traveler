@@ -53,5 +53,6 @@ export const getWebsiteText = async (link) => {
       console.log(error);
     });
 
-    displaySourceDescription(resp.replace(/ \([\s\S]*?\)/g, ""));
+    const result = resp.replace(/ \([\s\S]*?\)/g, "");
+    displaySourceDescription(result);
 };

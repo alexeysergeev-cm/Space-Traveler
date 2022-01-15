@@ -305,7 +305,7 @@ function showPlanetStats(planet, speed) {
     .attr("filter", "drop-shadow(0px 2px 2px black)")
     .text(function (d, i) {
       if (i === 0) {
-        return "Distance to destination (in Light Years)";
+        return "Distance to target planet (in Light Years)";
       } else if (i === 1) {
         return "Planet Number";
       } else if (i === 2) {

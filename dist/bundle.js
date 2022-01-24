@@ -35688,10 +35688,9 @@ var NEAR = "near";
 var MID = "mid";
 var FAR = "far";
 document.addEventListener("DOMContentLoaded", function () {
-  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])(); // initiateIntro();
-  //  development
-
-  developmentMode();
+  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])();
+  initiateIntro(); //  development
+  // developmentMode();
 });
 
 function developmentMode() {
@@ -35733,12 +35732,24 @@ function _initiateMain() {
             data0 = [];
             data1 = [];
             data2 = []; // load Default data
-            // data0 = await loadPlanets(NEAR, true);
-            // data1 = await loadPlanets(MID);
-            // data2 = await loadPlanets(FAR);
-            //dev
 
-            data0 = Object(_Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__["useDevDummyData"])();
+            _context2.next = 5;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR, true);
+
+          case 5:
+            data0 = _context2.sent;
+            _context2.next = 8;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
+
+          case 8:
+            data1 = _context2.sent;
+            _context2.next = 11;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR);
+
+          case 11:
+            data2 = _context2.sent;
+            //dev
+            // data0 = useDevDummyData();
             Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["activateDefaultButtons"])(); //selecting distance
 
             speed = 38000; //default
@@ -35996,7 +36007,7 @@ function _initiateMain() {
               });
             }
 
-          case 10:
+          case 18:
           case "end":
             return _context2.stop();
         }
@@ -36091,7 +36102,7 @@ function showHumanStats(distance, speed) {
     }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
     bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return "Flight Time (Years)";
+        return "Flight time (years)";
       } else if (i === 1) {
         return "Generations amount";
       }
@@ -36130,7 +36141,7 @@ function showHumanStats(distance, speed) {
 
     _bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return "Flight Time (Years)";
+        return "Flight time (years)";
       } else if (i === 1) {
         return "Generations amount";
       }
@@ -36178,7 +36189,7 @@ function showHumanStats(distance, speed) {
 
     _bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return "Flight Time (Months)";
+        return "Flight time (months)";
       } else if (i === 1) {
         return "Generations amount";
       }

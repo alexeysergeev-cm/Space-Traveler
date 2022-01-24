@@ -20,10 +20,10 @@ const FAR = "far";
 
 document.addEventListener("DOMContentLoaded", () => {
   initiateApp();
-  // initiateIntro();
+  initiateIntro();
 
   //  development
-  developmentMode();
+  // developmentMode();
 });
 
 function developmentMode() {
@@ -57,11 +57,11 @@ async function initiateMain() {
   let data2 = [];
 
   // load Default data
-  // data0 = await loadPlanets(NEAR, true);
-  // data1 = await loadPlanets(MID);
-  // data2 = await loadPlanets(FAR);
+  data0 = await loadPlanets(NEAR, true);
+  data1 = await loadPlanets(MID);
+  data2 = await loadPlanets(FAR);
   //dev
-  data0 = useDevDummyData();
+  // data0 = useDevDummyData();
 
   activateDefaultButtons();
 
@@ -424,7 +424,7 @@ function showHumanStats(distance, speed) {
       .attr("filter", "drop-shadow(0px 2px 2px black)")
       .text(function (d, i) {
         if (i === 0) {
-          return "Flight Time (Years)";
+          return "Flight time (years)";
         } else if (i === 1) {
           return "Generations amount";
         }
@@ -500,7 +500,7 @@ function showHumanStats(distance, speed) {
       .attr("filter", "drop-shadow(0px 2px 2px black)")
       .text(function (d, i) {
         if (i === 0) {
-          return "Flight Time (Years)";
+          return "Flight time (years)";
         } else if (i === 1) {
           return "Generations amount";
         }
@@ -583,7 +583,7 @@ function showHumanStats(distance, speed) {
       .attr("filter", "drop-shadow(0px 2px 2px black)")
       .text(function (d, i) {
         if (i === 0) {
-          return "Flight Time (Months)";
+          return "Flight time (months)";
         } else if (i === 1) {
           return "Generations amount";
         }

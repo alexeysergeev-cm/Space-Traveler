@@ -8,6 +8,7 @@ import {
   populateNames,
   activateDefaultButtons,
   newTextTransition,
+  showTheSpeed
 } from "./Utils/d3functions";
 import { useDevDummyData } from "./Utils/devDummyData";
 import { loadPlanets } from "./Utils/api";
@@ -126,7 +127,7 @@ async function initiateMain() {
       //check what speed chosen
       let humanData = document.getElementsByClassName("other-data")[0].children;
 
-      if (humanData.length === 2 && e.currentTarget.innerText === "Voyager 1") {
+      if (humanData.length === 3 && e.currentTarget.innerText === "Voyager 1") {
         let list = document.getElementsByClassName("planets-list")[0].children;
 
         //get distance && gerenrate data
@@ -134,6 +135,7 @@ async function initiateMain() {
           document.getElementsByClassName("planet-data")[0].children[1]
             .children[0].children[0]["__data__"];
 
+         
         let lightYearDistInMiles = 6000000000000; //miles
         let speedOfLight = 671000000; //mph
         let voyagerSpeed = 38000; //mph
@@ -185,7 +187,7 @@ async function initiateMain() {
             }
           }
         }
-      } else if (humanData.length === 2) {
+      } else if (humanData.length === 3) {
         //refactor TOO MANY repetitions
         let distance =
           document.getElementsByClassName("planet-data")[0].children[1]
@@ -330,8 +332,6 @@ function showPlanetStats(planet, speed) {
       }
     });
 
-
-
   d3.select(".misc").selectAll("p").remove();
 
   let misc = d3
@@ -367,6 +367,7 @@ function showPlanetStats(planet, speed) {
 
 //on speed click
 function showHumanStats(distance, speed) {
+
   let scaleFactor = 10;
   let barHeight = 50;
 
@@ -376,7 +377,7 @@ function showHumanStats(distance, speed) {
     d3.select(".other-data").selectAll("svg").remove();
 
     let otherWidth = 500;
-    let otherHeight = 152;
+    let otherHeight = 155;
 
     let graph2 = d3
       .select(".human-data-svg")
@@ -452,10 +453,10 @@ function showHumanStats(distance, speed) {
     d3.select(".other-data").selectAll("svg").remove();
 
     let otherWidth = 500;
-    let otherHeight = 290;
+    let otherHeight = 155;
 
     let graph2 = d3
-      .select(".other-data")
+      .select(".human-data-svg")
       .append("svg")
       .attr("width", otherWidth)
       .attr("height", otherHeight);
@@ -535,10 +536,10 @@ function showHumanStats(distance, speed) {
     d3.select(".other-data").selectAll("svg").remove();
 
     let otherWidth = 500;
-    let otherHeight = 290;
+    let otherHeight = 155;
 
     let graph2 = d3
-      .select(".other-data")
+      .select(".human-data-svg")
       .append("svg")
       .attr("width", otherWidth)
       .attr("height", otherHeight);
@@ -606,30 +607,4 @@ function showHumanStats(distance, speed) {
   }
 }
 
-function showTheSpeed(speed) {
-  if (speed === 27) {
-    d3.select(".speed").selectAll("h1").remove();
 
-    d3.select(".speed")
-      .selectAll("h1")
-      .data([speed])
-      .enter()
-      .append("h1")
-      .style("color", "rgb(255 140 0)")
-      .text(function (d) {
-        return d + " x The Speed of Light";
-      });
-  } else {
-    d3.select(".speed").selectAll("h1").remove();
-
-    d3.select(".speed")
-      .selectAll("h1")
-      .data([speed])
-      .enter()
-      .append("h1")
-      .style("color", "rgb(255 140 0)")
-      .text(function (d) {
-        return d.toLocaleString() + " mph";
-      });
-  }
-}

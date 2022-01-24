@@ -215,6 +215,7 @@ body {
 }
 
 .other-data {
+  position: relative;
   height: 286px;
   width: 500px;
   border: 3px solid rgb(0 128 0);
@@ -280,6 +281,8 @@ body {
 }
 
 .planet-data-static {
+  position: absolute;
+  bottom: 4px;
   width: 485px;
   height: 90px;
   border: 1px solid rgb(0 128 0);
@@ -313,7 +316,8 @@ body {
   font-family: monospace;
 }
 
-.misc, .facility {
+.misc,
+.facility {
   width: 242.5px;
   height: 79px;
   border: 1px solid rgb(100 149 237);

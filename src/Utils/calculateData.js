@@ -31,17 +31,24 @@ export const generateData = (planet, speed) => {
   data["humanData"] = humanData;
   data["lastPlanetUpdate"] = lastPlanetUpdate;
   data["discoveryFacility"] = discoveryFacility;
-  if (!data["plSystemDescription"]) {
-    data["plSystemDescription"] = extractText(planet.pl_refname);
-  } else {
-    displaySourceDescription(data["plSystemDescription"]);
-  }
+  data["plSystemDescription"] = getPlanetDescription(planet);
   return data;
 };
 
-function extractText(ref) {
+function getPlanetDescription(planet) {
+  extractText(planet);
+  // if (!data["plSystemDescription"]) {
+  //   data["plSystemDescription"] = extractText(planet.pl_refname);
+  // } else {
+  //   displaySourceDescription(data["plSystemDescription"]);
+  // }
+}
+
+function extractText(planet) {
+  const ref = planet.pl_refname;
   const start = ref.indexOf("https");
   const end = ref.indexOf("abstract") + 8;
   const link = ref.slice(start, end);
-  getWebsiteText(link);
+  const plName = planet.pl_name;
+  getWebsiteText({ link, plName });
 }

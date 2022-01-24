@@ -34945,16 +34945,18 @@ function countValidValues(obj) {
 }
 
 var getWebsiteText = /*#__PURE__*/function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(link) {
-    var resp, result;
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(_ref2) {
+    var link, plName, resp, result;
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            _context2.next = 2;
+            link = _ref2.link, plName = _ref2.plName;
+            _context2.next = 3;
             return axios.get("/getWebsiteText", {
               params: {
-                link: link
+                link: link,
+                plName: plName
               }
             }).then(function (response) {
               return response.data;
@@ -34962,12 +34964,12 @@ var getWebsiteText = /*#__PURE__*/function () {
               console.log(error);
             });
 
-          case 2:
+          case 3:
             resp = _context2.sent;
             result = resp.replace(/ \([\s\S]*?\)/g, "");
             Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["displaySourceDescription"])(result);
 
-          case 5:
+          case 6:
           case "end":
             return _context2.stop();
         }
@@ -34976,7 +34978,7 @@ var getWebsiteText = /*#__PURE__*/function () {
   }));
 
   return function getWebsiteText(_x3) {
-    return _ref2.apply(this, arguments);
+    return _ref3.apply(this, arguments);
   };
 }();
 
@@ -35017,21 +35019,28 @@ var generateData = function generateData(planet, speed) {
   data["humanData"] = humanData;
   data["lastPlanetUpdate"] = lastPlanetUpdate;
   data["discoveryFacility"] = discoveryFacility;
-
-  if (!data["plSystemDescription"]) {
-    data["plSystemDescription"] = extractText(planet.pl_refname);
-  } else {
-    Object(_d3functions__WEBPACK_IMPORTED_MODULE_1__["displaySourceDescription"])(data["plSystemDescription"]);
-  }
-
+  data["plSystemDescription"] = getPlanetDescription(planet);
   return data;
 };
 
-function extractText(ref) {
+function getPlanetDescription(planet) {
+  extractText(planet); // if (!data["plSystemDescription"]) {
+  //   data["plSystemDescription"] = extractText(planet.pl_refname);
+  // } else {
+  //   displaySourceDescription(data["plSystemDescription"]);
+  // }
+}
+
+function extractText(planet) {
+  var ref = planet.pl_refname;
   var start = ref.indexOf("https");
   var end = ref.indexOf("abstract") + 8;
   var link = ref.slice(start, end);
-  Object(_api__WEBPACK_IMPORTED_MODULE_0__["getWebsiteText"])(link);
+  var plName = planet.pl_name;
+  Object(_api__WEBPACK_IMPORTED_MODULE_0__["getWebsiteText"])({
+    link: link,
+    plName: plName
+  });
 }
 
 /***/ }),
@@ -35590,6 +35599,42 @@ var useDevDummyData = function useDevDummyData() {
 
 /***/ }),
 
+/***/ "./src/Utils/startTyping.js":
+/*!**********************************!*\
+  !*** ./src/Utils/startTyping.js ***!
+  \**********************************/
+/*! exports provided: startTyping */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startTyping", function() { return startTyping; });
+var text = ["There are roughly 30 years between generations. So 2000 years equals approximately 56 generations.", "A global average human life expectancy is 72.6 years.", "The earth's orbital period is 365 days.", "Distance: 1 parsec = 4.24 light years.", "Voyager 1 speed = 38,000 mph.", "The speed of light 671,000,000 mph.", "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.", "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system.", "😳"];
+var paragraphCount = 0;
+var charCount = 0;
+var startTyping = function startTyping() {
+  if (paragraphCount < text.length) {
+    var li = document.createElement("li");
+    document.getElementById("rel-info").appendChild(li);
+    actualType();
+  }
+};
+
+function actualType() {
+  if (charCount < text[paragraphCount].length) {
+    var letter = text[paragraphCount].charAt(charCount);
+    document.getElementById("rel-info").lastChild.textContent += letter;
+    charCount++;
+    setTimeout(actualType, 20);
+  } else if (charCount === text[paragraphCount].length) {
+    paragraphCount++;
+    charCount = 0;
+    startTyping();
+  }
+}
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -35604,7 +35649,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
-/* harmony import */ var _startTyping__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./startTyping */ "./src/startTyping.js");
+/* harmony import */ var _Utils_startTyping__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Utils/startTyping */ "./src/Utils/startTyping.js");
 /* harmony import */ var _Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Utils/d3functions */ "./src/Utils/d3functions.js");
 /* harmony import */ var _Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utils/devDummyData */ "./src/Utils/devDummyData.js");
 /* harmony import */ var _Utils_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utils/api */ "./src/Utils/api.js");
@@ -35632,9 +35677,10 @@ var NEAR = "near";
 var MID = "mid";
 var FAR = "far";
 document.addEventListener("DOMContentLoaded", function () {
-  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])();
-  initiateIntro(); //  development
-  // developmentMode();
+  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["initiateApp"])(); // initiateIntro();
+  //  development
+
+  developmentMode();
 });
 
 function developmentMode() {
@@ -35649,7 +35695,7 @@ function initiateIntro() {
   var main = document.querySelector(".main-div");
   var intro = document.querySelector(".intro");
   var button = intro.lastElementChild;
-  Object(_startTyping__WEBPACK_IMPORTED_MODULE_4__["startTyping"])();
+  Object(_Utils_startTyping__WEBPACK_IMPORTED_MODULE_4__["startTyping"])();
   button.addEventListener("click", function () {
     intro.classList.add("shrink");
     setTimeout(function () {
@@ -35676,24 +35722,12 @@ function _initiateMain() {
             data0 = [];
             data1 = [];
             data2 = []; // load Default data
-
-            _context2.next = 5;
-            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR, true);
-
-          case 5:
-            data0 = _context2.sent;
-            _context2.next = 8;
-            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
-
-          case 8:
-            data1 = _context2.sent;
-            _context2.next = 11;
-            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR);
-
-          case 11:
-            data2 = _context2.sent;
+            // data0 = await loadPlanets(NEAR, true);
+            // data1 = await loadPlanets(MID);
+            // data2 = await loadPlanets(FAR);
             //dev
-            // data0 = useDevDummyData();
+
+            data0 = Object(_Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__["useDevDummyData"])();
             Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["activateDefaultButtons"])(); //selecting distance
 
             speed = 38000; //default
@@ -35951,7 +35985,7 @@ function _initiateMain() {
               });
             }
 
-          case 18:
+          case 10:
           case "end":
             return _context2.stop();
         }
@@ -36160,42 +36194,6 @@ function showTheSpeed(speed) {
     d3__WEBPACK_IMPORTED_MODULE_3__["select"](".speed").selectAll("h1").data([speed]).enter().append("h1").style("color", "rgb(255 140 0)").text(function (d) {
       return d.toLocaleString() + " mph";
     });
-  }
-}
-
-/***/ }),
-
-/***/ "./src/startTyping.js":
-/*!****************************!*\
-  !*** ./src/startTyping.js ***!
-  \****************************/
-/*! exports provided: startTyping */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startTyping", function() { return startTyping; });
-var text = ["There are roughly 30 years between generations. So 2000 years equals approximately 56 generations.", "A global average human life expectancy is 72.6 years.", "The earth's orbital period is 365 days.", "Distance: 1 parsec = 4.24 light years.", "Voyager 1 speed = 38,000 mph.", "The speed of light 671,000,000 mph.", "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.", "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system.", "😳"];
-var paragraphCount = 0;
-var charCount = 0;
-var startTyping = function startTyping() {
-  if (paragraphCount < text.length) {
-    var li = document.createElement("li");
-    document.getElementById("rel-info").appendChild(li);
-    actualType();
-  }
-};
-
-function actualType() {
-  if (charCount < text[paragraphCount].length) {
-    var letter = text[paragraphCount].charAt(charCount);
-    document.getElementById("rel-info").lastChild.textContent += letter;
-    charCount++;
-    setTimeout(actualType, 20);
-  } else if (charCount === text[paragraphCount].length) {
-    paragraphCount++;
-    charCount = 0;
-    startTyping();
   }
 }
 

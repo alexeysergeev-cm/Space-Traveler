@@ -43,9 +43,9 @@ function countValidValues(obj) {
   return Object.values(obj).filter((el) => el !== null).length;
 }
 
-export const getWebsiteText = async (link) => {
+export const getWebsiteText = async ({ link, plName }) => {
   const resp = await axios
-    .get("/getWebsiteText", { params: { link: link } })
+    .get("/getWebsiteText", { params: { link: link, plName: plName } })
     .then((response) => {
       return response.data;
     })
@@ -53,6 +53,8 @@ export const getWebsiteText = async (link) => {
       console.log(error);
     });
 
-    const result = resp.replace(/ \([\s\S]*?\)/g, "");
-    displaySourceDescription(result);
+  const result = resp.replace(/ \([\s\S]*?\)/g, "");
+  displaySourceDescription(result);
 };
+
+

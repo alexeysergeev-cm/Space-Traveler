@@ -2,7 +2,7 @@ import "../css/reset.css";
 import "../css/main.css";
 import regeneratorRuntime from "regenerator-runtime";
 import * as d3 from "d3";
-import { startTyping } from "./startTyping";
+import { startTyping } from "./Utils/startTyping";
 import {
   initiateApp,
   populateNames,
@@ -19,10 +19,10 @@ const FAR = "far";
 
 document.addEventListener("DOMContentLoaded", () => {
   initiateApp();
-  initiateIntro();
+  // initiateIntro();
 
   //  development
-  // developmentMode();
+  developmentMode();
 });
 
 function developmentMode() {
@@ -56,11 +56,11 @@ async function initiateMain() {
   let data2 = [];
 
   // load Default data
-  data0 = await loadPlanets(NEAR, true);
-  data1 = await loadPlanets(MID);
-  data2 = await loadPlanets(FAR);
+  // data0 = await loadPlanets(NEAR, true);
+  // data1 = await loadPlanets(MID);
+  // data2 = await loadPlanets(FAR);
   //dev
-  // data0 = useDevDummyData();
+  data0 = useDevDummyData();
 
   activateDefaultButtons();
 

@@ -52,3 +52,9 @@ function extractText(planet) {
   const plName = planet.pl_name;
   getWebsiteText({ link, plName });
 }
+
+
+export const spinFetchAndCache = (arr) => {
+  arr.forEach(pl => extractText(pl))
+  console.log("DANZO")
+}

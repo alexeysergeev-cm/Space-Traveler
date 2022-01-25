@@ -12,19 +12,27 @@ import {
 } from "./Utils/d3functions";
 import { useDevDummyData } from "./Utils/devDummyData";
 import { loadPlanets } from "./Utils/api";
-import { generateData } from "./Utils/calculateData";
-import axios from "axios";
+import { generateData, spinFetchAndCache } from "./Utils/calculateData";
+
+
 
 const NEAR = "near";
 const MID = "mid";
 const FAR = "far";
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const pathToFile = "./data/planetSystemDescription.json";
   initiateApp();
   initiateIntro();
 
   //  development
   // developmentMode();
+  // fetch(pathToFile)
+  //   .then((response) => response.json())
+  //   .then((jsonResponse) => console.log(jsonResponse)); 
+
+  // spinFetchAndCache(JSON.parse(window.localStorage.getItem(FAR)));
 });
 
 function developmentMode() {

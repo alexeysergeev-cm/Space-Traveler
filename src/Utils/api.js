@@ -51,9 +51,9 @@ export const getWebsiteText = async ({ link, plName }) => {
     .then((response) => response.json())
     .then((jsonResponse) => jsonResponse);
 
-  const json = JSON.stringify(data.planetarySysDescrip);
-  window.localStorage.setItem("planetarySysDescrip", json);
-  //  debugger;
+  const desc = data.planetarySysDescrip[plName] || "No data, sorry";
+  const result = desc.replace(/ \([\s\S]*?\)/g, "");
+  displaySourceDescription(result);
 
   // const resp = await axios
   //   .get("/getWebsiteText", { params: { link: link, plName: plName } })

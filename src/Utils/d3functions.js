@@ -46,8 +46,8 @@ export const newTextTransition = () => {
   d3.select(".our-solar").transition().duration(250).style("height", "0px");
   d3.select(".our-solar")
     .transition()
-    .delay(750)
-    .duration(1000)
+    .delay(250)
+    .duration(500)
     .style("height", "470px");
 };
 

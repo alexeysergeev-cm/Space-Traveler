@@ -461,3 +461,24 @@ body {
 .planet-data-svg {
   min-height: 214px;
 }
+
+
+
+
+.dashboard > svg:first-child {
+  animation: satelite infinite;
+  animation-duration: 10s;
+  animation-play-state: running;
+}
+
+@keyframes satelite {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -55,15 +55,14 @@ function initiateIntro() {
 }
 
 async function initiateMain() {
+  let speed = 38000;
+  let curPlanet = undefined;
+
   const data0 = getPlanets(NEAR);
   const data1 = getPlanets(MID);
   const data2 = getPlanets(FAR);
   populateNames(data0);
 
-  let speed = 38000;
-  let curPlanet = undefined;
-
-  //click LEFT-SWITCH
   d3.selectAll(".left-switch")
     .selectAll("button")
     .on("click", async (e) => {
@@ -78,7 +77,6 @@ async function initiateMain() {
       }
     });
 
-  //if click RIGHT-SWITCH
   d3.selectAll(".right-switch")
     .selectAll("button")
     .on("click", (e) => {

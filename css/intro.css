@@ -31,7 +31,6 @@
   font-size: clamp(1.5rem, 2.3vw, 2.3rem);
   color: white;
   padding: 10px;
-  margin-bottom: 30px;
 }
 
 .intro > ul > li {
@@ -79,10 +78,10 @@
 }
 
 #rel-info {
-  font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+  font-size: clamp(0.9rem, 0.9vw, 1.2rem);
   padding-left: 20px;
   padding-right: 20px;
-  min-height: 500px;
+  min-height: 555px;
 }
 
 @-webkit-keyframes animation {
@@ -178,7 +177,7 @@
   border-radius: 60px;
 }
 
-#rel-info > li:nth-child(9) {
+#rel-info > li:nth-child(11) {
   text-align: center;
 }
 

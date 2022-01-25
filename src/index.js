@@ -22,10 +22,10 @@ const FAR = "far";
 
 document.addEventListener("DOMContentLoaded", () => {
   initiateApp();
-  // initiateIntro();
+  initiateIntro();
 
   //  development
-  developmentMode();
+  // developmentMode();
 
   // spinFetchAndCache(JSON.parse(window.localStorage.getItem(FAR)));
 });

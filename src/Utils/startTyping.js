@@ -1,12 +1,14 @@
 const text = [
-  "There are roughly 30 years between generations. So 2000 years equals approximately 56 generations.",
+  "Earth is the third planet from the Sun and the only astronomical object known to harbor life.",
+  "The earth's orbital period around the Sun is 365 days.",
   "A global average human life expectancy is 72.6 years.",
-  "The earth's orbital period is 365 days.",
-  "Distance: 1 parsec = 4.24 light years.",
-  "Voyager 1 speed = 38,000 mph.",
-  "The speed of light 671,000,000 mph.",
+  "There are roughly 30 years between generations. 2000 years equals to approximately 56 generations.",
+  "The parsec is a unit of length used to measure the large distances to astronomical objects outside the Solar System.",
+  "1 parsec equals to approximately 3.26 light years.",
+  "Spacecraft 'Voyager 1' has a speed of 38,000 mph.",
+  "The speed of light is 671,000,000 mph.",
   "The fastest human spaceflight reached a top speed of 24,791 mph. That's 1/27,000 the speed of light and the fastest any human beings have ever traveled.",
-  "This app gives you a prospective on what it takes to reach another planet that is outside of our solar system.",
+  "This app gives you a prospective on what it takes to reach a planet outside our Solar System.",
   "😳",
 ];
 

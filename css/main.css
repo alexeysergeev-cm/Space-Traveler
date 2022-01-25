@@ -179,7 +179,7 @@ body {
 }
 
 .planets-list > p.selected-pl {
-  background: rgb(255, 140, 0)
+  background: rgb(255, 140, 0);
 }
 
 .main-display {
@@ -334,29 +334,23 @@ body {
   border-radius: 3px;
 }
 
-.misc > h6 {
-  color: rgb(255 255 255);
-  font-size: 19px;
-  padding: 5px 0 0 0;
+.misc > h6,
+.facility > h6 {
+  color: rgb(131 183 153);
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  margin: auto;
+  filter: brightness(1.2);
+  font-family: sans-serif;
+  text-shadow: 0px 2px 2px black;
 }
 
-.misc > p {
-  color: orange;
+.misc > p,
+.facility > p {
+  color: white;
   font-size: 17px;
   padding-top: 10px;
-  font-family: monospace;
-}
-
-.facility > h6 {
-  color: rgb(255 255 255);
-  font-size: 19px;
-  padding: 5px 0 0 0;
-}
-
-.facility > p {
-  color: orange;
-  font-size: 17px;
-  padding-top: 8px;
   font-family: monospace;
 }
 

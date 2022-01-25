@@ -99,10 +99,10 @@ async function initiateMain() {
       showHumanStats(curPlanet.sy_dist, speed);
     });
 
-  const planetsList = document.getElementsByClassName("planets-list");
-  if (planetsList.length) {
-    planetsList[0].addEventListener("click", (e) => {
-      const list = document.getElementsByClassName("planets-list")[0].children;
+  const planetsList = document.querySelector(".planets-list");
+  if (planetsList) {
+    planetsList.addEventListener("click", (e) => {
+      const list = planetsList.children;
       d3.selectAll(list).classed("selected-pl", false);
       e.target.classList.toggle("selected-pl");
 

@@ -58,11 +58,11 @@ async function initiateMain() {
   let data2 = [];
 
   // load Default data
-  // data0 = await loadPlanets(NEAR, true);
-  // data1 = await loadPlanets(MID);
-  // data2 = await loadPlanets(FAR);
+  data0 = await loadPlanets(NEAR, true);
+  data1 = await loadPlanets(MID);
+  data2 = await loadPlanets(FAR);
   //dev
-  data0 = useDevDummyData();
+  // data0 = useDevDummyData();
 
   activateDefaultButtons();
 

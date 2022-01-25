@@ -34953,12 +34953,12 @@ var getWebsiteText = /*#__PURE__*/function () {
           case 0:
             link = _ref2.link, plName = _ref2.plName;
             _context2.next = 3;
-            return axios.get(link, {
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
+            return axios.get("/getWebsiteText", {
+              params: {
+                link: link,
+                plName: plName
               }
             }).then(function (response) {
-              debugger;
               return response.data;
             })["catch"](function (error) {
               console.log(error);
@@ -35735,12 +35735,24 @@ function _initiateMain() {
             data0 = [];
             data1 = [];
             data2 = []; // load Default data
-            // data0 = await loadPlanets(NEAR, true);
-            // data1 = await loadPlanets(MID);
-            // data2 = await loadPlanets(FAR);
-            //dev
 
-            data0 = Object(_Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__["useDevDummyData"])();
+            _context2.next = 5;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR, true);
+
+          case 5:
+            data0 = _context2.sent;
+            _context2.next = 8;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
+
+          case 8:
+            data1 = _context2.sent;
+            _context2.next = 11;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR);
+
+          case 11:
+            data2 = _context2.sent;
+            //dev
+            // data0 = useDevDummyData();
             Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["activateDefaultButtons"])(); //selecting distance
 
             speed = 38000; //default
@@ -35998,7 +36010,7 @@ function _initiateMain() {
               });
             }
 
-          case 10:
+          case 18:
           case "end":
             return _context2.stop();
         }

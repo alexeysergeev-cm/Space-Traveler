@@ -18,7 +18,9 @@ export const loadPlanets = async (distance, toPopulate) => {
       console.log(error);
     });
 
+  if (!resp) return;
   const filteredPlanets = handleDups(resp);
+  window.localStorage.setItem(distance, JSON.stringify(filteredPlanets));
   console.log(filteredPlanets);
   toPopulate && populateNames(filteredPlanets);
   return filteredPlanets;

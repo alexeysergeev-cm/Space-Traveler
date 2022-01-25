@@ -58,9 +58,15 @@ async function initiateMain() {
   let data2 = [];
 
   // load Default data
-  data0 = await loadPlanets(NEAR, true);
-  data1 = await loadPlanets(MID);
-  data2 = await loadPlanets(FAR);
+  data0 =
+    JSON.parse(window.localStorage.getItem(NEAR)) ||
+    (await loadPlanets(NEAR, true));
+  data1 =
+    JSON.parse(window.localStorage.getItem(MID)) || (await loadPlanets(MID));
+  data2 =
+    JSON.parse(window.localStorage.getItem(FAR)) || (await loadPlanets(FAR));
+
+  if (window.localStorage.getItem(NEAR)) populateNames(data0);
   //dev
   // data0 = useDevDummyData();
 
@@ -307,13 +313,13 @@ function showPlanetStats(planet, speed) {
     .attr("filter", "drop-shadow(0px 2px 2px black)")
     .text(function (d, i) {
       if (i === 0) {
-        return "Distance to target planet (in Light Years)";
+        return "Distance to the target planet (light years)";
       } else if (i === 1) {
-        return "Planet Number";
+        return "Number of planets in the planetary system";
       } else if (i === 2) {
-        return "Orbital Period (Days)";
+        return "Orbital period (days)";
       } else if (i === 3) {
-        return "Planet Mass (x times Earth Mass)";
+        return "Planet mass estimate (measured in Earth masses)";
       }
     });
 
@@ -423,9 +429,9 @@ function showHumanStats(distance, speed) {
       .attr("filter", "drop-shadow(0px 2px 2px black)")
       .text(function (d, i) {
         if (i === 0) {
-          return "Flight time (years)";
+          return "Flight time to the target planet (years)";
         } else if (i === 1) {
-          return "Generations amount";
+          return "Generations amount to the target planet";
         }
       });
 
@@ -499,9 +505,9 @@ function showHumanStats(distance, speed) {
       .attr("filter", "drop-shadow(0px 2px 2px black)")
       .text(function (d, i) {
         if (i === 0) {
-          return "Flight time (years)";
+          return "Flight time to the target planet (years)";
         } else if (i === 1) {
-          return "Generations amount";
+          return "Generations amount to the target planet";
         }
       });
 
@@ -582,9 +588,9 @@ function showHumanStats(distance, speed) {
       .attr("filter", "drop-shadow(0px 2px 2px black)")
       .text(function (d, i) {
         if (i === 0) {
-          return "Flight time (months)";
+          return "Flight time to the target planet (months)";
         } else if (i === 1) {
-          return "Generations amount";
+          return "Generations amount to the target planet";
         }
       });
 

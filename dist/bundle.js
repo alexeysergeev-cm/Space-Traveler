@@ -34906,12 +34906,22 @@ var loadPlanets = /*#__PURE__*/function () {
 
           case 3:
             resp = _context.sent;
+
+            if (resp) {
+              _context.next = 6;
+              break;
+            }
+
+            return _context.abrupt("return");
+
+          case 6:
             filteredPlanets = handleDups(resp);
+            window.localStorage.setItem(distance, JSON.stringify(filteredPlanets));
             console.log(filteredPlanets);
             toPopulate && Object(_d3functions__WEBPACK_IMPORTED_MODULE_0__["populateNames"])(filteredPlanets);
             return _context.abrupt("return", filteredPlanets);
 
-          case 8:
+          case 11:
           case "end":
             return _context.stop();
         }
@@ -35736,23 +35746,54 @@ function _initiateMain() {
             data1 = [];
             data2 = []; // load Default data
 
-            _context2.next = 5;
+            _context2.t0 = JSON.parse(window.localStorage.getItem(NEAR));
+
+            if (_context2.t0) {
+              _context2.next = 8;
+              break;
+            }
+
+            _context2.next = 7;
             return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR, true);
 
-          case 5:
-            data0 = _context2.sent;
-            _context2.next = 8;
-            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
+          case 7:
+            _context2.t0 = _context2.sent;
 
           case 8:
-            data1 = _context2.sent;
-            _context2.next = 11;
+            data0 = _context2.t0;
+            _context2.t1 = JSON.parse(window.localStorage.getItem(MID));
+
+            if (_context2.t1) {
+              _context2.next = 14;
+              break;
+            }
+
+            _context2.next = 13;
+            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
+
+          case 13:
+            _context2.t1 = _context2.sent;
+
+          case 14:
+            data1 = _context2.t1;
+            _context2.t2 = JSON.parse(window.localStorage.getItem(FAR));
+
+            if (_context2.t2) {
+              _context2.next = 20;
+              break;
+            }
+
+            _context2.next = 19;
             return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR);
 
-          case 11:
-            data2 = _context2.sent;
-            //dev
+          case 19:
+            _context2.t2 = _context2.sent;
+
+          case 20:
+            data2 = _context2.t2;
+            if (window.localStorage.getItem(NEAR)) Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data0); //dev
             // data0 = useDevDummyData();
+
             Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["activateDefaultButtons"])(); //selecting distance
 
             speed = 38000; //default
@@ -36010,7 +36051,7 @@ function _initiateMain() {
               });
             }
 
-          case 18:
+          case 28:
           case "end":
             return _context2.stop();
         }
@@ -36046,13 +36087,13 @@ function showPlanetStats(planet, speed) {
   }).attr("fill", "rgb(139, 0, 139)").attr("filter", "drop-shadow(0px 2px 2px black)");
   bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
     if (i === 0) {
-      return "Distance to target planet (in Light Years)";
+      return "Distance to the target planet (light years)";
     } else if (i === 1) {
-      return "Planet Number";
+      return "Number of planets in the planetary system";
     } else if (i === 2) {
-      return "Orbital Period (Days)";
+      return "Orbital period (days)";
     } else if (i === 3) {
-      return "Planet Mass (x times Earth Mass)";
+      return "Planet mass estimate (measured in Earth masses)";
     }
   });
   bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
@@ -36105,9 +36146,9 @@ function showHumanStats(distance, speed) {
     }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
     bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return "Flight time (years)";
+        return "Flight time to the target planet (years)";
       } else if (i === 1) {
-        return "Generations amount";
+        return "Generations amount to the target planet";
       }
     });
     bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
@@ -36144,9 +36185,9 @@ function showHumanStats(distance, speed) {
 
     _bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return "Flight time (years)";
+        return "Flight time to the target planet (years)";
       } else if (i === 1) {
-        return "Generations amount";
+        return "Generations amount to the target planet";
       }
     });
 
@@ -36192,9 +36233,9 @@ function showHumanStats(distance, speed) {
 
     _bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
       if (i === 0) {
-        return "Flight time (months)";
+        return "Flight time to the target planet (months)";
       } else if (i === 1) {
-        return "Generations amount";
+        return "Generations amount to the target planet";
       }
     });
 

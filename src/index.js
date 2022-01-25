@@ -41,7 +41,7 @@ function developmentMode() {
 function initiateIntro() {
   const main = document.querySelector(".main-div");
   const intro = document.querySelector(".intro");
-  const button = intro.lastElementChild;
+  const button = document.querySelector(".continue-btn")
   startTyping();
   button.addEventListener("click", () => {
     intro.classList.add("shrink");

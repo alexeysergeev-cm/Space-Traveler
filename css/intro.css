@@ -39,6 +39,7 @@
 }
 
 .intro > button {
+  position: relative;
   margin-top: auto;
   background: rgb(0 255 255);
   min-height: 50px;
@@ -51,6 +52,7 @@
   padding: 5px 10px;
   border: 1px solid rgb(0 0 0 / 50%);
 }
+
 
 .intro > button > span {
   cursor: pointer;

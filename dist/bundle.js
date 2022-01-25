@@ -38410,7 +38410,7 @@ function developmentMode() {
 function initiateIntro() {
   var main = document.querySelector(".main-div");
   var intro = document.querySelector(".intro");
-  var button = intro.lastElementChild;
+  var button = document.querySelector(".continue-btn");
   Object(_Utils_startTyping__WEBPACK_IMPORTED_MODULE_4__["startTyping"])();
   button.addEventListener("click", function () {
     intro.classList.add("shrink");

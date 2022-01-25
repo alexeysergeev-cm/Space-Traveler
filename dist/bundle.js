@@ -34953,12 +34953,12 @@ var getWebsiteText = /*#__PURE__*/function () {
           case 0:
             link = _ref2.link, plName = _ref2.plName;
             _context2.next = 3;
-            return axios.get("/getWebsiteText", {
-              params: {
-                link: link,
-                plName: plName
+            return axios.get(link, {
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
               }
             }).then(function (response) {
+              debugger;
               return response.data;
             })["catch"](function (error) {
               console.log(error);
@@ -35665,6 +35665,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utils/devDummyData */ "./src/Utils/devDummyData.js");
 /* harmony import */ var _Utils_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utils/api */ "./src/Utils/api.js");
 /* harmony import */ var _Utils_calculateData__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Utils/calculateData */ "./src/Utils/calculateData.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -35674,6 +35676,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -35732,24 +35735,12 @@ function _initiateMain() {
             data0 = [];
             data1 = [];
             data2 = []; // load Default data
-
-            _context2.next = 5;
-            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR, true);
-
-          case 5:
-            data0 = _context2.sent;
-            _context2.next = 8;
-            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID);
-
-          case 8:
-            data1 = _context2.sent;
-            _context2.next = 11;
-            return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR);
-
-          case 11:
-            data2 = _context2.sent;
+            // data0 = await loadPlanets(NEAR, true);
+            // data1 = await loadPlanets(MID);
+            // data2 = await loadPlanets(FAR);
             //dev
-            // data0 = useDevDummyData();
+
+            data0 = Object(_Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__["useDevDummyData"])();
             Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["activateDefaultButtons"])(); //selecting distance
 
             speed = 38000; //default
@@ -36007,7 +35998,7 @@ function _initiateMain() {
               });
             }
 
-          case 18:
+          case 10:
           case "end":
             return _context2.stop();
         }

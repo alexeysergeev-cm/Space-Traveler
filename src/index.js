@@ -8,11 +8,12 @@ import {
   populateNames,
   activateDefaultButtons,
   newTextTransition,
-  showTheSpeed
+  showTheSpeed,
 } from "./Utils/d3functions";
 import { useDevDummyData } from "./Utils/devDummyData";
 import { loadPlanets } from "./Utils/api";
 import { generateData } from "./Utils/calculateData";
+import axios from "axios";
 
 const NEAR = "near";
 const MID = "mid";
@@ -57,11 +58,11 @@ async function initiateMain() {
   let data2 = [];
 
   // load Default data
-  data0 = await loadPlanets(NEAR, true);
-  data1 = await loadPlanets(MID);
-  data2 = await loadPlanets(FAR);
+  // data0 = await loadPlanets(NEAR, true);
+  // data1 = await loadPlanets(MID);
+  // data2 = await loadPlanets(FAR);
   //dev
-  // data0 = useDevDummyData();
+  data0 = useDevDummyData();
 
   activateDefaultButtons();
 
@@ -135,7 +136,6 @@ async function initiateMain() {
           document.getElementsByClassName("planet-data")[0].children[1]
             .children[0].children[0]["__data__"];
 
-         
         let lightYearDistInMiles = 6000000000000; //miles
         let speedOfLight = 671000000; //mph
         let voyagerSpeed = 38000; //mph
@@ -367,7 +367,6 @@ function showPlanetStats(planet, speed) {
 
 //on speed click
 function showHumanStats(distance, speed) {
-
   let scaleFactor = 10;
   let barHeight = 50;
 
@@ -606,5 +605,3 @@ function showHumanStats(distance, speed) {
       });
   }
 }
-
-

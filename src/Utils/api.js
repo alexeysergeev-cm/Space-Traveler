@@ -45,8 +45,13 @@ function countValidValues(obj) {
 
 export const getWebsiteText = async ({ link, plName }) => {
   const resp = await axios
-    .get("/getWebsiteText", { params: { link: link, plName: plName } })
+    .get(link, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    })
     .then((response) => {
+      debugger
       return response.data;
     })
     .catch((error) => {
@@ -56,5 +61,3 @@ export const getWebsiteText = async ({ link, plName }) => {
   const result = resp.replace(/ \([\s\S]*?\)/g, "");
   displaySourceDescription(result);
 };
-
-

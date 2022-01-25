@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node ./src/server.mjs",
+    "heroku-postbuild": "webpack -p",
     "debug": "nodemon --inspect ./src/server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --mode=development --watch",
@@ -38,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/alexeysergeev-cm/Space-Traveler/issues"
   },
-  "homepage": "https://alexeysergeev-cm.github.io/",
+  "homepage": "https://alexeysergeev-cm.github.io/Space-Traveler",
   "keywords": [],
   "description": "",
   "dependencies": {

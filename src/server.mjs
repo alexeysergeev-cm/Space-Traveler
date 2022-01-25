@@ -84,6 +84,5 @@ async function readFile(plName) {
 }
 
 app.listen(PORT, () => {
-  // console.log(__dirname);
   console.log(`listening on ${PORT}`);
 });

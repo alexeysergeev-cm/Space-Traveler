@@ -1,5 +1,6 @@
 const axios = require("axios");
 import { populateNames, displaySourceDescription } from "./d3functions";
+const pathToFile = "./data/planetSystemDescription.json";
 
 export const loadPlanets = async (distance, toPopulate) => {
   const queryDistance =
@@ -46,17 +47,23 @@ function countValidValues(obj) {
 }
 
 export const getWebsiteText = async ({ link, plName }) => {
-  const resp = await axios
-    .get("/getWebsiteText", { params: { link: link, plName: plName } })
-    .then((response) => {
-      return response.data;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  const data = await fetch(pathToFile)
+    .then((response) => response.json())
+    .then((jsonResponse) => jsonResponse);
 
-  const result = resp.replace(/ \([\s\S]*?\)/g, "");
-  displaySourceDescription(result);
+  const json = JSON.stringify(data.planetarySysDescrip);
+  window.localStorage.setItem("planetarySysDescrip", json);
+  //  debugger;
+
+  // const resp = await axios
+  //   .get("/getWebsiteText", { params: { link: link, plName: plName } })
+  //   .then((response) => {
+  //     return response.data;
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+
+  // const result = resp.replace(/ \([\s\S]*?\)/g, "");
+  // displaySourceDescription(result);
 };
-
-

@@ -6,31 +6,24 @@ import { startTyping } from "./Utils/startTyping";
 import {
   initiateApp,
   populateNames,
-  activateDefaultButtons,
+  activateButton,
   newTextTransition,
   showTheSpeed,
 } from "./Utils/d3functions";
-import { useDevDummyData } from "./Utils/devDummyData";
+import { getPlanets } from "./Utils/devDummyData";
 import { loadPlanets } from "./Utils/api";
 import { generateData, spinFetchAndCache } from "./Utils/calculateData";
-
-
 
 const NEAR = "near";
 const MID = "mid";
 const FAR = "far";
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  const pathToFile = "./data/planetSystemDescription.json";
   initiateApp();
-  initiateIntro();
+  // initiateIntro();
 
   //  development
-  // developmentMode();
-  // fetch(pathToFile)
-  //   .then((response) => response.json())
-  //   .then((jsonResponse) => console.log(jsonResponse)); 
+  developmentMode();
 
   // spinFetchAndCache(JSON.parse(window.localStorage.getItem(FAR)));
 });
@@ -60,60 +53,40 @@ function initiateIntro() {
 }
 
 async function initiateMain() {
-  //store data from api request
-  let data0 = [];
-  let data1 = [];
-  let data2 = [];
+  const data0 = getPlanets(NEAR);
+  const data1 = getPlanets(MID);
+  const data2 = getPlanets(FAR);
+  populateNames(data0);
+  
 
-  // load Default data
-  data0 =
-    JSON.parse(window.localStorage.getItem(NEAR)) ||
-    (await loadPlanets(NEAR, true));
-  data1 =
-    JSON.parse(window.localStorage.getItem(MID)) || (await loadPlanets(MID));
-  data2 =
-    JSON.parse(window.localStorage.getItem(FAR)) || (await loadPlanets(FAR));
-
-  if (window.localStorage.getItem(NEAR)) populateNames(data0);
-  //dev
-  // data0 = useDevDummyData();
-
-  activateDefaultButtons();
-
-  //selecting distance
   let speed = 38000; //default
 
   //click LEFT-SWITCH
-  d3.selectAll("button").on("click", async (e) => {
-    let ele = e.currentTarget.parentElement.classList[0];
-    d3.select("." + ele)
-      .selectAll("button")
-      .style("background-color", "red")
-      .style("box-shadow", "0 2px 2px 0px rgb(0 0 0)");
-    e.currentTarget.style.backgroundColor = "rgb(90 250 13)";
-    e.currentTarget.style.boxShadow = "inset 0 1px 3px 1px rgb(0 0 0)";
-    e.currentTarget.style.outline = "none";
+  d3.selectAll(".left-switch")
+    .selectAll("button")
+    .on("click", async (e) => {
+      activateButton("left", e);
 
-    if (e.currentTarget.innerText === "< 5 parsecs") {
-      if (data0.length) {
-        populateNames(data0);
-      } else {
-        data0 = await loadPlanets(NEAR, true);
+      if (e.currentTarget.innerText === "< 5 parsecs") {
+        if (data0.length) {
+          populateNames(data0);
+        } else {
+          data0 = await loadPlanets(NEAR, true);
+        }
+      } else if (e.currentTarget.innerText === "5-10 parsecs") {
+        if (data1.length) {
+          populateNames(data1);
+        } else {
+          data1 = await loadPlanets(MID, true);
+        }
+      } else if (e.currentTarget.innerText === "10+ parsecs") {
+        if (data2.length) {
+          populateNames(data2);
+        } else {
+          data2 = await loadPlanets(FAR, true);
+        }
       }
-    } else if (e.currentTarget.innerText === "5-10 parsecs") {
-      if (data1.length) {
-        populateNames(data1);
-      } else {
-        data1 = await loadPlanets(MID, true);
-      }
-    } else if (e.currentTarget.innerText === "10+ parsecs") {
-      if (data2.length) {
-        populateNames(data2);
-      } else {
-        data2 = await loadPlanets(FAR, true);
-      }
-    }
-  });
+    });
 
   //if click RIGHT-SWITCH
   d3.selectAll(".right-switch")
@@ -214,46 +187,25 @@ async function initiateMain() {
   const planetsList = document.getElementsByClassName("planets-list");
   if (planetsList.length) {
     planetsList[0].addEventListener("click", (e) => {
-      let list = document.getElementsByClassName("planets-list")[0].children;
-      for (let item of list) {
-        if (item.style.backgroundColor === "rgb(255, 140, 0)") {
-          item.style.backgroundColor = "";
-        }
-      }
-      if (e.target.tagName === "P") {
-        e.target.style.backgroundColor = "rgb(255, 140, 0)";
-      }
+      const list = document.getElementsByClassName("planets-list")[0].children;
+      d3.selectAll(list).classed("selected-pl", false);
+      e.target.classList.toggle("selected-pl");
 
-      let switches = document.getElementsByClassName("left-switch")[0].children;
+      const switches = document.getElementsByClassName("left-switch")[0].children;
+      const plName = e.target.innerText;
       for (let i = 1; i < switches.length; i++) {
-        if (
-          switches[i].style.backgroundColor === "rgb(90, 250, 13)" &&
-          switches[i].innerText === "< 5 parsecs"
-        ) {
-          data0.forEach((planet) => {
-            // development
-            if (e.target.innerText === planet.pl_name) {
-              newTextTransition();
-              showPlanetStats(planet, speed);
-            }
-          });
-        } else if (
-          switches[i].style.backgroundColor === "rgb(90, 250, 13)" &&
-          switches[i].innerText === "5-10 parsecs"
-        ) {
-          data1.forEach((planet) => {
-            if (e.target.innerText === planet.pl_name) {
-              newTextTransition();
-              showPlanetStats(planet, speed);
-            }
-          });
-        } else {
-          data2.forEach((planet) => {
-            if (e.target.innerText === planet.pl_name) {
-              newTextTransition();
-              showPlanetStats(planet, speed);
-            }
-          });
+        let pl;
+        if (switches[i].classList.contains("selected-btn")) {
+          if (switches[i].innerText === "< 5 parsecs") {
+            pl = data0.filter((planet) => plName === planet.pl_name)
+          } else if (switches[i].innerText === "5-10 parsecs") {
+            pl = data1.filter((planet) => plName === planet.pl_name);
+          } else if (switches[i].innerText === "10+ parsecs") {
+            pl = data2.filter((planet) => plName === planet.pl_name);
+          }
+
+          newTextTransition();
+          pl[0] && showPlanetStats(pl[0], speed);
         }
       }
     });

@@ -27,14 +27,12 @@ export const populateNames = (data) => {
     });
 };
 
-export const activateDefaultButtons = () => {
-  const buttons = [".left-switch", ".right-switch"];
-  for(const el of buttons) {
-    d3.select(el)
-      .select("button")
-      .style("background-color", "rgb(90 250 13)")
-      .style("box-shadow", "inset 0 1px 3px 1px rgb(0 0 0)");
-  }
+export const activateButton = (side, e) => {
+  d3.selectAll(`.${side}-switch`)
+    .selectAll("button")
+    .classed("selected-btn", false);
+
+  e.currentTarget.classList.toggle("selected-btn");
 };
 
 export const displaySourceDescription = (text) => {

@@ -35073,7 +35073,7 @@ var spinFetchAndCache = function spinFetchAndCache(arr) {
 /*!**********************************!*\
   !*** ./src/Utils/d3functions.js ***!
   \**********************************/
-/*! exports provided: initiateApp, populateNames, activateButton, displaySourceDescription, newTextTransition, showTheSpeed */
+/*! exports provided: initiateApp, populateNames, activateButton, displaySourceDescription, newTextTransition, showTheSpeed, displayHumanStats, displayPlanetStats */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35084,6 +35084,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "displaySourceDescription", function() { return displaySourceDescription; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "newTextTransition", function() { return newTextTransition; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showTheSpeed", function() { return showTheSpeed; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "displayHumanStats", function() { return displayHumanStats; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "displayPlanetStats", function() { return displayPlanetStats; });
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
 
 var initiateApp = function initiateApp() {
@@ -35114,6 +35116,89 @@ var showTheSpeed = function showTheSpeed(speed) {
   d3__WEBPACK_IMPORTED_MODULE_0__["select"](".speed").selectAll("h1").remove();
   d3__WEBPACK_IMPORTED_MODULE_0__["select"](".speed").selectAll("h1").data([speed]).enter().append("h1").style("color", "rgb(255 140 0)").text(function (d) {
     return speed === 27 ? d + " x The Speed of Light" : d.toLocaleString() + " mph";
+  });
+};
+var displayHumanStats = function displayHumanStats(data, speed) {
+  var barHeight = 50;
+  var otherWidth = 500;
+  var otherHeight = 155;
+  var flightTimeUnits = speed === 27 ? "months" : "years";
+  var domain = speed === 27 ? [0, 10] : speed === 38000 ? [2000, 770000] : [10, 100];
+  var range = speed === 27 ? [10, 100] : [50, 490];
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".other-data").selectAll("svg").remove();
+  var scale = d3__WEBPACK_IMPORTED_MODULE_0__["scaleLinear"]().domain(domain).range(range);
+  var graph2 = d3__WEBPACK_IMPORTED_MODULE_0__["select"](".human-data-svg").append("svg").attr("width", otherWidth).attr("height", otherHeight);
+  var bar2 = graph2.selectAll("g").data(data).enter().append("g").attr("transform", function (d, i) {
+    if (i === 0) {
+      return "translate(0,25)";
+    } else if (i === 1) {
+      return "translate(0,100)";
+    }
+  });
+  bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_0__["easeLinear"]).duration(500).attr("width", function (d) {
+    return scale(d);
+  }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
+  bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
+    if (i === 0) {
+      return "Flight time to the target planet (".concat(flightTimeUnits, ")");
+    } else if (i === 1) {
+      return "Generations amount to the target planet";
+    }
+  });
+  bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
+    if (i === 0) {
+      return speed === 38000 ? parseInt(d).toLocaleString() : d.toFixed(2);
+    } else if (i === 1) {
+      return parseInt(d).toLocaleString();
+    }
+  });
+};
+var displayPlanetStats = function displayPlanetStats(data) {
+  var width = document.querySelector(".planet-data").offsetWidth - 6;
+  var height = document.querySelector(".planet-data").offsetHeight - 36;
+  var scaleFactor = 10;
+  var barHeight = 50;
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planet-data").selectAll("svg").remove();
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".misc").selectAll("p").remove();
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".facility").selectAll("p").remove();
+  var graph = d3__WEBPACK_IMPORTED_MODULE_0__["select"](".planet-data-svg").append("svg").attr("width", width).attr("height", height);
+  var bar = graph.selectAll("g").data(data["planetData"]).enter().append("g").attr("transform", function (d, i) {
+    if (i === 0) {
+      return "translate(0, 25)";
+    } else if (i === 1) {
+      return "translate(0, 95)";
+    } else if (i === 2) {
+      return "translate(0, 165)";
+    } else if (i === 3) {
+      return "translate(0, 245)";
+    }
+  });
+  bar.append("rect").attr("height", barHeight - 10).transition().ease(d3__WEBPACK_IMPORTED_MODULE_0__["easeLinear"]).duration(500).attr("width", function (d) {
+    return d * scaleFactor;
+  }).attr("fill", "rgb(139, 0, 139)").attr("filter", "drop-shadow(0px 2px 2px black)");
+  bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
+    if (i === 0) {
+      return "Distance to the target planet (light years)";
+    } else if (i === 1) {
+      return "Number of planets in the planetary system";
+    } else if (i === 2) {
+      return "Orbital period (days)";
+    } else if (i === 3) {
+      return "Planet mass estimate (measured in Earth masses)";
+    }
+  });
+  bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
+    if (i === 0 || i === 3) {
+      return d.toFixed(2);
+    } else {
+      return parseInt(d);
+    }
+  });
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".misc").selectAll("p").data([data["lastPlanetUpdate"]]).enter().append("p").text(function (d) {
+    return d;
+  });
+  d3__WEBPACK_IMPORTED_MODULE_0__["select"](".facility").selectAll("p").data([data["discoveryFacility"]]).enter().append("p").text(function (d) {
+    return d;
   });
 };
 
@@ -38291,14 +38376,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utils/devDummyData */ "./src/Utils/devDummyData.js");
 /* harmony import */ var _Utils_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utils/api */ "./src/Utils/api.js");
 /* harmony import */ var _Utils_calculateData__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Utils/calculateData */ "./src/Utils/calculateData.js");
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
-
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -38352,7 +38429,7 @@ function initiateMain() {
 
 function _initiateMain() {
   _initiateMain = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee2() {
-    var data0, data1, data2, speed, planetsList;
+    var data0, data1, data2, speed, curPlanet, planetsList;
     return regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -38361,8 +38438,8 @@ function _initiateMain() {
             data1 = Object(_Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__["getPlanets"])(MID);
             data2 = Object(_Utils_devDummyData__WEBPACK_IMPORTED_MODULE_6__["getPlanets"])(FAR);
             Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data0);
-            speed = 38000; //default
-            //click LEFT-SWITCH
+            speed = 38000;
+            curPlanet = undefined; //click LEFT-SWITCH
 
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"](".left-switch").selectAll("button").on("click", /*#__PURE__*/function () {
               var _ref = _asyncToGenerator( /*#__PURE__*/regenerator_runtime__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee(e) {
@@ -38372,86 +38449,15 @@ function _initiateMain() {
                       case 0:
                         Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["activateButton"])("left", e);
 
-                        if (!(e.currentTarget.innerText === "< 5 parsecs")) {
-                          _context.next = 12;
-                          break;
+                        if (e.currentTarget.innerText === "< 5 parsecs") {
+                          data0.length && Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data0);
+                        } else if (e.currentTarget.innerText === "5-10 parsecs") {
+                          data1.length && Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
+                        } else if (e.currentTarget.innerText === "10+ parsecs") {
+                          data2.length && Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data2);
                         }
 
-                        if (!data0.length) {
-                          _context.next = 6;
-                          break;
-                        }
-
-                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data0);
-                        _context.next = 10;
-                        break;
-
-                      case 6:
-                        _readOnlyError("data0");
-
-                        _context.next = 9;
-                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(NEAR, true);
-
-                      case 9:
-                        data0 = _context.sent;
-
-                      case 10:
-                        _context.next = 32;
-                        break;
-
-                      case 12:
-                        if (!(e.currentTarget.innerText === "5-10 parsecs")) {
-                          _context.next = 23;
-                          break;
-                        }
-
-                        if (!data1.length) {
-                          _context.next = 17;
-                          break;
-                        }
-
-                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data1);
-                        _context.next = 21;
-                        break;
-
-                      case 17:
-                        _readOnlyError("data1");
-
-                        _context.next = 20;
-                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(MID, true);
-
-                      case 20:
-                        data1 = _context.sent;
-
-                      case 21:
-                        _context.next = 32;
-                        break;
-
-                      case 23:
-                        if (!(e.currentTarget.innerText === "10+ parsecs")) {
-                          _context.next = 32;
-                          break;
-                        }
-
-                        if (!data2.length) {
-                          _context.next = 28;
-                          break;
-                        }
-
-                        Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["populateNames"])(data2);
-                        _context.next = 32;
-                        break;
-
-                      case 28:
-                        _readOnlyError("data2");
-
-                        _context.next = 31;
-                        return Object(_Utils_api__WEBPACK_IMPORTED_MODULE_7__["loadPlanets"])(FAR, true);
-
-                      case 31:
-                        data2 = _context.sent;
-
-                      case 32:
+                      case 2:
                       case "end":
                         return _context.stop();
                     }
@@ -38465,11 +38471,7 @@ function _initiateMain() {
             }()); //if click RIGHT-SWITCH
 
             d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"](".right-switch").selectAll("button").on("click", function (e) {
-              var ele = e.currentTarget.parentElement.classList[0];
-              d3__WEBPACK_IMPORTED_MODULE_3__["select"]("." + ele).selectAll("button").style("background-color", "red").style("box-shadow", "0 2px 2px 0px rgb(0 0 0)");
-              e.currentTarget.style.backgroundColor = "rgb(90 250 13)";
-              e.currentTarget.style.boxShadow = "inset 0 1px 3px 1px rgb(0 0 0)";
-              e.currentTarget.style.outline = "none";
+              Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["activateButton"])("right", e);
 
               if (e.currentTarget.innerText === "The Speed of Light") {
                 speed = 671000000;
@@ -38480,85 +38482,10 @@ function _initiateMain() {
               } else {
                 speed = 27;
                 Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["showTheSpeed"])(speed);
-              } //check what speed chosen
-
-
-              var humanData = document.getElementsByClassName("other-data")[0].children;
-
-              if (humanData.length === 3 && e.currentTarget.innerText === "Voyager 1") {
-                (function () {
-                  var list = document.getElementsByClassName("planets-list")[0].children; //get distance && gerenrate data
-
-                  var distance = document.getElementsByClassName("planet-data")[0].children[1].children[0].children[0]["__data__"];
-                  var lightYearDistInMiles = 6000000000000; //miles
-
-                  var speedOfLight = 671000000; //mph
-
-                  var voyagerSpeed = 38000; //mph
-
-                  var day = 24; //hrs
-
-                  var yearLength = 365; //days
-
-                  var totalMilesToDestination = lightYearDistInMiles * distance;
-                  var yearsToReach = totalMilesToDestination / (voyagerSpeed * day * yearLength);
-                  var humanGenerations = yearsToReach / 30; // 30 years between generations
-
-                  var humanData = [yearsToReach, humanGenerations];
-
-                  var _iterator = _createForOfIteratorHelper(list),
-                      _step;
-
-                  try {
-                    var _loop = function _loop() {
-                      var item = _step.value;
-
-                      if (item.style.backgroundColor === "rgb(255, 140, 0)") {
-                        ///NOT DRY! refactor
-                        var switches = document.getElementsByClassName("left-switch")[0].children;
-
-                        for (var i = 1; i < switches.length; i++) {
-                          if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "< 5 parsecs") {
-                            data0.forEach(function (planet) {
-                              //development
-                              if (item.innerText === planet.pl_name) {
-                                // showPlanetStats(planet, speed)
-                                showHumanStats(humanData, speed);
-                              }
-                            });
-                          } else if (switches[i].style.backgroundColor === "rgb(90, 250, 13)" && switches[i].innerText === "5-10 parsecs") {
-                            data1.forEach(function (planet) {
-                              if (item.innerText === planet.pl_name) {
-                                // showPlanetStats(planet, speed)
-                                showHumanStats(humanData, speed);
-                              }
-                            });
-                          } else {
-                            data2.forEach(function (planet) {
-                              if (item.innerText === planet.pl_name) {
-                                // showPlanetStats(planet, speed)
-                                showHumanStats(humanData, speed);
-                              }
-                            });
-                          }
-                        }
-                      }
-                    };
-
-                    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                      _loop();
-                    }
-                  } catch (err) {
-                    _iterator.e(err);
-                  } finally {
-                    _iterator.f();
-                  }
-                })();
-              } else if (humanData.length === 3) {
-                //refactor TOO MANY repetitions
-                var distance = document.getElementsByClassName("planet-data")[0].children[1].children[0].children[0]["__data__"];
-                showHumanStats(distance, speed);
               }
+
+              if (!curPlanet || !speed) return;
+              showHumanStats(curPlanet.sy_dist, speed);
             });
             planetsList = document.getElementsByClassName("planets-list");
 
@@ -38588,14 +38515,16 @@ function _initiateMain() {
                       });
                     }
 
+                    if (!pl[0]) return;
                     Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["newTextTransition"])();
-                    pl[0] && showPlanetStats(pl[0], speed);
+                    showPlanetStats(pl[0], speed);
+                    curPlanet = pl[0];
                   }
                 }
               });
             }
 
-          case 9:
+          case 10:
           case "end":
             return _context2.stop();
         }
@@ -38606,191 +38535,34 @@ function _initiateMain() {
 }
 
 function showPlanetStats(planet, speed) {
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data").selectAll("svg").remove();
-  var data = Object(_Utils_calculateData__WEBPACK_IMPORTED_MODULE_8__["generateData"])(planet, speed); //planet stats
+  var data = Object(_Utils_calculateData__WEBPACK_IMPORTED_MODULE_8__["generateData"])(planet, speed);
+  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["displayPlanetStats"])(data);
+  showHumanStats(planet.sy_dist, speed);
+}
 
-  var width = document.querySelector(".planet-data").offsetWidth - 6;
-  var height = document.querySelector(".planet-data").offsetHeight - 36;
-  var scaleFactor = 10;
-  var barHeight = 50;
-  var scale1 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([1, 100]).range([50, 500]);
-  var graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".planet-data-svg").append("svg").attr("width", width).attr("height", height);
-  var bar = graph.selectAll("g").data(data["planetData"]).enter().append("g").attr("transform", function (d, i) {
-    if (i === 0) {
-      return "translate(0, 25)";
-    } else if (i === 1) {
-      return "translate(0, 95)";
-    } else if (i === 2) {
-      return "translate(0, 165)";
-    } else if (i === 3) {
-      return "translate(0, 245)";
-    }
-  });
-  bar.append("rect").attr("height", barHeight - 10).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
-    return d * scaleFactor; // return scale1(d);
-  }).attr("fill", "rgb(139, 0, 139)").attr("filter", "drop-shadow(0px 2px 2px black)");
-  bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
-    if (i === 0) {
-      return "Distance to the target planet (light years)";
-    } else if (i === 1) {
-      return "Number of planets in the planetary system";
-    } else if (i === 2) {
-      return "Orbital period (days)";
-    } else if (i === 3) {
-      return "Planet mass estimate (measured in Earth masses)";
-    }
-  });
-  bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
-    if (i === 0 || i === 3) {
-      return d.toFixed(2);
-    } else {
-      return parseInt(d);
-    }
-  });
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").remove();
-  var misc = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".misc").selectAll("p").data([data["lastPlanetUpdate"]]).enter().append("p").text(function (d) {
-    return d;
-  });
-  d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").remove();
-  var facil = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".facility").selectAll("p").data([data["discoveryFacility"]]).enter().append("p").text(function (d) {
-    return d;
-  }); //show human-related data
+function showHumanStats(parsecDistance, speed) {
+  var LightYearsInOneParsec = 3.262;
+  var lightYearDistInMiles = 6 * 10e11;
+  var hoursInDay = 24;
+  var daysInYear = 365;
+  var yearsBetweenGenerations = 30;
+  var lightDistToTargetPl = parsecDistance * LightYearsInOneParsec;
+  var totalMilesToDestination = lightYearDistInMiles * lightDistToTargetPl;
+  var data;
 
-  var calcBySpeed = document.getElementsByClassName("speed")[0].innerText;
-
-  if (calcBySpeed === "38,000 mph") {
-    showHumanStats(data["humanData"], speed);
-  } else {
-    showHumanStats(data["planetData"][0], speed);
-  }
-} //on speed click
-
-
-function showHumanStats(distance, speed) {
-  var scaleFactor = 10;
-  var barHeight = 50;
-
-  if (distance.length > 1) {
-    var scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([2000, 770000]).range([50, 490]);
-    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
-    var otherWidth = 500;
-    var otherHeight = 155;
-    var graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".human-data-svg").append("svg").attr("width", otherWidth).attr("height", otherHeight);
-    var bar2 = graph2.selectAll("g").data(distance).enter().append("g").attr("transform", function (d, i) {
-      if (i === 0) {
-        return "translate(0,25)";
-      } else if (i === 1) {
-        return "translate(0,100)";
-      } else if (i === 2) {
-        return "translate(0,155)";
-      }
-    });
-    bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
-      return scale(d);
-    }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
-    bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
-      if (i === 0) {
-        return "Flight time to the target planet (years)";
-      } else if (i === 1) {
-        return "Generations amount to the target planet";
-      }
-    });
-    bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
-      if (i === 0) {
-        return parseInt(d).toLocaleString();
-      } else if (i === 1) {
-        return parseInt(d).toLocaleString();
-      }
-    });
-  } else if (speed > 40000) {
-    var genAmount = distance / 30;
-
-    var _scale = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([10, 100]).range([50, 490]);
-
-    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
-    var _otherWidth = 500;
-    var _otherHeight = 155;
-
-    var _graph = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".human-data-svg").append("svg").attr("width", _otherWidth).attr("height", _otherHeight);
-
-    var _bar = _graph.selectAll("g").data([distance, genAmount]).enter().append("g").attr("transform", function (d, i) {
-      if (i === 0) {
-        return "translate(0,25)";
-      } else if (i === 1) {
-        return "translate(0,100)";
-      } else if (i === 2) {
-        return "translate(0,155)";
-      }
-    });
-
-    _bar.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
-      return _scale(d);
-    }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
-
-    _bar.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
-      if (i === 0) {
-        return "Flight time to the target planet (years)";
-      } else if (i === 1) {
-        return "Generations amount to the target planet";
-      }
-    });
-
-    _bar.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
-      if (i === 0) {
-        return d.toFixed(2);
-      } else if (i === 1) {
-        return parseInt(d).toLocaleString();
-      }
-    });
+  if (speed === 38000) {
+    var humanYearsToReachDest = totalMilesToDestination / (speed * hoursInDay * daysInYear);
+    var humanGenerations = humanYearsToReachDest / yearsBetweenGenerations;
+    data = [humanYearsToReachDest, humanGenerations];
   } else if (speed === 27) {
-    var newDistance = distance / 27 * 12;
-
-    var _genAmount;
-
-    if (newDistance < 30) {
-      _genAmount = 0;
-    } else {
-      _genAmount = newDistance / 30;
-    }
-
-    var _scale2 = d3__WEBPACK_IMPORTED_MODULE_3__["scaleLinear"]().domain([0, 10]).range([10, 100]);
-
-    d3__WEBPACK_IMPORTED_MODULE_3__["select"](".other-data").selectAll("svg").remove();
-    var _otherWidth2 = 500;
-    var _otherHeight2 = 155;
-
-    var _graph2 = d3__WEBPACK_IMPORTED_MODULE_3__["select"](".human-data-svg").append("svg").attr("width", _otherWidth2).attr("height", _otherHeight2);
-
-    var _bar2 = _graph2.selectAll("g").data([newDistance, _genAmount]).enter().append("g").attr("transform", function (d, i) {
-      if (i === 0) {
-        return "translate(0,25)";
-      } else if (i === 1) {
-        return "translate(0,100)";
-      } else if (i === 2) {
-        return "translate(0,155)";
-      }
-    });
-
-    _bar2.append("rect").attr("height", barHeight - 1).transition().ease(d3__WEBPACK_IMPORTED_MODULE_3__["easeLinear"]).duration(500).attr("width", function (d) {
-      return _scale2(d);
-    }).attr("fill", "darkmagenta").attr("filter", "drop-shadow(0px 2px 2px black)");
-
-    _bar2.append("text").attr("x", 3).attr("y", -12).attr("dy", ".35em").attr("font-size", "18px").attr("font-family", "sans-serif").style("fill", "white").style("letter-spacing", "1px").attr("filter", "drop-shadow(0px 2px 2px black)").text(function (d, i) {
-      if (i === 0) {
-        return "Flight time to the target planet (months)";
-      } else if (i === 1) {
-        return "Generations amount to the target planet";
-      }
-    });
-
-    _bar2.append("text").attr("x", 5).attr("y", barHeight / 2).attr("dy", ".35em").attr("font-size", "16px").attr("font-family", "sans-serif").style("fill", "white").text(function (d, i) {
-      if (i === 0) {
-        return d.toFixed(2);
-      } else if (i === 1) {
-        return parseInt(d).toLocaleString();
-      }
-    });
+    var dist = lightDistToTargetPl / 27 * 12;
+    var genAmount = dist < 30 ? 0 : dist / 30;
+    data = [dist, genAmount];
+  } else {
+    data = [lightDistToTargetPl, lightDistToTargetPl / yearsBetweenGenerations];
   }
+
+  Object(_Utils_d3functions__WEBPACK_IMPORTED_MODULE_5__["displayHumanStats"])(data, speed);
 }
 
 /***/ })

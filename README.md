@@ -1,26 +1,25 @@
 # Space-Traveler
 
+Space-traveler is a data visualization tool that shows the flight time, distance, and human generations required to reach an exoplanet.
+
 ![S](https://github.com/alexeysergeev-cm/Space-Traveler/blob/main/assets/intro.gif)
 
-### [Space-Traveler](https://alexeysergeev-cm.github.io/Space-Traveler/)
+### [Try live](https://alexeysergeev-cm.github.io/Space-Traveler/)
 
 ## Motivation:
-I am as a space fan could not miss an opportunity to make something space related. I love everything about space: science, facts, sci-fi movies, books, video-games etc. As the final human frontier, space and colonization of other planets is our future. I believe that we have to understand and explore the planets beyond our own. Space travel is going to be the most challenging thing the human can encounter. It seems to be a fantasy to travel to other stars, but one day it will be no different than traveling from one country to another. Good to mention that fantasy has a property of becoming a reality.
 
-## Background and Overview
-The Space Traveler is a data visualization tool that shows the time, distance & generation amount it takes to reach a chosen exoplanet.
+I, as a space fan, could not miss an opportunity to write a space-related app. I truly believe that space exploration and planets’ colonization is our future. Therefore, space traveling will be one of the most challenging things humans can encounter. Today it is some sort of fantasy to travel to other stars but one day it will be no different than traveling from one country to another. Good to mention that fantasy has the property of becoming a reality.
 
 ![S](https://github.com/alexeysergeev-cm/Space-Traveler/blob/main/assets/proj_overview.gif)
 
-
 ## Functionality & MVP
-* Intro page with important information: such as distance units, avg human lifespan, orbital period of the earth. This gives users a general picture when using the app.
-* List of possible planets. Fetching data using API calls then store it to improve performance. 
-* Choosing the distance and spacecraft to compare and calculate the data.
-* Show planet data & other relevant data.
+
+- Intro page with important information about distance units, average human lifespan, Earth orbital period, etc.
+- Main page where users can filter planets by distance, choose spacecraft, and choose planets to get relevant information about resources it might take to get there.
 
 ## Wireframes
-These are initial wireframes that were designed in the beginning of the project. I decided to not update them to what you see now on the screen for future reference if I need to improve this project. Initially I was planning to get a galaxy map where users could zoom-in and zoom-out and click on the planets that will show releveant information. I definetely will be on look out for these kind of maps or consider building one myself.
+
+These are initial wireframes that were designed in the beginning of the project. Some of the stuff is not implemented but I still decided to keep them for future reference. Here is a galaxy map (not implemented) that could be used to show users the distance to the exoplanet.
 
 ![s](https://github.com/alexeysergeev-cm/Space-Traveler/blob/main/wireframes/intro.jpg)
 
@@ -28,100 +27,94 @@ These are initial wireframes that were designed in the beginning of the project.
 
 ## Architecture and technologies
 
-* `Vanilla JS` for main logic & functionality.
-* `D3 library` for data visualization.
-* `Webpack` to banel scripts into single source.
+- `Vanilla JS` for main logic and functionality.
+- `D3 library` for data visualization.
+- `Webpack` to banel scripts into single source.
+- `GitHub Pages` as a hosting service
+- `Node.js, Express, Axios` is implemented and has been used to make external Api calls to fetch data.
 
-The following code snippet is a representation of asynchronous JavaScript. It makes sure that it fetches data before it start populating the list of the planets. Without `asnyc - await` data in the `arr` will be stored as a promise which would not produce a desired result in the `populateNames(arr)`.
+## Code examples
+
+The following code snippet initiates the intro page, queries DOM elements, and adds button event listener. Once the button is clicked the transition to the main page begins.
 
 ```javascript
-async function loadNear(){
-  let arr = await d3.csv('https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&where=st_dist<5&order=st_dist') 
-  populateNames(arr)
-  return arr
-}
-
-async function populateNames(arr){
-  d3.select(".planets-list")
-  .selectAll("p").remove()
-
-  d3.select(".planets-list")
-    .selectAll("p")
-    .data(arr)
-    .enter().append("p")
-    .text(function(d) { return d.pl_name });
+function initiateIntro() {
+  const main = document.querySelector(".main-div");
+  const intro = document.querySelector(".intro");
+  const button = document.querySelector(".continue-btn");
+  startTyping();
+  button.addEventListener("click", () => {
+    intro.classList.add("shrink");
+    setTimeout(() => {
+      intro.classList.add("hidden");
+      main.classList.remove("hidden");
+      main.classList.add("grow");
+    }, 4000);
+    initiateMain();
+  });
 }
 ```
 
-The next code snippet show the utilization of `D3.js` library to visualize the data. The `transition(), ease(), duration()` are used to add animation for a better UX.
+The next code snippet shows the utilization of `D3.js` library to visualize the data. The `transition(), ease(), and duration()` are used to add animation to the bar chart.
 
 ```javascript
-bar.append("rect")
-  .attr("height", barHeight - 10)
+bar2
+  .append("rect")
+  .attr("height", barHeight - 1)
   .transition()
   .ease(d3.easeLinear)
   .duration(500)
-  .attr("width", function(d) {
-          // return d * scaleFactor;
-          return scale1(d)
+  .attr("width", function (d) {
+    return scale(d);
   })
-  .attr("fill", 'rgb(139, 0, 139)')
-  .attr('filter', 'drop-shadow(0px 2px 2px black)')
+  .attr("fill", "darkmagenta")
+  .attr("filter", "drop-shadow(0px 2px 2px black)");
 
-bar.append("text")
+bar2
+  .append("text")
   .attr("x", 3)
-  .attr("y", -12 )
+  .attr("y", -12)
   .attr("dy", ".35em")
   .attr("font-size", "18px")
   .attr("font-family", "sans-serif")
   .style("fill", "white")
   .style("letter-spacing", "1px")
-  .attr('filter', 'drop-shadow(0px 2px 2px black)')
+  .attr("filter", "drop-shadow(0px 2px 2px black)")
   .text(function (d, i) {
     if (i === 0) {
-      return 'Distance (Light Years)'
+      return `Flight time to the target planet (${flightTimeUnits})`;
     } else if (i === 1) {
-      return 'Planet Number'
-    } else if (i === 2){
-      return 'Orbital Period (Days)'
+      return "Generations amount to the target planet";
     }
-  })
+  });
 
-bar.append("text")
-  .attr("x", 5 )
+bar2
+  .append("text")
+  .attr("x", 5)
   .attr("y", barHeight / 2)
+  .attr("dy", ".35em")
   .attr("font-size", "16px")
   .attr("font-family", "sans-serif")
   .style("fill", "white")
   .text(function (d, i) {
     if (i === 0) {
-      return d.toFixed(2)
-    } else {
-      return parseInt(d) 
+      return speed === 38000 ? parseInt(d).toLocaleString() : d.toFixed(2);
+    } else if (i === 1) {
+      return parseInt(d).toLocaleString();
     }
-  })
-
+  });
 ```
 
-This last code snippet is shown to represent basic `DOM` manipulation. The `button.addEventListener()` is listening for a 'button click' to perform the next sets of instructions.
+This function reads from a `json` file that has been previously created and stored by calling an external Api. The function fetches information about planetary systems, removes the parenthesis and text within, and displays data to a user.
 
 ```javascript
-function continueButton(){  
-  const main = document.getElementsByClassName('main-div')
-  main[0].classList.add('hidden')
+export const getWebsiteText = async ({ link, plName }) => {
+  const data = await fetch(pathToFile)
+    .then((response) => response.json())
+    .then((jsonResponse) => jsonResponse);
 
-  const intro = document.getElementsByClassName('intro')
-  intro[0].classList.remove('hidden')
-
-  startType()
-
-  let button = intro[0].lastElementChild
-  button.addEventListener('click', () => {
-    main[0].classList.remove('hidden')
-    intro[0].classList.add('hidden')
-    
-    mainPageTransition()
-    loadDefaultData()
-  })
-}
+  const desc = data.planetarySysDescrip[plName] || "No data, sorry";
+  const result = desc.replace(/ \([\s\S]*?\)/g, "");
+  displaySourceDescription(result);
+};
 ```
